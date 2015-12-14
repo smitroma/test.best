@@ -1,0 +1,238 @@
+<wpml-config>
+
+    <custom-types>
+    	<custom-type translate="1">field_groups</custom-type>
+        <custom-type translate="1">portfolio</custom-type>
+    </custom-types>    
+   
+
+    <custom-fields>
+    	<custom-field action="ignore">allorany</custom-field>
+    	<custom-field action="ignore">audio_upload</custom-field>
+    	<custom-field action="ignore">audio_url</custom-field>
+    	<custom-field action="ignore">breadcrumb</custom-field>
+    	<custom-field action="ignore">featured_stamp</custom-field>
+    	<custom-field action="ignore">hide_on_screen</custom-field>
+    	<custom-field action="ignore">image</custom-field>
+    	<custom-field action="ignore">layerslider_id</custom-field>
+    	<custom-field action="ignore">layout</custom-field>
+    	<custom-field action="ignore">link_title</custom-field>
+    	<custom-field action="ignore">link_url</custom-field>
+    	<custom-field action="ignore">portfolio_columns</custom-field>
+    	<custom-field action="ignore">portfolio_rounded_corners</custom-field>
+    	<custom-field action="ignore">portfolio_text</custom-field>
+    	<custom-field action="ignore">position</custom-field>
+    	<custom-field action="ignore">post_content</custom-field>
+    	<custom-field action="ignore">post_icons</custom-field>
+    	<custom-field action="ignore">post_views_count</custom-field>
+    	<custom-field action="ignore">remove_widget_footer</custom-field>
+    	<custom-field action="ignore">rounded_corners</custom-field>
+    	<custom-field action="ignore">rule</custom-field>
+    	<custom-field action="ignore">sidebar</custom-field>
+    	<custom-field action="ignore">slider_images</custom-field>
+    	<custom-field action="ignore">slider_images_0_slider_image</custom-field>
+    	<custom-field action="ignore">slider_images_1_slider_image</custom-field>
+    	<custom-field action="ignore">slider_images_2_slider_image</custom-field>
+    	<custom-field action="ignore">slider_images_3_slider_image</custom-field>
+    	<custom-field action="ignore">slider_images_4_slider_image</custom-field>
+    	<custom-field action="ignore">slider_images_5_slider_image</custom-field>
+    	<custom-field action="ignore">slider_images_6_slider_image</custom-field>
+    	<custom-field action="ignore">slider_images_7_slider_image</custom-field>
+    	<custom-field action="ignore">the_quote</custom-field>
+    	<custom-field action="ignore">video_embed</custom-field>
+    	<custom-field action="ignore">video_height</custom-field>
+    	<custom-field action="ignore">video_poster</custom-field>
+    	<custom-field action="ignore">video_upload</custom-field>
+    	<custom-field action="ignore">video_url</custom-field>
+    	<custom-field action="ignore">_addition_settings</custom-field>
+    	<custom-field action="ignore">_audio_upload</custom-field>
+    	<custom-field action="ignore">_audio_url</custom-field>
+    	<custom-field action="ignore">_blog_grid_text</custom-field>
+    	<custom-field action="ignore">_breadcrumb</custom-field>
+    	<custom-field action="ignore">_featured_stamp</custom-field>
+    	<custom-field action="ignore">_form</custom-field>
+    	<custom-field action="ignore">_image</custom-field>
+    	<custom-field action="ignore">_layerslider_id</custom-field>
+    	<custom-field action="ignore">_link_title</custom-field>
+    	<custom-field action="ignore">_link_url</custom-field>
+    	<custom-field action="ignore">_locale</custom-field>
+    	<custom-field action="ignore">_mail</custom-field>
+    	<custom-field action="ignore">_mail_2</custom-field>
+    	<custom-field action="ignore">_portfolio_columns</custom-field>
+    	<custom-field action="ignore">_portfolio_rounded_corners</custom-field>
+    	<custom-field action="ignore">_portfolio_text</custom-field>
+    	<custom-field action="ignore">_post_content</custom-field>
+    	<custom-field action="ignore">_post_icons</custom-field>
+    	<custom-field action="ignore">_remove_widget_footer</custom-field>
+    	<custom-field action="ignore">_rounded_corners</custom-field>
+    	<custom-field action="ignore">_sidebar</custom-field>
+    	<custom-field action="ignore">slider_images</custom-field>
+    	<custom-field action="ignore">_slider_images_0_slider_image</custom-field>
+    	<custom-field action="ignore">_slider_images_1_slider_image</custom-field>
+    	<custom-field action="ignore">_slider_images_2_slider_image</custom-field>
+    	<custom-field action="ignore">_slider_images_3_slider_image</custom-field>
+    	<custom-field action="ignore">_slider_images_4_slider_image</custom-field>
+    	<custom-field action="ignore">_slider_images_5_slider_image</custom-field>
+    	<custom-field action="ignore">_slider_images_6_slider_image</custom-field>
+    	<custom-field action="ignore">_slider_images_7_slider_image</custom-field>
+    	<custom-field action="ignore">_the_quote</custom-field>
+    	<custom-field action="ignore">_video_embed</custom-field>
+    	<custom-field action="ignore">_video_height</custom-field>
+    	<custom-field action="ignore">_video_poster</custom-field>
+    	<custom-field action="ignore">_video_upload</custom-field>
+    	<custom-field action="ignore">_video_url</custom-field>
+    	<custom-field action="ignore">_wpb_vc_js_interface_version</custom-field>
+    	<custom-field action="ignore">_wpb_vc_js_status</custom-field>
+        <custom-field action="ignore">blog_grid_text</custom-field>
+        <custom-field action="ignore">field_51e5470a47dc4</custom-field>
+        <custom-field action="ignore">field_51fe5a113c11f</custom-field>
+        <custom-field action="ignore">field_51fe578f5ec49</custom-field>
+        <custom-field action="ignore">field_52a5b15417cb6</custom-field>
+        <custom-field action="ignore">field_52a5b20817cb7</custom-field>
+        <custom-field action="ignore">field_52a30c98391c1</custom-field>
+        <custom-field action="ignore">field_52a58d6a8fa22</custom-field>
+        <custom-field action="ignore">field_52a58d568fa20</custom-field>
+        <custom-field action="ignore">field_52a58d638fa21</custom-field>
+        <custom-field action="ignore">field_52a194f189afd</custom-field>
+        <custom-field action="ignore">field_52a195df89aff</custom-field>
+        <custom-field action="ignore">field_52a201ea5af06</custom-field>
+        <custom-field action="ignore">field_52a201f65af07</custom-field>
+        <custom-field action="ignore">field_52a2027cedd8d</custom-field>
+        <custom-field action="ignore">field_52a5926ef6fb6</custom-field>
+        <custom-field action="ignore">field_52a5962f73dba</custom-field>
+        <custom-field action="ignore">field_52a1950289afe</custom-field>
+        <custom-field action="ignore">field_53</custom-field>
+        <custom-field action="ignore">field_55</custom-field>
+        <custom-field action="ignore">field_56</custom-field>
+        <custom-field action="ignore">field_64</custom-field>
+        <custom-field action="ignore">field_100</custom-field>
+        <custom-field action="ignore">field_104</custom-field>
+        <custom-field action="ignore">field_115</custom-field>
+		<custom-field action="ignore">field_121</custom-field>
+		<custom-field action="ignore">field_122</custom-field>
+		<custom-field action="ignore">field_123</custom-field>
+		<custom-field action="ignore">field_129</custom-field>
+		<custom-field action="ignore">field_132</custom-field>
+		<custom-field action="ignore">field_134</custom-field>
+		<custom-field action="ignore">field_139</custom-field>
+		<custom-field action="ignore">field_144</custom-field>
+		<custom-field action="ignore">field_520e8f9121746</custom-field>
+		<custom-field action="ignore">field_520e41d9fcc37</custom-field>
+		<custom-field action="ignore">field_520e4135fcc33</custom-field>
+		<custom-field action="ignore">field_520e4144fcc34</custom-field>
+		<custom-field action="ignore">field_520e4169fcc35</custom-field>
+		<custom-field action="ignore">field_520e4189fcc36</custom-field>
+		<custom-field action="ignore">field_522d8e2f11778</custom-field>
+		<custom-field action="ignore">field_522d8e7c1177a</custom-field>
+		<custom-field action="ignore">field_522d8e4111779</custom-field>
+		<custom-field action="ignore">field_522d91a5e0bbd</custom-field>
+		<custom-field action="ignore">field_522d91cee0bbe</custom-field>
+		<custom-field action="ignore">field_522d921ae0bc0</custom-field>
+		<custom-field action="ignore">field_522d968cea525</custom-field>
+		<custom-field action="ignore">field_522d9154e0bbb</custom-field>
+		<custom-field action="ignore">field_522d9179e0bbc</custom-field>
+		<custom-field action="ignore">field_522d9201e0bbf</custom-field>
+		<custom-field action="ignore">field_522d9662ea524</custom-field>
+		<custom-field action="ignore">field_523c6b2401878</custom-field>
+		<custom-field action="ignore">field_523c6bdc01879</custom-field>
+		<custom-field action="ignore">field_523c3393c7ce1</custom-field>
+		<custom-field action="ignore">field_524affca21ce9</custom-field>
+		<custom-field action="ignore">field_529d98f59e941</custom-field>
+		<custom-field action="ignore">field_529d99119e942</custom-field>
+		<custom-field action="ignore">field_529d99749e943</custom-field>
+		<custom-field action="ignore">field_529db06b5a128</custom-field>
+		<custom-field action="ignore">field_529db3a8017f5</custom-field>
+		<custom-field action="ignore">field_529dbc7cc3ca9</custom-field>
+		<custom-field action="ignore">field_529df2fc13f71</custom-field>
+		<custom-field action="ignore">field_5188dcff36aee</custom-field>
+		<custom-field action="ignore">field_5224f5a65c6ff</custom-field>
+		<custom-field action="ignore">field_5224f5fc5c700</custom-field>
+		<custom-field action="ignore">field_5253cd70bcc5f</custom-field>
+		<custom-field action="ignore">field_5253cd96bcc60</custom-field>
+		<custom-field action="ignore">field_5253ce05acb60</custom-field>
+		<custom-field action="ignore">field_5257e97879635</custom-field>
+		<custom-field action="ignore">field_522615fe01d5d</custom-field>
+		<custom-field action="ignore">field_522798b80d72b</custom-field>
+		<custom-field action="ignore">field_523741b0c9be0</custom-field>
+		<custom-field action="ignore">field_523835fe019b4</custom-field>
+		<custom-field action="ignore">field_5237418ac9bdf</custom-field>
+		<custom-field action="ignore">field_5238360c019b5</custom-field>
+		<custom-field action="ignore">field_5252860e18147</custom-field>
+		<custom-field action="ignore">field_5261002e0d65b</custom-field>
+		<custom-field action="ignore">field_5261009adc28d</custom-field>
+		<custom-field action="ignore">field_52a58d738fa23</custom-field>
+		<custom-field action="ignore">_additional_settings</custom-field>
+		<custom-field action="ignore">_menu_item_classes</custom-field>
+		<custom-field action="ignore">_menu_item_menu_item_parent</custom-field>
+		<custom-field action="ignore">_menu_item_object</custom-field>
+		<custom-field action="ignore">_menu_item_object_id</custom-field>
+		<custom-field action="ignore">_menu_item_target</custom-field>
+		<custom-field action="ignore">_menu_item_type</custom-field>
+		<custom-field action="ignore">_menu_item_url</custom-field>
+		<custom-field action="ignore">_menu_item_xfn</custom-field>
+		<custom-field action="ignore">_messages</custom-field>
+		<custom-field action="ignore">_slider_images</custom-field>
+		<custom-field action="ignore">field_4</custom-field>
+		<custom-field action="ignore">field_15</custom-field>
+		<custom-field action="ignore">field_22</custom-field>
+		<custom-field action="ignore">field_23</custom-field>
+		<custom-field action="ignore">field_24</custom-field>
+		<custom-field action="ignore">field_25</custom-field>
+		<custom-field action="ignore">field_38</custom-field>
+		<custom-field action="ignore">field_39</custom-field>
+		<custom-field action="ignore">field_48</custom-field>
+		<custom-field action="ignore">field_50</custom-field>
+		<custom-field action="ignore">field_133</custom-field>
+
+
+
+        
+    </custom-fields>
+
+
+    <admin-texts>
+
+	    <key name="options_footer_callout_text" />
+	    <key name="options_footer_callout_button_0_callout_button_text" />
+	    <key name="options_copyright_text" />
+
+    </admin-texts>   
+    
+    <language-switcher-settings>
+        <key name="icl_lang_sel_config">
+            <key name="font-current-normal">#444444</key>
+            <key name="font-current-hover">#000000</key>
+            <key name="background-current-normal">#ffffff</key>
+            <key name="background-current-hover">#eeeeee</key>
+            <key name="font-other-normal">#444444</key>
+            <key name="font-other-hover">#000000</key>
+            <key name="background-other-normal">#ffffff</key>
+            <key name="background-other-hover">#eeeeee</key>
+            <key name="border">#cdcdcd</key>
+        </key>
+        <key name="icl_lang_sel_footer_config">
+            <key name="font-current-normal">#444444</key>
+            <key name="font-current-hover">#000000</key>
+            <key name="background-current-normal">#ffffff</key>
+            <key name="background-current-hover">#eeeeee</key>
+            <key name="font-other-normal">#444444</key>
+            <key name="font-other-hover">#000000</key>
+            <key name="background-other-normal">#ffffff</key>
+            <key name="background-other-hover">#eeeeee</key>
+            <key name="border">#cdcdcd</key>
+        </key>    
+        <key name="icl_language_switcher_sidebar">0</key>  
+        <key name="icl_widget_title_show">0</key>
+        <key name="icl_lang_sel_type">dropdown</key>
+        <key name="icl_lso_link_empty">0</key>
+        <key name="icl_lso_flags">0</key>
+        <key name="icl_lso_native_lang">1</key>
+        <key name="icl_lso_display_lang">1</key>
+        <key name="icl_lang_sel_footer">0</key>
+        <key name="icl_post_availability">0</key>
+        <key name="icl_post_availability_position">below</key>
+        <key name="icl_post_availability_text">This post is also available in: %s</key>    
+    </language-switcher-settings>    
+</wpml-config>
+
+

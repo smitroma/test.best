@@ -1,0 +1,45 @@
+h1, h2, h3, h4, h5, h6{color: #004b8d;}
+
+.align-center{margin: 0 auto;};
+
+.vc_progress_bar {margin-bottom:5px;}
+.wpb_heading wpb_progress_bar_heading{margin-top:22px;}
+
+.separator_align_left div{padding-left:0px !important; font-weight:bold;}
+
+.entry h1, .entry h2, .entry h3, .entry h4, .entry h5, .entry h6 {
+margin-bottom: 5px;
+margin-top: 20px;
+}
+
+.hentry ul li{
+	font-weight: 300;
+	font-size: 13px;
+	
+}
+
+.gray-callout{background: #f4f4f4; padding: 12px; margin-bottom: 15px !important;}
+
+.entry .post-icons{display:none;}
+
+/* to top btn*/
+#toTop{background-color: #004b8d !important;}
+
+/* center within*/
+.center-within{
+	text-align: center;	
+}
+
+
+/* layer slider */
+.ls-nav-next, .ls-nav-prev{	background-color: #004b8d !important;}
+
+/* testimonials */
+.testimonial p{text-align: right; margin-top: 10px;}
+
+/* seperator headings */
+.vc_text_separator div {font-size: 20px;}
+
+
+/* Trends */
+.small-bottom, .small-bottom div {margin-bottom: 5px !important; padding-bottom: 0px;}

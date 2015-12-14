@@ -1,0 +1,145 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Avian\n"
+"POT-Creation-Date: 2013-12-27 13:26-0000\n"
+"PO-Revision-Date: 2013-12-27 13:49-0000\n"
+"Last-Translator: \n"
+"Language-Team: Team Avian <jayneshvekaria@hotmail.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;e_\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../comments.php:65
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+"Sie müssen <a href=\"%s\">eingeloggt</a> sein, um einen Kommentar zu "
+"schreiben"
+
+#: ../comments.php:67
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"angemeldet als <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Melden "
+"Sie sich von diesem Konto\">ausloggen?</a>"
+
+#: ../comments.php:70
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+"Sie können diese verwenden <abbr title=\"HyperText Markup Language\">HTML</"
+"abbr> tags und attribute: %s"
+
+#: ../comments.php:73
+msgid "Name"
+msgstr "Name"
+
+#: ../comments.php:75
+msgid "Email"
+msgstr "Email"
+
+#: ../comments.php:77
+msgid "Website"
+msgstr "Webseite"
+
+#: ../functions.php:190
+msgid "Search"
+msgstr "Suche"
+
+#: ../functions.php:460 ../functions.php:521
+msgid "sometime"
+msgstr "irgendwann"
+
+#: ../functions.php:483 ../functions.php:504 ../functions.php:544
+msgid "seconds"
+msgstr "sekunden"
+
+#: ../functions.php:498
+msgid "year"
+msgstr "jahr"
+
+#: ../functions.php:498
+msgid "years"
+msgstr "jahre"
+
+#: ../functions.php:499
+msgid "month"
+msgstr "monat"
+
+#: ../functions.php:499
+msgid "months"
+msgstr "monat"
+
+#: ../functions.php:500
+msgid "week"
+msgstr "woche"
+
+#: ../functions.php:500
+msgid "weeks"
+msgstr "woche"
+
+#: ../functions.php:501
+msgid "day"
+msgstr "tag"
+
+#: ../functions.php:501
+msgid "days"
+msgstr "tage"
+
+#: ../functions.php:502
+msgid "hour"
+msgstr "stunde"
+
+#: ../functions.php:502
+msgid "hours"
+msgstr "stunden"
+
+#: ../functions.php:503
+msgid "minute"
+msgstr "minute"
+
+#: ../functions.php:503
+msgid "minutes"
+msgstr "minute"
+
+#: ../functions.php:504
+msgid "second"
+msgstr "sekunde"
+
+#: ../functions.php:547
+msgid " ago"
+msgstr "Vor"
+
+#: ../functions.php:577
+msgid "You are here"
+msgstr "Sie sind hier"
+
+#: ../functions.php:582
+msgid "Home"
+msgstr "Startseite"
+
+#: ../functions.php:794
+msgid "Views"
+msgstr "Aufrufe"
+
+#: ../functions.php:831
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Sie haben keine ausreichenden Rechte, um auf diese Seite zuzugreifen."
+
+#: ../framework/widgets/widget_twitter.php:12
+msgid "A widget that displays your latest tweets"
+msgstr "Ein Widget, das zeigt Ihre neuesten Tweets"
+
+#: ../framework/widgets/widget_twitter.php:14
+msgid "Twitter Feed"
+msgstr "Twitter Feed"

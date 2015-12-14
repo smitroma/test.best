@@ -1,0 +1,144 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Avian\n"
+"POT-Creation-Date: 2013-12-27 13:26-0000\n"
+"PO-Revision-Date: 2013-12-28 23:11-0000\n"
+"Last-Translator: \n"
+"Language-Team: Team Avian <jayneshvekaria@hotmail.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;e_\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../comments.php:65
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+"<a href=\"%s\">Вы должны войти в систему, чтобы оставить комментарий.</a>"
+
+#: ../comments.php:67
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"Вы вошли как <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Выйти?"
+"\">Выйти?</a>"
+
+#: ../comments.php:70
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+"Вы можете использовать эти <abbr title=\"HyperText Markup Language\">HTML</"
+"abbr>теги и атрибуты: %s"
+
+#: ../comments.php:73
+msgid "Name"
+msgstr "название"
+
+#: ../comments.php:75
+msgid "Email"
+msgstr "е-мейл"
+
+#: ../comments.php:77
+msgid "Website"
+msgstr "сайт"
+
+#: ../functions.php:190
+msgid "Search"
+msgstr "поиск"
+
+#: ../functions.php:460 ../functions.php:521
+msgid "sometime"
+msgstr "когда-то"
+
+#: ../functions.php:483 ../functions.php:504 ../functions.php:544
+msgid "seconds"
+msgstr "секунды"
+
+#: ../functions.php:498
+msgid "year"
+msgstr "год"
+
+#: ../functions.php:498
+msgid "years"
+msgstr "лет"
+
+#: ../functions.php:499
+msgid "month"
+msgstr "месяц"
+
+#: ../functions.php:499
+msgid "months"
+msgstr "месяцев"
+
+#: ../functions.php:500
+msgid "week"
+msgstr "неделя"
+
+#: ../functions.php:500
+msgid "weeks"
+msgstr "недели"
+
+#: ../functions.php:501
+msgid "day"
+msgstr "день"
+
+#: ../functions.php:501
+msgid "days"
+msgstr "дней"
+
+#: ../functions.php:502
+msgid "hour"
+msgstr "час"
+
+#: ../functions.php:502
+msgid "hours"
+msgstr "часов"
+
+#: ../functions.php:503
+msgid "minute"
+msgstr "минут"
+
+#: ../functions.php:503
+msgid "minutes"
+msgstr "минут"
+
+#: ../functions.php:504
+msgid "second"
+msgstr "второй"
+
+#: ../functions.php:547
+msgid " ago"
+msgstr "тому назад"
+
+#: ../functions.php:577
+msgid "You are here"
+msgstr "Вы здесь"
+
+#: ../functions.php:582
+msgid "Home"
+msgstr "домой"
+
+#: ../functions.php:794
+msgid "Views"
+msgstr "Просмотров"
+
+#: ../functions.php:831
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Вы не имеете достаточно прав для доступа к этой странице."
+
+#: ../framework/widgets/widget_twitter.php:12
+msgid "A widget that displays your latest tweets"
+msgstr "Виджет, который отображает ваши последние твиты"
+
+#: ../framework/widgets/widget_twitter.php:14
+msgid "Twitter Feed"
+msgstr "Твиттер"

@@ -1,0 +1,62 @@
+#wps-panel { margin-top:30px; margin-right:20px; }
+
+#wps-panel ol {
+	font-size: 13px;
+}
+#wps-panel p {
+	font-size: 13px !important;
+	line-height: 22px;
+}
+     
+#wps-panel-sidebar { float:left; width:150px; }
+    #wps-panel-sidebar ul, #wps-panel-sidebar li { list-style-type:none; margin:0; padding:0; }
+    #wps-panel-sidebar ul { background:#666; border:1px solid #555; border-bottom:0; }
+        #wps-panel-sidebar a { display:block; font-size:11px; padding:8px 10px; border-bottom:1px solid #555; text-decoration:none; color:#fff; text-shadow:1px 0 0 #222; font-weight:bold; }
+        #wps-panel-sidebar a:hover { background:#555; color:#fff; }
+        #wps-panel-sidebar a.wps-panel-active { background:#555; color:#fff; }
+ 
+#wps-panel-content { overflow:hidden; padding:22px; border-top:2px solid #555; background:#f7f7f7; }
+#wps-panel-content, #wps-panel-content p { font-size:11px; color:#666; }
+ 
+.wps-panel-section { display:none; }
+.wps-panel-section.wps-panel-active { display:block; }
+        
+#wps-panel pre {
+ background: #fff;
+ padding: 22px 22px 22px 22px;
+ border-bottom: 1px solid #ddd !important;
+}
+ 
+#import-demo {
+	padding: 22px 32px 22px 32px !important;
+	height: auto !important;
+	text-align: center;
+}
+ 
+.field_key-field_5253ce05acb60, .field_key-field_5253cd96bcc60 {
+	text-align: center !important;
+}
+
+.field_key-field_5253ce05acb60 h1 {
+	color: #E14D43;
+}
+
+.field_key-field_5253ce05acb60 h2 span {
+	color: #E14D43 !important;
+}
+.zt-admin-important {
+	border: 1px solid #e1e1e1;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	background: #F5f5f5;
+	padding: 22px 22px 44px 22px;
+	border-radius: 5px;
+}
+.wpb_element_wrapper .full_width, .wpb_element_wrapper .bg_colour, .wpb_element_wrapper .background_bg, .wpb_element_wrapper .row_dark, .wpb_element_wrapper .parallax_bg, .wpb_element_wrapper .isotope, .wpb_element_wrapper .row_large, .wpb_element_wrapper .remove_top_margin, .wpb_element_wrapper .remove_bottom_margin, .wpb_element_wrapper .remove_top_padding, .wpb_element_wrapper .remove_button_padding {
+	display: none !important;
+}

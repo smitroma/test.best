@@ -1,0 +1,139 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Avian\n"
+"POT-Creation-Date: 2013-12-27 13:26-0000\n"
+"PO-Revision-Date: 2013-12-27 13:26-0000\n"
+"Last-Translator: \n"
+"Language-Team: Team Avian <jayneshvekaria@hotmail.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;e_\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../comments.php:65
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: ../comments.php:67
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+
+#: ../comments.php:70
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+
+#: ../comments.php:73
+msgid "Name"
+msgstr ""
+
+#: ../comments.php:75
+msgid "Email"
+msgstr ""
+
+#: ../comments.php:77
+msgid "Website"
+msgstr ""
+
+#: ../functions.php:190
+msgid "Search"
+msgstr ""
+
+#: ../functions.php:460 ../functions.php:521
+msgid "sometime"
+msgstr ""
+
+#: ../functions.php:483 ../functions.php:504 ../functions.php:544
+msgid "seconds"
+msgstr ""
+
+#: ../functions.php:498
+msgid "year"
+msgstr ""
+
+#: ../functions.php:498
+msgid "years"
+msgstr ""
+
+#: ../functions.php:499
+msgid "month"
+msgstr ""
+
+#: ../functions.php:499
+msgid "months"
+msgstr ""
+
+#: ../functions.php:500
+msgid "week"
+msgstr ""
+
+#: ../functions.php:500
+msgid "weeks"
+msgstr ""
+
+#: ../functions.php:501
+msgid "day"
+msgstr ""
+
+#: ../functions.php:501
+msgid "days"
+msgstr ""
+
+#: ../functions.php:502
+msgid "hour"
+msgstr ""
+
+#: ../functions.php:502
+msgid "hours"
+msgstr ""
+
+#: ../functions.php:503
+msgid "minute"
+msgstr ""
+
+#: ../functions.php:503
+msgid "minutes"
+msgstr ""
+
+#: ../functions.php:504
+msgid "second"
+msgstr ""
+
+#: ../functions.php:547
+msgid " ago"
+msgstr ""
+
+#: ../functions.php:577
+msgid "You are here"
+msgstr ""
+
+#: ../functions.php:582
+msgid "Home"
+msgstr ""
+
+#: ../functions.php:794
+msgid "Views"
+msgstr ""
+
+#: ../functions.php:831
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: ../framework/widgets/widget_twitter.php:12
+msgid "A widget that displays your latest tweets"
+msgstr ""
+
+#: ../framework/widgets/widget_twitter.php:14
+msgid "Twitter Feed"
+msgstr ""

@@ -1,0 +1,139 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Avian\n"
+"POT-Creation-Date: 2013-12-27 13:26-0000\n"
+"PO-Revision-Date: 2013-12-27 13:26-0000\n"
+"Last-Translator: \n"
+"Language-Team: Team Avian <jayneshvekaria@hotmail.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;e_\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../comments.php:65
+#, php-format
+msgid "Musisz być <a href=\"%s\">zalogowany</a> żeby umieścić komentarz."
+msgstr ""
+
+#: ../comments.php:67
+#, php-format
+msgid ""
+"Zalogowany jako <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Wyloguj się "
+"this account\">Log out?</a>"
+msgstr ""
+
+#: ../comments.php:70
+#, php-format
+msgid ""
+"Musisz uzyć <abbr title=\"HyperText Markup Language\">HTML</abbr> tagu "
+"and attributes: %s"
+msgstr ""
+
+#: ../comments.php:73
+msgid "Imię"
+msgstr ""
+
+#: ../comments.php:75
+msgid "Email"
+msgstr ""
+
+#: ../comments.php:77
+msgid "Strona www"
+msgstr ""
+
+#: ../functions.php:190
+msgid "Szukaj"
+msgstr ""
+
+#: ../functions.php:460 ../functions.php:521
+msgid "czasami"
+msgstr ""
+
+#: ../functions.php:483 ../functions.php:504 ../functions.php:544
+msgid "sekund"
+msgstr ""
+
+#: ../functions.php:498
+msgid "rok"
+msgstr ""
+
+#: ../functions.php:498
+msgid "lat"
+msgstr ""
+
+#: ../functions.php:499
+msgid "miesiąc"
+msgstr ""
+
+#: ../functions.php:499
+msgid "miesięcy"
+msgstr ""
+
+#: ../functions.php:500
+msgid "tydzień"
+msgstr ""
+
+#: ../functions.php:500
+msgid "tygodni"
+msgstr ""
+
+#: ../functions.php:501
+msgid "dzień"
+msgstr ""
+
+#: ../functions.php:501
+msgid "dni"
+msgstr ""
+
+#: ../functions.php:502
+msgid "godzina"
+msgstr ""
+
+#: ../functions.php:502
+msgid "godzin"
+msgstr ""
+
+#: ../functions.php:503
+msgid "minuta"
+msgstr ""
+
+#: ../functions.php:503
+msgid "minut"
+msgstr ""
+
+#: ../functions.php:504
+msgid "sekund"
+msgstr ""
+
+#: ../functions.php:547
+msgid " temu"
+msgstr ""
+
+#: ../functions.php:577
+msgid "Jesteś tu"
+msgstr ""
+
+#: ../functions.php:582
+msgid "Strona Główna"
+msgstr ""
+
+#: ../functions.php:794
+msgid "Wyświetleń"
+msgstr ""
+
+#: ../functions.php:831
+msgid "nie masz uprawnień do wyświetlenia tej strony."
+msgstr ""
+
+#: ../framework/widgets/widget_twitter.php:12
+msgid "Ten widget wyświetla ostatnie tweety."
+msgstr ""
+
+#: ../framework/widgets/widget_twitter.php:14
+msgid "Twitter Feed"
+msgstr ""
