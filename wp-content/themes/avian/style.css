@@ -1107,8 +1107,8 @@ textarea:focus {
 	margin-bottom: 0px;
 	height: 100%;
 	display: inline-block;
-	font-size: 11px;
-	color: #555;
+	font-size: 13px;
+	color: #e9e9e9;
 	font-weight: 300;
 	padding-top: 10px;
 	padding-right: 12px;
