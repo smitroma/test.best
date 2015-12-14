@@ -906,7 +906,7 @@ textarea:focus {
 	padding: 15px 18px 35px 18px;
 	text-align: center;
 	font-family: "Open Sans";
-	font-size: 17px;
+	font-size: 17px !important;
 	font-weight: 500;
 	background-image: url(assets/img/navigation_divider.png);
 	background-repeat: no-repeat;
