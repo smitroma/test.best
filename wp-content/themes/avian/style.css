@@ -838,6 +838,7 @@ textarea:focus {
 }
 .nav-logo img {
 	height: 101px;
+    padding-bottom: 10px;
 	width: auto;
 }
 .nav-logo-center {
@@ -882,7 +883,7 @@ textarea:focus {
 	margin-bottom: 0px;
 }
 .navigation {
-	margin-top: 20px;
+	margin-top: 10px;
 	display: block;
 	transition: all 0.2s;
     -webkit-transition: all 0.2s;
