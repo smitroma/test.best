@@ -503,7 +503,7 @@ function testimonial_register() {
 		'menu_icon' => get_template_directory_uri() . '/assets/img/admin_icon2.png',
 		'rewrite' => true,
 		'menu_position' => null,
-		'supports' => array('title', 'editor', 'thumbnail'),
+		'supports' => array('editor', 'thumbnail'),
 		'show_in_menu' => TRUE,
 		'show_in_nav_menus' => TRUE,
 		'has_archive' => TRUE
