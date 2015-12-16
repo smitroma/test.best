@@ -17,7 +17,6 @@ wp-content/wp-cache-config.php
 wp-content/cache/*
 wp-content/cache/supercache/*
 .htaccess
-index.php
 license.txt
 readme.html
 wp-activate.php
