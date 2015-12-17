@@ -2,7 +2,7 @@
 Theme Name: Avian
 Theme URI: http://www.zeotheory.com
 Description: A MultiPurpose WordPress Theme.
- 
+
 Author: Jaynesh
 Author URI: http://themeforest.net/user/Jaynesh
 Version: 1.2
@@ -39,52 +39,52 @@ version 3.0 (http://www.gnu.org/licenses/gpl-3.0.html)
 /*	1. Base CSS
 /*-----------------------------------------------------------------------------------*/
 
-* { 
+* {
 	margin: 0;
 	padding: 0px;
 	font-family: "Open Sans";
-} 
-body { 
-	background: #f8f8f8; 
-	margin: 0; 
-	height: 100%; 
+}
+body {
+	background: #f8f8f8;
+	margin: 0;
+	height: 100%;
 	z-index: 1000;
 	color: #555;
 }
-img	{ 
-	border: 0; 
-	padding: 0 0 0 0; 
+img	{
+	border: 0;
+	padding: 0 0 0 0;
 }
-a { 
+a {
 	outline: none;
 	font-weight: 600;
 }
-a:hover, a:visited, a:link, a:active { 
-	text-decoration: none; 
-	color: #666; 
+a:hover, a:visited, a:link, a:active {
+	text-decoration: none;
+	color: #666;
 }
 a:hover {
 	color: #333;
 }
-ul, li { 
-	padding: 0 0 0 0; 
-	margin: 0; 
-	list-style-type: none; 
+ul, li {
+	padding: 0 0 0 0;
+	margin: 0;
+	list-style-type: none;
 }
 hr {
 	border: 0;
 	border-bottom: 1px dashed #ddd;
 }
-p { 
-	width: 100%; 
-	padding: 0 0 0 0; 
-	margin-bottom: 22px; 
-	font-family: "Open Sans" !important; 
+p {
+	width: 100%;
+	padding: 0 0 0 0;
+	margin-bottom: 22px;
+	font-family: "Open Sans" !important;
 	font-weight: 300;
-	font-size: 13px; 
+	font-size: 13px;
 	line-height: 24px;
-	color: #777; 
- 	margin-top: 0; 
+	color: #777;
+ 	margin-top: 0;
 }
 strong {
 	font-weight: 600;
@@ -92,18 +92,18 @@ strong {
 iframe {
 	border: none !important;
 }
-p a { 
-	color: #333 !important; 
+p a {
+	color: #333 !important;
 }
-h1, h2, h3, h4, h5, h6 { 
+h1, h2, h3, h4, h5, h6 {
 	font-family: "Open Sans" !important;
 	font-weight: 500;
-	padding: 0 0 0 0; 
-	margin-top: 0; margin-bottom: 22px; margin-left: auto; margin-right: auto; 
+	padding: 0 0 0 0;
+	margin-top: 0; margin-bottom: 22px; margin-left: auto; margin-right: auto;
 	color: #50575E;
-	letter-spacing: -0.4px; 
+	letter-spacing: -0.4px;
 }
-.entry h1, .entry h2, .entry h3, .entry h4, .entry h5, .entry h6 { 
+.entry h1, .entry h2, .entry h3, .entry h4, .entry h5, .entry h6 {
 	margin-bottom: 12px;
 }
 blockquote {
@@ -163,7 +163,7 @@ address, pre {
 	float: right !important;
 }
 .center {
-	margin-left: auto; 
+	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
 }
@@ -211,7 +211,7 @@ address, pre {
 .content-heading a:hover {
 	color: #444;
 }
-.heading { 
+.heading {
 	font-size: 16px;
 	font-family: "Open Sans";
 	margin-bottom: 0px;
@@ -222,7 +222,7 @@ address, pre {
 	width: 65%;
 	display: inline-block;
 }
-.heading { 
+.heading {
 	font-size: 16px;
 	font-family: "Open Sans";
 	margin-bottom: 30px;
@@ -439,7 +439,7 @@ textarea {
 	height: inherit !important;
 }
 input {
-	height: 40px !important; 
+	height: 40px !important;
 	width: 100%;
 }
 input, textarea, select, a { outline: none !important; }
@@ -451,7 +451,7 @@ input, textarea {
 	border-bottom: 1px solid #e7e7e7 !important;
 	box-shadow: none !important;
 	padding: 12px 12px !important;
-	cursor: pointer;	
+	cursor: pointer;
 	font-size: 12px !important;
 	box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
 	transition: all 0.4s; -moz-transition: all 0.4s; -webkit-transition: all 0.4s; -o-transition: all 0.4s;
@@ -625,7 +625,7 @@ textarea:focus {
 	line-height: 50px;
 	margin-left: auto;
 	margin-right: auto;
-	text-align: center;	
+	text-align: center;
 	margin-bottom: 12px;
 	background: #F6F6F6;
 }
@@ -742,8 +742,8 @@ textarea:focus {
 	margin-bottom: 0px;
 }
 .footer .up {
-	position: absolute; 
-	margin-top: -60px; 
+	position: absolute;
+	margin-top: -60px;
 	margin-right: 22px;
 	right: 0;
 }
@@ -771,11 +771,11 @@ textarea:focus {
 .quote-section:after {
 	content: "";
 	position: absolute;
-	width: 0; 
-	height: 0; 
+	width: 0;
+	height: 0;
 	border-left: 11px solid transparent;
 	border-right: 11px solid transparent;
-	
+
 	border-top: 11px solid #fff;
 	top: -1px;
 	left: 0;
@@ -1005,11 +1005,11 @@ textarea:focus {
 .sub-menu-arrow {
 	content: "";
 	position: absolute;
-	width: 0; 
-	height: 0; 
+	width: 0;
+	height: 0;
 	border-left: 4px solid transparent;
 	border-right: 4px solid transparent;
-	
+
 	border-bottom: 4px solid #323538;
 	margin-top: -4px;
 	top: 0;
@@ -1049,7 +1049,7 @@ textarea:focus {
 	padding: 15px 12px 19px 12px;
 }
 .header-scrolled .dropdown .sub-menu li a {
-	background: #323538 !important; 
+	background: #323538 !important;
 }
 .header-scrolled .header-logo {
 	position: absolute;
@@ -1058,8 +1058,8 @@ textarea:focus {
 .header-scrolled .header-logo img {
 	height: 70%;
 }
-.header-scrolled .sub-menu .current-menu-item a { 
-	background: #323538 !important; 
+.header-scrolled .sub-menu .current-menu-item a {
+	background: #323538 !important;
 }
 .header-scrolled .navigation .sub-menu li a:hover {
 	background: #2D3033 !important;
@@ -1198,7 +1198,7 @@ textarea:focus {
 .mega-menu .sub-menu .menu-item-has-children > a:hover {
 	padding-left: 20px !important;
 	background: inherit !important;
-	
+
 }
 .navigation .sub-menu i {
 	color: #fff !important;
@@ -1237,7 +1237,7 @@ textarea:focus {
 	border-right: 0px !important;
 }
 
-	
+
 /*-----------------------------------------------------------------------------------*/
 /*	6. Mobile Navigation
 /*-----------------------------------------------------------------------------------*/
@@ -1651,12 +1651,12 @@ textarea:focus {
 .icon {
 	width: 13px; height: 13px;
 	display: inline-block;
-	position: relative; 
+	position: relative;
 	top: 3px;
 	margin-right: 0px;
 }
 .like {
-	background: url(assets/img/icon_like.png) no-repeat center; background-size: contain;	
+	background: url(assets/img/icon_like.png) no-repeat center; background-size: contain;
 	margin-right: 3px;
 }
 .entry-meta {
@@ -1721,10 +1721,10 @@ textarea:focus {
 	left: 0;
 	right: 0;
 	opacity: 0;
-	transition: all 0.2s ease-in; 
-	-moz-transition: all 0.2s ease-in; 
-	-webkit-transition: all 0.2s ease-in; 
-	display:table-cell; 
+	transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
+	display:table-cell;
 	vertical-align:middle;
 	z-index: 1;
 }
@@ -1743,8 +1743,8 @@ textarea:focus {
 	background: #4DD2B8;
 	padding: 10px 10px;
 	border-radius: 2px;
-	transition: all 0.2s ease-in; 
-	-moz-transition: all 0.2s ease-in; 
+	transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
 	-webkit-transition: all 0.2s ease-in;
 }
 .entry-image:hover .view {
@@ -1791,7 +1791,7 @@ textarea:focus {
 .entry-image img {
 	width: 100%;
 	position: relative;
-	transition: all 0.2s ease-in; -moz-transition: all 0.2s ease-in; -webkit-transition: all 0.2s ease-in; 
+	transition: all 0.2s ease-in; -moz-transition: all 0.2s ease-in; -webkit-transition: all 0.2s ease-in;
 	-o-transition: all 0.2s ease-in;
 }
 .entry-image-overlay {
@@ -1800,8 +1800,8 @@ textarea:focus {
 	position: absolute; top: 0px;
 	opacity: 0;
 	z-index: 1;
-	background-color: #222528; 
-	transition: all 0.2s ease-in; -moz-transition: all 0.2s ease-in; -webkit-transition: all 0.2s ease-in; 
+	background-color: #222528;
+	transition: all 0.2s ease-in; -moz-transition: all 0.2s ease-in; -webkit-transition: all 0.2s ease-in;
 	-o-transition: all 0.2s ease-in;
 	border-radius: 3px;
 }
@@ -2041,7 +2041,7 @@ textarea:focus {
 	height: auto;
 	float: left; /* Places list items side by side*/
 	list-style: none; /* Resets default - User Agent - style */
-	
+
 	/* Cosmetic */
 	margin: 0 1px;
 	padding: 10px;
@@ -2056,7 +2056,7 @@ textarea:focus {
 #simplePrevious, #simpleNext{
 	cursor: pointer;
 	font-size: 0.8em;
-	text-decoration: underline;	
+	text-decoration: underline;
 }
 
 /* counter */
@@ -2355,7 +2355,7 @@ textarea:focus {
 	 border-right:24px solid transparent;
 	 bottom: -24px;
 	 z-index: 10;
-	
+
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -2397,7 +2397,7 @@ textarea:focus {
 }
 .social-button-team a img {
 	height: 20px !important;
-	width: auto !important; 
+	width: auto !important;
 }
 .social-button-team:hover {
 	opacity: 1;
@@ -2417,7 +2417,7 @@ textarea:focus {
 	margin-left: auto;
 	margin-right: auto;
 }
-.mobile-footer ul li { 
+.mobile-footer ul li {
 	display: inline-block;
 	padding-right: 2px;
 }
@@ -2491,14 +2491,14 @@ a img.aligncenter {
     margin: 0;
     padding: 0 4px 5px;
 }
-.sticky { 
-	color:red; 
+.sticky {
+	color:red;
 }
 .gallery-caption {
-	
+
 }
 .bypostauthor {
-	
+
 }
 .clearboth {
 	height: 0;
@@ -2510,7 +2510,7 @@ a img.aligncenter {
 	height: 22px;
 	width: 100%;
 }
-.size-auto, 
+.size-auto,
 .size-full,
 .size-large,
 .size-medium,
@@ -2529,10 +2529,10 @@ a img.aligncenter {
 
 /* Footer Widgets */
 .sub-footer {
-	font-family: 'Oswald' !important; 
-	font-size: 12px; 
+	font-family: 'Oswald' !important;
+	font-size: 12px;
 	line-height: 20px;
-	color: #fff; 
+	color: #fff;
 }
 .sub-footer > .span3 {
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
@@ -2610,8 +2610,8 @@ a img.aligncenter {
 
 /* Sidebar Widgets */
 .widget-area > div {
-	-moz-box-sizing: border-box; 
-	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	position: relative;
 	margin-bottom: 50px;
@@ -2677,12 +2677,12 @@ a img.aligncenter {
 .widget-area ul li {
 	border-bottom: 1px dotted #ccc;
 	padding-bottom: 12px;
-	padding-top: 12px;	
+	padding-top: 12px;
 }
 .widget-area ul ul li:last-child {
 	border-bottom: 0px dotted #ccc;
 	padding-bottom: 0;
-	padding-top: 12px;	
+	padding-top: 12px;
 }
 .widget-area .widget_recent_entries ul li {
 	background: #f3f3f3;
@@ -2763,7 +2763,7 @@ a img.aligncenter {
 .widget_nav_menu ul li a {
 	border-bottom: 1px solid #e7e7e7;
 	border-right: 1px solid #e7e7e7;
-	box-shadow: inset -20px 0px 9px -10px #f6f6f6; 
+	box-shadow: inset -20px 0px 9px -10px #f6f6f6;
 	padding-bottom: 16px;
 	padding-top: 16px;
 	padding-left: 16px;
@@ -2788,7 +2788,7 @@ a img.aligncenter {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-} 
+}
 .widget-right .widget-area {
 	padding-left: 30px;
 	border-left: 1px solid #f1f1f1;
@@ -2800,7 +2800,7 @@ a img.aligncenter {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-} 
+}
 .widget-left .widget-area {
 	padding-right: 30px;
 	border-right: 1px solid #f1f1f1;
@@ -2891,7 +2891,7 @@ a img.aligncenter {
 	transition: all 0.3s;
 	-webkit-transition: all 0.3s; /* Safari */
 	-ms-transition: all 0.3s;
-	
+
 }
 .ls-wp-fullwidth-helper {
 	top: auto;
@@ -3030,7 +3030,7 @@ a img.aligncenter {
 	font-weight: 400;
 	font-size: 12px;
 	cursor: pointer;
-	color: #fff !important; 
+	color: #fff !important;
 	box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
 	background-color: #50575E;
 	margin-left: -1px;
@@ -3057,7 +3057,7 @@ a img.aligncenter {
 	font-weight: 400;
 	font-size: 12px;
 	cursor: pointer;
-	color: #fff !important; 
+	color: #fff !important;
 	box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
 	background-color: #4DD2B8;
 	border-top: 0px solid #4DD2B8 !important;
@@ -3073,13 +3073,13 @@ a img.aligncenter {
 	font-weight: 400;
 	font-size: 12px;
 	cursor: pointer;
-	color: #666 !important; 
+	color: #666 !important;
 	box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
 	border-bottom: 1px solid #e7e7e7 !important;
 	border-right: 1px solid #e7e7e7;
 	background: #fff;
 	box-shadow: -20px 0 9px -10px #F6f6f6 inset;
-	
+
 }
 .wpb_tour .ui-state-default:last-child .ui-tabs-anchor {
 	border-bottom: 0px !important;
@@ -3097,7 +3097,7 @@ a img.aligncenter {
 	transition: all 0.2s;
     -webkit-transition: all 0.2s; /* Safari */
 }
-.wpb_tour .ui-tabs-anchor:hover { 
+.wpb_tour .ui-tabs-anchor:hover {
 	background: #f8f8f8;
 	padding-left: 32px !important;
 }
@@ -3136,12 +3136,12 @@ a img.aligncenter {
 	border-radius: 5px;
 }
 .flex-direction-nav .flex-next {
-	margin-right: 20px !important; 
-	background: #000 url(assets/img/nextpost.png) center center no-repeat !important; 
+	margin-right: 20px !important;
+	background: #000 url(assets/img/nextpost.png) center center no-repeat !important;
 }
 .flex-direction-nav .flex-prev {
 	margin-left: 20px !important;
-	background: #000 url(assets/img/prevpost.png) center center no-repeat !important; 
+	background: #000 url(assets/img/prevpost.png) center center no-repeat !important;
 }
 .flex-control-nav li {
 	margin: 0px 5px !important;
@@ -3176,7 +3176,7 @@ a img.aligncenter {
 	font-size: 16px !important;
 }
 .wpb_column {
-	margin-bottom: 0px !important; 
+	margin-bottom: 0px !important;
 }
 /*-----------------------------------------------------------------------------------*/
 /*	17. Misc
@@ -3333,14 +3333,16 @@ a img.aligncenter {
 	-moz-box-sizing: content-box!important;
 	-webkit-box-sizing: content-box!important;
 	margin-left: -150%;
-    padding-left: 150%;
-    padding-right: 150%;
-    width: 100%;
-    position: relative;
-    z-index: 0;
-    background: #f7f7f7;
-    border-top: 1px solid #f1f1f1;
-    border-bottom: 1px solid #f1f1f1;
+  padding-left: 150%;
+  padding-right: 150%;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  /*background: #f7f7f7;
+  border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;*/
 }
 .full-width-portfolio {
 	padding-right: 0px;
@@ -3348,9 +3350,9 @@ a img.aligncenter {
 	border-top: 0px;
 	border-bottom: 0px;
 	opacity: 0;
-	transition: all 0.2s ease-in; 
-	-moz-transition: all 0.2s ease-in; 
-	-webkit-transition: all 0.2s ease-in; 
+	transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
 }
 .full-width-light {
 	margin-top: 30px;
@@ -3496,9 +3498,9 @@ a img.aligncenter {
 .team-icons [class*="fa-"] {
 	margin-right: 8px;
 	color: #4A4F54;
-	transition: all 0.2s ease-in; 
-	-moz-transition: all 0.2s ease-in; 
-	-webkit-transition: all 0.2s ease-in; 
+	transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
 }
 .team-icons [class*="fa-"]:hover {
 	color: #5ED2C6;
@@ -3656,7 +3658,7 @@ a img.aligncenter {
 
 .feature
 .feature h3 {
-	margin-bottom: 12px; 
+	margin-bottom: 12px;
 }
 .feature-icon {
 	color: #51BAB6;
@@ -3851,9 +3853,9 @@ a img.aligncenter {
 /* Alex Edits */
 .align-center{margin: 0 auto;}
 
-.main-row{padding-top: 10px; padding-bottom: 5px;}
-.wpb_text_column{padding-bottom: 5px !important;}
-.wpb_row, .wpb_content_element, ul.wpb_thumbnails-fluid > li, .last_toggle_el_margin, .wpb_button{margin-bottom: 10px !important; margin-top: 5px;}
+.main-row { padding-top: 10px; padding-bottom: 5px; }
+.wpb_text_column { padding-bottom: 5px !important;}
+.wpb_row, .wpb_content_element, ul.wpb_thumbnails-fluid > li, .last_toggle_el_margin, .wpb_button{ margin-bottom: 10px; margin-top: 5px;}
 
 .no-marg {margin-bottom: 2px !important;}
 .wpb_heading .wpb_progress_bar_heading{margin-top:22px;}
