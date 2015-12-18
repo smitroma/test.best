@@ -3,8 +3,8 @@
  * The template for displaying all single posts and attachments
  *
  * @package Brain_Bytes
- * @subpackage Zaban_Couples
- * @since Zaban Couples 1.0
+ * @subpackage Hodges Mace 
+ * @since Hodges Mace  1.0
  */
 
 get_header(); ?>

@@ -1,10 +1,10 @@
 <?php
 /**
- * Zaban Couples functions and definitions
+ *  functions and definitions
  *
  * @package Brain_Bytes
- * @subpackage Zaban_Couples
- * @since Zaban Couples 1.0
+ * @subpackage Hodges Mace 
+ * @since Hodges Mace  1.0
  */
 
 if (!function_exists('zabancouples_setup')) {
@@ -63,7 +63,7 @@ add_action( 'after_setup_theme', 'zabancouples_setup' );
  *
  * Adds a `js` class to the root `<html>` element when JavaScript is detected.
  *
- * @since Zaban Couples 1.1
+ * @since Hodges Mace  1.1
  */
 function zabancouples_javascript_detection() {
 	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
@@ -73,7 +73,7 @@ add_action( 'wp_head', 'zabancouples_javascript_detection', 0 );
 /**
  * Enqueue scripts and styles.
  *
- * @since Zaban Couples 1.0
+ * @since Hodges Mace  1.0
  */
 function zabancouples_scripts() {
     wp_enqueue_style('normalize', get_template_directory_uri() . '/css/normalize.min.css');
@@ -89,9 +89,9 @@ function zabancouples_scripts() {
 add_action( 'wp_enqueue_scripts', 'zabancouples_scripts' );
 
 /**
- * Zaban Couples Custom Header
+ *  Custom Header
  *
- * @since Zaban Couples 1.0
+ * @since Hodges Mace  1.0
  */
 
 $custom_header_args = array(

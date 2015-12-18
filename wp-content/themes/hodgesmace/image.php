@@ -3,8 +3,8 @@
  * The template for displaying image attachments
  *
  * @package Brain_Bytes
- * @subpackage Zaban_Couples
- * @since Zaban Couples 1.0
+ * @subpackage Hodges Mace 
+ * @since Hodges Mace  1.0
  */
 
 get_header(); ?>
@@ -34,9 +34,9 @@ get_header(); ?>
 						<div class="entry-attachment">
 							<?php
 								/**
-								 * Filter the default Zaban Couples image attachment size.
+								 * Filter the default  image attachment size.
 								 *
-								 * @since Zaban Couples 1.0
+								 * @since Hodges Mace  1.0
 								 *
 								 * @param string $image_size Image size. Default 'large'.
 								 */

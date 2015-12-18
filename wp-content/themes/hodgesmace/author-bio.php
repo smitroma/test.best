@@ -3,8 +3,8 @@
  * The template for displaying Author bios
  *
  * @package Brain_Bytes
- * @subpackage Zaban_Couples
- * @since Zaban Couples 1.0
+ * @subpackage Hodges Mace 
+ * @since Hodges Mace  1.0
  */
 ?>
 
@@ -15,7 +15,7 @@
 		/**
 		 * Filter the author bio avatar size.
 		 *
-		 * @since Zaban Couples 1.0
+		 * @since Hodges Mace  1.0
 		 *
 		 * @param int $size The avatar height and width size in pixels.
 		 */
