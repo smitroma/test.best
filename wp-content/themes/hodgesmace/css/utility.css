@@ -1,0 +1,332 @@
+/*
+ * Alignment utility classes
+ */
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.left {
+  float: left !important;
+}
+.right {
+  float: right !important;
+}
+
+/*
+ * Margin utility classes
+ */
+
+.m-a-0 {
+  margin: 0 !important;
+}
+
+.m-t-0 {
+  margin-top: 0 !important;
+}
+
+.m-r-0 {
+  margin-right: 0 !important;
+}
+
+.m-b-0 {
+  margin-bottom: 0 !important;
+}
+
+.m-l-0 {
+  margin-left: 0 !important;
+}
+
+.m-x-0 {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.m-y-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.m-a {
+  margin: 1em !important;
+}
+
+.m-t {
+  margin-top: 1em !important;
+}
+
+.m-r {
+  margin-right: 1em !important;
+}
+
+.m-b {
+  margin-bottom: 1em !important;
+}
+
+.m-l {
+  margin-left: 1em !important;
+}
+
+.m-x {
+  margin-right: 1em !important;
+  margin-left: 1em !important;
+}
+
+.m-y {
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
+}
+
+.m-x-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.m-a-md {
+  margin: 1.5em !important;
+}
+
+.m-t-md {
+  margin-top: 1.5em !important;
+}
+
+.m-r-md {
+  margin-right: 1.5em !important;
+}
+
+.m-b-md {
+  margin-bottom: 1.5em !important;
+}
+
+.m-l-md {
+  margin-left: 1.5em !important;
+}
+
+.m-x-md {
+  margin-right: 1.5em !important;
+  margin-left: 1.5em !important;
+}
+
+.m-y-md {
+  margin-top: 1.5em !important;
+  margin-bottom: 1.5em !important;
+}
+
+.m-a-lg {
+  margin: 3em !important;
+}
+
+.m-t-lg {
+  margin-top: 3em !important;
+}
+
+.m-t-xl {
+  margin-top: 4em !important;
+}
+
+.m-t-xxl {
+  margin-top: 5em !important;
+}
+
+.m-r-lg {
+  margin-right: 3em !important;
+}
+
+.m-b-lg {
+  margin-bottom: 3em !important;
+}
+
+.m-l-lg {
+  margin-left: 3em !important;
+}
+
+.m-x-lg {
+  margin-right: 3em !important;
+  margin-left: 3em !important;
+}
+
+.m-y-lg {
+  margin-top: 3em !important;
+  margin-bottom: 3em !important;
+}
+
+.m-y-xl {
+  margin-top: 4em !important;
+  margin-bottom: 4em !important;
+}
+
+.m-y-xxl {
+  margin-top: 5em !important;
+  margin-bottom: 5em !important;
+}
+
+.m-y-xxxl {
+  margin-top: 6em !important;
+  margin-bottom: 6em !important;
+}
+
+/*
+ * Padding utility classes
+ */
+.p-a-0 {
+  padding: 0 !important;
+}
+
+.p-t-0 {
+  padding-top: 0 !important;
+}
+
+.p-r-0 {
+  padding-right: 0 !important;
+}
+
+.p-b-0 {
+  padding-bottom: 0 !important;
+}
+
+.p-l-0 {
+  padding-left: 0 !important;
+}
+
+.p-x-0 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.p-y-0 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.p-a {
+  padding: 1em !important;
+}
+
+.p-t {
+  padding-top: 1em !important;
+}
+
+.p-r {
+  padding-right: 1em !important;
+}
+
+.p-b {
+  padding-bottom: 1em !important;
+}
+
+.p-l {
+  padding-left: 1em !important;
+}
+
+.p-x {
+  padding-right: 1em !important;
+  padding-left: 1em !important;
+}
+
+.p-y {
+  padding-top: 1em !important;
+  padding-bottom: 1em !important;
+}
+
+.p-a-md {
+  padding: 1.5em !important;
+}
+
+.p-t-md {
+  padding-top: 1.5em !important;
+}
+
+.p-r-md {
+  padding-right: 1.5em !important;
+}
+
+.p-b-md {
+  padding-bottom: 1.5em !important;
+}
+
+.p-l-md {
+  padding-left: 1.5em !important;
+}
+
+.p-x-md {
+  padding-right: 1.5em !important;
+  padding-left: 1.5em !important;
+}
+
+.p-y-md {
+  padding-top: 1.5em !important;
+  padding-bottom: 1.5em !important;
+}
+
+.p-a-lg {
+  padding: 3em !important;
+}
+
+.p-t-lg {
+  padding-top: 3em !important;
+}
+
+.p-r-lg {
+  padding-right: 3em !important;
+}
+
+.p-b-lg {
+  padding-bottom: 3em !important;
+}
+
+.p-l-lg {
+  padding-left: 3em !important;
+}
+
+.p-x-lg {
+  padding-right: 3em !important;
+  padding-left: 3em !important;
+}
+
+.p-y-lg {
+  padding-top: 3em !important;
+  padding-bottom: 3em !important;
+}
+
+.p-y-xl {
+  padding-top: 4em !important;
+  padding-bottom: 4em !important;
+}
+
+.p-y-xxl {
+  padding-top: 5em !important;
+  padding-bottom: 5em !important;
+}
+
+.p-y-xxxl {
+  padding-top: 6em !important;
+  padding-bottom: 6em !important;
+}
