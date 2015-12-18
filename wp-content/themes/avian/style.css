@@ -3340,6 +3340,7 @@ a img.aligncenter {
   z-index: 0;
   background-repeat: no-repeat;
   background-position-x: 50%;
+  background-size: 30%;
   /*background: #f7f7f7;
   border-top: 1px solid #f1f1f1;
   border-bottom: 1px solid #f1f1f1;*/
@@ -3879,3 +3880,81 @@ input[type=checkbox]{background: none !important; border-bottom-width: 0px !impo
 
 .navigation .sub-menu li a{padding: 10px 15px 10px 15px;}
 .navigation .sub-menu li a:hover{padding-left: 15px;}
+
+
+/* ========================================================================== *
+ * Brain Bytes Redesign
+ * ========================================================================== */
+
+/* Global Elements
+* ------------------------------------------------------------------------- */
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('./assets/fonts/OpenSans-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neuxeit Grotesk Regular';
+    src: url('./assets/fonts/Neuxeit-Grotesk-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neuxeit Grotesk Bold';
+    src: url('./assets/fonts/NeuzeitGro-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, body p, body h4, body h5, body h6 {
+  font-family: 'OpenSans' !important;
+}
+
+body h1, body h2, body h3 {
+  font-family: 'Neuxeit Grotesk Regular' !important;
+}
+
+body h1 strong, body h2 strong, body h3 strong{
+  font-family: 'Neuxeit Grotesk Bold' !important;
+}
+
+/* Home Page
+* ------------------------------------------------------------------------- */
+
+.home-top-banner {
+  height:498px;
+}
+.home-smart-ben-section-top,
+.home-smart-ben-section-columns,
+.home-smart-ben-section-button {
+  background-size: initial;
+  background-repeat: repeat;
+}
+.home-complete-answer-section {
+  height: 150px;
+}
+.home-image-banner-section {
+  height: 392px;
+}
+.home-contact-section {
+  height: 580px;
+}
+
+/* Elements
+ * ------------------------------------------------------------------------- */
+
+/* Buttons */
+body .button-green {
+  background-color: #8ec449 !important;
+  color: #fff !important;
+}
+
+
+/* Helpers
+ * ------------------------------------------------------------------------- */
+
+ .d-n { display: none; }
