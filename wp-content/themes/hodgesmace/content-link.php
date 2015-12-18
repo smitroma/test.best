@@ -15,9 +15,9 @@
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) :
-				the_title( sprintf( '<h1 class="entry-title"><a href="%s">', esc_url( zabancouples_get_link_url() ) ), '</a></h1>' );
+				the_title( sprintf( '<h1 class="entry-title"><a href="%s">', esc_url( hodgesmace_get_link_url() ) ), '</a></h1>' );
 			else :
-				the_title( sprintf( '<h2 class="entry-title"><a href="%s">', esc_url( zabancouples_get_link_url() ) ), '</a></h2>' );
+				the_title( sprintf( '<h2 class="entry-title"><a href="%s">', esc_url( hodgesmace_get_link_url() ) ), '</a></h2>' );
 			endif;
 		?>
 	</header>
@@ -27,16 +27,16 @@
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
-				__( 'Continue reading %s', 'zabancouples' ),
+				__( 'Continue reading %s', 'hodgesmace' ),
 				the_title( '<span class="screen-reader-text">', '</span>', false )
 			) );
 
 			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'zabancouples' ) . '</span>',
+				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'hodgesmace' ) . '</span>',
 				'after'       => '</div>',
 				'link_before' => '<span>',
 				'link_after'  => '</span>',
-				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'zabancouples' ) . ' </span>%',
+				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'hodgesmace' ) . ' </span>%',
 				'separator'   => '<span class="screen-reader-text">, </span>',
 			) );
 		?>
@@ -52,7 +52,7 @@
 
 	<footer class="entry-footer">
 		
-		<?php edit_post_link( __( 'Edit', 'zabancouples' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'hodgesmace' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer>
 	<!-- .entry-footer -->
 

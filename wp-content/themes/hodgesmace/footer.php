@@ -5,18 +5,16 @@
  * Contains the closing of the "site-content" div and all content after.
  *
  * @package Brain_Bytes
- * @subpackage Hodges Mace 
+ * @subpackage Hodges Mace
  * @since Hodges Mace  1.0
  */
 ?>
 </div><!-- .site-content -->
 <div id="footer">
   <div class="row container">
-    <div class="footer-logo">
-      <img src="<?php echo get_template_directory_uri()?>/images/footer-logo.png" />
-    </div>
-    <?php wp_nav_menu(array('menu' => 'Main Menu', 'menu_class' => 'footer_nav')); ?>
-  </container>
+    <p class="left c-white">&copy; <?php echo date('Y') ?> <?php bloginfo('name')?></p>
+    <p class="right c-white"><?php echo do_shortcode('[icon class="fa-linkedin"]') ?> <?php echo do_shortcode('[icon class="fa-envelope"]')?></p>
+  </div>
 </div>
 </div><!-- .container-fluid -->
 <?php wp_footer(); ?>

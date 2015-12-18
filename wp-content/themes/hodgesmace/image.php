@@ -21,7 +21,7 @@ get_header(); ?>
 
 					<nav id="image-navigation" class="navigation image-navigation">
 						<div class="nav-links">
-							<div class="nav-previous"><?php previous_image_link( false, __( 'Previous Image', 'zabancouples' ) ); ?></div><div class="nav-next"><?php next_image_link( false, __( 'Next Image', 'zabancouples' ) ); ?></div>
+							<div class="nav-previous"><?php previous_image_link( false, __( 'Previous Image', 'hodgesmace' ) ); ?></div><div class="nav-next"><?php next_image_link( false, __( 'Next Image', 'hodgesmace' ) ); ?></div>
 						</div><!-- .nav-links -->
 					</nav><!-- .image-navigation -->
 
@@ -40,7 +40,7 @@ get_header(); ?>
 								 *
 								 * @param string $image_size Image size. Default 'large'.
 								 */
-								$image_size = apply_filters( 'zabancouples_attachment_size', 'large' );
+								$image_size = apply_filters( 'hodgesmace_attachment_size', 'large' );
 
 								echo wp_get_attachment_image( get_the_ID(), $image_size );
 							?>
@@ -56,11 +56,11 @@ get_header(); ?>
 						<?php
 							the_content();
 							wp_link_pages( array(
-								'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'zabancouples' ) . '</span>',
+								'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'hodgesmace' ) . '</span>',
 								'after'       => '</div>',
 								'link_before' => '<span>',
 								'link_after'  => '</span>',
-								'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'zabancouples' ) . ' </span>%',
+								'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'hodgesmace' ) . ' </span>%',
 								'separator'   => '<span class="screen-reader-text">, </span>',
 							) );
 						?>
@@ -68,7 +68,7 @@ get_header(); ?>
 
 					<footer class="entry-footer">
 						
-						<?php edit_post_link( __( 'Edit', 'zabancouples' ), '<span class="edit-link">', '</span>' ); ?>
+						<?php edit_post_link( __( 'Edit', 'hodgesmace' ), '<span class="edit-link">', '</span>' ); ?>
 					</footer><!-- .entry-footer -->
 
 				</article><!-- #post-## -->
@@ -81,7 +81,7 @@ get_header(); ?>
 
 					// Previous/next post navigation.
 					the_post_navigation( array(
-						'prev_text' => _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'zabancouples' ),
+						'prev_text' => _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'hodgesmace' ),
 					) );
 
 				// End the loop.

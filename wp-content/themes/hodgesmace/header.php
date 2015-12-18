@@ -3,7 +3,7 @@
  * Header
  *
  * @package Brain_Bytes
- * @subpackage Hodges Mace 
+ * @subpackage Hodges Mace
  * @since Hodges Mace  1.0
  */
 ?>
@@ -21,7 +21,14 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+
   <div class="container-fluid">
+		<div id="top-header">
+			<div class="container">
+				<?php echo do_shortcode('[icon class="fa-search"]') ?>
+				<a class="bttn-white-border m-l-md" href="#">SmartBen Login</a>
+			</div>
+		</div>
     <div id="header">
       <div class="container">
 				<div class="logo">
@@ -29,10 +36,13 @@
             <img	src="<?php header_image(); ?>" alt="<?php bloginfo('name') ?>" />
 					</h1>
 				</div>
-				<div>
 				<div class="mobile-menu-toggle"><i class="fa fa-bars"></i></div>
+				<div id="main-menu">
+					<div class="header-right-button">
+						<a class="bttn-blue">Requeset a Demo</a>
+					</div>
+	        <?php wp_nav_menu(array('menu' => 'Main Menu', 'menu_class' => 'header_nav')); ?>
 				</div>
-        <?php wp_nav_menu(array('menu' => 'Main Menu', 'menu_class' => 'header_nav')); ?>
-      </div>
+    	</div>
     </div>
 		<div class="site-content">

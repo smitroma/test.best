@@ -3,13 +3,13 @@
  *  functions and definitions
  *
  * @package Brain_Bytes
- * @subpackage Hodges Mace 
+ * @subpackage Hodges Mace
  * @since Hodges Mace  1.0
  */
 
-if (!function_exists('zabancouples_setup')) {
+if (!function_exists('hodges_setup')) {
 
-    function zabancouples_setup() {
+    function hodgesmace_setup() {
 
         // Add default posts and comments RSS feed links to head.
         add_theme_support('automatic-feed-links');
@@ -34,7 +34,7 @@ if (!function_exists('zabancouples_setup')) {
 
         // Register primary nav menu
         register_nav_menus(array(
-            'primary' => __('Primary Menu', 'zabancouples')
+            'primary' => __('Primary Menu', 'hodgesmace')
         ));
 
         /*
@@ -56,7 +56,7 @@ if (!function_exists('zabancouples_setup')) {
     }
 }
 
-add_action( 'after_setup_theme', 'zabancouples_setup' );
+add_action( 'after_setup_theme', 'hodgesmace_setup' );
 
 /**
  * JavaScript Detection.
@@ -65,28 +65,27 @@ add_action( 'after_setup_theme', 'zabancouples_setup' );
  *
  * @since Hodges Mace  1.1
  */
-function zabancouples_javascript_detection() {
+function hodgesmace_javascript_detection() {
 	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 }
-add_action( 'wp_head', 'zabancouples_javascript_detection', 0 );
+add_action( 'wp_head', 'hodgesmace_javascript_detection', 0 );
 
 /**
  * Enqueue scripts and styles.
  *
  * @since Hodges Mace  1.0
  */
-function zabancouples_scripts() {
+function hodgesmace_scripts() {
+    wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
     wp_enqueue_style('normalize', get_template_directory_uri() . '/css/normalize.min.css');
     wp_enqueue_style('typography', get_template_directory_uri() . '/css/typography.css');
     wp_enqueue_style('grid', get_template_directory_uri() . '/css/grid.css');
     wp_enqueue_style('utility', get_template_directory_uri() . '/css/utility.css');
-
-    wp_enqueue_style('zabancouples-style', get_stylesheet_uri());
-
-    wp_enqueue_script('zabancouples-script', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20150330', true);
+    wp_enqueue_style('hodgesmace-style', get_stylesheet_uri());
+    wp_enqueue_script('hodgesmace-script', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20150330', true);
 }
 
-add_action( 'wp_enqueue_scripts', 'zabancouples_scripts' );
+add_action( 'wp_enqueue_scripts', 'hodgesmace_scripts' );
 
 /**
  *  Custom Header
@@ -121,3 +120,85 @@ function icon_func( $atts ) {
 	return '<i class="fa '.$atts['class'].'"></i>';
 }
 add_shortcode( 'icon', 'icon_func' );
+
+/*-----------------------------------------------------------------------------------*/
+/*	Custom Post Type : Portfolio
+/*-----------------------------------------------------------------------------------*/
+
+add_action('init', 'zt_portfolio_register');
+
+function zt_portfolio_register() {
+
+	$labels = array(
+		'name' => 'Portfolio', 'post type general name',
+		'singular_name' => 'Portfolio Item', 'post type singular name',
+		'add_new' => 'Add New', 'portfolio item',
+		'add_new_item' => 'Add New Portfolio Item',
+		'edit_item' => 'Edit Portfolio Item',
+		'new_item' => 'New Portfolio Item',
+		'view_item' => 'View Portfolio Item',
+		'search_items' => 'Search Portfolio',
+		'not_found' =>  'Nothing found',
+		'not_found_in_trash' => 'Nothing found in Trash',
+		'parent_item_colon' => '',
+	);
+
+	$args = array(
+		'labels' => $labels,
+		'label' => 'asd',
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'rewrite' => true,
+		'menu_position' => null,
+		'supports' => array('title','comments', 'editor', 'thumbnail'),
+		'show_in_menu' => TRUE,
+		'show_in_nav_menus' => TRUE,
+		'has_archive' => TRUE
+	  );
+
+	register_post_type( 'portfolio' , $args );
+	register_taxonomy("portfolio_categories", array("portfolio"), array("hierarchical" => true, "label" => "Portfolio Categories", "singular_label" => "Portfolio Category", "rewrite" => true));
+
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	Custom Post Type : Testimonials
+/*-----------------------------------------------------------------------------------*/
+
+add_action('init', 'testimonial_register');
+
+function testimonial_register() {
+
+	$labels = array(
+		'name' => 'Testimonials', 'post type general name',
+		'singular_name' => 'Testimonial Item', 'post type singular name',
+		'add_new' => 'Add New', 'testimonial item',
+		'add_new_item' => 'Add New Testimonial Item',
+		'edit_item' => 'Edit Testimonial Item',
+		'new_item' => 'New Testimonial Item',
+		'view_item' => 'View Testimonial Item',
+		'search_items' => 'Search Testimonial',
+		'not_found' =>  'Nothing found',
+		'not_found_in_trash' => 'Nothing found in Trash',
+		'parent_item_colon' => '',
+	);
+
+	$args = array(
+		'labels' => $labels,
+		'label' => 'asd',
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'rewrite' => true,
+		'menu_position' => null,
+		'supports' => array('editor', 'thumbnail'),
+		'show_in_menu' => TRUE,
+		'show_in_nav_menus' => TRUE,
+		'has_archive' => TRUE
+	  );
+
+	register_post_type( 'testimonials' , $args );
+}
