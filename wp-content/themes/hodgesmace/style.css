@@ -126,12 +126,12 @@ hr {
 @media (min-width: 1440px ) {
   .site-content .container, .container, .site-content .vc_row-fluid,
   .site-content .cq-bannerblock-content {
-    width: 70%;
+    width: 78%;
     padding: 0;
   }
   .site-content .wrapper-container, .site-content .banner-bttn-right-sm {
     width: 100%;
-    padding: 0 15%;
+    padding: 0 11%;
   }
 }
 
@@ -179,8 +179,8 @@ hr {
 #header .mobile-menu-toggle {
   color: #ccc;
   position: absolute;
-  top: 25px;
-  right: 20px;
+  top: 85px;
+  right: 30px;
   font-size: 30px;
 }
 
@@ -210,7 +210,7 @@ hr {
 .header_nav {
  font-family: 'OpenSans Light';
  float: left;
- font-size: 1.2em;
+ font-size: 1em;
  display: none;
  margin: 0;
  padding: 0;
@@ -268,7 +268,7 @@ hr {
   }
 
   .header_nav li a, .header_nav li a:visited {
-    padding: 2.6em 0.9em;
+    padding:4em 0.9em;
   }
 
   .header_nav li ul li a {
@@ -279,9 +279,10 @@ hr {
     display: none;
     position: absolute;
     left: 0;
-    padding: 0 15%;
+    padding: 0 11%;
     width: 100%;
-    top: 211px;
+    top: 11.5em;
+    border-top: 1px solid #eee;
     z-index: 100;
     background: #fff;
     float: none;
@@ -393,6 +394,7 @@ hr {
 
 .bttn-blue {
   background-color: #1897d3;
+  border: 1px solid #1897d3;
   color: #fff;
 }
 
