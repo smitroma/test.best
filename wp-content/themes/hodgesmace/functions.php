@@ -76,6 +76,7 @@ add_action( 'wp_head', 'hodgesmace_javascript_detection', 0 );
  * @since Hodges Mace  1.0
  */
 function hodgesmace_scripts() {
+    wp_enqueue_style('js-composer', get_template_directory_uri() . '/css/js-composer.min.css');
     wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
     wp_enqueue_style('normalize', get_template_directory_uri() . '/css/normalize.min.css');
     wp_enqueue_style('typography', get_template_directory_uri() . '/css/typography.css');
