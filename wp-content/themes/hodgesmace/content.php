@@ -5,7 +5,7 @@
  * Used for both single and index/archive/search.
  *
  * @package Brain_Bytes
- * @subpackage Hodges Mace 
+ * @subpackage Hodges Mace
  * @since Hodges Mace  1.0
  */
 ?>
@@ -21,6 +21,7 @@
 		?>
 	</header> -->
 	<!-- .entry-header -->
+
 	<div class="entry-content">
 		<?php
 			/* translators: %s: Name of current post */
