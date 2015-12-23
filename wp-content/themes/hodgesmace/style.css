@@ -289,6 +289,10 @@ hr {
     margin-right: .5em;
   }
 
+  .header_nav .sub-menu li:first-child a:before {
+    content: '';
+  }
+
   .header_nav li a, .header_nav li a:visited {
     padding:56px 15px;
   }
