@@ -203,3 +203,26 @@ function testimonial_register() {
 
 	register_post_type( 'testimonials' , $args );
 }
+
+/*-----------------------------------------------------------------------------------*/
+/*	EXCERPT LENGTH / CONTENT
+/*-----------------------------------------------------------------------------------*/
+
+
+  if ( ! function_exists( 'wpse_custom_wp_trim_excerpt' ) ) {
+    function wpse_custom_wp_trim_excerpt($wpse_excerpt) {
+      $raw_excerpt = $wpse_excerpt;
+      if ( '' == $wpse_excerpt ) {
+          $wpse_excerpt = get_the_content('');
+          $wpse_excerpt = apply_filters('the_content', $wpse_excerpt);
+          $excerpt_length = apply_filters('excerpt_length', 75);
+          $wpse_excerpt = trim(force_balance_tags($wpse_excerpt));
+
+          return $wpse_excerpt;
+      }
+      return apply_filters('wpse_custom_wp_trim_excerpt', $wpse_excerpt, $raw_excerpt);
+    }
+  }
+
+  remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+  add_filter('get_the_excerpt', 'wpse_custom_wp_trim_excerpt');

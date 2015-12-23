@@ -58,6 +58,10 @@ h4 { font-size: 1.5em; }
 h5 { font-size: 1.2em; }
 h6 { font-size: 1em; }
 
+h5, h6 {
+  color: #1897d3;
+}
+
 hr {
   width: 50px;
 }
@@ -279,14 +283,14 @@ hr {
     margin-right: 0;
   }
 
-  .header_nav li a:before {
+  .header_nav li:first-child a:before {
     font-family: 'FontAwesome';
     content:"\f107";
     margin-right: .5em;
   }
 
   .header_nav li a, .header_nav li a:visited {
-    padding:56px 8px;
+    padding:56px 15px;
   }
 
   .header_nav li ul li a {
@@ -300,7 +304,7 @@ hr {
     padding: 0 2.5%;
     width: 100%;
     top: 186px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #cad6f9;
     z-index: 100;
     background: #fff;
     float: none;
@@ -314,11 +318,21 @@ hr {
     margin-right: 0;
   }
 
+  .header_nav .sub-menu .menu-item i._mi {
+    height: 80px;
+    line-height: 80px;
+    color: #1897d3;
+  }
+
+  .header_nav .sub-menu .menu-item:first-child a {
+    border-right: 1px solid #cad6f9;
+  }
+
   .header_nav .sub-menu .menu-item {
     padding-top: 1em;
     padding-bottom: 1em;
     vertical-align: top;
-    width: 19%;
+    width: 19.5%;
     text-align: center;
   }
 
@@ -339,9 +353,6 @@ hr {
   .header_nav .sub-menu {
     top: 194px;
     padding: 0 11%;
-  }
-  .header_nav .sub-menu .menu-item {
-    width: 19.6%;
   }
 }
 
@@ -446,7 +457,7 @@ input[type=submit],.site-content .vc_btn3.vc_btn3-color-green.vc_btn3-style-mode
  */
 
 .site-content .gform_wrapper input, .gform_wrapper textarea {
-  border: 2px solid #939393;
+  border: 2px solid #f1f1f1;
   color: #939393;
   border-radius: 0.75em;
   padding: .75em 1em !important;
@@ -708,11 +719,53 @@ input[type=submit],.site-content .vc_btn3.vc_btn3-color-green.vc_btn3-style-mode
   }
 }
 
+/* Testimonial Slider */
+
+.testimonials-slider .wpb_gallery_slides > ul > li {
+  text-align: center;
+}
+
+.testimonials-slider .flexslider {
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+
+.testimonials-slider .flex-caption {
+  background-color: transparent;
+  width: 75%;
+  margin: 20px auto;
+  min-width: 300px;
+}
+
+.testimonials-slider .flexslider .slides img {
+  width: auto;
+  display: initial;
+}
+
+/* Contact Footer */
+
+.contact-footer .gform_footer input[type=submit] {
+  width: 100%;
+  border: none;
+  background-color: #1897d3;
+}
+
 /* Helpers */
 
 .fs-xs-2-em { font-size: 2em; }
 .va-m { vertical-align: middle; }
 .h-550 { height: 550px }
+.float-left {
+  float: left !important;
+  clear: none !important;
+}
+.float-right {
+  float: right !important;
+  clear: none !important;
+}
 
 @media (width:990px) {
   .fs-xs-2-em {
