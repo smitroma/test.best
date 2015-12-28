@@ -121,19 +121,21 @@ hr {
     width: 95%;
     padding: 0;
   }
-  .site-content .wrapper-container, .site-content .banner-bttn-right-sm {
+  .site-content .wrapper-container, .site-content .banner-bttn-right-sm,
+  .header_nav .sub-menu {
     width: 100%;
     padding: 0 2.5%;
   }
 }
 
-@media (min-width: 1440px ) {
+@media (min-width: 990px ) {
   .site-content .container, .container, .site-content .vc_row-fluid,
   .site-content .cq-bannerblock-content {
     width: 78%;
     padding: 0;
   }
-  .site-content .wrapper-container, .site-content .banner-bttn-right-sm {
+  .site-content .wrapper-container, .site-content .banner-bttn-right-sm,
+  .header_nav .sub-menu {
     width: 100%;
     padding: 0 11%;
   }
@@ -171,11 +173,11 @@ hr {
 #header {
   width: 100%;
   z-index: 10;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #cad6f9;
 }
 
 #header .logo img {
-  max-width: 300px;
+  max-width: 220px;
   width: 60%;
   float: left;
 }
@@ -183,7 +185,7 @@ hr {
 #header .mobile-menu-toggle {
   color: #ccc;
   position: absolute;
-  top: 85px;
+  top: 98px;
   right: 30px;
   font-size: 30px;
 }
@@ -194,7 +196,6 @@ hr {
   }
   #header .logo img {
     width: 80%;
-    max-width: 220px;
   }
   #header .mobile-menu-toggle {
     display: none;
@@ -299,9 +300,8 @@ hr {
     display: none;
     position: absolute;
     left: 0;
-    padding: 0 2.5%;
     width: 100%;
-    top: 186px;
+    top: 194px;
     border-top: 1px solid #cad6f9;
     z-index: 100;
     background: #fff;
@@ -351,8 +351,7 @@ hr {
     font-size: 1em;
   }
   .header_nav .sub-menu {
-    top: 194px;
-    padding: 0 11%;
+    top: 198px;
   }
 }
 
