@@ -289,11 +289,6 @@ hr {
     margin-right: .5em;
   }
 
-  .header_nav .sub-menu li:first-child a:before {
-    content: '';
-    visibility: hidden;
-  }
-
   .header_nav li a, .header_nav li a:visited {
     padding:56px 15px;
   }
@@ -344,6 +339,7 @@ hr {
   .header_nav .sub-menu a:before {
     content: '';
     margin-right: 0;
+    visibility: hidden;
   }
 
 }
