@@ -473,6 +473,15 @@ input[type=submit],.site-content .vc_btn3.vc_btn3-color-green.vc_btn3-style-mode
  * --------------------------------------------------------------- *
  */
 
+body .gform_wrapper label.gfield_label+div.ginput_container {
+  margin-bottom: .375;
+  margin-top: 0;
+}
+
+.site-content .gform_wrapper {
+  margin-top: 0;
+}
+
  /* Hide Labels */
 
  .site-content .gform_wrapper .top_label .gfield_label {
