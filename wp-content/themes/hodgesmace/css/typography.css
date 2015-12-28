@@ -16,39 +16,43 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'OpenSans Light';
-    src: url('../fonts/OpenSans-Light.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
 
-body {
-  font-family: 'OpenSans Light', Helvetica, Arial, sans-serif;
+body, p, input[type=submit], input[type=image], a {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   margin-bottom: .5em;
   font-family: 'Neuxeit Grotesk Regular';
+  font-weight: 100;
 }
 
 h5, h6 {
- font-family: 'OpenSans Light', Helvetica, Arial, sans-serif;
+ font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+ font-weight: 300;
 }
 
 h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   font-family: 'NeuzeitGro Bold';
+  font-weight: 700;
 }
 
 h6 {
-  font-family: 'OpenSans Light';
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 300;
 }
 
 p {
-  font-family: 'OpenSans Light';
   margin-top: 0;
   margin-bottom: 1em;
+}
+
+strong {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 700;
 }
 
 hr {

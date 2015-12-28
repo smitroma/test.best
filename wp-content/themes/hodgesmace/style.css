@@ -156,7 +156,7 @@ hr {
  background-color: #555555;
  color: #fff;
  text-align: right;
- padding: 10px 0;
+ padding: 20px 0;
 }
 
 .header-right-button {
@@ -190,7 +190,7 @@ hr {
 
 @media (min-width: 768px ) {
   #header {
-    padding: 1em 0;
+    padding: 10px 0;
   }
   #header .logo img {
     width: 80%;
@@ -212,7 +212,6 @@ hr {
 /* Header Nav */
 
 .header_nav {
- font-family: 'OpenSans Light';
  float: left;
  clear: both;
  font-size: 1.5em;
@@ -269,7 +268,6 @@ hr {
     float: right;
     clear: none;
     text-align: right;
-    font-family: 'OpenSans Light';
     margin: 0 auto;
   }
 
@@ -316,6 +314,7 @@ hr {
   .header_nav .sub-menu .menu-item a {
     display: block;
     margin-right: 0;
+    font-weight: 700;
   }
 
   .header_nav .sub-menu .menu-item i._mi {
@@ -412,7 +411,6 @@ hr {
 input[type=submit], .bttn-white-border, .bttn-blue, .site-wrapper .gform_wrapper .gform_footer input.button,
 .site-wrapper .gform_wrapper .gform_footer input[type=image],
 .site-wrapper .gform_wrapper .gform_footer input[type=submit] {
-  font-family: 'OpenSans Light';
   text-transform: uppercase;;
   border: none;
   cursor: pointer;
