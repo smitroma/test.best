@@ -291,6 +291,7 @@ hr {
 
   .header_nav .sub-menu li:first-child a:before {
     content: '';
+    visibility: hidden;
   }
 
   .header_nav li a, .header_nav li a:visited {
