@@ -33,6 +33,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Neuxeit Grotesk Regular';
 }
 
+h5, h6 {
+ font-family: 'OpenSans Light', Helvetica, Arial, sans-serif;
+}
+
 h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   font-family: 'NeuzeitGro Bold';
 }
@@ -52,4 +56,9 @@ hr {
   border-width: 1px;
   border-style: solid;
   height: 0;
+}
+
+.site-content .vc_btn3 {
+  font-family: 'Neuxeit Grotesk Regular';
+  font-size:1em;
 }

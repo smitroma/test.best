@@ -26,15 +26,17 @@
 		<div id="top-header">
 			<div class="container">
 				<?php echo do_shortcode('[icon class="fa-search"]') ?>
-				<a class="bttn-white-border m-l-md" href="#">SmartBen Login</a>
-				<a class="bttn-blue">Requeset a Demo</a>
+				<a class="bttn-white-border m-l-sm" href="#">SmartBen Login</a>
+				<a class="bttn-blue m-r-sm">Requeset a Demo</a>
 			</div>
 		</div>
     <div id="header">
       <div class="container">
 				<div class="logo">
 					<h1 class="m-b-0">
-            <img	src="<?php header_image(); ?>" alt="<?php bloginfo('name') ?>" />
+						<a href="<?php bloginfo('home') ?> ">
+            	<img	src="<?php header_image(); ?>" alt="<?php bloginfo('name') ?>" />
+						</a>
 					</h1>
 				</div>
 				<div class="mobile-menu-toggle"><i class="fa fa-bars"></i></div>

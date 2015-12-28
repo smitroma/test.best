@@ -110,6 +110,36 @@
   margin-left: auto !important;
 }
 
+.m-a-sm {
+  margin: .5em !important;
+}
+
+.m-t-sm {
+  margin-top: .5em !important;
+}
+
+.m-r-sm {
+  margin-right: .5em !important;
+}
+
+.m-b-sm {
+  margin-bottom: .5em !important;
+}
+
+.m-l-sm {
+  margin-left: .5em !important;
+}
+
+.m-x-sm {
+  margin-right: .5em !important;
+  margin-left: .5em !important;
+}
+
+.m-y-sm {
+  margin-top: .5em !important;
+  margin-bottom: .5em !important;
+}
+
 .m-a-md {
   margin: 1.5em !important;
 }
