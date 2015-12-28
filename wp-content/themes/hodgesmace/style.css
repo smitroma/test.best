@@ -412,6 +412,7 @@ input[type=submit], .bttn-white-border, .bttn-blue, .site-wrapper .gform_wrapper
 .site-wrapper .gform_wrapper .gform_footer input[type=submit] {
   text-transform: uppercase;;
   border: none;
+  font-size: 14px;
   cursor: pointer;
   border-radius: 0.5em;
   display: inline-block;
@@ -445,6 +446,7 @@ input[type=submit], .bttn-white-border, .bttn-blue, .site-wrapper .gform_wrapper
 
 input[type=submit],.site-content .vc_btn3.vc_btn3-color-green.vc_btn3-style-modern {
   background-color: #8ec449;
+  font-size: 14px;
   color: #fff;
   border: none;
 }
