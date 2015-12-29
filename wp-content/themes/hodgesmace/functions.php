@@ -77,6 +77,7 @@ add_action( 'wp_head', 'hodgesmace_javascript_detection', 0 );
  */
 function hodgesmace_scripts() {
     wp_enqueue_style('js_composer_front'); // VC CSS
+    wp_enqueue_style('OpenSans', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,700');
     wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
     wp_enqueue_style('normalize', get_template_directory_uri() . '/css/normalize.min.css');
     wp_enqueue_style('typography', get_template_directory_uri() . '/css/typography.css');
