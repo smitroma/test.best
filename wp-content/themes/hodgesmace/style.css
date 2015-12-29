@@ -254,6 +254,11 @@ hr {
     display: none;
 }
 
+.header_nav .sub-menu .menu-item .description {
+  font-weight: 300;
+  display: none;
+}
+
 @media (min-width: 768px ) {
 
   #main-menu {
@@ -346,6 +351,9 @@ hr {
     visibility: hidden;
   }
 
+  .header_nav .sub-menu .menu-item .description {
+    display: inherit;
+  }
 }
 
 @media (min-width: 1440px ) {
@@ -354,6 +362,9 @@ hr {
   }
   .header_nav {
     font-size: 1em;
+  }
+  .header_nav .sub-menu {
+    font-size: .9em;
   }
   .header_nav .sub-menu {
     top: 191px;

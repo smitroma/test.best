@@ -63,8 +63,8 @@ add_action( 'after_setup_theme', 'hodgesmace_setup' );
  *
  * Adds a `js` class to the root `<html>` element when JavaScript is detected.
  *
- * @since Hodges Mace  1.1
  */
+
 function hodgesmace_javascript_detection() {
 	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 }
@@ -73,8 +73,8 @@ add_action( 'wp_head', 'hodgesmace_javascript_detection', 0 );
 /**
  * Enqueue scripts and styles.
  *
- * @since Hodges Mace  1.0
  */
+
 function hodgesmace_scripts() {
     wp_enqueue_style('js_composer_front'); // VC CSS
     wp_enqueue_style('OpenSans', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,700');
@@ -91,8 +91,6 @@ add_action( 'wp_enqueue_scripts', 'hodgesmace_scripts' );
 
 /**
  *  Custom Header
- *
- * @since Hodges Mace  1.0
  */
 
 $custom_header_args = array(
@@ -227,3 +225,17 @@ function testimonial_register() {
 
   remove_filter('get_the_excerpt', 'wp_trim_excerpt');
   add_filter('get_the_excerpt', 'wpse_custom_wp_trim_excerpt');
+
+
+/**
+ * Descriptions on Header Menu
+ */
+
+function header_menu_desc( $item_output, $item, $depth, $args ) {
+	if( 'Main Menu' == $args->menu && $depth && $item->description )
+		$item_output = str_replace( '</a>', '<span class="description">' . $item->description . '</span></a>', $item_output );
+
+	return $item_output;
+}
+
+add_filter( 'walker_nav_menu_start_el', 'header_menu_desc', 10, 4 );

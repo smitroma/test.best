@@ -45,7 +45,7 @@
 				</div>
 				<div class="mobile-menu-toggle"><i class="fa fa-bars"></i></div>
 				<div id="main-menu">
-	        <?php wp_nav_menu(array('menu' => 'Main Menu', 'menu_class' => 'header_nav')); ?>
+	        <?php wp_nav_menu(array('menu' => 'Main Menu', 'menu_class' => 'header_nav' )); ?>
 				</div>
     	</div>
     </div>
