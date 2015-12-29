@@ -439,6 +439,7 @@ hr {
 
 input[type=submit], .bttn-white-border, .bttn-blue,
 .vc_general.vc_btn3.bttn-white-border, .vc_general.vc_btn3.bttn-blue,
+.bttn-green-border, .vc_general.vc_btn3.bttn-green-border,
 .site-wrapper .gform_wrapper .gform_footer input.button,
 .site-wrapper .gform_wrapper .gform_footer input[type=image],
 .site-wrapper .gform_wrapper .gform_footer input[type=submit] {
@@ -466,6 +467,14 @@ input[type=submit], .bttn-white-border, .bttn-blue,
   padding: 6px 20px 4px 20px;
   background: transparent;
   color: #fff;
+}
+
+.bttn-green-border,
+.vc_general.vc_btn3.bttn-green-border {
+  border: 1px solid #8ec449;
+  padding: 6px 20px 4px 20px;
+  background: transparent;
+  color: #8ec449;
 }
 
 .bttn-blue,
