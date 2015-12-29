@@ -404,7 +404,8 @@ hr {
 
 .site-content .rounded-box-gray, .site-content .rounded-box-white {
   border-radius: .75em;
-  padding: 5%;
+  padding: 2em 5%;
+  overflow: auto;
 }
 
 /* Gray */
