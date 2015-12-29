@@ -16,11 +16,11 @@
     font-style: normal;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400,300);
 
 body, p, input[type=submit], input[type=image], a {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,7 +42,7 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 
 h6 {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 p {
