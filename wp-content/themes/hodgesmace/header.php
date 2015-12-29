@@ -26,8 +26,12 @@
 		<div id="top-header">
 			<div class="container">
 				<?php echo do_shortcode('[icon class="fa-search"]') ?>
-				<a class="bttn-white-border m-l-sm" href="#">SmartBen Login</a>
-				<a class="bttn-blue m-r-sm">Request a Demo</a>
+				<a href="#">
+					<button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern bttn-white-border m-l-sm">SmartBen Login</button>
+				</a>
+				<a href="#">
+					<button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern bttn-blue m-l-sm">Request a Demo</button>
+				</a>
 			</div>
 		</div>
     <div id="header">

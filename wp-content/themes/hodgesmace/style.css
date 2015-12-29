@@ -301,7 +301,7 @@ hr {
     position: absolute;
     left: 0;
     width: 100%;
-    top: 194px;
+    top: 193px;
     border-top: 1px solid #cad6f9;
     z-index: 100;
     background: #fff;
@@ -320,7 +320,7 @@ hr {
   .header_nav .sub-menu .menu-item i._mi {
     height: 80px;
     line-height: 80px;
-    margin-bottom: 10px;
+    margin-bottom: .25em;
     color: #1897d3;
   }
 
@@ -356,7 +356,7 @@ hr {
     font-size: 1em;
   }
   .header_nav .sub-menu {
-    top: 198px;
+    top: 191px;
   }
 }
 
@@ -412,7 +412,9 @@ hr {
  * --------------------------------------------------------------- *
  */
 
-input[type=submit], .bttn-white-border, .bttn-blue, .site-wrapper .gform_wrapper .gform_footer input.button,
+input[type=submit], .bttn-white-border, .bttn-blue,
+.vc_general.vc_btn3.bttn-white-border, .vc_general.vc_btn3.bttn-blue,
+.site-wrapper .gform_wrapper .gform_footer input.button,
 .site-wrapper .gform_wrapper .gform_footer input[type=image],
 .site-wrapper .gform_wrapper .gform_footer input[type=submit] {
   text-transform: uppercase;;
@@ -421,7 +423,7 @@ input[type=submit], .bttn-white-border, .bttn-blue, .site-wrapper .gform_wrapper
   cursor: pointer;
   border-radius: 0.5em;
   display: inline-block;
-  padding: 9px 20px;
+  padding: 7px 20px 5px 20px;
   line-height: 1.5em;
 }
 
@@ -432,14 +434,17 @@ input[type=submit], .bttn-white-border, .bttn-blue, .site-wrapper .gform_wrapper
   color: #fff;
 }
 
-.bttn-white-border {
+.bttn-white-border,
+.vc_general.vc_btn3.bttn-white-border {
   border: 1px solid #fff;
+  padding: 6px 20px 4px 20px;
+  background: transparent;
   color: #fff;
 }
 
-.bttn-blue {
+.bttn-blue,
+.vc_general.vc_btn3.bttn-blue {
   background-color: #1897d3;
-  border: 1px solid #1897d3;
   color: #fff;
 }
 
@@ -454,6 +459,12 @@ input[type=submit],.site-content .vc_btn3.vc_btn3-color-green.vc_btn3-style-mode
   font-size: 14px;
   color: #fff;
   border: none;
+}
+
+.vc_btn3-container.vc_btn3-center .vc_btn3-block.vc_btn3-size-md,
+.vc_btn3.vc_btn3-size-md {
+  padding-top: 11px;
+  padding-bottom: 8px;
 }
 
 /*
