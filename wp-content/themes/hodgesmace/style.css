@@ -68,13 +68,13 @@ hr {
 
 @media (min-width: 768px ) {
   body {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
 @media (min-width: 1440px ) {
   body {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 
@@ -803,7 +803,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 
 .fs-xs-2-em { font-size: 2em; }
 .va-m { vertical-align: middle; }
-.h-550 { height: 550px }
+.home-banner-height { height: 450px }
 .float-left {
   float: left !important;
   clear: none !important;
