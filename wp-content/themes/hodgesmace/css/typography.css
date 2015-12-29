@@ -60,7 +60,7 @@ hr {
   height: 0;
 }
 
-.site-content .vc_btn3 {
+.site-content .vc_btn3, .vc_btn3 {
   font-family: 'Neuxeit Grotesk Regular';
   font-size:1em;
 }
