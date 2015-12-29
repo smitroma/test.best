@@ -60,7 +60,22 @@ hr {
   height: 0;
 }
 
-.site-content .vc_btn3, .vc_btn3 {
+.site-content .vc_btn3, .vc_btn3,
+.gform_wrapper .gform_footer input.button,
+.gform_wrapper .gform_footer input[type=image],
+.gform_wrapper .gform_footer input[type=submit]  {
   font-family: 'Neuxeit Grotesk Regular';
   font-size:1em;
+}
+
+/* Helpers */
+
+.ff-header-bold {
+  font-family: 'NeuzeitGro Bold';
+}
+.ff-header {
+  font-family: 'Neuxeit Grotesk Regular';
+}
+.ff-body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }

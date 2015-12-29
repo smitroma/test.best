@@ -445,6 +445,7 @@ input[type=submit], .bttn-white-border, .bttn-blue,
 .gform_wrapper .gform_footer input[type=submit] {
   background-color: #8ec449;
   color: #fff;
+  padding: 8px 20px 4px 20px !important;
 }
 
 .bttn-white-border,
@@ -494,8 +495,8 @@ input[type=submit], .site-content .vc_btn3.vc_btn3-color-green.vc_btn3-style-mod
 .site-content .gform_wrapper input, .gform_wrapper textarea {
   border: 2px solid #f1f1f1;
   color: #939393;
-  border-radius: 0.75em;
-  padding: .75em 1em !important;
+  border-radius: 5px;
+  padding: 10px !important;;
 }
 
 .site-content .gform_wrapper :focus {
@@ -795,6 +796,10 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   width: 100%;
   border: none;
   background-color: #1897d3;
+}
+
+.gform_wrapper .contact-footer textarea.medium {
+    height: 10em;
 }
 
 /* Helpers */
