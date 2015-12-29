@@ -337,12 +337,21 @@ hr {
     border-right: 1px solid #cad6f9;
   }
 
+  .header_nav .sub-menu .menu-item:first-child {
+    width: 28%;
+  }
+
   .header_nav .sub-menu .menu-item {
     padding-top: 1em;
     padding-bottom: 1em;
     vertical-align: top;
-    width: 19.5%;
+    width: 17.4%;
     text-align: center;
+  }
+
+  .header_nav .sub-menu .menu-item a {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .header_nav .sub-menu a:before {
