@@ -314,13 +314,18 @@ hr {
   .header_nav .sub-menu .menu-item a {
     display: block;
     margin-right: 0;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .header_nav .sub-menu .menu-item i._mi {
     height: 80px;
     line-height: 80px;
+    margin-bottom: 10px;
     color: #1897d3;
+  }
+
+  .header_nav .sub-menu .menu-item span {
+    line-height: 1.25em;
   }
 
   .header_nav .sub-menu .menu-item:first-child a {
