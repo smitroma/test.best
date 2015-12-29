@@ -27,10 +27,7 @@
 			<div class="container">
 				<?php echo do_shortcode('[icon class="fa-search"]') ?>
 				<a href="#">
-					<button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern bttn-white-border m-l-sm">SmartBen Login</button>
-				</a>
-				<a href="#">
-					<button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern bttn-blue m-l-sm">Request a Demo</button>
+					<button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern bttn-white-border m-l-md">SmartBen Login</button>
 				</a>
 			</div>
 		</div>
@@ -45,6 +42,11 @@
 				</div>
 				<div class="mobile-menu-toggle"><i class="fa fa-bars"></i></div>
 				<div id="main-menu">
+					<div class="request-header">
+						<a href="#">
+							<button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern bttn-blue m-l-sm">Request a Demo</button>
+						</a>
+					</div>
 	        <?php wp_nav_menu(array('menu' => 'Main Menu', 'menu_class' => 'header_nav' )); ?>
 				</div>
     	</div>
