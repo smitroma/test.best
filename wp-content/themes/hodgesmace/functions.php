@@ -103,12 +103,6 @@ $custom_header_args = array(
 add_theme_support( 'custom-header', $custom_header_args );
 
 /**
- * show/hide admin bar
- */
-
-show_admin_bar( false );
-
-/**
  * Font-Awesome Shortcode
  */
 
