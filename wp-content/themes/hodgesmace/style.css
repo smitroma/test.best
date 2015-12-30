@@ -833,6 +833,10 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 /* Home */
 
 .home-banner-height { height: 450px }
+.site-content .blue-arrow {
+  background-position: center -1px !important;
+  background-size: 300px;
+}
 
 /* Internal Page */
 
@@ -877,7 +881,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   clear: none !important;
 }
 .site-content .background-top-center {
-  background-position: center -1px !important;
+  background-position: center top !important;
 }
 
 @media (width:990px) {
