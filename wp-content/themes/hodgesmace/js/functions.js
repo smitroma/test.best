@@ -14,7 +14,7 @@
   $('.hover').hover(function(e){
     debugger;
     var idx = $('.hover').index(this);
-    $('.hover-contet').hide();
+    $('.hover-content').hide();
     $('.hover-content-'+idx).show();
   });
 
