@@ -830,7 +830,21 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
     height: 10em;
 }
 
-/* Smarter */
+/* Home */
+
+.home-banner-height { height: 450px }
+
+/* Internal Page */
+
+.page-banner-height { height: 350px }
+.hover-content {
+  display: none;
+}
+.hover {
+  cursor: pointer;
+}
+
+/* Smarter Approach */
 
 .smarter-banner-ampersand {
   text-align: center;
@@ -847,13 +861,12 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   color: #fff;
 }
 
+.smarter-banner-height { height: 550px }
+
 /* Helpers */
 
 .fs-xs-2-em { font-size: 2em; }
 .va-m { vertical-align: middle; }
-.home-banner-height { height: 450px }
-.page-banner-height { height: 350px }
-.smarter-banner-height { height: 550px }
 .h-550 { height: 550px}
 .float-left {
   float: left !important;
