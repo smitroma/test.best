@@ -529,6 +529,7 @@ input[type=submit], .site-content .vc_btn3.vc_btn3-color-green.vc_btn3-style-mod
 .site-content .gform_wrapper :focus {
   border-color: #4d7bde;
   color: #4d7bde;
+  outline: 0;
 }
 
 /*
