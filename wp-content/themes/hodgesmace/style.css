@@ -19,6 +19,7 @@ Text Domain: hodgesmace
  * green: #8ec449 > e.g. Button Green
  * dk-blue: #1897d3 > e.g. Button Blue
  * lt-blue: #cad6f9 > e.g. Nav Blue
+ * ltr-blue: #dcf1fa > e.g. bkg blue
  * md-gray: #555555 > e.g. Text Gray
  * lt-gray: #f9f9f9 > e.g. Logo BG gray
  * white: #ffffff
@@ -843,6 +844,31 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 .page-banner-height { height: 350px }
 .hover-content {
   display: none;
+}
+.hover .icon {
+  background-color: #dcf1fa;
+  border-radius: 50%;
+  width: 80%;
+  height: 80%;
+  background-size: contain;
+}
+.hover-0 .icon {
+  background-image: url('./images/custom-communication.png') center bottom;
+}
+.hover-0:hover .icon {
+  background-image: url('./images/custom-communication-hover.png') center bottom;
+}
+.hover-1 .icon {
+  background-image: url('./images/ongoing-support.png') center bottom;
+}
+.hover-1:hover .icon {
+  background-image: url('./images/ongoing-support-hover.png') center bottom;
+}
+.hover-2 .icon {
+  background-image: url('./images/security.png') center bottom;
+}
+.hover-2:hover .icon {
+  background-image: url('./images/security-hover.png') center bottom;
 }
 .hover {
   cursor: pointer;

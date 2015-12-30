@@ -12,7 +12,6 @@
   // Internal What You Can Expect
 
   $('.hover').hover(function(e){
-    debugger;
     var idx = $('.hover').index(this);
     $('.hover-content').hide();
     $('.hover-content-'+idx).show();
