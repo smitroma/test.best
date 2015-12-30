@@ -422,7 +422,7 @@ hr {
 
 .site-content .box-trans-white-less {
   border-radius: 0;
-  background:rgba(255,255,255,0.6);
+  background:rgba(255,255,255,0.8);
 }
 
 /* Gray */
@@ -911,14 +911,14 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   font-weight: 500;
 }
 
-.smarter-banner-height { height: 550px }
+.smarter-banner-height { height: 650px }
 
 /* Helpers */
 
 .fs-xs-2-em { font-size: 2em; }
 .va-m { vertical-align: middle; }
 .h-550 { height: 550px}
-.h-330 { height: 330px;}
+.h-350 { height: 350px;}
 .float-left {
   float: left !important;
   clear: none !important;
