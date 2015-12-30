@@ -829,6 +829,23 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
     height: 10em;
 }
 
+/* Smarter */
+
+.smarter-banner-ampersand {
+  text-align: center;
+  position: absolute;
+  left: 47%;
+  top: 50%;
+  background-color: #cad6f9;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  font-size: 3em;
+  font-weight: bold;
+  color: #fff;
+}
+
 /* Helpers */
 
 .fs-xs-2-em { font-size: 2em; }
