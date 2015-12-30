@@ -839,7 +839,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   clear: none !important;
 }
 .site-content .background-top-center {
-  background-position: top center !important;
+  background-position: center -1px !important;
 }
 
 @media (width:990px) {
