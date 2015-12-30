@@ -20,6 +20,7 @@ Text Domain: hodgesmace
  * dk-blue: #1897d3 > e.g. Button Blue
  * lt-blue: #cad6f9 > e.g. Nav Blue
  * ltr-blue: #dcf1fa > e.g. bkg blue
+ * brt-blue: #bce6f6 > e.g. border bottom
  * md-gray: #555555 > e.g. Text Gray
  * lt-gray: #f9f9f9 > e.g. Logo BG gray
  * white: #ffffff
@@ -887,16 +888,22 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 .smarter-banner-ampersand {
   text-align: center;
   position: absolute;
-  left: 47%;
+  left: 50%;
   top: 50%;
-  background-color: #cad6f9;
+  background-color: #1897d3;
+  opacity: .4;
   width: 80px;
   height: 80px;
   line-height: 80px;
+  margin-left: -40px;
   border-radius: 50%;
   font-size: 3em;
-  font-weight: bold;
+  font-family: "Open Sans";
   color: #fff;
+}
+
+.smarter-banner-ampersand p {
+  font-weight: 500;
 }
 
 .smarter-banner-height { height: 550px }
@@ -906,6 +913,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 .fs-xs-2-em { font-size: 2em; }
 .va-m { vertical-align: middle; }
 .h-550 { height: 550px}
+.h-330 { height: 330px;}
 .float-left {
   float: left !important;
   clear: none !important;
