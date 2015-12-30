@@ -849,11 +849,14 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   margin: 1em auto;
   background-color: #dcf1fa;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  background-size: 265px;
+  width: 207px;
+  height: 207px;
+  background-size: 263px;
   background-repeat: no-repeat;
-  background-position: -30px -30px;
+  background-position: -28px -25px;
+}
+.hover:hover .icon {
+  background-color: transparent;
 }
 .hover-0 .icon {
   background-image: url('./images/custom-communication.png');
@@ -863,12 +866,14 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 }
 .hover-1 .icon {
   background-image: url('./images/ongoing-support.png');
+  background-position: -28px -28px;
 }
 .hover-1:hover .icon {
   background-image: url('./images/ongoing-support-hover.png');
 }
 .hover-2 .icon {
   background-image: url('./images/security.png');
+  background-position: -29px -28px;
 }
 .hover-2:hover .icon {
   background-image: url('./images/security-hover.png');
