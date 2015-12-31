@@ -956,7 +956,11 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 }
 
 @media (min-width: 768px ) {
-  .smarter-banner-height { height: 800px }
+  .smarter-banner-height { height: 750px }
+}
+
+@media (min-width: 1200px ) {
+  .smarter-banner-height { height: 700px }
 }
 
 @media (width:1440px) {
