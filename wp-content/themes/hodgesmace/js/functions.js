@@ -14,7 +14,7 @@
   $('.hover').hover(function(e){
     var idx = $('.hover').index(this);
     $('.hover').removeClass('hover-active');
-    $(this).addClass('.hover-active');
+    $(this).addClass('hover-active');
     $('.hover-content').hide();
     $('.hover-content-'+idx).show();
   }, function(e) {
