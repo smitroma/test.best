@@ -868,8 +868,13 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 
 .page-banner-height { height: 350px }
 
-.hover-content { display: none; }
+.hover-content {
+  display: none;
+  height: 300px;
+}
+
 .hover-content-1 { display: inherit; }
+
 .hover { cursor: pointer; }
 
 .hover h3 { height: 85px; }

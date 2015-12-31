@@ -18,7 +18,7 @@
     $(this).addClass('hover-active');
     $('.hover-content').hide();
     $('.hover-content-'+idx).show();
-    
+
   }, function(e) {
   });
 
