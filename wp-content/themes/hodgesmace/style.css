@@ -338,6 +338,7 @@ hr {
     width: 100%;
     top: 136px;
     border-top: 1px solid #cad6f9;
+    border-bottom: 1px solid #cad6f9;
     z-index: 100;
     background: #fff;
     float: none;
