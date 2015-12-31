@@ -866,7 +866,11 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 
 /* Internal Page */
 
-.page-banner-height { height: 350px }
+.page-banner-height {
+  height: 350px ;
+  display: table-cell;
+  vertical-align: middle;
+}
 
 .hover-content {
   display: none;
