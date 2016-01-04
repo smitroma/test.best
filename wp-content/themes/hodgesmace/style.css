@@ -193,7 +193,7 @@ hr {
 
 #header {
   width: 100%;
-  position: realtive;
+  position: relative;
   height: 86px;
   z-index: 10;
   border-bottom: 1px solid #cad6f9;
