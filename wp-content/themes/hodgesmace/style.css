@@ -430,7 +430,7 @@ hr {
   margin: 0;
   display: table-row;
   list-style: none;
-  float: left;
+  float: right;
 }
 
 #menu-footer li {
@@ -1033,8 +1033,9 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 
 .fs-xs-2-em { font-size: 2em; }
 .va-m { vertical-align: middle; }
-.h-550 { height: 550px}
-.h-350 { height: 350px;}
+.h-550 { height: 550px; }
+.h-350 { height: 350px; }
+ .m-r-10-px { margin-right: 10px; }
 .float-left {
   float: left !important;
   clear: none !important;
