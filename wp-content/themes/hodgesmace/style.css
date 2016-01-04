@@ -226,8 +226,8 @@ ul#menu-login-menu .sub-menu {
   right: 0;
   margin-top: 10px;
   display: none;
-  width: auto;
-  padding: 10px 20px 15px 70px;
+  width: 100%;
+  padding: 10px 20px 15px 10px;
   background-color: #333;
   z-index: 100;
 }
