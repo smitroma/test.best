@@ -252,7 +252,7 @@ input#searchsubmit {
   border-radius: 0px;
   padding: 0;
   text-transform: none;
-  font-family: "FontAwesome";
+  margin-left: 10px;
 }
 input#s {
   background-color: transparent;
