@@ -433,6 +433,15 @@ hr {
   float: left;
 }
 
+#menu-footer li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#menu-footer li a {
+  color: #fff;
+}
+
 /*
  * Rounded Boxes
  * --------------------------------------------------------------- *
