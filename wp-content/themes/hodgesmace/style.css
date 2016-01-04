@@ -933,6 +933,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 .testimonials-slider .flexslider {
   border-radius: 0;
   border: none;
+  min-height: 438px;
   background: transparent;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
