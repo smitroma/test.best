@@ -326,12 +326,6 @@ hr {
     margin-right: 0;
   }
 
-  .header_nav li:first-child a:before {
-    font-family: 'FontAwesome';
-    content:"\f107";
-    margin-right: .5em;
-  }
-
   .header_nav li a, .header_nav li a:visited {
     padding:36px 15px;
   }
