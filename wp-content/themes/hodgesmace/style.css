@@ -185,7 +185,7 @@ hr {
 
 @media( min-width: 768px ){
   #top-header {
-   padding: 10px 0;
+   padding: 0;
  }
 }
 
@@ -194,6 +194,52 @@ hr {
   clear: none;
   margin-top: .25em;
   margin-left: 1em;
+}
+
+/* Login Menu */
+
+.menu-login-menu-container {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+ul#menu-login-menu {
+  list-style: none;
+  margin: 0;
+  position: relative;
+  padding: 0;
+}
+
+ul#menu-login-menu li {
+  padding: 10px 20px;
+  position: relative;
+  width: 100%;
+}
+ul#menu-login-menu li a {
+  color: #fff;
+  white-space: nowrap;
+}
+ul#menu-login-menu .sub-menu {
+  list-style: none;
+  position: absolute;
+  margin: 0;
+  right: 0;
+  margin-top: 10px;
+  display: none;
+  width: auto;
+  padding: 10px 20px 15px 70px;
+  background-color: #333;
+  z-index: 100;
+}
+ul#menu-login-menu .sub-menu li {
+  padding: 1px 0;
+  font-size: .9em;
+}
+ul#menu-login-menu li:hover {
+  background-color: #333;
+}
+ul#menu-login-menu li:hover > .sub-menu {
+  display: block;
 }
 
  /* Main Header */
