@@ -827,6 +827,21 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 
 /* Testimonial Slider */
 
+.flexslider .flex-direction-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.flexslider .flex-prev {
+    opacity: 0.7;
+    left: 10px;
+}
+.flexslider .flex-next {
+    opacity: 0.7;
+    right: 10px;
+}
+
 .testimonials-slider .wpb_gallery_slides > ul > li {
   text-align: center;
 }
@@ -834,6 +849,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 .testimonials-slider .flexslider {
   border-radius: 0;
   border: none;
+  height: 396px !important;
   background: transparent;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
