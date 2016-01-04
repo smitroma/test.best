@@ -251,7 +251,7 @@ input#searchsubmit {
   padding: 0;
   text-transform: none;
 }
-input#searchsubmit::before {
+input#searchsubmit:before {
   font-family: "FontAwesome";
   content: "\f002";
 }
