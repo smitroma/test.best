@@ -242,6 +242,20 @@ ul#menu-login-menu li:hover > .sub-menu {
   display: block;
 }
 
+/* Search Form */
+
+input#searchsubmit {
+  color: inherit;
+  background-color: transparent;
+  border-radius: 0px;
+  padding: 0;
+  text-transform: none;
+}
+input#searchsubmit::before {
+  font-family: "FontAwesome";
+  content: "\f002";
+}
+
  /* Main Header */
 
 #header {
