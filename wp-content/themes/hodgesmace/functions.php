@@ -34,9 +34,9 @@ if (!function_exists('hodges_setup')) {
 
         // Register primary nav menu
         register_nav_menus(array(
-            'top_nav' => __('Login Nav', 'hodgesmace'),
             'header_nav' => __('Main Menu', 'hodgesmace'),
-            'footer_nav' => __('Footer Menu', 'hodgesmace')
+            'footer_nav' => __('Footer Menu', 'hodgesmace'),
+            'top_nav' => __('Login Nav', 'hodgesmace'),
         ));
 
         /*
