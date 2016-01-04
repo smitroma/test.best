@@ -25,6 +25,7 @@
   <div class="container-fluid">
 		<div id="top-header">
 			<div class="container">
+				<?php get_search_form( true ); ?>
 				<?php echo do_shortcode('[icon class="fa-search"]') ?>
 				<?php wp_nav_menu(array('menu' => 'Login Menu', 'menu_class' => 'top_nav' )); ?>
 				<!-- <a href="#">
