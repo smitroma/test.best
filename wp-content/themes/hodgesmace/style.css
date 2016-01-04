@@ -193,6 +193,8 @@ hr {
 
 #header {
   width: 100%;
+  position: realtive;
+  height: 86px;
   z-index: 10;
   border-bottom: 1px solid #cad6f9;
 }
@@ -336,7 +338,7 @@ hr {
     position: absolute;
     left: 0;
     width: 100%;
-    top: 136px;
+    top: 85px;
     border-top: 1px solid #cad6f9;
     border-bottom: 1px solid #cad6f9;
     z-index: 100;
@@ -400,9 +402,6 @@ hr {
   }
   .header_nav {
     font-size: 1em;
-  }
-  .header_nav .sub-menu {
-    top: 136px;
   }
 }
 
@@ -983,9 +982,9 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 .smartben-hover-content {
   background-color: rgba(0,0,0,.7);
   color: #fff;
-  padding: 2em;
+  padding: 1em 2em;
+  margin-right: 1.5em;
   height: 21.2em;
-  width: 23em;
   position: absolute;
   display:none;
   top: 0;
