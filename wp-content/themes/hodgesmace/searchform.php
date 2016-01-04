@@ -2,6 +2,6 @@
 	<div>
 		<label class="screen-reader-text" for="s"><?php _x( 'Search for:', 'label' ); ?></label>
 		<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" />
-		<input type="submit" id="searchsubmit" class="fa" value="&#xf002;" />
+		<?php echo do_shortcode('[icon class="fa-search"]') ?>
 	</div>
 </form>
