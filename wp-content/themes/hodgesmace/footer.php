@@ -15,7 +15,8 @@
     <p class="left c-white">&copy; <?php echo date('Y') ?> <?php bloginfo('name')?></p>
     <p class="right c-white">
       <?php wp_nav_menu(array('menu' => 'Footer Menu', 'menu_class' => 'footer_nav' )); ?>
-      <?php echo do_shortcode('[icon class="fa-linkedin"]') ?> <?php echo do_shortcode('[icon class="fa-envelope"]')?></p>
+      <?php echo do_shortcode('[icon class="fa-linkedin"]') ?> <?php echo do_shortcode('[icon class="fa-envelope"]')?>
+    </p>
   </div>
 </div>
 </div><!-- .container-fluid -->
