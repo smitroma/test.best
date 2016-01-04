@@ -26,7 +26,7 @@
 		<div id="top-header">
 			<div class="container">
 				<?php echo do_shortcode('[icon class="fa-search"]') ?>
-				<?php wp_nav_menu(array('menu' => 'Login Nav', 'menu_class' => 'top_nav' )); ?>
+				
 				<!-- <a href="#">
 					<button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern bttn-white-border m-l-md">SmartBen Login</button>
 				</a> -->
