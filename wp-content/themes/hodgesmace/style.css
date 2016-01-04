@@ -243,7 +243,9 @@ ul#menu-login-menu li:hover > .sub-menu {
 }
 
 /* Search Form */
-
+.top-header form#searchform {
+  display: inline-block;
+}
 input#searchsubmit {
   color: inherit;
   background-color: transparent;
@@ -254,6 +256,18 @@ input#searchsubmit {
 input#searchsubmit:before {
   font-family: "FontAwesome";
   content: "\f002";
+}
+input#s {
+  background-color: transparent;
+  color: #fff;
+  padding: 3px 10px;
+  border: 2px solid #999;
+  border-radius: 5px;
+}
+input#s:focus {
+  outline: 0;
+  color: #fff;
+  border: 2px solid #1897d3;
 }
 
  /* Main Header */
