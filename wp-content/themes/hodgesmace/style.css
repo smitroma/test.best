@@ -180,6 +180,13 @@ hr {
  color: #fff;
  text-align: right;
  padding: 10px 0;
+ padding: 10px 20px;
+}
+
+@media( min-width: 768px ){
+  #top-header {
+   padding: 10px 0;
+ }
 }
 
 .header-right-button {
@@ -208,7 +215,7 @@ hr {
 #header .mobile-menu-toggle {
   color: #ccc;
   position: absolute;
-  top: 70px;
+  top: 20px;
   right: 30px;
   font-size: 30px;
 }
