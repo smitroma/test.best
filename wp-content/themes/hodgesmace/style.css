@@ -60,6 +60,10 @@ h4 { font-size: 1.5em; }
 h5 { font-size: 1.2em; }
 h6 { font-size: 1em; }
 
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: #555;
+}
+
 h5, h6 {
   color: #1897d3;
 }
@@ -1112,43 +1116,6 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   color: #fff;
 }
 
-/* Helpers */
-
-.fs-xs-2-em { font-size: 2em; }
-.va-m { vertical-align: middle; }
-.h-550 { height: 550px; }
-.h-350 { height: 350px; }
-.ta-c { text-align: center; }
-.m-r-10-px { margin-right: 10px; }
-.uppercase { text-transform: uppercase; }
-.bold { font-weight: bold; }
-.d-t { display: table; }
-.float-left {
-  float: left !important;
-  clear: none !important;
-}
-.float-right {
-  float: right !important;
-  clear: none !important;
-}
-.site-content .background-top-center {
-  background-position: center top !important;
-}
-.aligncenter, img.aligncenter {
-  clear: both;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.vertical-center {
-  display: table-cell;
-  vertical-align: center;
-}
-
-@media (width:990px) {
-  .fs-xs-2-em { font-size: initial; }
-}
-
 /* Blog Roll */
 
 .site-content .blog-banner {
@@ -1172,6 +1139,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   display: table-cell;
   vertical-align: middle;
   height: 160px;
+  color: #555;
 }
 
 .blog-excerpt {
@@ -1251,4 +1219,47 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 
 .pagination .active a {
   color: #fff;
+}
+
+/* single */
+
+.post-meta {
+  font-size: 1.2em;
+}
+
+/* Helpers */
+
+.fs-xs-2-em { font-size: 2em; }
+.va-m { vertical-align: middle; }
+.h-550 { height: 550px; }
+.h-350 { height: 350px; }
+.ta-c { text-align: center; }
+.m-r-10-px { margin-right: 10px; }
+.uppercase { text-transform: uppercase; }
+.bold { font-weight: bold; }
+.d-t { display: table; }
+.float-left {
+  float: left !important;
+  clear: none !important;
+}
+.float-right {
+  float: right !important;
+  clear: none !important;
+}
+.site-content .background-top-center {
+  background-position: center top !important;
+}
+.aligncenter, img.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.vertical-center {
+  display: table-cell;
+  vertical-align: center;
+}
+
+@media (width:990px) {
+  .fs-xs-2-em { font-size: initial; }
 }

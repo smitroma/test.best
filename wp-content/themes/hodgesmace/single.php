@@ -3,7 +3,7 @@
  * The template for displaying all single posts and attachments
  *
  * @package Brain_Bytes
- * @subpackage Hodges Mace 
+ * @subpackage Hodges Mace
  * @since Hodges Mace  1.0
  */
 
@@ -11,38 +11,47 @@ get_header(); ?>
 
 	<div id="primary">
 		<main id="main" role="main">
+			<div class="container">
+				<?php while ( have_posts() ) : the_post(); ?>
+					<div class="featured-img p-t-md">
+						<?php if ( has_post_thumbnail() ): ?>
+							<?php the_post_thumbnail(); ?>
+						<?php else: ?>
+							<div class="default-img">
+								<div class="default-img-content">
+									No Image Added
+								</div>
+							</div>
+						<?php endif; ?>
+					</div>
+					<div class="post-meta uppercase p-y-md">
+						<span><?php the_date() ?></span> | <span>BY <?php the_author() ?></span>
+					</div>
+					<h1><?php the_title() ?></h1>
+					<div class="post-content p-b-lg">
+						<?php the_content(); ?>
+					</div>
 
-		<?php
-		// Start the loop.
-		while ( have_posts() ) : the_post();
+					<?php if ( comments_open() || get_comments_number() ) : ?>
+						<?php // comments_template(); ?>
+					<?php endif; ?>
 
-			/*
-			 * Include the post format-specific template for the content. If you want to
-			 * use this in a child theme, then include a file called called content-___.php
-			 * (where ___ is the post format) and that will be used instead.
-			 */
-			the_content();
+					<!-- Related Posts -->
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
 
-			// Previous/next post navigation.
-			the_post_navigation( array(
-				'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'hodgesmace' ) . '</span> ' .
-					'<span class="screen-reader-text">' . __( 'Next post:', 'hodgesmace' ) . '</span> ' .
-					'<span class="post-title">%title</span>',
-				'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'hodgesmace' ) . '</span> ' .
-					'<span class="screen-reader-text">' . __( 'Previous post:', 'hodgesmace' ) . '</span> ' .
-					'<span class="post-title">%title</span>',
-			) );
+					<h3 style="text-align: center;">Related Posts</h3>
 
-		// End the loop.
-		endwhile;
-		?>
 
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+					<?php $inner_query = new WP_Query($args); ?>
+					<?php if($inner_query->have_posts()): while ($inner_query->have_posts()) : the_post() ?>
+
+					<?php endwhile; else: ?>
+
+					<?php endif; ?>
+
+				<?php endwhile;	?>
+			</div>
+		</main>
+	</div>
 
 <?php get_footer(); ?>

@@ -21,19 +21,21 @@ get_header(); ?>
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="container p-y-lg blog-excerpt">
           <div class="col-md-4 p-r-lg-md col-xs-12">
-            <?php if ( has_post_thumbnail() ): ?>
-              <?php the_post_thumbnail(); ?>
-            <?php else: ?>
-              <div class="default-img">
-                <div class="default-img-content">
-                  No Image Added
+            <a href="<?php the_permalink() ?>">
+              <?php if ( has_post_thumbnail() ): ?>
+                <?php the_post_thumbnail(); ?>
+              <?php else: ?>
+                <div class="default-img">
+                  <div class="default-img-content">
+                    No Image Added
+                  </div>
                 </div>
-              </div>
-            <?php endif; ?>
+              <?php endif; ?>
+            </a>
           </div>
           <div class="col-md-8">
             <p class="post-meta"><?php the_date(); ?> | BY <?php the_author(); ?></p>
-            <h3><?php the_title(); ?></h3>
+            <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
             <p class="post-content"><?php the_excerpt(); ?></p>
           </div>
         </div>
