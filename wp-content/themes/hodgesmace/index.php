@@ -48,17 +48,19 @@ get_header(); ?>
         if(!$paged) { $paged = 1; }
       ?>
 
-      <div class="pagination">
-        <?php if(($paged - 1) > 0): ?>
-          <span class="nav-next"><a href="<?php echo get_pagenum_link($paged-1) ?>"><?php echo do_shortcode('[icon class="fa fa-angle-left"]') ?></a></span>
-        <?php endif; ?>
-        <?php for ($i=1; $i <= $pages; $i++): ?>
-          <span class="<?php echo ($i == $paged) ? 'active' : ''?>"><a href="<?php echo get_pagenum_link($i) ?>"><?php echo $i ?></a></span>
-        <?php endfor;?>
-        <?php if($paged < $pages): ?>
-          <span class="nav-next"><a href="<?php echo get_pagenum_link($paged+1) ?>"><?php echo do_shortcode('[icon class="fa fa-angle-right"]') ?></a></span>
-        <?php endif; ?>
-      </div>
+      <?php if($pages > 1): ?>
+        <div class="pagination">
+          <?php if(($paged - 1) > 0): ?>
+            <span class="nav-next"><a href="<?php echo get_pagenum_link($paged-1) ?>"><?php echo do_shortcode('[icon class="fa fa-angle-left"]') ?></a></span>
+          <?php endif; ?>
+          <?php for ($i=1; $i <= $pages; $i++): ?>
+            <span class="<?php echo ($i == $paged) ? 'active' : ''?>"><a href="<?php echo get_pagenum_link($i) ?>"><?php echo $i ?></a></span>
+          <?php endfor;?>
+          <?php if($paged < $pages): ?>
+            <span class="nav-next"><a href="<?php echo get_pagenum_link($paged+1) ?>"><?php echo do_shortcode('[icon class="fa fa-angle-right"]') ?></a></span>
+          <?php endif; ?>
+        </div>
+      <?php endif; ?>
 
       <?php else : ?>
         <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
