@@ -207,7 +207,7 @@ function testimonial_register() {
   if ( ! function_exists( 'wpse_custom_wp_trim_excerpt' ) ) {
     function wpse_custom_wp_trim_excerpt($wpse_excerpt) {
       $raw_excerpt = $wpse_excerpt;
-      if ( '' == $wpse_excerpt ) {
+      if ( '' == $wpse_excerpt && get_post_type(get_the_ID()) == 'testimonial') {
           $wpse_excerpt = get_the_content('');
           $wpse_excerpt = apply_filters('the_content', $wpse_excerpt);
           $excerpt_length = apply_filters('excerpt_length', 75);
