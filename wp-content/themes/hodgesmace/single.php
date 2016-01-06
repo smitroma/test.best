@@ -52,7 +52,7 @@ get_header(); ?>
 					<?php $related_query = new WP_Query($args); ?>
 					<?php if($related_query->have_posts()): ?>
 						<div class="wrapper-container related-articles">
-							<h3 style="text-align: center;" class="m-b-0">Related Posts</h3>
+							<h3 style="text-align: center;" class="m-b-0">Related Articles</h3>
 						</div>
 						<div class="background-top-center blue-arrow related-articles-arrow"></div>
 						<div class="container p-y-lg">
