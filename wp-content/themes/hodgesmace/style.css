@@ -399,7 +399,7 @@ input#s:focus {
   }
 
   .header_nav li a, .header_nav li a:visited {
-    padding:36px 15px;
+    padding:36px 11px;
   }
 
   .header_nav li ul li a {
@@ -1068,22 +1068,12 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   }
 }
 
-.smarter-banner-height { height:1100px }
-
-@media (min-width: 540px ) {
-  .smarter-banner-height { height: 950px }
-}
-
 @media (min-width: 768px ) {
-  .smarter-banner-height { height: 750px }
-}
-
-@media (min-width: 1200px ) {
-  .smarter-banner-height { height: 700px }
+  .smarter-column { height: 380px; }
 }
 
 @media (width:1440px) {
-  .smarter-banner-height { height: 650px }
+  .smarter-column { height: 300px; }
 }
 
 /* SmartBen Platform */
