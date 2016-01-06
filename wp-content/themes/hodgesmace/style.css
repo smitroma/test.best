@@ -111,13 +111,6 @@ hr {
   color: #ffffff;
 }
 
-/* Helpers */
-.alignright {
-  float: right;
-  clear: both;
-  text-align: right;
-}
-
 /*
  * Containers / Wrappers
  * --------------------------------------------------------------- *
@@ -1267,9 +1260,14 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 }
 .aligncenter, img.aligncenter {
   clear: both;
-  display: block;
+  display: table;
   margin-left: auto;
   margin-right: auto;
+}
+.alignright {
+  float: right;
+  clear: both;
+  text-align: right;
 }
 .vertical-center {
   display: table-cell;
