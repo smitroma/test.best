@@ -51,7 +51,10 @@ body {
     background-color: #fff;
 }
 
-a { text-decoration: none;}
+a {
+  text-decoration: none;
+  color: #1897d3;
+}
 p { font-size: 1em; }
 h1 { font-size: 3em; }
 h2 { font-size: 2.5em; }
@@ -1224,6 +1227,20 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 
 .post-meta {
   font-size: 1.2em;
+}
+
+.site-content .related-articles {
+  background-image: url('./images/blog/related-articles-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1em 0;
+  color: #fff;
+}
+
+.related-articles-arrow {
+  background-image: url('./images/blog/Rounded-Rectangle-71.svg');
+  background-repeat: no-repeat;
+  height: 20px;
 }
 
 /* Helpers */
