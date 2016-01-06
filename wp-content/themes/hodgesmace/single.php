@@ -38,10 +38,6 @@ get_header(); ?>
 				</div>
 				<!-- Related Posts -->
 
-				<div class="wrapper-container related-articles">
-					<h3 style="text-align: center;" class="m-b-0">Related Posts</h3>
-				</div>
-				<div class="background-top-center blue-arrow related-articles-arrow"></div>
 				<?php if(is_array(get_the_tags())): ?>
 					<?php
 						$tags = array();
@@ -55,6 +51,10 @@ get_header(); ?>
 					); ?>
 					<?php $related_query = new WP_Query($args); ?>
 					<?php if($related_query->have_posts()): ?>
+						<div class="wrapper-container related-articles">
+							<h3 style="text-align: center;" class="m-b-0">Related Posts</h3>
+						</div>
+						<div class="background-top-center blue-arrow related-articles-arrow"></div>
 						<div class="container p-y-lg">
 							<?php while ($related_query->have_posts()): $related_query->the_post()?>
 								<div class="col-md-4 col-xs-12 p-x-md">
