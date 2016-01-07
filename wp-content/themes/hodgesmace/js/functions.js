@@ -10,17 +10,20 @@
   })
 
   // Internal What You Can Expect
-
   $('.hover').hover(function(e){
+      var idx = $('.hover').index(this);
+      $('.hover').removeClass('hover-active');
+      $(this).addClass('hover-active');
+      $('.hover-content').hide();
+      $('.hover-content-'+idx).show();
+    }, function(e) {}
+  );
 
-    var idx = $('.hover').index(this);
-    $('.hover').removeClass('hover-active');
-    $(this).addClass('hover-active');
-    $('.hover-content').hide();
-    $('.hover-content-'+idx).show();
-
-  }, function(e) {
-  });
-
-
+  // Anchor
+  $('.anchor-bttn').click(function() {
+    var anchorTarget = $(this).attr('data-target');
+    $('html, body').animate({
+        scrollTop: $('#'+anchorTarget).offset().top
+    }, 1000);
+  })
 })(jQuery);
