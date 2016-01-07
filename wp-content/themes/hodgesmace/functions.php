@@ -235,3 +235,127 @@ function header_menu_desc( $item_output, $item, $depth, $args ) {
 }
 
 add_filter( 'walker_nav_menu_start_el', 'header_menu_desc', 10, 4 );
+
+/**
+ * Act-On Code copied from integration docs
+ */
+
+/**
+* Post form submission data to Act-On and convert visitors to known via cURL, allowing no direct touch
+* between Act-On and your website vistitor's browser to be necessary
+*/
+class ActonWordPressConnection {
+protected $_postItems = array();
+protected function getPostItems() {
+  return $this->_postItems;
+}
+
+/**
+* for setting your form's POST items (key is your form input's name, value is the input value)
+* @param string $key first part of key=value for form field submission (name in name=John)
+* @param string $value latter part of key=value for form field submission (John in name=John)
+*/
+public function setPostItems($key, $value)
+{
+$this->_postItems[$key] = (string)$value;
+}
+
+protected function getDomain($address)
+{
+$pieces = parse_url($address);
+$domain = isset($pieces['host']) ? $pieces['host'] : '';
+if (preg_match('/(?P<domain>[a-z0-9][a-z0-9\-]{1,63}\.[a-z\.]{2,6})$/i', $domain, $regs))
+{
+return $regs['domain'];
+}
+
+return false;
+}
+
+// get IP of website visitor to send to Act-On for location info
+
+protected function getUserIP()
+{
+
+// check proxy
+
+if (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
+{
+$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+}
+else
+{
+$ip = $_SERVER['REMOTE_ADDR'];
+}
+
+return $ip;
+}
+
+/**
+* process form data for submission to your Act-On external form URL
+* @param string $extPostUrl your external post (Proxy URL) for your Act-On "proxy" form
+*/
+public function processConnection($extPostUrl)
+{
+
+// get the account ID from $extPostURL
+
+$acctIdWithPath = preg_replace('/^(.*?)eform\//', '', $extPostUrl); // remove extPostUrl string parts up to 'eform/'
+$acctId = explode('/', (string)$acctIdWithPath, 2); // remove parts after the first /, which leaves the acct ID remaining
+$aoCookieName = 'wp' . $acctId[0];
+$aoCookieNameOI = 'ao_optin' . $acctId[0]; // if opt-in cookie is enabled
+if (isset($_COOKIE[$aoCookieName]))
+{
+$aoCookieToSend = new WP_Http_Cookie();
+$aoCookieToSend->name = $aoCookieName;
+$aoCookieToSend->value = $_COOKIE[$aoCookieName];
+$aoCookiesToSend[] = $aoCookieToSend;
+if (isset($_COOKIE[$aoCookieNameOI]))
+{
+$aoCookieToSendOI = new WP_Http_Cookie();
+$aoCookieToSendOI->name = $aoCookieNameOI;
+$aoCookieToSendOI->value = $_COOKIE[$aoCookieNameOI];
+$aoCookiesToSend[] = $aoCookieToSendOI;
+}
+
+$this->setPostItems('_ipaddr', $this->getUserIP()); // Act-On accepts manually defined IPs if using field name '_ipaddr'
+$fields = http_build_query($this->getPostItems()); // encode post items into query-string
+$request = wp_remote_get($extPostUrl . '?' . $fields, array(
+'cookies' => $aoCookiesToSend
+));
+$aoResponseCookie = explode(";", (string)$request["headers"]["set-cookie"]);
+foreach($aoResponseCookie as $key => & $value)
+{
+$splitAtEquals = explode('=', (string)$value);
+$newKey = $splitAtEquals[0]; // set array keys to named keys (wpXXXX, Version, Domain, Max-Age, Expires, Path)
+$aoResponseCookie[$newKey] = $value;
+$newValue = preg_replace('/^(.*?)=/', '', $value);
+$value = $newValue;
+}
+
+setrawcookie($aoCookieName, $aoResponseCookie[$aoCookieName], time() + 86400 * 365, "/", $this->getDomain($extPostUrl));
+}
+}
+}
+
+/* Contact Form */
+
+add_action('gform_after_submission_1', 'send_to_acton', 10, 2);
+
+function send_to_acton($entry,$form) {
+
+  $ao_gf1 = new ActonWordPressConnection;
+
+  $ao_gf1->setPostItems('name',$entry['1']);
+  $ao_gf1->setPostItems('email',$entry['2']);
+  $ao_gf1->setPostItems('subject',$entry['3']);
+  $ao_gf1->setPostItems('message',$entry['4']);
+
+  $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/0001/d-ext-0001');
+}
+
+/* Request a Demo Form */
+
+
+
+?>

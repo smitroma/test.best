@@ -26,4 +26,5 @@
         scrollTop: $('#'+anchorTarget).offset().top
     }, 1000);
   })
+  
 })(jQuery);
