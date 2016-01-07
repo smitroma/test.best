@@ -1090,11 +1090,12 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 .smartben-hover-content {
   background-color: rgba(0,0,0,.7);
   color: #fff;
-  padding: 2em;
-  margin-right: 1.5em;
-  height: 25.2em;
+  padding: 1.5em;
+  margin-right: 1.9em;
+  font-size: .8em;
+  height: 24.3em;
   position: absolute;
-  display:none;
+  display: none;
   top: 0;
 }
 
