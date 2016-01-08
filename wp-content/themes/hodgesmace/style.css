@@ -75,6 +75,10 @@ hr {
   width: 50px;
 }
 
+img {
+  max-width: 100%;
+}
+
 .site-content ul {
   padding-left: 20px;
   position: relative;
