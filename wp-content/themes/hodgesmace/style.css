@@ -409,7 +409,7 @@ input#s:focus {
   }
 
   .header_nav li a, .header_nav li a:visited {
-    padding:36px 11px;
+    padding:36px 7px;
   }
 
   .header_nav li ul li a {
@@ -1026,7 +1026,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 
 .hover-content {
   display: none;
-  height: 300px;
+  height: 500px;
 }
 
 .hover-content-1 { display: inherit; }
@@ -1077,9 +1077,12 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   min-height:160px;
 }
 
+@media (min-width: 990px) {
+  .hover h3 { font-size: 1.5em; }
+}
+
 @media (min-width: 768px){
   .hover-content {
-    display: none;
     height: 300px;
   }
   .hover .icon {
