@@ -20,6 +20,18 @@ get_header(); ?>
 					<div class="aligncenter d-t p-y-md"><?php get_search_form(); ?></div>
 				</div>
 			</section>
+			<div class="container blog-footer">
+				<div class="col-md-6">
+					<div class="blog-footer-content">
+						<h2 class="m-b-0">6 Tips for Improving <br>Employee Communication</h2>
+					</div>
+				</div>
+				<div class="col-md-6 d-t">
+					<div class="blog-footer-content p-l-0 w-xs-12">
+						<div class="ta-c"><button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-green">Download Resource</button></div>
+					</div>
+				</div>
+			</div>
 		</main>
 	</div>
 
