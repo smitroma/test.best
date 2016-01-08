@@ -1340,8 +1340,8 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   vertical-align: center;
 }
 @media(width:768px) {
-  .site-content .t-r-md { text-align: right; }
-  .site-content .t-l-md { text-align: left; }
+  .site-content .ta-r-md { text-align: right; }
+  .site-content .ta-l-md { text-align: left; }
 }
 @media (width:990px) {
   .fs-xs-2-em { font-size: initial; }
