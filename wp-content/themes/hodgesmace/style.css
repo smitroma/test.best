@@ -389,7 +389,7 @@ input#s:focus {
     display: block !important;
     padding: 0;
     border: none;
-    position: relative;
+    position: inherit;
     top: 0;
     width: inherit;
     float: right;
