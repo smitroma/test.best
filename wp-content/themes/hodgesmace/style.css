@@ -89,6 +89,10 @@ hr {
   left: 0;
 }
 
+.site-content ul.slides li:before {
+  content: "";
+}
+
 @media (min-width: 768px ) {
   body {
     font-size: 14px;
