@@ -118,6 +118,9 @@ hr {
 
 #main {
  overflow:hidden; /* fixes visual composer overflow issues */
+ position: relative;
+ left: 0;
+ clear:both;
 }
 
 .site-content {
