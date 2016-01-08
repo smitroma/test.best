@@ -126,7 +126,7 @@ hr {
 
 .site-content .container, .container, .site-content .vc_row-fluid,
 .site-content .wrapper-container, .site-content .cq-bannerblock-content {
-  width: 100%;
+  width: 95%;
   padding: 0 20px;
   margin-left: auto;
   margin-right: auto;
@@ -1020,13 +1020,15 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 
 .page-banner-height {
   height: 350px ;
+  width: 95% !important;
+  padding: 0 2.5% !important;
   display: table-cell;
   vertical-align: middle;
 }
 
 .hover-content {
   display: none;
-  height: 500px;
+  height: 460px;
 }
 
 .hover-content-1 { display: inherit; }
