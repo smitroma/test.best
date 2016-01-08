@@ -346,7 +346,8 @@ function send_to_acton($entry,$form) {
 
   $ao_gf1 = new ActonWordPressConnection;
 
-  $ao_gf1->setPostItems('name',$entry['1']);
+  $ao_gf1->setPostItems('firstName',$entry['1']);
+  $ao_gf1->setPostItems('lastName',$entry['1']);
   $ao_gf1->setPostItems('email',$entry['2']);
   $ao_gf1->setPostItems('subject',$entry['3']);
   $ao_gf1->setPostItems('message',$entry['4']);
