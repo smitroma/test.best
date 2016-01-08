@@ -248,7 +248,7 @@ ul#menu-login-menu li:hover > .sub-menu {
 /* Search Form */
 #top-header form#searchform {
   display: inline-block;
-  width: 43%;
+  width: 41%;
 }
 input#searchsubmit {
   color: inherit;
