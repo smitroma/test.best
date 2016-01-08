@@ -1077,14 +1077,11 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   min-height:160px;
 }
 
-@media (min-width: 990px) {
-  .hover h3 { font-size: 1.5em; }
+@media(min-width: 550px){
+  .hover-content { height: 300px; }
 }
 
 @media (min-width: 768px){
-  .hover-content {
-    height: 300px;
-  }
   .hover .icon {
     width: 207px;
     height: 207px;
@@ -1099,6 +1096,11 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   }
   .hover h3 { height: 85px; font-size: 2em; }
 }
+
+@media (min-width: 990px) {
+  .hover h3 { font-size: 1.5em; }
+}
+
 
 /* Smarter Approach */
 
