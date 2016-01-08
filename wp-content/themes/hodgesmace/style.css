@@ -1211,6 +1211,8 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   overflow:auto;
   border-radius: 5px;
   margin-bottom: 4em;
+  margin-left: 2.5%;
+  width: 98%;
 }
 
 .blog-footer-content {
@@ -1225,6 +1227,10 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
     vertical-align: middle;
     padding-left: 15%;
     width: 85%;
+  }
+  .blog-footer{
+    margin-left: inherit;
+    width: inherit;
   }
 }
 
