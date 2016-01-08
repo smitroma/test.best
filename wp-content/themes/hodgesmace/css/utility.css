@@ -366,3 +366,13 @@
     padding-right: 3em;
   }
 }
+
+/* Only non Mobile first class */
+@media(max-width: 768px) {
+  .p-l-0-xs {
+    padding-left: 0 !important;
+  }
+  .p-r-0-xs {
+    padding-right: 0 !important;
+  }
+}
