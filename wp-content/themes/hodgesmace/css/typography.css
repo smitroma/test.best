@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: 'NeuzeitGro Bold';
-    src: url('../fonts/NeuzeitGro-Bold.ttf') format('truetype');
+    src: url('../fonts/NeuzeitGro-Bold.ttf') format('truetype'), url('../fonts/NeuzeitGro-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
