@@ -422,7 +422,8 @@ input#s:focus {
     display: none;
     position: absolute;
     top: 65px;
-    background: #eee;
+    background: #fff;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,.1);
     padding-bottom: 1.5em;
     padding-top: 1em;
     padding-left: 1.3em;
@@ -440,7 +441,7 @@ input#s:focus {
 
   .header_nav .soft-serv .sub-menu {
     left: 0;
-    background: #fff;
+    box-shadow: none;
     top: 85px;
     width: 100%;
     border-top: 1px solid #cad6f9;
