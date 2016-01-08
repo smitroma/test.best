@@ -340,9 +340,9 @@ setrawcookie($aoCookieName, $aoResponseCookie[$aoCookieName], time() + 86400 * 3
 
 /* Contact Form */
 
-add_action('gform_after_submission_1', 'send_to_acton', 10, 2);
+add_action('gform_after_submission_1', 'send_to_acton_1', 10, 2);
 
-function send_to_acton($entry,$form) {
+function send_to_acton_1($entry,$form) {
 
   $ao_gf1 = new ActonWordPressConnection;
 
@@ -357,9 +357,9 @@ function send_to_acton($entry,$form) {
 
 /* Request a Demo Form */
 
-add_action('gform_after_submission_2', 'send_to_acton', 10, 2);
+add_action('gform_after_submission_2', 'send_to_acton_2', 10, 2);
 
-function send_to_acton($entry,$form) {
+function send_to_acton_2($entry,$form) {
 
   $ao_gf1 = new ActonWordPressConnection;
 
