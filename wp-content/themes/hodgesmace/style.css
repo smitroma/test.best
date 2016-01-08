@@ -1033,41 +1033,68 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 
 .hover { cursor: pointer; }
 
-.hover h3 { height: 85px; }
+.hover h3 {
+  height: 45px;
+  font-size: .7em
+}
 
 .hover .icon {
   margin: 1em auto;
   background-color: #dcf1fa;
   border-radius: 50%;
-  width: 207px;
-  height: 207px;
-  background-size: 263px;
+  width: 67px;
+  height: 67px;
+  background-size: 80px;
   background-repeat: no-repeat;
-  background-position: -28px -25px;
+  background-position: -6px -6px;
 }
 
 .hover.hover-active .icon { background-color: transparent; }
 
-.hover-0 .icon { background-image: url('./images/custom-communication.png'); }
+.hover-0 .icon {
+  background-image: url('./images/custom-communication.png');
+}
 
-.hover-0.hover-active .icon { background-image: url('./images/custom-communication-hover.png');}
+.hover-0.hover-active .icon {
+  background-image: url('./images/custom-communication-hover.png');
+}
 
 .hover-1 .icon {
   background-image: url('./images/ongoing-support.png');
-  background-position: -28px -28px;
 }
 
-.hover-1.hover-active .icon { background-image: url('./images/ongoing-support-hover.png'); }
+.hover-1.hover-active .icon {
+  background-image: url('./images/ongoing-support-hover.png');
+}
 
 .hover-2 .icon {
   background-image: url('./images/security.png');
-  background-position: -29px -28px;
 }
 
 .hover-2.hover-active .icon { background-image: url('./images/security-hover.png');}
 
 .three-col-content-height {
   min-height:160px;
+}
+
+@media (min-width: 768px){
+  .hover-content {
+    display: none;
+    height: 300px;
+  }
+  .hover .icon {
+    width: 207px;
+    height: 207px;
+    background-size: 263px;
+    background-position: -28px -25px;
+  }
+  .hover-1 .icon {
+    background-position: -28px -28px;
+  }
+  .hover-2 .icon {
+    background-position: -29px -28px;
+  }
+  .hover h3 { height: 85px; font-size: 2em; }
 }
 
 /* Smarter Approach */
