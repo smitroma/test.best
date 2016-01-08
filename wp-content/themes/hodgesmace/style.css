@@ -519,6 +519,7 @@ input#s:focus {
   background-color: #555555;
   overflow: visible;
   width: 100%;
+  padding: .5em 0;
 }
 
 @media (min-width: 768px ) {
