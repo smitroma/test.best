@@ -1201,7 +1201,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 }
 
 .default-img {
-  display: table;
+  display: block;
   width: 100%;
 }
 
@@ -1344,7 +1344,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 }
 .aligncenter, img.aligncenter {
   clear: both;
-  display: table;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
