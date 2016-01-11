@@ -1040,10 +1040,15 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 
 .page-banner-height {
   height: 350px ;
-  width: 95% !important;
-  padding: 0 2.5% !important;
-  display: table-cell;
-  vertical-align: middle;
+  display: block;
+}
+
+.page-banner-height .vc_column_container {
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: 50%;
+  position: relative;
 }
 
 .hover-content {
