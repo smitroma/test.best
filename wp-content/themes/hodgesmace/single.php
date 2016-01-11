@@ -13,17 +13,21 @@ get_header(); ?>
 		<main id="main" role="main">
 			<div class="container">
 				<?php while ( have_posts() ) : the_post(); ?>
-					<div class="featured-img p-t-md">
-						<?php if ( has_post_thumbnail() ): ?>
-							<?php the_post_thumbnail(); ?>
-						<?php else: ?>
+
+					<!-- Featured Image Banner now add to post instead of using the featured image as banner -->
+
+					<!-- <div class="featured-img p-t-md">
+						<?php //if ( has_post_thumbnail() ): ?>
+							<?php //the_post_thumbnail(); ?>
+						<?php //else: ?>
 							<div class="default-img">
 								<div class="default-img-content">
 									No Image Added
 								</div>
 							</div>
-						<?php endif; ?>
-					</div>
+						<?php //endif; ?>
+					</div> -->
+
 					<div class="post-meta uppercase p-y-md">
 						<span><?php the_date() ?></span> | <span>BY <?php the_author() ?></span>
 					</div>
