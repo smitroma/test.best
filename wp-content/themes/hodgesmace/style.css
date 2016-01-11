@@ -1011,7 +1011,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 .testimonials-slider .flexslider .slides img {
   width: auto;
   height: auto;
-  display: table;
+  display: block;
   margin-right: auto;
   margin-left: auto;
 }
