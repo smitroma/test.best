@@ -1214,7 +1214,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   .in-the-community-column { height: 480px; }
 }
 
-@media (width:1440px) {
+@media (min-width:1440px) {
   .in-the-community-column { height: 400px; }
 }
 
