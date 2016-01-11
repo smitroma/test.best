@@ -1214,10 +1214,6 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   .in-the-community-column { height: 500px; }
 }
 
-@media (min-width: 1130px ) {
-  .in-the-community-column { height: 435px; }
-}
-
 @media (min-width: 1330px ) {
   .in-the-community-column { height: 435px; }
 }
