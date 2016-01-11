@@ -1263,16 +1263,19 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 .default-img {
   display: block;
   width: 100%;
+  background: #ddd;
+  margin-right: 3em;
+  height: 160px;
 }
 
 .default-img-content {
-  background-color: #ddd;
+  background-color: #ddd; */
   width: 100%;
+  top: 50%;
+  margin-top: -20px;
   text-align: center;
-  display: table-cell;
-  vertical-align: middle;
-  height: 160px;
   color: #555;
+  position: absolute;
 }
 
 .blog-excerpt {
