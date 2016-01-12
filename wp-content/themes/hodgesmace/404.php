@@ -21,16 +21,16 @@ get_header(); ?>
 				</div>
 			</section>
 			<div class="container blog-footer">
-				<div class="col-md-6 col-xs-12">
-					<div class="blog-footer-content">
-						<h2>6 Tips for Improving <br>Employee Communication</h2>
-						<div><button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-green">Download Resource</button></div>
-					</div>
-				</div>
-				<div class="blog-footer-img">
-					<img src="<?php echo get_stylesheet_directory_uri() ?>/images/blog/EmployeeCommunicationGraphic.png" />
-				</div>
-			</div>
+        <div class="col-md-6 col-xs-12">
+          <div class="blog-footer-content">
+            <h2>6 Tips for Improving <br>Employee Communication</h2>
+            <div><?php echo do_shortcode('[resource_link]<button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-green">Download Resource</button>[/resource_link]');?></div>
+          </div>
+        </div>
+        <div class="blog-footer-img">
+          <img src="<?php echo get_stylesheet_directory_uri() ?>/images/blog/EmployeeCommunicationGraphic.png" width="100%" height="auto"/>
+        </div>
+      </div>
 		</main>
 	</div>
 
