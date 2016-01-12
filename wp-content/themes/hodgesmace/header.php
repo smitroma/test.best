@@ -35,11 +35,9 @@
     <div id="header">
       <div class="container">
 				<div class="logo">
-					<h1 class="m-b-0">
-						<a href="<?php bloginfo('home') ?> ">
+						<a href="<?php echo home_url(); ?> ">
             	<img	src="<?php header_image(); ?>" alt="<?php bloginfo('name') ?>" />
 						</a>
-					</h1>
 				</div>
 				<div class="mobile-menu-toggle"><i class="fa fa-bars"></i></div>
 				<div id="main-menu">

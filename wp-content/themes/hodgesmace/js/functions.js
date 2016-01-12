@@ -10,13 +10,28 @@
   })
 
   // Internal What You Can Expect
+
+  var getWhatYouExpectContent = function(activeBox) {
+    var hoverContent = '.hover-content-'+$('.hover').index(activeBox);
+    $('.hover').removeClass('hover-active');
+    $(activeBox).addClass('hover-active');
+    $('.hover-content').hide();
+    return(hoverContent);
+  }
+
+  // Desktop
   $('.hover').hover(function(e){
-      var idx = $('.hover').index(this);
-      $('.hover').removeClass('hover-active');
-      $(this).addClass('hover-active');
-      $('.hover-content').hide();
-      $('.hover-content-'+idx).show();
-    }, function(e) {}
+    var hoverContent = getWhatYouExpectContent(this);
+    console.log(hoverContent);
+    $(hoverContent).show();
+    }
+  );
+
+  // Mobile
+  $('.hover').click(function(e){
+    var hoverContent = getWhatYouExpectContent(this);
+    $(hoverContent).show();
+    }
   );
 
   // Anchor
@@ -26,5 +41,11 @@
         scrollTop: $('#'+anchorTarget).offset().top
     }, 1000);
   })
-  
+
+  // SmartBen Boxes
+  $('.smartben-box').click(function() {
+    $('.smartben-hover-content').hide();
+    $(this).find('.smartben-hover-content').show();
+  })
+
 })(jQuery);
