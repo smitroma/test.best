@@ -1083,15 +1083,12 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 /* Internal Page */
 
 .page-banner-height {
-  height: 350px ;
   display: block;
 }
 
 .page-banner-height .vc_column_container {
-  position: absolute;
-  top: 175px;
-  margin-top: -87.5px;
-  left: 0;
+  margin-top: 6em;
+  margin-bottom: 6em;
 }
 
 .hover-content {
