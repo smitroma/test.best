@@ -1429,6 +1429,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 .uppercase { text-transform: uppercase; }
 .bold { font-weight: bold; }
 .d-t { display: table; }
+.d-n-xs { display: none; }
 .float-left {
   float: left !important;
   clear: none !important;
@@ -1459,4 +1460,5 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 @media(min-width:768px) {
   .site-content .ta-r-md { text-align: right; }
   .site-content .ta-l-md { text-align: left; }
+  .site-content .d-n-xs { display: block; }
 }
