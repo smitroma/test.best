@@ -17,11 +17,11 @@ get_header(); ?>
           <h2>6 Tips for Improving <br>Employee Communication</h2>
           <?php echo do_shortcode('[resource_link]<button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-green">Download Resource</button>[/resource_link]');?>
         </div>
-      </div>    
+      </div>
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="container p-y-lg blog-excerpt">
           <div class="col-md-4 p-b-md p-r-lg p-r-0-xs col-xs-12">
-            <a href="<?php the_permalink() ?>">
+            <a href="<?php the_permalink() ?>" class="img-100">
               <?php if ( has_post_thumbnail() ): ?>
                 <?php the_post_thumbnail(); ?>
               <?php else: ?>
