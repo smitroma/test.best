@@ -332,7 +332,7 @@ input#s:focus {
   display:none;
 }
 
-@media (min-width: 1150px ) {
+@media (min-width: 1170px ) {
   #header .request-header {
     display: block;
   }
@@ -435,7 +435,7 @@ input#s:focus {
   }
 
   .header_nav li a, .header_nav li a:visited {
-    padding:36px 7px;
+    padding:36px 6px;
   }
 
   .header_nav li ul li a {
