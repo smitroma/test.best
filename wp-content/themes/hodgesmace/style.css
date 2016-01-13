@@ -1122,6 +1122,10 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   background-image: url('./images/custom-communication-hover.png');
 }
 
+.hover-0.hover-active h3 span{
+  color: #fb9f0e !important;
+}
+
 .hover-1 .icon {
   background-image: url('./images/ongoing-support.png');
 }
@@ -1130,12 +1134,20 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   background-image: url('./images/ongoing-support-hover.png');
 }
 
+.hover-1.hover-active h3 span{
+  color: #0093d3 !important;
+}
+
 .hover-2 .icon {
   background-image: url('./images/security.png');
 }
 
 .hover-2.hover-active .icon {
   background-image: url('./images/security-hover.png');
+}
+
+.hover-2.hover-active h3 span {
+  color: #8dc63f !important;
 }
 
 .three-col-content-height {
