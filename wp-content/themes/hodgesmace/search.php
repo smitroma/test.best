@@ -18,6 +18,7 @@ get_header(); ?>
           <?php echo do_shortcode('[resource_link]<button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-green">Download Resource</button>[/resource_link]');?>
         </div>
       </div>
+      
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="container p-y-lg blog-excerpt">
           <div class="col-md-12">
