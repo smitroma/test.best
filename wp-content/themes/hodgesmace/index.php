@@ -20,7 +20,7 @@ get_header(); ?>
       </div>
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="container p-y-lg blog-excerpt">
-          <div class="col-md-4 p-b-md col-xs-12">
+          <div class="col-md-4 p-b-md p-r-lg p-r-0-xs col-xs-12">
             <a href="<?php the_permalink() ?>">
               <?php if ( has_post_thumbnail() ): ?>
                 <?php the_post_thumbnail(); ?>
