@@ -1107,18 +1107,12 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 
 .hover .icon {
   margin: 1em auto;
-  background-color: #dcf1fa;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  width: 67px;
-  height: 67px;
+  display: block;
+  width: 80px;
+  height: 80px;
   background-size: 80px;
   background-repeat: no-repeat;
-  background-position: -6px -6px;
 }
-
-.hover.hover-active .icon { background-color: transparent; }
 
 .hover-0 .icon {
   background-image: url('./images/custom-communication.png');
@@ -1140,7 +1134,9 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   background-image: url('./images/security.png');
 }
 
-.hover-2.hover-active .icon { background-image: url('./images/security-hover.png');}
+.hover-2.hover-active .icon {
+  background-image: url('./images/security-hover.png');
+}
 
 .three-col-content-height {
   min-height:160px;
@@ -1151,17 +1147,10 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 }
 
 @media (min-width: 768px){
-  .hover .icon {
-    width: 207px;
-    height: 207px;
-    background-size: 263px;
-    background-position: -28px -25px;
-  }
-  .hover-1 .icon {
-    background-position: -28px -28px;
-  }
-  .hover-2 .icon {
-    background-position: -29px -28px;
+  .hover .icon, .hover-1 .icon, .hover-2 .icon {
+    width: 200px;
+    height: 200px;
+    background-size: 200px;
   }
   .hover h3 { height: 85px; font-size: 2em; }
 }
