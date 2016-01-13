@@ -25,7 +25,7 @@ get_header(); ?>
               <?php if ( has_post_thumbnail() ): ?>
                 <?php the_post_thumbnail(); ?>
               <?php else: ?>
-                <div class="default-img col-md-11 col-xs-12">
+                <div class="default-img col-xs-12">
                   <div class="default-img-content">
                     No Image Added
                   </div>
