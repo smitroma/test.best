@@ -816,7 +816,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
  */
 
 .img-100, .img-100 .vc_figure, .img-100 .vc_figure div,
-.img-100 .vc_figure img {
+.img-100 .vc_figure img, .img-100 img {
   width: 100%;
   height: auto;
 }
