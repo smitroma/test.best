@@ -14,18 +14,18 @@ get_header(); ?>
       <div class="blog-banner wrapper-container">
         <div class="banner-content-center">
           <h4 class="uppercase">Featured Resource</h4>
-          <h2>Lorem ipsum dolor sit amet, <br>consectetur adipisicing elit</h2>
-          <button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-green">Download Resource</button>
+          <h2>6 Tips for Improving <br>Employee Communication</h2>
+          <?php echo do_shortcode('[resource_link]<button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-green">Download Resource</button>[/resource_link]');?>
         </div>
       </div>
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="container p-y-lg blog-excerpt">
-          <div class="col-md-4 p-r-lg-md col-xs-12">
+          <div class="col-md-4 p-b-md p-r-lg p-r-0-xs col-xs-12">
             <a href="<?php the_permalink() ?>">
               <?php if ( has_post_thumbnail() ): ?>
                 <?php the_post_thumbnail(); ?>
               <?php else: ?>
-                <div class="default-img">
+                <div class="default-img col-xs-12">
                   <div class="default-img-content">
                     No Image Added
                   </div>
@@ -66,15 +66,14 @@ get_header(); ?>
         <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
       <?php endif; ?>
       <div class="container blog-footer">
-        <div class="col-md-6">
+        <div class="col-md-6 col-xs-12">
           <div class="blog-footer-content">
-            <h2 class="m-b-0">6 Tips for Improving <br>Employee Communication</h2>
+            <h2>6 Tips for Improving <br>Employee Communication</h2>
+            <div><?php echo do_shortcode('[resource_link]<button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-green">Download Resource</button>[/resource_link]');?></div>
           </div>
         </div>
-        <div class="col-md-6 d-t">
-          <div class="blog-footer-content p-l-0 w-xs-12">
-            <div class="ta-c"><button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-green">Download Resource</button></div>
-          </div>
+        <div class="blog-footer-img">
+          <img src="<?php echo get_stylesheet_directory_uri() ?>/images/blog/EmployeeCommunicationGraphic.png" width="100%" height="auto"/>
         </div>
       </div>
     </main>
