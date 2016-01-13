@@ -395,6 +395,7 @@ function resource_link_func( $atts, $content='' ) {
   $url = get_home_url().'/index.php/?page_id=1507';
 	return '<a href="'.$url.'" class="'.$atts['class'].'">'.$content.'</a>';
 }
+
 add_shortcode( 'resource_link', 'resource_link_func' );
 
 ?>
