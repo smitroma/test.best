@@ -384,14 +384,12 @@ function send_to_acton_2($entry,$form) {
 // Resource url
 
 function resource_link_func( $atts, $content='' ) {
-
   $atts = shortcode_atts( array(
     'class' => ''
   ), $atts, 'resource_link' );
   $upload_dir = wp_upload_dir();
   $url = $upload_dir['baseurl'].'/2016/01/H-M-E-Book-6-Tips-for-Improving-Employee-Communications-1.pdf';
 	return '<a href="'.$url.'" class="'.$atts['class'].'">'.$content.'</a>';
-  
 }
 add_shortcode( 'resource_link', 'resource_link_func' );
 
