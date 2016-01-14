@@ -1246,12 +1246,25 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   font-size: .6em;
   height: 36em;
   position: absolute;
+  padding-top: 7em;
   display: none;
   top: 0;
 }
 
 .smartben-hover-content h5 {
   color: #fff;
+}
+
+@media(min-width: 1250px) {
+  .smartben-hover-content {
+    padding-top: 8em
+  }
+}
+
+@media(min-width: 768px) {
+  .smartben-hover-content {
+    padding-top: 3em
+  }
 }
 
 /* Blog Roll */
