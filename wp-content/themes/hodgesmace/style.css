@@ -741,6 +741,12 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
    display: none;
  }
 
+ /* Center Button */
+
+ .site-content .button-center .gform_footer {
+   text-align: center;
+ }
+
  /* Inline Form */
 
 .site-content .gform_wrapper .inline-form {
@@ -788,23 +794,6 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   border-bottom-right-radius: .75em;
   -webkit-border-bottom-right-radius: .75em;
   -moz-border-bottom-right-radius: .75em;
-}
-
-/* Color Themes */
-
-/* Brown */
-.site-content .gform_wrapper .brown-form input {
-  background-color: #cad6f9;
-}
-
-.site-content .gform_wrapper .brown-form .gform_footer input.button,
-.site-content .gform_wrapper .brown-form .gform_footer input[type=image],
-.site-content .gform_wrapper .brown-form .gform_footer input[type=submit] {
-  background-color: #80392c;
-}
-
-.site-content .gform_wrapper .brown-form :focus {
-  color: #80392c;
 }
 
 /*
