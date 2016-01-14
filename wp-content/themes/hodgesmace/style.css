@@ -1070,6 +1070,13 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   background-size: 300px;
 }
 
+/* Contact Us */
+
+.site-content .contact-icon {
+  max-width: 80px;
+  clear: left;
+}
+
 /* Internal Page */
 
 .page-banner-height {
