@@ -1147,7 +1147,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   left: 50%;
   margin-left: -.28em;
   line-height: 0;
-  font-size: 4em;
+  font-size: 3em;
   color: #0093d3;
   font-family: 'FontAwesome';
 }
@@ -1162,15 +1162,15 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 
 @media (min-width: 768px){
   .hover .icon, .hover-1 .icon, .hover-2 .icon {
-    width: 200px;
-    height: 200px;
-    background-size: 200px;
+    width: 150px;
+    height: 150px;
+    background-size: 150px;
   }
   .hover h3 { height: 85px; font-size: 2em; }
   .hover.hover-active .icon:after {
     bottom: -.25em;
     margin-left: -.3em;
-    font-size: 8em;
+    font-size: 5em;
   }
 }
 
