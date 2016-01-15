@@ -14,7 +14,7 @@
   <div class="row container">
     <p class="left c-white">&copy; <?php echo date('Y') ?> <?php bloginfo('name')?></p>
     <p class="right c-white">
-      <?php echo do_shortcode('[icon class="fa-linkedin m-r-10-px"]') ?> <?php echo do_shortcode('[icon class="fa-envelope"]')?>
+      <a class="c-white" href="https://www.linkedin.com/company/1706000?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A1706000%2Cidx%3A2-1-9%2CtarId%3A1452720499093%2Ctas%3Ahodges"><?php echo do_shortcode('[icon class="fa-linkedin m-r-10-px"]') ?></a> <a class="c-white" href="<?php echo get_home_url()."/index.php/?page_id=1533" ?>"><?php echo do_shortcode('[icon class="fa-envelope"]')?></a>
     </p>
     <?php wp_nav_menu(array('menu' => 'Footer Menu', 'menu_class' => 'footer_nav' )); ?>
   </div>
