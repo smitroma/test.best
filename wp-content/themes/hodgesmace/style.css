@@ -251,11 +251,19 @@ ul#menu-login-menu .sub-menu li {
   padding: 1px 0;
   font-size: .9em;
 }
-ul#menu-login-menu li:hover {
+
+ul#menu-login-menu li.active {
   background-color: #333;
 }
-ul#menu-login-menu li:hover > .sub-menu {
-  display: block;
+
+
+@media(min-width: 768px) {
+  ul#menu-login-menu li:hover > .sub-menu {
+    display: block !important;
+  }
+  ul#menu-login-menu li:hover {
+    background-color: #333;
+  }
 }
 
 /* Search Form */

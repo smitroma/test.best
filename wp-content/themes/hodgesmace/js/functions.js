@@ -9,8 +9,13 @@
       $('.header_nav').toggle();
     })
 
-  // Internal What You Can Expect
+  // Portal Menu toggle
+    $('#top-header .menu-item-has-children').click(function() {
+      $(this).toggleClass('active');
+      $(this).find('.sub-menu').toggle();
+    })
 
+  // Internal What You Can Expect
     var getWhatYouExpectContent = function(activeBox) {
       var hoverContent = '.hover-content-'+$('.hover').index(activeBox);
       $('.hover').removeClass('hover-active');
