@@ -13,10 +13,17 @@
 <div id="footer">
   <div class="row container">
     <p class="left c-white">&copy; <?php echo date('Y') ?> <?php bloginfo('name')?></p>
-    <p class="right c-white"><?php echo do_shortcode('[icon class="fa-linkedin"]') ?> <?php echo do_shortcode('[icon class="fa-envelope"]')?></p>
+    <p class="right c-white">
+      <a class="c-white" href="https://www.linkedin.com/company/1706000?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A1706000%2Cidx%3A2-1-9%2CtarId%3A1452720499093%2Ctas%3Ahodges"><?php echo do_shortcode('[icon class="fa-linkedin m-r-10-px"]') ?></a> <a class="c-white" href="<?php echo get_home_url()."/index.php/?page_id=1533" ?>"><?php echo do_shortcode('[icon class="fa-envelope"]')?></a>
+    </p>
+    <?php wp_nav_menu(array('menu' => 'Footer Menu', 'menu_class' => 'footer_nav' )); ?>
   </div>
 </div>
 </div><!-- .container-fluid -->
 <?php wp_footer(); ?>
+
+<!-- ActOn Tracking Code -->
+<script>/*<![CDATA[*/(function(w,a,b,d,s){w[a]=w[a]||{};w[a][b]=w[a][b]||{q:[],track:function(r,e,t){this.q.push({r:r,e:e,t:t||+new Date});}};var e=d.createElement(s);var f=d.getElementsByTagName(s)[0];e.async=1;e.src='//marketing.hodgesmace.com/cdnr/96/acton/bn/tracker/17907';f.parentNode.insertBefore(e,f);})(window,'ActOn','Beacon',document,'script');ActOn.Beacon.track();/*]]>*/</script>
+
 </body>
 </html>

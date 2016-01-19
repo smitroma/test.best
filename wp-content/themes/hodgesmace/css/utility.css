@@ -360,3 +360,19 @@
   padding-top: 6em !important;
   padding-bottom: 6em !important;
 }
+
+@media(min-width: 768px) {
+  .m-r-lg-md {
+    padding-right: 3em;
+  }
+}
+
+/* Only non Mobile first class */
+@media(max-width: 768px) {
+  .site-content .p-l-0-xs {
+    padding-left: 0 !important;
+  }
+  .site-content .p-r-0-xs {
+    padding-right: 0 !important;
+  }
+}
