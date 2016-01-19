@@ -1206,7 +1206,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 }
 
 @media (min-width: 990px) {
-  .hover h3 { font-size: 50px; }
+  .hover h3 { font-size: 1.5em; }
 }
 
 
