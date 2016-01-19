@@ -313,7 +313,7 @@ input#s:focus {
 }
 
 #header .logo {
-  max-width: 220px;
+  max-width: 26  0px;
   width: 75%;
   float: left;
 }
@@ -447,7 +447,7 @@ input#s:focus {
   }
 
   .header_nav li a, .header_nav li a:visited {
-    padding:36px 6px;
+    padding:36px 8px;
   }
 
   .header_nav li ul li a {
