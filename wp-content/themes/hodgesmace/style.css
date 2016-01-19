@@ -1089,6 +1089,26 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   clear: left;
 }
 
+.site-content .phone-before,
+.site-content .envelope-before {
+  padding-left: 25px;
+}
+.site-content .phone-before:before {
+  content: '\f098';
+  font-family: 'FontAwesome';
+  position: absolute;
+  color: #555;
+  left: 0;
+}
+
+.site-content .envelope-before:before {
+  content: '\f003';
+  font-family: 'FontAwesome';
+  position: absolute;
+  color: #555;
+  left: 0;
+}
+
 /* Internal Page */
 
 .page-banner-height {
@@ -1490,6 +1510,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   vertical-align: center;
 }
 .d-n-xs { display: none; }
+
 @media(min-width:768px) {
   .site-content .ta-r-md { text-align: right; }
   .site-content .f-r-md { float: right !important;}
