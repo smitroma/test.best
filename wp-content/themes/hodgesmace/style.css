@@ -261,8 +261,11 @@ ul#menu-login-menu li.active {
   ul#menu-login-menu li:hover > .sub-menu {
     display: block !important;
   }
+  ul#menu-login-menu li {
+    background-color: transparent !important;
+  }
   ul#menu-login-menu li:hover {
-    background-color: #333;
+    background-color: #333 !important;
   }
 }
 
