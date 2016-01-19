@@ -682,10 +682,11 @@ input[type=submit], .bttn-white-border, .bttn-blue,
   color: #fff;
 }
 
-/* Changes default green button to ours*/
+/* Changes default button to ours*/
 
 .site-content .vc_btn3 {
   text-transform: uppercase;
+  line-height: 1.25;
 }
 
 input[type=submit], .site-content .vc_btn3.vc_btn3-color-green.vc_btn3-style-modern {
