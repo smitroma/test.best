@@ -1,6 +1,6 @@
 <?php
 /**
- * Default page template
+ * Default posts template
  *
  * @package Brain_Bytes
  * @subpackage Hodges Mace
