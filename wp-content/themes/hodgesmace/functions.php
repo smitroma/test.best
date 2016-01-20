@@ -187,7 +187,7 @@ function resource_register() {
     'query_var' => true,
     'rewrite' => true,
     'menu_position' => null,
-    'supports' => array('editor', 'thumbnail'),
+    'supports' => array('editor', 'thumbnail', 'title'),
     'show_in_menu' => TRUE,
     'show_in_nav_menus' => TRUE,
     'has_archive' => TRUE
