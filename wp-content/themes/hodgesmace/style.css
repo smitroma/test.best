@@ -1005,7 +1005,10 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   }
 }
 
-/* Testimonial Slider */
+/*
+ * Testimonial Slider
+ * --------------------------------------------------------------- *
+ */
 
 .site-content .flexslider ul li:before {
   content: "";
@@ -1062,7 +1065,10 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   margin-left: auto;
 }
 
-/* Contact Footer */
+/*
+ * Contact Footer
+ * --------------------------------------------------------------- *
+ */
 
 .contact-footer .gform_footer input[type=submit] {
   width: 100%;
@@ -1074,7 +1080,9 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
     height: 10em;
 }
 
-/* Home */
+/* Home
+* --------------------------------------------------------------- *
+*/
 
 .home-banner-height { height: 450px }
 .site-content .blue-arrow {
@@ -1082,7 +1090,9 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   background-size: 300px;
 }
 
-/* Contact Us */
+/* Contact Us
+* --------------------------------------------------------------- *
+*/
 
 .site-content .contact-icon {
   max-width: 100px;
@@ -1109,7 +1119,9 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   left: 0;
 }
 
-/* Internal Page */
+/* Internal Page
+* --------------------------------------------------------------- *
+*/
 
 .page-banner-height {
   display: block;
@@ -1210,7 +1222,9 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 }
 
 
-/* Smarter Approach */
+/* Smarter Approach
+* --------------------------------------------------------------- *
+*/
 
 .smarter-banner-ampersand {
   text-align: center;
@@ -1250,7 +1264,9 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   .smarter-column { height: 300px; }
 }
 
-/* In The Community */
+/* In The Community
+* --------------------------------------------------------------- *
+*/
 
 @media (min-width: 768px ) {
   .in-the-community-column { height: 560px; }
@@ -1268,7 +1284,9 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   .in-the-community-column { height: 400px; }
 }
 
-/* SmartBen Platform */
+/* SmartBen Platform
+* --------------------------------------------------------------- *
+*/
 
 .smartben-box img {
     height: 130px;
@@ -1308,7 +1326,9 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   }
 }
 
-/* Blog Roll */
+/* Blog Roll
+* --------------------------------------------------------------- *
+*/
 
 .site-content .blog-banner {
   background-image: url('./images/blog/blog-banner.jpg');
@@ -1449,7 +1469,9 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   color: #fff;
 }
 
-/* single */
+/* Single
+* --------------------------------------------------------------- *
+*/
 
 .post-meta {
   font-size: 1.2em;
@@ -1469,7 +1491,17 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   height: 20px;
 }
 
-/* Helpers */
+/* Essential Grid
+* --------------------------------------------------------------- *
+*/
+
+.esg-filter-wrapper.dropdownstyle .esg-filterbutton {
+  white-space: nowrap;
+}
+
+/* Helpers
+* --------------------------------------------------------------- *
+*/
 
 .cursor-a, .cursor-a a { cursor: default; }
 .va-m { vertical-align: middle; }
