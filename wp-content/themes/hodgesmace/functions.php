@@ -118,48 +118,6 @@ function icon_func( $atts ) {
 add_shortcode( 'icon', 'icon_func' );
 
 /*-----------------------------------------------------------------------------------*/
-/*	Custom Post Type : Portfolio
-/*-----------------------------------------------------------------------------------*/
-
-add_action('init', 'zt_portfolio_register');
-
-function zt_portfolio_register() {
-
-	$labels = array(
-		'name' => 'Portfolio', 'post type general name',
-		'singular_name' => 'Portfolio Item', 'post type singular name',
-		'add_new' => 'Add New', 'portfolio item',
-		'add_new_item' => 'Add New Portfolio Item',
-		'edit_item' => 'Edit Portfolio Item',
-		'new_item' => 'New Portfolio Item',
-		'view_item' => 'View Portfolio Item',
-		'search_items' => 'Search Portfolio',
-		'not_found' =>  'Nothing found',
-		'not_found_in_trash' => 'Nothing found in Trash',
-		'parent_item_colon' => '',
-	);
-
-	$args = array(
-		'labels' => $labels,
-		'label' => 'asd',
-		'public' => true,
-		'publicly_queryable' => true,
-		'show_ui' => true,
-		'query_var' => true,
-		'rewrite' => true,
-		'menu_position' => null,
-		'supports' => array('title','comments', 'editor', 'thumbnail'),
-		'show_in_menu' => TRUE,
-		'show_in_nav_menus' => TRUE,
-		'has_archive' => TRUE
-	  );
-
-	register_post_type( 'portfolio' , $args );
-	register_taxonomy("portfolio_categories", array("portfolio"), array("hierarchical" => true, "label" => "Portfolio Categories", "singular_label" => "Portfolio Category", "rewrite" => true));
-
-}
-
-/*-----------------------------------------------------------------------------------*/
 /*	Custom Post Type : Testimonials
 /*-----------------------------------------------------------------------------------*/
 
@@ -200,9 +158,59 @@ function testimonial_register() {
 }
 
 /*-----------------------------------------------------------------------------------*/
-/*	EXCERPT LENGTH / CONTENT
+/*	Custom Post Type : Resources
 /*-----------------------------------------------------------------------------------*/
 
+add_action('init', 'resource_register');
+
+function resource_register() {
+  $labels = array(
+    'name' => 'Resources', 'post type general name',
+    'singular_name' => 'Resource Item', 'post type singular name',
+    'add_new' => 'Add New', 'resource item',
+    'add_new_item' => 'Add New Resource Item',
+    'edit_item' => 'Edit Resource Item',
+    'new_item' => 'New Resource Item',
+    'view_item' => 'View Resource Item',
+    'search_items' => 'Search Resource',
+    'not_found' =>  'Nothing found',
+    'not_found_in_trash' => 'Nothing found in Trash',
+    'parent_item_colon' => '',
+  );
+
+  $args = array(
+    'labels' => $labels,
+    'label' => 'asd',
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'query_var' => true,
+    'rewrite' => true,
+    'menu_position' => null,
+    'supports' => array('editor', 'thumbnail'),
+    'show_in_menu' => TRUE,
+    'show_in_nav_menus' => TRUE,
+    'has_archive' => TRUE
+  );
+
+	register_post_type( 'resources' , $args );
+}
+
+/*	Resources Shortcode */
+
+function resource_link_func( $atts, $content='' ) {
+  $atts = shortcode_atts( array(
+    'class' => ''
+  ), $atts, 'resource_link' );
+  $url = get_home_url().'/index.php/?page_id=1507';
+	return '<a href="'.$url.'" class="'.$atts['class'].'">'.$content.'</a>';
+}
+
+add_shortcode( 'resource_link', 'resource_link_func' );
+
+/*-----------------------------------------------------------------------------------*/
+/*	EXCERPT LENGTH / CONTENT
+/*-----------------------------------------------------------------------------------*/
 
   if ( ! function_exists( 'wpse_custom_wp_trim_excerpt' ) ) {
     function wpse_custom_wp_trim_excerpt($wpse_excerpt) {
@@ -223,9 +231,10 @@ function testimonial_register() {
   add_filter('get_the_excerpt', 'wpse_custom_wp_trim_excerpt');
 
 
-/**
- * Descriptions on Header Menu
- */
+/*-----------------------------------------------------------------------------------*/
+/*	DESCRIPTIONS ON HEADER MENU
+/*-----------------------------------------------------------------------------------*/
+
 
 function header_menu_desc( $item_output, $item, $depth, $args ) {
 	if( 'Main Menu' == $args->menu && $depth && $item->description )
@@ -236,9 +245,10 @@ function header_menu_desc( $item_output, $item, $depth, $args ) {
 
 add_filter( 'walker_nav_menu_start_el', 'header_menu_desc', 10, 4 );
 
-/**
- * Act-On Code copied from integration docs
- */
+
+/*-----------------------------------------------------------------------------------*/
+/*	actOn Code copied from integration docs
+/*-----------------------------------------------------------------------------------*/
 
  class ActonWordPressConnection
  {
@@ -384,18 +394,5 @@ function send_to_acton_3($entry,$form) {
 
   $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/0007/d-ext-0001');
 }
-
-
-// Resource url
-
-function resource_link_func( $atts, $content='' ) {
-  $atts = shortcode_atts( array(
-    'class' => ''
-  ), $atts, 'resource_link' );
-  $url = get_home_url().'/index.php/?page_id=1507';
-	return '<a href="'.$url.'" class="'.$atts['class'].'">'.$content.'</a>';
-}
-
-add_shortcode( 'resource_link', 'resource_link_func' );
 
 ?>
