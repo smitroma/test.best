@@ -187,16 +187,17 @@ function resource_register() {
     'query_var' => true,
     'rewrite' => true,
     'menu_position' => null,
-    'supports' => array('editor', 'thumbnail', 'title'),
+    'supports' => array('editor', 'thumbnail', 'title', ''),
     'show_in_menu' => TRUE,
     'show_in_nav_menus' => TRUE,
-    'has_archive' => TRUE
+    'has_archive' => TRUE,
+    'taxonomies' => array('category')
   );
 
 	register_post_type( 'resources' , $args );
 }
 
-/*	Resources Shortcode */
+/*	Featured Resource Shortcode */
 
 function resource_link_func( $atts, $content='' ) {
   $atts = shortcode_atts( array(
