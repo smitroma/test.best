@@ -1499,6 +1499,12 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   white-space: nowrap;
 }
 
+.esg-dropdown-wrapper {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px 0px;
+}
+
 /* Helpers
 * --------------------------------------------------------------- *
 */
