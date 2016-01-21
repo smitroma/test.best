@@ -4,6 +4,8 @@
  * Tabs
  --------------------------------------------*/
 
- .vc_tta-tabs-list {
+/* hides broken functionality from ie9 */
+ .site-content ul.vc_tta-tabs-list {
    display: none;
+   height: 0;
  }
