@@ -363,7 +363,7 @@
 
 @media(min-width: 768px) {
   .m-r-lg-md {
-    padding-right: 3em;
+    padding-right: 3em !important;
   }
 }
 
