@@ -1066,6 +1066,51 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 }
 
 /*
+ * Tabs
+ * --------------------------------------------------------------- *
+ */
+
+  .site-content .vc_tta-tabs ul li:before {
+    content: '';
+  }
+
+  .site-content .press-tabs .vc_tta-tabs-list .vc_tta-tab {
+    width: 25%;
+    margin-bottom: -1px;
+  }
+
+  .site-content .press-tabs .vc_tta-tabs-list .vc_tta-tab a {
+    background-color: transparent;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    font-size: 1.5em;
+    font-family: 'Neuxeit Grotesk Regular';
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: transparent;
+  }
+
+  .site-content .press-tabs.vc_tta-tabs-position-top .vc_tta-tabs-list .vc_tta-tab.vc_active a {
+    border-bottom-color: #333;
+    font-family: 'NeuzeitGro Bold';
+    font-size: 1.7em;
+  }
+
+@media (min-width: 768px) {
+  .site-content .vc_tta.press-tabs .vc_tta-panels {
+    border-color: #f0f0f0;
+    background-color: transparent;
+    border-radius: 0px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    padding-top: 2em;
+  }
+}
+
+/*
  * Contact Footer
  * --------------------------------------------------------------- *
  */
