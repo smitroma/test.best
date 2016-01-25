@@ -8,11 +8,12 @@
  */
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js">
+<html <?php language_attributes(); ?> class="no-js" prefix="og: http://ogp.me/ns#">
 <head>
+	<meta property="og:image" content="<?php echo get_template_directory_uri ()?>/images/hodgesmace-logo-hi.png">	
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<!--[if lte IE 9]>
