@@ -203,7 +203,7 @@ function resource_link_func( $atts, $content='' ) {
   $atts = shortcode_atts( array(
     'class' => ''
   ), $atts, 'resource_link' );
-  $url = 'http://marketing.hodgesmace.com/acton/ppform/17907/0006/u-0003';
+  $url = 'http://marketing.hodgesmace.com/acton/ppform/17907/0006/u-0002';
 	return '<a href="'.$url.'" class="'.$atts['class'].'">'.$content.'</a>';
 }
 
