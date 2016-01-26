@@ -645,8 +645,8 @@ input#s:focus {
  * --------------------------------------------------------------- *
  */
 
-input[type=submit], .bttn-white-border, .bttn-blue,
-.vc_general.vc_btn3.bttn-white-border, .vc_general.vc_btn3.bttn-blue,
+input[type=submit], .aoFormContainer input[type=button], .bttn-white-border,
+.bttn-blue, .vc_general.vc_btn3.bttn-white-border, .vc_general.vc_btn3.bttn-blue,
 .bttn-green-border, .vc_general.vc_btn3.bttn-green-border,
 .site-wrapper .gform_wrapper .gform_footer input.button,
 .site-wrapper .gform_wrapper .gform_footer input[type=image],
@@ -663,7 +663,8 @@ input[type=submit], .bttn-white-border, .bttn-blue,
   line-height: 1.5em;
 }
 
-.gform_wrapper .gform_footer input.button,
+input[type=submit], .aoFormContainer input[type=button], .gform_wrapper
+.gform_footer input.button,
 .gform_wrapper .gform_footer input[type=image],
 .gform_wrapper .gform_footer input[type=submit] {
   background-color: #8ec449;
@@ -1573,6 +1574,12 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.site-content .aoFormContainer .formFieldLabel {
+    color: #fff;
+    padding-bottom: 10px;
+}
+
 /* Helpers
 * --------------------------------------------------------------- *
 */
