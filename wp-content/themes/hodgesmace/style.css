@@ -1553,6 +1553,18 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 0px;
 }
 
+/* Act-On Template
+* --------------------------------------------------------------- *
+*/
+
+.site-content .act-on-form-bkg {
+  padding-top: 6em;
+  padding-bottom: 6em;
+  background-image: url('./images/blog/blog-banner.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 /* Helpers
 * --------------------------------------------------------------- *
 */
