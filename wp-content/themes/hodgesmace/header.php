@@ -13,7 +13,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta "og:image:secure_url" content="https://dl.dropboxusercontent.com/u/96324587/H-M%20Logo_Horizontal-01.png">
+	<meta property="og:image:secure_url" content="https://dl.dropboxusercontent.com/u/96324587/H-M%20Logo_Horizontal-01.png">
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="400" />
 	<meta property="og:image:height" content="300" />
