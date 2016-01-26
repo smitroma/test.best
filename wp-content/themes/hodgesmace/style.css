@@ -81,6 +81,10 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
+form {
+  margin-bottom: 0;
+}
+
 .site-content ul {
   padding-left: 20px;
   position: relative;
@@ -1558,6 +1562,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 */
 
 .site-content .act-on-form-bkg {
+  min-height: 550px;
   padding-top: 6em;
   padding-bottom: 6em;
   background-image: url('./images/blog/blog-banner.jpg');
