@@ -52,7 +52,7 @@
       <div class="container">
 				<div class="logo">
 						<a href="<?php echo home_url(); ?> ">
-            	<img	src="<?php header_image(); ?>" alt="<?php bloginfo('name') ?>" />
+            	<img	src="<?php header_image(); ?>" alt="<?php bloginfo('name') ?>"  width="260" height="86" title="Hodges-Mace Logo" alt="Hodges-Mace Logo"/>
 						</a>
 				</div>
 				<div class="mobile-menu-toggle"><i class="fa fa-bars"></i></div>
