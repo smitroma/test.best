@@ -729,6 +729,7 @@ input[type=submit], .site-content .vc_btn3.vc_btn3-color-green.vc_btn3-style-mod
 .site-content .ao_tbl_container .formFieldText {
   border: 2px solid #f1f1f1;
   color: #939393;
+  height: inherit;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
