@@ -51,7 +51,8 @@ get_header(); ?>
 						$tags = implode(',',$tags);
 					?>
 					<?php $args = array(
-						'tag' => $tags
+						'tag' => $tags,
+						'post__not_in' => array(get_the_ID())
 					); ?>
 					<?php $related_query = new WP_Query($args); ?>
 					<?php if($related_query->have_posts()): ?>
