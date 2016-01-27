@@ -3,7 +3,7 @@
  * Default page template
  *
  * @package Brain_Bytes
- * @subpackage Hodges Mace 
+ * @subpackage Hodges Mace
  * @since Hodges Mace  1.0
  */
 

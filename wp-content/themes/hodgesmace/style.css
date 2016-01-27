@@ -1581,6 +1581,11 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
     padding-bottom: 10px;
 }
 
+.site-content .aoFormContainer input[type=button] {
+  line-height: 1;
+  padding-bottom: 8px !important; 
+}
+
 /* Helpers
 * --------------------------------------------------------------- *
 */
