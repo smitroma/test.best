@@ -363,7 +363,7 @@
 
 @media(min-width: 768px) {
   .m-r-lg-md {
-    padding-right: 3em;
+    padding-right: 3em !important;
   }
 }
 
@@ -374,5 +374,11 @@
   }
   .site-content .p-r-0-xs {
     padding-right: 0 !important;
+  }
+  .site-content .m-l-0-xs {
+    margin-left: 0 !important;
+  }
+  .site-content .m-r-0-xs {
+    margin-right: 0 !important;
   }
 }

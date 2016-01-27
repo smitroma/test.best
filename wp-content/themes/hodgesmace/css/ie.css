@@ -1,0 +1,11 @@
+/* IE 9 Style for tab element */
+
+/*
+ * Tabs
+ --------------------------------------------*/
+
+/* hides broken functionality from ie9 */
+ .site-content ul.vc_tta-tabs-list {
+   display: none;
+   height: 0;
+ }

@@ -8,15 +8,23 @@
  */
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js">
+<html <?php language_attributes(); ?> class="no-js" prefix="og: http://ogp.me/ns#">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Hodges-Mace: Smarter Benefits" />
+	<meta property="og:description" content="Hodges-Mace, LLC is an employee benefits technology and communications company. Hodges-Mace empowers employers and employees to enjoy smarter benefits." />
+	<meta property="og:url" content="http://www.hodgesmace.com/" />
+	<meta property="og:site_name" content="Hodges-Mace" />
+	<meta property="og:image" content="http://www.hodgesmace.com/wp-content/uploads/2016/01/hodgesmace-logo.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-	<!--[if lt IE 9]>
+	<!--[if lte IE 9]>
 	   <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
+		 <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/ie.css">
 	<![endif]-->
 	<?php wp_head(); ?>
 </head>
@@ -44,7 +52,7 @@
       <div class="container">
 				<div class="logo">
 						<a href="<?php echo home_url(); ?> ">
-            	<img	src="<?php header_image(); ?>" alt="<?php bloginfo('name') ?>" />
+            	<img src="<?php header_image(); ?>" alt="<?php bloginfo('name') ?>"  width="260" height="86" title="Hodges-Mace Logo" />
 						</a>
 				</div>
 				<div class="mobile-menu-toggle"><i class="fa fa-bars"></i></div>
