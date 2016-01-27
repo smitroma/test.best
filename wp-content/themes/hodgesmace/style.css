@@ -820,6 +820,14 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   -moz-border-bottom-right-radius: .75em;
 }
 
+/* Name Field correction */
+
+.site-content .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield span.name_first,
+.site-content .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield span.name_last, 
+.site-content .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield span.name_middle {
+  padding-top: 0px;
+}
+
 /*
  * Visual Composer Helper Classes
  * --------------------------------------------------------------- *
@@ -1583,7 +1591,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 
 .site-content .aoFormContainer input[type=button] {
   line-height: 1;
-  padding-bottom: 8px !important; 
+  padding-bottom: 8px !important;
 }
 
 /* Helpers
