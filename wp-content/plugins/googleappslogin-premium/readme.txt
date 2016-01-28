@@ -79,7 +79,7 @@ The plugin will work whether your site is configured for HTTP or HTTPS.
 However, you may have configured your site to run so that the login pages 
 can be accessed by *either* HTTP *or* HTTPS. In that case, you may run into problems. 
 We recommend that you set [FORCE_SSL_ADMIN](http://codex.wordpress.org/Administration_Over_SSL) 
-or at least FORCE_SSL_LOGIN to true. This will ensure that all users are consistently using HTTPS 
+to true. This will ensure that all users are consistently using HTTPS
 for login.
 
 You may then need to ensure the Redirect URL and Web Origin in the Google Cloud Console are

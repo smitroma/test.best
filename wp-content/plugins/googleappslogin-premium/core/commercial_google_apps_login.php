@@ -39,9 +39,9 @@ class commercial_google_apps_login extends core_google_apps_login {
 					$parts = explode("@", $email);
 					if (count($parts) == 2) { // Pretty likely since got it from WP
 						if (in_array(strtolower($parts[1]), $domain_list)) {
-							$user = new WP_Error('ga_login_error', 
-									sprintf(__('User with email address %s must use Login with Google', 'google-apps-login'),
-											 $email) );
+							$errarray = Array('error' => 'ga_user_must_glogin');
+							wp_redirect( add_query_arg( $errarray, $this->get_login_url() ));
+							exit;
 							// We do not want password check any more
 						}
 					}
@@ -49,17 +49,6 @@ class commercial_google_apps_login extends core_google_apps_login {
 			}
 		}
 		return $user;
-	}
-	
-	protected function checkRegularWPError($user, $username, $password) {
-		if (!empty($username) || !empty($password)) {
-			// Need to redirect back to wp-login.php?error=
-			// to ensure regular WP auth will not override our error
-			// with a successful username/password login
-			$errarray = Array('error' => urlencode($user->get_error_message()));
-			wp_redirect( add_query_arg( $errarray, site_url('wp-login.php')) );
-			exit;
-		}	
 	}
 	
 	protected function createUserOrError($userinfo, $options) {
