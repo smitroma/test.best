@@ -251,69 +251,44 @@ add_filter( 'walker_nav_menu_start_el', 'header_menu_desc', 10, 4 );
 /*	actOn Code copied from integration docs
 /*-----------------------------------------------------------------------------------*/
 
-class ActonWordPressConnection {
- protected $_postItems = array();
-
- protected function getPostItems()
+ class ActonWordPressConnection
  {
-   return $this->_postItems;
- }
+   protected $_postItems = array();
 
- /**
-  * for setting your form's POST items (key is your form input's name, value is the input value).
-  *
-  * @param string $key first part of key=value for form field submission (name in name=John)
-  * @param string $value latter part of key=value for form field submission (John in name=John)
-  */
- public function setPostItems($key, $value)
- {
-     $this->_postItems[$key] = (string) $value;
- }
-
- protected function getDomain($address)
- {
-     $pieces = parse_url($address);
-     $domain = isset($pieces['host']) ? $pieces['host'] : '';
-     if (preg_match('/(?P<domain>[a-z0-9][a-z0-9\-]{1,63}\.[a-z\.]{2,6})$/i', $domain, $regs)) {
-       return $regs['domain'];
-     }
-     return false;
- }
-
- // get IP of website visitor to send to Act-On for location info
- protected function getUserIP()
- {
-     // check proxy
-   if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-     $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-   } else {
-     $ip = $_SERVER['REMOTE_ADDR'];
+   protected function getPostItems()
+   {
+     return $this->_postItems;
    }
-   return $ip;
- }
 
- /**
- * process form data for submission to your Act-On external form URL.
- *
- * @param string $extPostUrl your external post (Proxy URL) for your Act-On "proxy" form
- */
- public function processConnection($extPostUrl)
- {
-   // get the account ID from $extPostURL
-   $acctIdWithPath = preg_replace('/^(.*?)eform\//', '', $extPostUrl); // remove extPostUrl string parts up to 'eform/'
-   $acctId = explode('/', (string) $acctIdWithPath, 2); // remove parts after the first /, which leaves the acct ID remaining
-   $aoCookieName = 'wp'.$acctId[0];
-   $aoCookieNameOI = 'ao_optin'.$acctId[0]; // if opt-in cookie is enabled
-   if (isset($_COOKIE[$aoCookieName])) {
-     $aoCookieToSend = new WP_Http_Cookie();
-     $aoCookieToSend->name = $aoCookieName;
-     $aoCookieToSend->value = $_COOKIE[$aoCookieName];
-     $aoCookiesToSend[] = $aoCookieToSend;
-     if (isset($_COOKIE[$aoCookieNameOI])) {
-       $aoCookieToSendOI = new WP_Http_Cookie();
-       $aoCookieToSendOI->name = $aoCookieNameOI;
-       $aoCookieToSendOI->value = $_COOKIE[$aoCookieNameOI];
-       $aoCookiesToSend[] = $aoCookieToSendOI;
+   /**
+    * for setting your form's POST items (key is your form input's name, value is the input value).
+    *
+    * @param string $key first part of key=value for form field submission (name in name=John)
+    * @param string $value latter part of key=value for form field submission (John in name=John)
+    */
+   public function setPostItems($key, $value)
+   {
+       $this->_postItems[$key] = (string) $value;
+   }
+
+   protected function getDomain($address)
+   {
+       $pieces = parse_url($address);
+       $domain = isset($pieces['host']) ? $pieces['host'] : '';
+       if (preg_match('/(?P<domain>[a-z0-9][a-z0-9\-]{1,63}\.[a-z\.]{2,6})$/i', $domain, $regs)) {
+         return $regs['domain'];
+       }
+       return false;
+   }
+
+   // get IP of website visitor to send to Act-On for location info
+   protected function getUserIP()
+   {
+       // check proxy
+     if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+       $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+     } else {
+       $ip = $_SERVER['REMOTE_ADDR'];
      }
      return $ip;
    }
@@ -356,31 +331,13 @@ class ActonWordPressConnection {
        }
        setrawcookie($aoCookieName, $aoResponseCookie[$aoCookieName], time() + 86400 * 365, '/', $this->getDomain($extPostUrl));
      }
-    //  else {
-    //    $this->setPostItems('_ipaddr', $this->getUserIP()); // Act-On accepts manually defined IPs if using field name '_ipaddr'
-    //    $fields = http_build_query($this->getPostItems()); // encode post items into query-string
-    //    $request = wp_remote_get($extPostUrl.'?'.$fields, array());
-    //  }
+     else {
+       $this->setPostItems('_ipaddr', $this->getUserIP()); // Act-On accepts manually defined IPs if using field name '_ipaddr'
+       $fields = http_build_query($this->getPostItems()); // encode post items into query-string
+       $request = wp_remote_get($extPostUrl.'?'.$fields, array());
+     }
    }
  }
-}
-
-/* Custom Progressive Profiling */
-
-function custom_progressive_profiling($atts, $content = '') {
-  $extPostUrl = 'http://marketing.hodgesmace.com/acton/eform/17907/0001/d-ext-0001';
-  // get the account ID from $extPostURL
-  $acctIdWithPath = preg_replace('/^(.*?)eform\//', '', $extPostUrl); // remove extPostUrl string parts up to 'eform/'
-  $acctId = explode('/', (string) $acctIdWithPath, 2); // remove parts after the first /, which leaves the acct ID remaining
-  $aoCookieName = 'wp'.$acctId[0];
-
-  if (isset($_COOKIE[$aoCookieName])) {
-     return print_r($_COOKIE[$aoCookieName]);
-  }
-
-}
-
-add_shortcode( 'progressive_profiling', 'custom_progressive_profiling' );
 
 /* Contact Form */
 
@@ -392,8 +349,6 @@ function send_to_acton_1($entry,$form) {
 
   $ao_gf1->setPostItems('firstName',$entry['5.3']);
   $ao_gf1->setPostItems('lastName',$entry['5.6']);
-  $ao_gf1->setPostItems('businessPhone',$entry['6']);
-  $ao_gf1->setPostItems('mobilePhone',$entry['7']);
   $ao_gf1->setPostItems('email',$entry['2']);
   $ao_gf1->setPostItems('subject',$entry['3']);
   $ao_gf1->setPostItems('message',$entry['4']);
@@ -414,10 +369,9 @@ function send_to_acton_2($entry,$form) {
     $entry['9.1'],$entry['9.2'],$entry['9.3'],$entry['9.4'],$entry['9.5'],
   );
 
+
   $ao_gf1->setPostItems('firstName',$entry['11.3']);
   $ao_gf1->setPostItems('lastName',$entry['11.6']);
-  $ao_gf1->setPostItems('businessPhone',$entry['12']);
-  $ao_gf1->setPostItems('mobilePhone',$entry['13']);
   $ao_gf1->setPostItems('email',$entry['2']);
   $ao_gf1->setPostItems('subject',$entry['3']);
   $ao_gf1->setPostItems('message',$entry['4']);
