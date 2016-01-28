@@ -330,11 +330,12 @@ add_filter( 'walker_nav_menu_start_el', 'header_menu_desc', 10, 4 );
          $value = $newValue;
        }
        setrawcookie($aoCookieName, $aoResponseCookie[$aoCookieName], time() + 86400 * 365, '/', $this->getDomain($extPostUrl));
-     } else {
-       $this->setPostItems('_ipaddr', $this->getUserIP()); // Act-On accepts manually defined IPs if using field name '_ipaddr'
-       $fields = http_build_query($this->getPostItems()); // encode post items into query-string
-       $request = wp_remote_get($extPostUrl.'?'.$fields, array());
      }
+    //  else {
+    //    $this->setPostItems('_ipaddr', $this->getUserIP()); // Act-On accepts manually defined IPs if using field name '_ipaddr'
+    //    $fields = http_build_query($this->getPostItems()); // encode post items into query-string
+    //    $request = wp_remote_get($extPostUrl.'?'.$fields, array());
+    //  }
    }
  }
 
