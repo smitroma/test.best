@@ -8,17 +8,10 @@
  */
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js" prefix="og: http://ogp.me/ns#">
+<html <?php language_attributes(); ?> class="no-js">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta property="og:locale" content="en_US" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Hodges-Mace: Smarter Benefits" />
-	<meta property="og:description" content="Hodges-Mace, LLC is an employee benefits technology and communications company. Hodges-Mace empowers employers and employees to enjoy smarter benefits." />
-	<meta property="og:url" content="http://www.hodgesmace.com/" />
-	<meta property="og:site_name" content="Hodges-Mace" />
-	<meta property="og:image" content="http://www.hodgesmace.com/wp-content/uploads/2016/01/hodgesmace-logo.jpg" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
