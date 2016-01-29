@@ -347,7 +347,18 @@ function custom_progressive_profiling($atts, $content = '') {
   $aoCookieName = 'wp'.$acctId[0];
 
   if (isset($_COOKIE[$aoCookieName])) {
-     return print_r($_COOKIE[$aoCookieName]);
+    $ch = curl_init();
+
+    curl_setopt_array($ch, array(
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_HTTPHEADER => array("Authorization: Bearer 4bce2069eca9ffd66bac9360589cf7", "Cache-Control: no-cache"),
+      CURLOPT_URL => 'https://restapi.actonsoftware.com/api/1/list/lookup?cookie={<wbr />'.$_COOKIE[$aoCookieName]),'}',
+    ));
+
+    $data = curl_exec($ch);
+    curl_close($ch);
+
+    return print_r($data);
   }
 
 }
