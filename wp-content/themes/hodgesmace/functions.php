@@ -292,34 +292,6 @@ add_filter( 'walker_nav_menu_start_el', 'header_menu_desc', 10, 4 );
      }
      return $ip;
    }
-<<<<<<< HEAD
- }
-}
-
-/* Custom Progressive Profiling */
-
-function custom_progressive_profiling($atts, $content = '') {
-  $extPostUrl = 'http://marketing.hodgesmace.com/acton/eform/17907/0001/d-ext-0001';
-  // get the account ID from $extPostURL
-  $acctIdWithPath = preg_replace('/^(.*?)eform\//', '', $extPostUrl); // remove extPostUrl string parts up to 'eform/'
-  $acctId = explode('/', (string) $acctIdWithPath, 2); // remove parts after the first /, which leaves the acct ID remaining
-  $aoCookieName = 'wp'.$acctId[0];
-
-  if (isset($_COOKIE[$aoCookieName])) {
-    $ch = curl_init();
-
-    curl_setopt_array($ch, array(
-      CURLOPT_RETURNTRANSFER => true,
-      CURLOPT_HTTPHEADER => array("Authorization: Bearer 4bce2069eca9ffd66bac9360589cf7", "Cache-Control: no-cache"),
-      CURLOPT_URL => 'https://restapi.actonsoftware.com/api/1/list/lookup?cookie={<wbr />'.$_COOKIE[$aoCookieName]),'}',
-    ));
-
-    $data = curl_exec($ch);
-    curl_close($ch);
-
-    return print_r($data);
-  }
->>>>>>> 127768471aa450e845958d5b143feae9b1050f9d
 
    /**
    * process form data for submission to your Act-On external form URL.
@@ -365,7 +337,33 @@ function custom_progressive_profiling($atts, $content = '') {
        $request = wp_remote_get($extPostUrl.'?'.$fields, array());
      }
    }
- }
+}
+
+
+/* Custom Progressive Profiling */
+
+function custom_progressive_profiling($atts, $content = '') {
+  $extPostUrl = 'http://marketing.hodgesmace.com/acton/eform/17907/0001/d-ext-0001';
+  // get the account ID from $extPostURL
+  $acctIdWithPath = preg_replace('/^(.*?)eform\//', '', $extPostUrl); // remove extPostUrl string parts up to 'eform/'
+  $acctId = explode('/', (string) $acctIdWithPath, 2); // remove parts after the first /, which leaves the acct ID remaining
+  $aoCookieName = 'wp'.$acctId[0];
+
+  if (isset($_COOKIE[$aoCookieName])) {
+    $ch = curl_init();
+
+    curl_setopt_array($ch, array(
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_HTTPHEADER => array("Authorization: Bearer 4bce2069eca9ffd66bac9360589cf7", "Cache-Control: no-cache"),
+      CURLOPT_URL => 'https://restapi.actonsoftware.com/api/1/list/lookup?cookie={<wbr />'.$_COOKIE[$aoCookieName].'}',
+    ));
+
+    $data = curl_exec($ch);
+    curl_close($ch);
+
+    return print_r($data);
+  }
+}
 
 /* Contact Form */
 
