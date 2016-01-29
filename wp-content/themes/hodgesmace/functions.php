@@ -339,7 +339,6 @@ add_filter( 'walker_nav_menu_start_el', 'header_menu_desc', 10, 4 );
    }
 }
 
-
 /* Custom Progressive Profiling */
 
 function custom_progressive_profiling($atts, $content = '') {
@@ -422,5 +421,14 @@ function send_to_acton_3($entry,$form) {
 
   $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/0007/d-ext-0001');
 }
+
+/* Yoast Debuggin */
+
+function test_yoast() {
+  $this->options = WPSEO_Options::get_all();
+  return print_r($this->options);
+}
+
+add_shortcode('yoast', 'test_yoast');
 
 ?>
