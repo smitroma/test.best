@@ -389,9 +389,12 @@ function send_to_acton_2($entry,$form) {
 
   $ao_gf1 = new ActonWordPressConnection;
 
-  $interests = array(
-    $entry['8.1'],$entry['8.2'],$entry['8.3'],$entry['8.4'],$entry['8.5'],
-    $entry['9.1'],$entry['9.2'],$entry['9.3'],$entry['9.4'],$entry['9.5'],
+  $interestSolutions = array(
+    $entry['8.1'],$entry['8.2'],$entry['8.3'],$entry['8.4'],$entry['8.5']
+  );
+
+  $interestServices = array(
+    $entry['9.1'],$entry['9.2'],$entry['9.3'],$entry['9.4'],$entry['9.5']
   );
 
 
@@ -400,7 +403,8 @@ function send_to_acton_2($entry,$form) {
   $ao_gf1->setPostItems('email',$entry['2']);
   $ao_gf1->setPostItems('subject',$entry['3']);
   $ao_gf1->setPostItems('message',$entry['4']);
-  $ao_gf1->setPostItems('interest',join(', ', array_filter($interests)));
+  $ao_gf1->setPostItems('interestSolution',join(', ', array_filter($interestSolutions)));
+  $ao_gf1->setPostItems('interestService',join(', ', array_filter($interestServices)));
   $ao_gf1->setPostItems('demoDay',$entry['6']);
 
 
