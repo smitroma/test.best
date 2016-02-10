@@ -1,3 +1,14 @@
+12.01.2016 - ver 4.9.2
+   - Fixed: "Editing an existing Post Grid, page IDs are displayed instead of titles."
+   - Fixed: Extra CSS class name for single image in post grid
+   - Fixed: Third elements not working in templates
+   - Fixed: Visual Composer button is now added even if post doesn't support title
+   - Fixed: Yoast + single image without default value
+   - Fixed: Grid builder on multisite
+   - Fixed: 404 error on WP multisite
+   - Improved: Tab activation through menu (links on same page)
+   - Improved: PHP7 compatibility
+
 23.12.2015 - ver 4.9.1
    - Improved: VC save action is fired on wp save_post instead of edit_post
    - Improved: Some unneded files removed from package
