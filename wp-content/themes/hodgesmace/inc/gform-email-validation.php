@@ -34,7 +34,6 @@ class GW_Email_Domain_Validator {
     }
 
     function validate($validation_result) {
-
         $form = $validation_result['form'];
 
         foreach($form['fields'] as &$field) {
@@ -60,6 +59,7 @@ class GW_Email_Domain_Validator {
         }
 
         $validation_result['form'] = $form;
+
         return $validation_result;
     }
 
@@ -106,7 +106,7 @@ class GW_Email_Domain_Validator {
 
 }
 
-class GWEmailDomainControl extends GW_Email_Domain_Validator { }
+class GWEmailDomainControl extends GW_Email_Domain_Validator {}
 
 # Configuration
 
@@ -156,8 +156,8 @@ $excluded_domains = array(
 
 new GW_Email_Domain_Validator( array(
     'form_id' => 2,
-    'field_id' => 2,
-    'domains' => $excluded_domains,
+    'field_id' => 17,
+    'domains' => array('gmail.com'),
     'validation_message' => __( 'Only business email accounts are allowed e.g. name@company.com' ),
 ) );
 

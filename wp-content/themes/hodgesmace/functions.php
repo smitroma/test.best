@@ -400,7 +400,7 @@ function send_to_acton_2($entry,$form) {
 
   $ao_gf1->setPostItems('firstName',$entry['11.3']);
   $ao_gf1->setPostItems('lastName',$entry['11.6']);
-  $ao_gf1->setPostItems('email',$entry['2']);
+  $ao_gf1->setPostItems('email',$entry['17']);
   $ao_gf1->setPostItems('subject',$entry['3']);
   $ao_gf1->setPostItems('message',$entry['4']);
   $ao_gf1->setPostItems('interestSolution',join(', ', array_filter($interestSolutions)));
