@@ -828,6 +828,12 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   padding-top: 0px;
 }
 
+/* Adusts text area size */
+
+.site-content .gform_wrapper textarea.large {
+  height: 13.5em;
+}
+
 /*
  * Visual Composer Helper Classes
  * --------------------------------------------------------------- *
