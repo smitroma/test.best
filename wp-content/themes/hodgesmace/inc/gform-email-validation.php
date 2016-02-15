@@ -157,7 +157,7 @@ $excluded_domains = array(
 new GW_Email_Domain_Validator( array(
     'form_id' => 2,
     'field_id' => 17,
-    'domains' => array('gmail.com'),
+    'domains' => $excluded_domains,
     'validation_message' => __( 'Only business email accounts are allowed e.g. name@company.com' ),
 ) );
 
