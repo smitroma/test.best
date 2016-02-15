@@ -428,13 +428,10 @@ function send_to_acton_3($entry,$form) {
   $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/0007/d-ext-0001');
 }
 
-/* Yoast Debuggin */
+/* Gravity Forms Business Email Validation */
 
-function test_yoast() {
-  $this->options = WPSEO_Options::get_all();
-  return print_r($this->options);
-}
+require_once('inc/gform-email-validation.php');
 
-add_shortcode('yoast', 'test_yoast');
+
 
 ?>

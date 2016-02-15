@@ -93,9 +93,9 @@
 
     $(document).bind('gform_confirmation_loaded', function(event, formId) {
         dataLayer.push({
-            'event' : 'formSubmit', 
+            'event' : 'formSubmit',
             'formName' : formId
         });
     });
-    
+
 })(jQuery);
