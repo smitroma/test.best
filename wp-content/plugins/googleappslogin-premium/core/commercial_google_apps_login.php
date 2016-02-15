@@ -166,7 +166,7 @@ class commercial_google_apps_login extends core_google_apps_login {
 		echo "<input id='input_ga_domainname' name='".$this->get_options_name()."[ga_domainname]' size='40' type='text' value='".esc_attr($options['ga_domainname'])."' class='textinput' />";
 		echo '<br class="clear">';
 		
-		echo "<input id='input_ga_autocreate' name='".$this->get_options_name()."[ga_autocreate]' type='checkbox' ".($options['ga_autocreate'] ? 'checked' : '')." class='checkbox' />";
+		echo "<input id='input_ga_autocreate' name='".$this->get_options_name()."[ga_autocreate]' type='checkbox' ".($options['ga_autocreate'] ? 'checked' : '')." class='checkbox gal_needsdomain' />";
 		echo '<label for="input_ga_autocreate" class="checkbox plain">'.__('Auto-create new users on my domain', 'google-apps-login').'</label>';
 		echo '<br class="clear">';
 
@@ -178,7 +178,7 @@ class commercial_google_apps_login extends core_google_apps_login {
 			echo '<br class="clear">';
 		}
 		
-		echo "<input id='input_ga_disablewplogin' name='".$this->get_options_name()."[ga_disablewplogin]' type='checkbox' ".($options['ga_disablewplogin'] ? 'checked' : '')." class='checkbox' />";
+		echo "<input id='input_ga_disablewplogin' name='".$this->get_options_name()."[ga_disablewplogin]' type='checkbox' ".($options['ga_disablewplogin'] ? 'checked' : '')." class='checkbox gal_needsdomain' />";
 		echo '<label for="input_ga_disablewplogin" class="checkbox plain">'.__('Disable WordPress username/password login for my domain', 'google-apps-login').'</label>';
 
 		echo '<br class="clear">';
