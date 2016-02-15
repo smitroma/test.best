@@ -861,6 +861,12 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   height: 16.85em;
 }
 
+/* Adjusts date size */
+
+.site-content .gform_wrapper .datepicker {
+     width: 47.5% !important; 
+}
+
 /*
  * Visual Composer Helper Classes
  * --------------------------------------------------------------- *
