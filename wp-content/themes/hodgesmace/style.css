@@ -1252,16 +1252,16 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 
 .hover-content {
   display: none;
-  height: 460px;
+  height: 480px;
 }
 
 /* Height with btn */
-.hover-content-btn { height: 420px; }
+.hover-content-btn { height: 440px; }
 .hover-btn { height: 40px; }
 
 @media(min-width: 550px){
-  .hover-content { height: 300px; }
-  .hover-content-btn { height: 260px; }
+  .hover-content { height: 320px; }
+  .hover-content-btn { height: 280px; }
   .hover-btn { height: 40px; }
 }
 
