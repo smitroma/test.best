@@ -1255,14 +1255,14 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   height: 460px;
 }
 
-/* Heigth with btn */
-.hover-content.hover-content-btn { height: 420px; }
-.hover-content.hover-btn { height: 40px; }
+/* Height with btn */
+.hover-content-btn { height: 420px; }
+.hover-btn { height: 40px; }
 
 @media(min-width: 550px){
   .hover-content { height: 300px; }
-  .hover-content.hover-content-btn { height: 260px; }
-  .hover-content.hover-btn { height: 40px; }
+  .hover-content-btn { height: 260px; }
+  .hover-btn { height: 40px; }
 }
 
 /* show middle content by default */
