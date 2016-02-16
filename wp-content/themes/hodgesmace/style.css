@@ -875,7 +875,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 
 /* Fixes error floats */
 .gform_wrapper .top_label .gfield_error {
-  float: none !important;  
+  float: none !important;
 }
 
 /*
@@ -1246,19 +1246,30 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   margin-bottom: 6em;
 }
 
+/* What You Can Expect
+* --------------------------------------------------------------- *
+*/
+
 .hover-content {
   display: none;
   height: 460px;
 }
 
+/* Heigth with btn */
+.hover-content.hover-content-btn { height: 420px; }
+.hover-content.hover-btn { height: 40px; }
+
+@media(min-width: 550px){
+  .hover-content { height: 300px; }
+  .hover-content.hover-content-btn { height: 260px; }
+  .hover-content.hover-btn { height: 40px; }
+}
+
+/* show middle content by default */
+
 .hover-content-1 { display: inherit; }
 
-.hover { cursor: pointer; }
 
-.hover h3 {
-  height: 45px;
-  font-size: .7em
-}
 
 .hover .icon {
   margin: 1em auto;
@@ -1314,9 +1325,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   min-height:160px;
 }
 
-@media(min-width: 550px){
-  .hover-content { height: 300px; }
-}
+
 
 @media (min-width: 768px){
   .hover .icon, .hover-1 .icon, .hover-2 .icon {
