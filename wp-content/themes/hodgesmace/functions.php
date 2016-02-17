@@ -400,12 +400,14 @@ function send_to_acton_2($entry,$form) {
 
   $ao_gf1->setPostItems('firstName',$entry['11.3']);
   $ao_gf1->setPostItems('lastName',$entry['11.6']);
-  $ao_gf1->setPostItems('email',$entry['2']);
+  $ao_gf1->setPostItems('email',$entry['17']);
   $ao_gf1->setPostItems('subject',$entry['3']);
   $ao_gf1->setPostItems('message',$entry['4']);
   $ao_gf1->setPostItems('interestSolution',join(', ', array_filter($interestSolutions)));
   $ao_gf1->setPostItems('interestService',join(', ', array_filter($interestServices)));
-  $ao_gf1->setPostItems('demoDay',$entry['6']);
+  $ao_gf1->setPostItems('demoDay',$entry['14']);
+  $ao_gf1->setPostItems('companyName',$entry['15']);
+  $ao_gf1->setPostItems('state',$entry['16']);
 
 
   $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/0002/d-ext-0001');
@@ -426,13 +428,10 @@ function send_to_acton_3($entry,$form) {
   $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/0007/d-ext-0001');
 }
 
-/* Yoast Debuggin */
+/* Gravity Forms Business Email Validation */
 
-function test_yoast() {
-  $this->options = WPSEO_Options::get_all();
-  return print_r($this->options);
-}
+require_once('inc/gform-email-validation.php');
 
-add_shortcode('yoast', 'test_yoast');
+
 
 ?>

@@ -421,6 +421,12 @@ class core_google_apps_login {
 	}
 	
 	public function ga_init() {
+		if (isset($_GET['code']) && isset($_GET['state'])) {
+			$options = $this->get_option_galogin();
+			if ($options['ga_rememberme']) {
+				$_POST['rememberme'] = true;
+			}
+		}
 		if (!isset($_COOKIE[self::$gal_cookie_name])) {
 			setcookie(self::$gal_cookie_name, $this->get_cookie_value(), time()+36000, '/', defined(COOKIE_DOMAIN) ? COOKIE_DOMAIN : '' );
 		}
@@ -840,7 +846,15 @@ class core_google_apps_login {
 		echo '<label for="input_ga_auto_login" class="checkbox plain">';
 		_e( 'Automatically redirect to Google from login page' , 'google-apps-login' );
 		echo '</label>';
-		
+
+		echo '<br class="clear" />';
+
+		echo "<input id='input_ga_rememberme' name='".$this->get_options_name()."[ga_rememberme]' type='checkbox' ".($options['ga_rememberme'] ? 'checked' : '')." class='checkbox' />";
+
+		echo '<label for="input_ga_rememberme" class="checkbox plain">';
+		_e( 'Remember Me - do not log users out at end of browser session' , 'google-apps-login' );
+		echo '</label>';
+
 		echo '<br class="clear" />';
 		
 		echo "<input id='input_ga_poweredby' name='".$this->get_options_name()."[ga_poweredby]' type='checkbox' ".($options['ga_poweredby'] ? 'checked' : '')." class='checkbox' />";
@@ -899,6 +913,7 @@ class core_google_apps_login {
 		$newinput['ga_force_permissions'] = isset($input['ga_force_permissions']) ? (boolean)$input['ga_force_permissions'] : false;
 		$newinput['ga_auto_login'] = isset($input['ga_auto_login']) ? (boolean)$input['ga_auto_login'] : false;
 		$newinput['ga_poweredby'] = isset($input['ga_poweredby']) ? (boolean)$input['ga_poweredby'] : false;
+		$newinput['ga_rememberme'] = isset($input['ga_rememberme']) ? (boolean)$input['ga_rememberme'] : false;
 		
 		// Service account settings
 		$newinput['ga_domainadmin'] = isset($input['ga_domainadmin']) ? trim($input['ga_domainadmin']) : '';
@@ -980,6 +995,7 @@ class core_google_apps_login {
 						'ga_force_permissions' => false,
 						'ga_auto_login' => false,
 						'ga_poweredby' => false,
+						'ga_rememberme' => false,
 						'ga_sakey' => '',
 						'ga_domainadmin' => '');
 	}
