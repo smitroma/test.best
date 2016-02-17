@@ -159,8 +159,6 @@ document.domain = "hodgesmace.com";
       submit.onclick = '';
 
       return validateFields(obj);
-
-      });
     }
 
     function validateFields(form) {
@@ -168,7 +166,7 @@ document.domain = "hodgesmace.com";
       console.log('validateFields');
 
       var notEmpty = false;
-      var excludesDomain = false;
+      var excludesDomain = true;
 
       form.find('input').foreach( function() {
         // Empty ?
@@ -182,9 +180,7 @@ document.domain = "hodgesmace.com";
           var validDomain = excludedDomains.foreach(function(v) {
 
             console.log(v);
-
-            var excludesDomain = !($(this).value().contains(v));
-            if (!excludesDomain) break;
+            var excludesDomain = (excludesDomain) ? !($(this).value().indexOf(v) > -1 ) : excludesDomain;
 
           }).bind(this)
         }
@@ -194,7 +190,7 @@ document.domain = "hodgesmace.com";
 
     }
 
-    $('.act-on-form').change({
+    $('.act-on-form').change( function () {
       console.log('changed');
       console.log('returns:',validateFields(this));
     });
