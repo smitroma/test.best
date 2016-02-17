@@ -105,7 +105,7 @@ document.domain = "hodgesmace.com";
 
 // ActOn Iframe sizing
 
-var form;
+var form = window;
 
 function resizeIframe(obj) {
   try {
@@ -172,7 +172,7 @@ function validateForm(obj) {
   // // Disable submit
   // submit.css('opacity', 0.8);
   // submit.onclick = '';
-  // 
+  //
   // return validateFields(obj);
 }
 
