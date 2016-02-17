@@ -104,7 +104,9 @@ document.domain = "hodgesmace.com";
     // ActOn Iframe sizing
 
     function resizeIframe(obj) {
-      obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+      if(obj.contentWindow.document.domain === "hodgesmace.com") {
+        obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+      }
     }
 
 })(jQuery);
