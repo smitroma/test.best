@@ -108,5 +108,5 @@ document.domain = "hodgesmace.com";
 function resizeIframe(obj) {
   try {
     obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-  } catch {}
+  } catch(e) { return }
 }
