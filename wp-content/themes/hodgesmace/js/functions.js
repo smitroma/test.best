@@ -3,7 +3,7 @@
  */
 
 // Unrestricts same origin policy for acton iframes
-document.domain = "marketing.hodgesmace.com";
+document.domain = "hodgesmace.com";
 
 (function($) {
 
