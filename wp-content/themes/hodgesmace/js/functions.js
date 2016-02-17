@@ -101,12 +101,12 @@ document.domain = "hodgesmace.com";
         });
     });
 
-    // ActOn Iframe sizing
-
-    function resizeIframe(obj) {
-      if(obj.contentWindow.document.domain === "hodgesmace.com") {
-        obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-      }
-    }
-
 })(jQuery);
+
+// ActOn Iframe sizing
+
+function resizeIframe(obj) {
+  if(obj.contentWindow.document.domain === "hodgesmace.com") {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+}
