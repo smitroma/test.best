@@ -106,7 +106,7 @@ document.domain = "hodgesmace.com";
 // ActOn Iframe sizing
 
 function resizeIframe(obj) {
-  if(obj.contentWindow && obj.contentWindow.document.domain === "hodgesmace.com") {
+  try {
     obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-  }
+  } catch {}
 }
