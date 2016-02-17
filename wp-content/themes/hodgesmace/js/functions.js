@@ -2,6 +2,9 @@
  * Main script functions
  */
 
+// Unrestricts same origin policy for acton iframes
+document.domain = "hodgesmace.com";
+
 (function($) {
 
   // Mobile Menu toggle
@@ -97,5 +100,11 @@
             'formName' : formId
         });
     });
+
+    // ActOn Iframe sizing
+
+    function resizeIframe(obj) {
+      obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+    }
 
 })(jQuery);
