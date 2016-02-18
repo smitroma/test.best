@@ -188,7 +188,7 @@ function validateFields(inputs) {
     return i.name === 'Email';
   });
   var valid =  excludedDomains.filter( funciton(d){
-    return emailInput.value.indexOf(d) > -1
+    return emailInput.value.indexOf(d) > -1;
   }).length === 0;
   return valid;
 }
