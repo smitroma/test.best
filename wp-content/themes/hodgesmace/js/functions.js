@@ -187,9 +187,15 @@ function validateFields(inputs) {
   // Empty Validation
   debugger;
   var empty = inputs.filter( function(i){
+    // filters out hidden fields
     if(i.getAttribute('type') === 'hidden' ){
       return false;
     }
+    // filters out unknown act on field
+    if(i.name === 'ao_form_neg_cap' ){
+      return false;
+    }
+
     return i.value === '';
   });
 
