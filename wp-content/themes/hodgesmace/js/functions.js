@@ -178,7 +178,7 @@ function validateForm(iframe) {
       if(validateFields(inputs)) {
         submit.style.cursor = 'pointer';
         submit.style.opacity = 1;
-        submit.onclick = submitOnClick;
+        submit.setAttribute('onclick', submitOnClick);
       }
     }, false );
   }
@@ -188,7 +188,7 @@ function disableSubmit(submit) {
   // Disable submit
   submit.style.cursor = 'default';
   submit.style.opacity = 0.8;
-  submit.onclick = 'alert(\'The form is not valid\')';
+  submit.setAttribute('onclick', 'alert(\'The form is not valid\')');
 }
 
 function validateFields(inputs) {
