@@ -189,7 +189,7 @@ function disableSubmit(submit) {
   // Disable submit
   // submit.style.cursor = 'default';
   // submit.style.opacity = 0.8;
-  submit.setAttribute('onclick', 'alert("The form is not valid.\n- No empty fields allowed\n- Only business email addresses accepted")');
+  submit.setAttribute('onclick', '');
 }
 
 function validateFields(inputs) {
