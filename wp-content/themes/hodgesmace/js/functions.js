@@ -204,11 +204,14 @@ function validateFields(inputs) {
     if(i.name === 'ao_form_neg_cap' ){
       return false;
     }
-
+    i.style.border = '2px solid #f1f1f1';
     return i.value === '';
   });
 
   if(empty.length > 0) {
+    empty.foreach( function(i) {
+      i.style.border = '2px solid #ff000';
+    });
     return false;
   }
 
@@ -221,6 +224,13 @@ function validateFields(inputs) {
     var valid = excludedDomains.filter( function(d){
       return emailInput[0].value.indexOf(d) > -1;
     }).length === 0;
+
+    if(!valid) {
+      emailInput[0].style.border = '2px solid #ff000';
+    } else {
+      emailInput[0].style.border = '2px solid #f1f1f1';
+    }
+
     return valid;
   } else {
     return true;
