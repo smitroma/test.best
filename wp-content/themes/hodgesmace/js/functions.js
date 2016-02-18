@@ -184,16 +184,26 @@ function validateForm(iframe) {
 }
 
 function validateFields(inputs) {
-  debugger;
+  // Empty Validation
+  
+  var empty = inputs.filter( function(i){
+    return i.value === '';
+  });
+
+  if(empty) {
+    return false;
+  }
+
+  // Email Validation
+
   var emailInput = inputs.filter( function(i){
     return i.name === 'Email';
   });
   if( emailInput.length > 0) {
-    var valid =  excludedDomains.filter( function(d){
+    return valid =  excludedDomains.filter( function(d){
       return emailInput[0].value.indexOf(d) > -1;
     }).length === 0;
   } else {
-    var valid = true;
+    return true;
   }
-  return valid;
 }
