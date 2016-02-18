@@ -107,20 +107,8 @@ document.domain = "hodgesmace.com";
 
 function resizeIframe(iframe) {
   try {
-    debugger;
     iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-
-    if(iframe.className === "act-on-form"){
-
-      var form = iframe.contentDocument.getElementsByTagName('form')[0];
-      var inputs = [].slice.call(form.getElementsByTagName('input'));
-      var submit = inputs.filter( function(v) { return v.name === 'Submit'; });
-
-      form.addEventListener( 'change', function(e){
-        e.preventDefault();
-        console.log('submit');
-      }, false );
-    }
+    validateForm(iframe);
   } catch(e) { return }
 }
 
@@ -173,45 +161,34 @@ function validateForm(iframe) {
 
   console.log('validate');
 
-  var form = document.getElementsByClassName('act-on-form')[0].contentDocument;
-  var inputs = form.getElementsByTagName('input');
-  var submit = form.find('input[name=Submit]');
-  var submitAction = submit.onclick;
+  if(iframe.className === "act-on-form"){
 
-  console.log('vars: ',form,submit,submitAction);
+    var form = iframe.contentDocument.getElementsByTagName('form')[0];
+    var inputs = [].slice.call(form.getElementsByTagName('input'));
+    var submit = inputs.filter( function(v) { return v.name === 'Submit'; });
+    var submitOnClick = submit.onClick;
 
-  // Disable submit
-  submit.css('opacity', 0.8);
-  submit.onclick = '';
+    // Disable submit
+    submit.style.opacity = 0.8;
+    submit.onclick = '';
 
-  return validateFields(iframe);
+    form.addEventListener( 'change', function(e){
+
+      // Check if valid;
+      if(validateFields(inputs)) {
+        submit.style.opacity = 1;
+        submit.onclick = submitOnClick;
+      }
+    }, false );
+  }
 }
 
-function validateFields(form) {
-
-  console.log('validateFields');
-
-  var notEmpty = false;
-  var excludesDomain = true;
-
-  // form.find('input').foreach( function() {
-  //   // Empty ?
-  //   notEmpty = !!($(this).value());
-  //
-  //   // Email
-  //   if($(this).attr('type')==='email'){
-  //
-  //     console.log('validateEmail');
-  //
-  //     var validDomain = excludedDomains.foreach(function(v) {
-  //
-  //       console.log(v);
-  //       var excludesDomain = (excludesDomain) ? !($(this).value().indexOf(v) > -1 ) : excludesDomain;
-  //
-  //     }).bind(this)
-  //   }
-  // });
-  //
-  // console.log(notEmpty && excludesDomain);
-
+function validateFields(inputs) {
+  var emailInput = inputs.filter( function(i){
+    return i.name === 'Email';
+  });
+  var valid =  excludedDomains.filter( funciton(d){
+    return emailInput.value.indexOf(d) > -1
+  }).length === 0;
+  return valid;
 }
