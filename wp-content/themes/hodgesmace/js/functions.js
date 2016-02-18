@@ -107,6 +107,7 @@ document.domain = "hodgesmace.com";
 
 function resizeIframe(obj) {
   try {
+
     obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
 
     var iframe = document.getElementsByClassName('act-on-form');
@@ -114,7 +115,8 @@ function resizeIframe(obj) {
     var inputs = (form) ? form.getElementsByTagName('input') : [];
 
     if(form) {
-      form.addEventListener( 'submit', function(e){
+      console.log(form);
+      form.addEventListener( 'change', function(e){
         e.preventDefault();
         console.log('submit');
       }, false );
