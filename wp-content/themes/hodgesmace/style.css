@@ -1657,6 +1657,10 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   padding-bottom: 8px !important;
 }
 
+.site-content .act-on, .site-content .act-on-form {
+  height: 500px;
+}
+
 /* Helpers
 * --------------------------------------------------------------- *
 */
