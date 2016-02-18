@@ -105,23 +105,22 @@ document.domain = "hodgesmace.com";
 
 // ActOn Iframe sizing
 
-function resizeIframe(obj) {
+function resizeIframe(iframe) {
   try {
     debugger;
-    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
 
-    var iframe = document.getElementsByClassName('act-on-form');
-    var form = (iframe.length > 0) ? iframe.contentDocument.getElementsByTagName('form')[0] : false;
-    var inputs = (form) ? form.getElementsByTagName('input') : [];
+    if(iframe.className === "act-on-form"){
 
-    if(form) {
+      var form = iframe.contentDocument.getElementsByTagName('form')[0];
+      var inputs = form.getElementsByTagName('input');
+
       console.log(form);
       form.addEventListener( 'change', function(e){
         e.preventDefault();
         console.log('submit');
       }, false );
     }
-
   } catch(e) { return }
 }
 
@@ -170,7 +169,7 @@ var excludedDomains = [
   "hotmail.com", "gmail.com", "yahoo.com.mx", "live.com.mx", "yahoo.com", "hotmail.es", "live.com", "hotmail.com.mx", "prodigy.net.mx", "msn.com"
 ];
 
-function validateForm(obj) {
+function validateForm(iframe) {
 
   console.log('validate');
 
@@ -185,7 +184,7 @@ function validateForm(obj) {
   submit.css('opacity', 0.8);
   submit.onclick = '';
 
-  return validateFields(obj);
+  return validateFields(iframe);
 }
 
 function validateFields(form) {
