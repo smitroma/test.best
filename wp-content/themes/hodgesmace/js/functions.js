@@ -169,6 +169,7 @@ function validateForm(iframe) {
     var submitOnClick = submit.getAttribute('onclick');
 
     // Disable submit
+    submit.style.cursor = 'default'; 
     submit.style.opacity = 0.8;
     submit.onclick = '';
 
@@ -176,6 +177,7 @@ function validateForm(iframe) {
 
       // Check if valid;
       if(validateFields(inputs)) {
+        submit.style.cursor = 'pointer';
         submit.style.opacity = 1;
         submit.onclick = submitOnClick;
       }
@@ -185,7 +187,6 @@ function validateForm(iframe) {
 
 function validateFields(inputs) {
   // Empty Validation
-  debugger;
 
   var empty = inputs.filter( function(i){
     // filters out hidden fields
