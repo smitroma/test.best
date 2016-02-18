@@ -169,9 +169,9 @@ function validateForm(iframe) {
     var submitOnClick = submit.getAttribute('onclick');
 
     // Disable submit
-    submit.style.cursor = 'default'; 
+    submit.style.cursor = 'default';
     submit.style.opacity = 0.8;
-    submit.onclick = '';
+    submit.onclick = 'alert(\'The form is not valid\')';
 
     form.addEventListener( 'change', function(e){
 
