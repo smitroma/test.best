@@ -185,12 +185,12 @@ function validateForm(iframe) {
 
 function validateFields(inputs) {
   // Empty Validation
-
+  debugger;
   var empty = inputs.filter( function(i){
     return i.value === '';
-  }).length > 0;
+  });
 
-  if(empty) {
+  if(empty.length > 0) {
     return false;
   }
 
