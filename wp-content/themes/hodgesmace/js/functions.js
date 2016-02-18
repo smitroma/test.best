@@ -192,7 +192,7 @@ function disableSubmit(submit) {
   submit.setAttribute('onclick', '');
 }
 
-function validateFields(inputs) {
+function validateFields(inputs, iframe) {
   // Empty Validation
 
   var empty = inputs.filter( function(i){
