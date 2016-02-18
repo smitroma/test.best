@@ -107,6 +107,7 @@ document.domain = "hodgesmace.com";
 
 function resizeIframe(iframe) {
   try {
+    debugger;
     iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
     validateForm(iframe);
   } catch(e) { return }
@@ -187,7 +188,7 @@ function validateFields(inputs) {
   var emailInput = inputs.filter( function(i){
     return i.name === 'Email';
   });
-  var valid =  excludedDomains.filter( funciton(d){
+  var valid =  excludedDomains.filter( function(d){
     return emailInput.value.indexOf(d) > -1;
   }).length === 0;
   return valid;
