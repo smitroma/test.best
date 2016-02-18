@@ -176,7 +176,7 @@ function validateForm(iframe) {
       disableSubmit(submit);
 
       // Check if valid;
-      if(validateFields(inputs, iframe)) {
+      if(validateFields(inputs, iframe.contentDocument)) {
         // submit.style.cursor = 'pointer';
         // submit.style.opacity = 1;
         submit.setAttribute('onclick', submitOnClick);
