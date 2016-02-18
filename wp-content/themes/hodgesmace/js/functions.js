@@ -111,7 +111,7 @@ function resizeIframe(iframe) {
     validateForm(iframe);
   } catch(e) {
     iframe.style.height = '500px';
-    return
+    return;
   }
 }
 
@@ -189,7 +189,7 @@ function disableSubmit(submit) {
   // Disable submit
   // submit.style.cursor = 'default';
   // submit.style.opacity = 0.8;
-  submit.setAttribute('onclick', 'alert(\'The form is not valid:\n\n- Make sure there are no empty fields.\n- Only business emails excepted e.g. name@company.com not name@gmail.com\')');
+  submit.setAttribute('onclick', 'alert("The form is not valid.\n- No empty fields allowed\n- Only business email addresses accepted")');
 }
 
 function validateFields(inputs) {
