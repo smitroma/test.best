@@ -176,8 +176,8 @@ function validateForm(iframe) {
 
       // Check if valid;
       if(validateFields(inputs)) {
-        submit.style.cursor = 'pointer';
-        submit.style.opacity = 1;
+        // submit.style.cursor = 'pointer';
+        // submit.style.opacity = 1;
         submit.setAttribute('onclick', submitOnClick);
       }
     }, false );
@@ -186,8 +186,8 @@ function validateForm(iframe) {
 
 function disableSubmit(submit) {
   // Disable submit
-  submit.style.cursor = 'default';
-  submit.style.opacity = 0.8;
+  // submit.style.cursor = 'default';
+  // submit.style.opacity = 0.8;
   submit.setAttribute('onclick', 'alert(\'The form is not valid:\n\n- Make sure there are no empty fields.\n- Only business emails excepted e.g. name@company.com not name@gmail.com\')');
 }
 
