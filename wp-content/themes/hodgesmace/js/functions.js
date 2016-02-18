@@ -114,6 +114,11 @@ function resizeIframe(iframe) {
 
       var form = iframe.contentDocument.getElementsByTagName('form')[0];
       var inputs = form.getElementsByTagName('input');
+      var submit;
+
+      for(input in inputs) {
+          submit = (input.name = 'Submit') ? input : submit;
+      }
 
       form.addEventListener( 'change', function(e){
         e.preventDefault();
