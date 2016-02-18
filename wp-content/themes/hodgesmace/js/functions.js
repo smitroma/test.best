@@ -186,6 +186,7 @@ function validateForm(iframe) {
 function validateFields(inputs) {
   // Empty Validation
   debugger;
+
   var empty = inputs.filter( function(i){
     // filters out hidden fields
     if(i.getAttribute('type') === 'hidden' ){
@@ -209,9 +210,10 @@ function validateFields(inputs) {
     return i.name === 'Email';
   });
   if( emailInput.length > 0) {
-    return valid =  excludedDomains.filter( function(d){
+    var valid = excludedDomains.filter( function(d){
       return emailInput[0].value.indexOf(d) > -1;
     }).length === 0;
+    return valid;
   } else {
     return true;
   }
