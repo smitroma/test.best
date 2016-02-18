@@ -168,12 +168,11 @@ function validateForm(iframe) {
     var submit = inputs.filter( function(v) { return v.name === 'Submit'; })[0];
     var submitOnClick = submit.getAttribute('onclick');
 
-    // Disable submit
-    submit.style.cursor = 'default';
-    submit.style.opacity = 0.8;
-    submit.onclick = 'alert(\'The form is not valid\')';
+    disableSubmit(submit);
 
     form.addEventListener( 'change', function(e){
+
+      disableSubmit(submit);
 
       // Check if valid;
       if(validateFields(inputs)) {
@@ -183,6 +182,13 @@ function validateForm(iframe) {
       }
     }, false );
   }
+}
+
+function disableSubmit(submit) {
+  // Disable submit
+  submit.style.cursor = 'default';
+  submit.style.opacity = 0.8;
+  submit.onclick = 'alert(\'The form is not valid\')';
 }
 
 function validateFields(inputs) {
