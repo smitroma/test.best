@@ -188,7 +188,7 @@ function validateFields(inputs) {
 
   var empty = inputs.filter( function(i){
     return i.value === '';
-  }) > 0;
+  }).length > 0;
 
   if(empty) {
     return false;
