@@ -209,7 +209,7 @@ function validateFields(inputs) {
   });
 
   if(empty.length > 0) {
-    empty.foreach( function(i) {
+    empty.forEach( function(i) {
       i.style.border = '2px solid #ff000';
     });
     return false;
