@@ -111,14 +111,17 @@ document.domain = "hodgesmace.com";
     try {
       obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
 
-      var form = document.getElementsByClassName('act-on-form')[0].contentDocument.getElementsByTagName('form')[0];
-      var inputs = form.getElementsByTagName('input');
+      var iframe = document.getElementsByClassName('act-on-form');
+      var form = (iframe.length > 0) ? iframe.contentDocument.getElementsByTagName('form')[0] : false;
+      var inputs = (form) ? form.getElementsByTagName('input') : [];
 
-      form.addEventListener( 'submit', function(e){
-        e.preventDefault();
-        console.log('submit');
-      }, false );
-
+      if(form) {
+        form.addEventListener( 'submit', function(e){
+          e.preventDefault();
+          console.log('submit');
+        }, false );
+      }
+      
     } catch(e) { return }
   }
 
