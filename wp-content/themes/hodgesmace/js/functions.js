@@ -113,12 +113,8 @@ function resizeIframe(iframe) {
     if(iframe.className === "act-on-form"){
 
       var form = iframe.contentDocument.getElementsByTagName('form')[0];
-      var inputs = form.getElementsByTagName('input');
-      var submit;
-
-      for(input in inputs) {
-          submit = (input.name = 'Submit') ? input : submit;
-      }
+      var inputs = [].slice.call(form.getElementsByTagName('input'));
+      var submit = inputs.filter( function(v) { return v.name === 'Submit'; });
 
       form.addEventListener( 'change', function(e){
         e.preventDefault();
