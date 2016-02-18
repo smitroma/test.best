@@ -107,7 +107,7 @@ document.domain = "hodgesmace.com";
 
 function resizeIframe(obj) {
   try {
-
+    debugger;
     obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
 
     var iframe = document.getElementsByClassName('act-on-form');
