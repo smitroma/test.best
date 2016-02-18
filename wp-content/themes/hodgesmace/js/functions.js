@@ -109,7 +109,10 @@ function resizeIframe(iframe) {
   try {
     iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
     validateForm(iframe);
-  } catch(e) { return }
+  } catch(e) {
+    iframe.style.height = '500px';
+    return
+  }
 }
 
 // form.addEventListener( 'change', validateForm(this), true );
@@ -158,8 +161,6 @@ var excludedDomains = [
 ];
 
 function validateForm(iframe) {
-
-  console.log('validate');
 
   if(iframe.className === "act-on-form"){
 
