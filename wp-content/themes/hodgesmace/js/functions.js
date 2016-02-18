@@ -166,8 +166,8 @@ function validateForm(iframe) {
 
     var form = iframe.contentDocument.getElementsByTagName('form')[0];
     var inputs = [].slice.call(form.getElementsByTagName('input'));
-    var submit = inputs.filter( function(v) { return v.name === 'Submit'; });
-    var submitOnClick = submit.onClick;
+    var submit = inputs.filter( function(v) { return v.name === 'Submit'; })[0];
+    var submitOnClick = submit.getAttribute('onclick');
 
     // Disable submit
     submit.style.opacity = 0.8;
