@@ -105,102 +105,113 @@ document.domain = "hodgesmace.com";
 
 // ActOn Iframe sizing
 
-var form = window;
+(function() {
 
-function resizeIframe(obj) {
-  try {
-    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-    form = obj.contentWindow;
-  } catch(e) { return }
-}
+  function resizeIframe(obj) {
+    try {
+      obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
 
-form.addEventListener( 'change', validateForm(this), true );
+      var form = document.getElementsByClassName('act-on-form')[0].contentDocument.getElementsByTagName('form')[0];
+      var inputs = form.getElementsByTagName('input');
 
-// Act-On Validation
+      form.addEventListener( 'submit', function(e){
+        e.preventDefault();
+        console.log('submit');
+      }, false );
 
-var excludedDomains = [
-  /* Default domains included */
-  "aol.com", "att.net", "comcast.net", "facebook.com", "gmail.com", "gmx.com", "googlemail.com",
-  "google.com", "hotmail.com", "hotmail.co.uk", "mac.com", "me.com", "mail.com", "msn.com",
-  "live.com", "sbcglobal.net", "verizon.net", "yahoo.com", "yahoo.co.uk",
+    } catch(e) { return }
+  }
 
-  /* Other global domains */
-  "email.com", "games.com" /* AOL */, "gmx.net", "hush.com", "hushmail.com", "icloud.com", "inbox.com",
-  "lavabit.com", "love.com" /* AOL */, "outlook.com", "pobox.com", "rocketmail.com" /* Yahoo */,
-  "safe-mail.net", "wow.com" /* AOL */, "ygm.com" /* AOL */, "ymail.com" /* Yahoo */, "zoho.com", "fastmail.fm",
+  // form.addEventListener( 'change', validateForm(this), true );
 
-  /* United States ISP domains */
-  "bellsouth.net", "charter.net", "comcast.net", "cox.net", "earthlink.net", "juno.com",
+  // Act-On Validation
 
-  /* British ISP domains */
-  "btinternet.com", "virginmedia.com", "blueyonder.co.uk", "freeserve.co.uk", "live.co.uk",
-  "ntlworld.com", "o2.co.uk", "orange.net", "sky.com", "talktalk.co.uk", "tiscali.co.uk",
-  "virgin.net", "wanadoo.co.uk", "bt.com",
+  var excludedDomains = [
+    /* Default domains included */
+    "aol.com", "att.net", "comcast.net", "facebook.com", "gmail.com", "gmx.com", "googlemail.com",
+    "google.com", "hotmail.com", "hotmail.co.uk", "mac.com", "me.com", "mail.com", "msn.com",
+    "live.com", "sbcglobal.net", "verizon.net", "yahoo.com", "yahoo.co.uk",
 
-  /* Domains used in Asia */
-  "sina.com", "qq.com", "naver.com", "hanmail.net", "daum.net", "nate.com", "yahoo.co.jp", "yahoo.co.kr", "yahoo.co.id", "yahoo.co.in", "yahoo.com.sg", "yahoo.com.ph",
+    /* Other global domains */
+    "email.com", "games.com" /* AOL */, "gmx.net", "hush.com", "hushmail.com", "icloud.com", "inbox.com",
+    "lavabit.com", "love.com" /* AOL */, "outlook.com", "pobox.com", "rocketmail.com" /* Yahoo */,
+    "safe-mail.net", "wow.com" /* AOL */, "ygm.com" /* AOL */, "ymail.com" /* Yahoo */, "zoho.com", "fastmail.fm",
 
-  /* French ISP domains */
-  "hotmail.fr", "live.fr", "laposte.net", "yahoo.fr", "wanadoo.fr", "orange.fr", "gmx.fr", "sfr.fr", "neuf.fr", "free.fr",
+    /* United States ISP domains */
+    "bellsouth.net", "charter.net", "comcast.net", "cox.net", "earthlink.net", "juno.com",
 
-  /* German ISP domains */
-  "gmx.de", "hotmail.de", "live.de", "online.de", "t-online.de" /* T-Mobile */, "web.de", "yahoo.de",
+    /* British ISP domains */
+    "btinternet.com", "virginmedia.com", "blueyonder.co.uk", "freeserve.co.uk", "live.co.uk",
+    "ntlworld.com", "o2.co.uk", "orange.net", "sky.com", "talktalk.co.uk", "tiscali.co.uk",
+    "virgin.net", "wanadoo.co.uk", "bt.com",
 
-  /* Russian ISP domains */
-  "mail.ru", "rambler.ru", "yandex.ru", "ya.ru", "list.ru",
+    /* Domains used in Asia */
+    "sina.com", "qq.com", "naver.com", "hanmail.net", "daum.net", "nate.com", "yahoo.co.jp", "yahoo.co.kr", "yahoo.co.id", "yahoo.co.in", "yahoo.com.sg", "yahoo.com.ph",
 
-  /* Belgian ISP domains */
-  "hotmail.be", "live.be", "skynet.be", "voo.be", "tvcablenet.be", "telenet.be",
+    /* French ISP domains */
+    "hotmail.fr", "live.fr", "laposte.net", "yahoo.fr", "wanadoo.fr", "orange.fr", "gmx.fr", "sfr.fr", "neuf.fr", "free.fr",
 
-  /* Argentinian ISP domains */
-  "hotmail.com.ar", "live.com.ar", "yahoo.com.ar", "fibertel.com.ar", "speedy.com.ar", "arnet.com.ar",
+    /* German ISP domains */
+    "gmx.de", "hotmail.de", "live.de", "online.de", "t-online.de" /* T-Mobile */, "web.de", "yahoo.de",
 
-  /* Domains used in Mexico */
-  "hotmail.com", "gmail.com", "yahoo.com.mx", "live.com.mx", "yahoo.com", "hotmail.es", "live.com", "hotmail.com.mx", "prodigy.net.mx", "msn.com"
-];
+    /* Russian ISP domains */
+    "mail.ru", "rambler.ru", "yandex.ru", "ya.ru", "list.ru",
 
-function validateForm(obj) {
+    /* Belgian ISP domains */
+    "hotmail.be", "live.be", "skynet.be", "voo.be", "tvcablenet.be", "telenet.be",
 
-  console.log('validate');
+    /* Argentinian ISP domains */
+    "hotmail.com.ar", "live.com.ar", "yahoo.com.ar", "fibertel.com.ar", "speedy.com.ar", "arnet.com.ar",
 
-  // var form = $(obj.contentWindow.document);
-  // var submit = form.find('input[name=Submit]');
-  // var submitAction = submit.onclick;
-  //
-  // console.log('vars: ',form,submit,submitAction);
-  //
-  // // Disable submit
-  // submit.css('opacity', 0.8);
-  // submit.onclick = '';
-  //
-  // return validateFields(obj);
-}
+    /* Domains used in Mexico */
+    "hotmail.com", "gmail.com", "yahoo.com.mx", "live.com.mx", "yahoo.com", "hotmail.es", "live.com", "hotmail.com.mx", "prodigy.net.mx", "msn.com"
+  ];
 
-function validateFields(form) {
+  function validateForm(obj) {
 
-  console.log('validateFields');
+    console.log('validate');
 
-  var notEmpty = false;
-  var excludesDomain = true;
+    var form = document.getElementsByClassName('act-on-form')[0].contentDocument;
+    var inputs = form.getElementsByTagName('input');
+    var submit = form.find('input[name=Submit]');
+    var submitAction = submit.onclick;
 
-  // form.find('input').foreach( function() {
-  //   // Empty ?
-  //   notEmpty = !!($(this).value());
-  //
-  //   // Email
-  //   if($(this).attr('type')==='email'){
-  //
-  //     console.log('validateEmail');
-  //
-  //     var validDomain = excludedDomains.foreach(function(v) {
-  //
-  //       console.log(v);
-  //       var excludesDomain = (excludesDomain) ? !($(this).value().indexOf(v) > -1 ) : excludesDomain;
-  //
-  //     }).bind(this)
-  //   }
-  // });
-  //
-  // console.log(notEmpty && excludesDomain);
+    console.log('vars: ',form,submit,submitAction);
 
-}
+    // Disable submit
+    submit.css('opacity', 0.8);
+    submit.onclick = '';
+
+    return validateFields(obj);
+  }
+
+  function validateFields(form) {
+
+    console.log('validateFields');
+
+    var notEmpty = false;
+    var excludesDomain = true;
+
+    // form.find('input').foreach( function() {
+    //   // Empty ?
+    //   notEmpty = !!($(this).value());
+    //
+    //   // Email
+    //   if($(this).attr('type')==='email'){
+    //
+    //     console.log('validateEmail');
+    //
+    //     var validDomain = excludedDomains.foreach(function(v) {
+    //
+    //       console.log(v);
+    //       var excludesDomain = (excludesDomain) ? !($(this).value().indexOf(v) > -1 ) : excludesDomain;
+    //
+    //     }).bind(this)
+    //   }
+    // });
+    //
+    // console.log(notEmpty && excludesDomain);
+
+  }
+
+})();
