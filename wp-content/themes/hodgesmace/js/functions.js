@@ -176,7 +176,7 @@ function validateForm(iframe) {
       disableSubmit(submit);
 
       // Check if valid;
-      if(validateFields(inputs)) {
+      if(validateFields(inputs, iframe)) {
         // submit.style.cursor = 'pointer';
         // submit.style.opacity = 1;
         submit.setAttribute('onclick', submitOnClick);
@@ -196,22 +196,20 @@ function validateFields(inputs) {
   // Empty Validation
 
   var empty = inputs.filter( function(i){
-    // filters out hidden fields
-    if(i.getAttribute('type') === 'hidden' ){
+    // filters out hidden/ button fields
+    if(i.getAttribute('type') === 'hidden' || i.getAttribute('type') === 'button' ){
       return false;
     }
     // filters out unknown act on field
-    if(i.name === 'ao_form_neg_cap' ){
+    if( i.name === 'ao_form_neg_cap' ){
       return false;
     }
-    i.style.border = '2px solid #f1f1f1';
+
     return i.value === '';
   });
 
   if(empty.length > 0) {
-    empty.forEach( function(i) {
-      i.style.border = '2px solid #ff000';
-    });
+    iframe.getElementById('errorMsg').innerHTML = 'No empty fields allowed';
     return false;
   }
 
@@ -226,9 +224,7 @@ function validateFields(inputs) {
     }).length === 0;
 
     if(!valid) {
-      emailInput[0].style.border = '2px solid #ff000';
-    } else {
-      emailInput[0].style.border = '2px solid #f1f1f1';
+      iframe.getElementById('errorMsg').innerHTML = 'Only business email addresses allowed.';
     }
 
     return valid;
