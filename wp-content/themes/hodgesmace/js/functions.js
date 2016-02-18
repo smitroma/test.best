@@ -187,6 +187,9 @@ function validateFields(inputs) {
   // Empty Validation
   debugger;
   var empty = inputs.filter( function(i){
+    if(i.getAttribute('type') === 'hidden' ){
+      return false;
+    }
     return i.value === '';
   });
 
