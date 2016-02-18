@@ -188,8 +188,12 @@ function validateFields(inputs) {
   var emailInput = inputs.filter( function(i){
     return i.name === 'Email';
   });
-  var valid =  excludedDomains.filter( function(d){
-    return emailInput.value.indexOf(d) > -1;
-  }).length === 0;
+  if( emailInput.length > 0) {
+    var valid =  excludedDomains.filter( function(d){
+      return emailInput[0].value.indexOf(d) > -1;
+    }).length === 0;
+  } else {
+    var valid = true;
+  }
   return valid;
 }
