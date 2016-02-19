@@ -1641,14 +1641,10 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   overflow: auto;
   padding-top: 6em;
   padding-bottom: 6em;
-  background-image: url('./images/blog/blog-banner.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #f9f9f9;
 }
 
 .site-content .aoFormContainer .formFieldLabel {
-    color: #fff;
     padding-bottom: 10px;
 }
 
