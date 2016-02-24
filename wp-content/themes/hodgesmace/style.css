@@ -1641,20 +1641,23 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   overflow: auto;
   padding-top: 6em;
   padding-bottom: 6em;
-  background-image: url('./images/blog/blog-banner.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #f9f9f9;
 }
 
 .site-content .aoFormContainer .formFieldLabel {
-    color: #fff;
     padding-bottom: 10px;
 }
 
 .site-content .aoFormContainer input[type=button] {
   line-height: 1;
   padding-bottom: 8px !important;
+}
+
+.site-content div#errorMsg {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ff0000;
+    font-weight: bold;
 }
 
 /* Helpers

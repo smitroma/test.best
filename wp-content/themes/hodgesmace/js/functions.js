@@ -105,16 +105,17 @@ document.domain = "hodgesmace.com";
 
 // ActOn Iframe sizing
 
-var form = window;
-
-function resizeIframe(obj) {
+function resizeIframe(iframe) {
   try {
-    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-    form = obj.contentWindow;
-  } catch(e) { return }
+    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+    validateForm(iframe);
+  } catch(e) {
+    iframe.style.height = '500px';
+    return;
+  }
 }
 
-form.addEventListener( 'change', validateForm(this), true );
+// form.addEventListener( 'change', validateForm(this), true );
 
 // Act-On Validation
 
@@ -159,48 +160,75 @@ var excludedDomains = [
   "hotmail.com", "gmail.com", "yahoo.com.mx", "live.com.mx", "yahoo.com", "hotmail.es", "live.com", "hotmail.com.mx", "prodigy.net.mx", "msn.com"
 ];
 
-function validateForm(obj) {
+function validateForm(iframe) {
 
-  console.log('validate');
+  if(iframe.className === "act-on-form"){
 
-  // var form = $(obj.contentWindow.document);
-  // var submit = form.find('input[name=Submit]');
-  // var submitAction = submit.onclick;
-  //
-  // console.log('vars: ',form,submit,submitAction);
-  //
-  // // Disable submit
-  // submit.css('opacity', 0.8);
-  // submit.onclick = '';
-  //
-  // return validateFields(obj);
+    var form = iframe.contentDocument.getElementsByTagName('form')[0];
+    var inputs = [].slice.call(form.getElementsByTagName('input'));
+    var submit = inputs.filter( function(v) { return v.name === 'Submit'; })[0];
+    var submitOnClick = submit.getAttribute('onclick');
+
+    disableSubmit(submit);
+
+    form.addEventListener( 'change', function(e){
+
+      disableSubmit(submit);
+
+      // Check if valid;
+      if(validateFields(inputs, iframe.contentDocument)) {
+        // submit.style.cursor = 'pointer';
+        // submit.style.opacity = 1;
+        submit.setAttribute('onclick', submitOnClick);
+      }
+    }, false );
+  }
 }
 
-function validateFields(form) {
+function disableSubmit(submit) {
+  // Disable submit
+  // submit.style.cursor = 'default';
+  // submit.style.opacity = 0.8;
+  submit.setAttribute('onclick', '');
+}
 
-  console.log('validateFields');
+function validateFields(inputs, iframe) {
+  // Empty Validation
 
-  var notEmpty = false;
-  var excludesDomain = true;
+  var empty = inputs.filter( function(i){
+    // filters out hidden/ button fields
+    if(i.getAttribute('type') === 'hidden' || i.getAttribute('type') === 'button' ){
+      return false;
+    }
+    // filters out unknown act on field
+    if( i.name === 'ao_form_neg_cap' ){
+      return false;
+    }
 
-  // form.find('input').foreach( function() {
-  //   // Empty ?
-  //   notEmpty = !!($(this).value());
-  //
-  //   // Email
-  //   if($(this).attr('type')==='email'){
-  //
-  //     console.log('validateEmail');
-  //
-  //     var validDomain = excludedDomains.foreach(function(v) {
-  //
-  //       console.log(v);
-  //       var excludesDomain = (excludesDomain) ? !($(this).value().indexOf(v) > -1 ) : excludesDomain;
-  //
-  //     }).bind(this)
-  //   }
-  // });
-  //
-  // console.log(notEmpty && excludesDomain);
+    return i.value === '';
+  });
 
+  if(empty.length > 0) {
+    iframe.getElementById('errorMsg').innerHTML = 'No empty fields allowed';
+    return false;
+  }
+
+  // Email Validation
+
+  var emailInput = inputs.filter( function(i){
+    return i.name === 'Email';
+  });
+  if( emailInput.length > 0) {
+    var valid = excludedDomains.filter( function(d){
+      return emailInput[0].value.indexOf(d) > -1;
+    }).length === 0;
+
+    if(!valid) {
+      iframe.getElementById('errorMsg').innerHTML = 'Only business email addresses allowed.';
+    }
+
+    return valid;
+  } else {
+    return true;
+  }
 }
