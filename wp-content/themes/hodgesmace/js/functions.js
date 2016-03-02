@@ -94,13 +94,6 @@
         setEvenColHeight();
       });
 
-    $(document).bind('gform_confirmation_loaded', function(event, formId) {
-        dataLayer.push({
-            'event' : 'formSubmit',
-            'formName' : formId
-        });
-    });
-
 })(jQuery);
 
 // ActOn Iframe sizing
