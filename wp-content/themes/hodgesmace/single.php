@@ -52,7 +52,9 @@ get_header(); ?>
 					?>
 					<?php $args = array(
 						'tag' => $tags,
-						'post__not_in' => array(get_the_ID())
+						'post__not_in' => array(get_the_ID()),
+						'max_num_pages' => 1,
+						'posts_per_page' => 3
 					); ?>
 					<?php $related_query = new WP_Query($args); ?>
 					<?php if($related_query->have_posts()): ?>
