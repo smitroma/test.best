@@ -1256,7 +1256,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 }
 
 /* Height with btn */
-.hover-content-btn { height: 440px; }
+.hover-content-btn { height: 490px; }
 .hover-btn { height: 40px; }
 
 @media(min-width: 550px){
