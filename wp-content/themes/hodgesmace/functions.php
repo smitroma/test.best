@@ -203,7 +203,18 @@ function resource_link_func( $atts, $content='' ) {
   $atts = shortcode_atts( array(
     'class' => ''
   ), $atts, 'resource_link' );
-  $url = 'http://marketing.hodgesmace.com/acton/ppform/17907/0006/u-0002';
+
+  $featured_query = new WP_Query(array('post_type'=> 'resources', 'cat'=> 41));
+
+  if($featured_query->have_posts()){
+    while($featured_query->have_posts()){
+      $featured_query->the_post();
+      $url = get_the_permalink();
+    }
+  } else {
+    $url = '#';
+  }
+
 	return '<a href="'.$url.'" class="'.$atts['class'].'">'.$content.'</a>';
 }
 
