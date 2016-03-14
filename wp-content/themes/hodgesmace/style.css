@@ -56,12 +56,21 @@ a {
   color: #1897d3;
 }
 p { font-size: 1em; }
+
 h1 { font-size: 3em; }
 h2 { font-size: 2.5em; }
 h3 { font-size: 2em; }
 h4 { font-size: 1.5em; }
 h5 { font-size: 1.2em; }
 h6 { font-size: 1em; }
+
+@media(max-width: 769px) {
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.8em; }
+  h3 { font-size: 1.5em; }
+  h4 { font-size: 1.2em; }
+  h5 { font-size: 1em; }
+}
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: #555;
