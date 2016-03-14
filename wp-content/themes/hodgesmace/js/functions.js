@@ -2,16 +2,8 @@
  * Main script functions
  */
 
-// Unrestricts same origin policy for acton iframes
-// document.domain = "hodgesmace.com";
-
-// resize window of resources iframe
-
-var resizeIframe = function(iframe){
-  //$(iframe).height($(iframe).contents().height());
-}
-
 (function($) {
+  console.log($);
 
   // Mobile Menu toggle
     $('.mobile-menu-toggle').click(function() {
