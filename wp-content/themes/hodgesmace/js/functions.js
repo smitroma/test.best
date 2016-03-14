@@ -5,6 +5,12 @@
 // Unrestricts same origin policy for acton iframes
 // document.domain = "hodgesmace.com";
 
+// resize window of resources iframe
+
+var resizeIframe = function(iframe){
+  //$(iframe).height($(iframe).contents().height());
+}
+
 (function($) {
 
   // Mobile Menu toggle
@@ -93,11 +99,5 @@
     $(window).resize(function() {
       setEvenColHeight();
     });
-
-    // resize window of resources iframe
-
-    var resizeIframe = function(iframe){
-      //$(iframe).height($(iframe).contents().height());
-    }
 
 })(jQuery);
