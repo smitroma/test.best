@@ -1660,6 +1660,10 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
     font-weight: bold;
 }
 
+.site-content .act-on-form {
+  height: 400px;
+}
+
 /* Helpers
 * --------------------------------------------------------------- *
 */

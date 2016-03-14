@@ -94,10 +94,10 @@
       setEvenColHeight();
     });
 
-  // resize window of resources iframe
+    // resize window of resources iframe
 
-  function resizeIframe(iframe){
-    //$(iframe).height($(iframe).contents().height());
-  }
+    var resizeIframe = function(iframe){
+      //$(iframe).height($(iframe).contents().height());
+    }
 
 })(jQuery);
