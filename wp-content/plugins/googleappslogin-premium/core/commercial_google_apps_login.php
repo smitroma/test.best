@@ -140,7 +140,18 @@ class commercial_google_apps_login extends core_google_apps_login {
 		</script>
 		<?php
 	}
-	
+
+	protected function get_hd() {
+		$options = $this->get_option_galogin();
+		if ($options['ga_forcedomain']) {
+			$domain_list = $this->split_domainslist($options['ga_domainname']);
+			if (count($domain_list) > 0) {
+				return $domain_list[0];
+			}
+		}
+		return '';
+	}
+
 	// ADMIN AND OPTIONS
 	// *****************
 	
@@ -168,6 +179,10 @@ class commercial_google_apps_login extends core_google_apps_login {
 		
 		echo "<input id='input_ga_autocreate' name='".$this->get_options_name()."[ga_autocreate]' type='checkbox' ".($options['ga_autocreate'] ? 'checked' : '')." class='checkbox gal_needsdomain' />";
 		echo '<label for="input_ga_autocreate" class="checkbox plain">'.__('Auto-create new users on my domain', 'google-apps-login').'</label>';
+		echo '<br class="clear">';
+
+		echo "<input id='input_ga_forcedomain' name='".$this->get_options_name()."[ga_forcedomain]' type='checkbox' ".($options['ga_forcedomain'] ? 'checked' : '')." class='checkbox gal_needsdomain' />";
+		echo '<label for="input_ga_forcedomain" class="checkbox plain">'.__('Force Google login to use accounts on my domain (saves user having to select from multiple Google accounts)', 'google-apps-login').'</label>';
 		echo '<br class="clear">';
 
 		if ($this->want_premium_default_role()) {
@@ -296,6 +311,7 @@ class commercial_google_apps_login extends core_google_apps_login {
 					);
 		}
 		$newinput['ga_autocreate'] = isset($input['ga_autocreate']) ? (boolean)$input['ga_autocreate'] : false;
+		$newinput['ga_forcedomain'] = isset($input['ga_forcedomain']) ? (boolean)$input['ga_forcedomain'] : false;
 		$newinput['ga_disablewplogin'] = isset($input['ga_disablewplogin']) ? (boolean)$input['ga_disablewplogin'] : false;
 		$newinput['ga_hidewplogin'] = isset($input['ga_hidewplogin']) ? (boolean)$input['ga_hidewplogin'] : false;
 		
@@ -384,6 +400,7 @@ class commercial_google_apps_login extends core_google_apps_login {
 		return array_merge( parent::get_default_options(), 
 			Array('ga_domainname' => '',
 				  'ga_autocreate' => false,
+				  'ga_forcedomain' => false,
 				  'ga_disablewplogin' => false,
 				  'ga_hidewplogin' => false,
 				  'ga_defaultrole' => get_option('default_role'),

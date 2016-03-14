@@ -61,6 +61,11 @@ class core_google_apps_login {
 		$client->setClientId($options['ga_clientid']);
 		$client->setClientSecret($options['ga_clientsecret']);
 		$client->setRedirectUri($this->get_login_url());
+
+		$hd = $this->get_hd();
+		if ($hd) {
+			$client->setHostedDomain($hd);
+		}
 		
 		$scopes = array_unique(apply_filters('gal_gather_scopes', $this->get_default_scopes()));
 		$client->setScopes($scopes);
@@ -75,6 +80,10 @@ class core_google_apps_login {
 		}
 				
 		return Array($client, $oauthservice);
+	}
+
+	protected function get_hd() {
+		return '';
 	}
 	
 	protected function get_default_scopes() {
