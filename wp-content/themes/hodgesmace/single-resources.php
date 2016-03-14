@@ -24,17 +24,30 @@ get_header(); ?>
 
 				</div>
 				<!-- Related Posts -->
-
+				<?php
+					$tags = array();
+					$cats = array();
+				?>
 				<?php if(is_array(get_the_tags())): ?>
 					<?php
-						$tags = array();
 						foreach(get_the_tags() as $tag){
 							array_push($tags, $tag->name) ;
 						}
 						$tags = implode(',',$tags);
 					?>
+				<?php endif; ?>
+				<?php if(is_array(get_the_category())): ?>
+					<?php
+						foreach(get_the_category() as $cat){
+							array_push($cats, $cat->term_id) ;
+						}
+						$cats = implode(',',$cats);
+					?>
+				<?php endif; ?>
+				<?php if(!empty($tags) || !empty($cats)): ?>
 					<?php $args = array(
 						'tag' => $tags,
+						'cat' => $cats,
 						'post_type' => 'resources',
 						'post__not_in' => array(get_the_ID()),
 						'max_num_pages' => 1,
@@ -65,7 +78,6 @@ get_header(); ?>
 				          <div>
 				            <p class="post-date"><?php the_date(); ?></p>
 				            <h4 style="font-size: 1em;"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
-				            <p class="post-author">By <?php the_author(); ?></p>
 										<p><a href="<?php the_permalink() ?>" class="uppercase">Read Article <?php echo do_shortcode('[icon class="fa-caret-right"]')?></a></p>
 				          </div>
 				        </div>

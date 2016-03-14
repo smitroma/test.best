@@ -191,7 +191,7 @@ function resource_register() {
     'show_in_menu' => TRUE,
     'show_in_nav_menus' => TRUE,
     'has_archive' => TRUE,
-    'taxonomies' => array('category')
+    'taxonomies' => array('category', 'post_tag'),
   );
 
 	register_post_type( 'resources' , $args );
