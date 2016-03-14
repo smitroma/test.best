@@ -14,20 +14,6 @@ get_header(); ?>
 			<div class="container">
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<!-- Featured Image Banner now add to post instead of using the featured image as banner -->
-
-					<!-- <div class="featured-img p-t-md">
-						<?php //if ( has_post_thumbnail() ): ?>
-							<?php //the_post_thumbnail(); ?>
-						<?php //else: ?>
-							<div class="default-img">
-								<div class="default-img-content">
-									No Image Added
-								</div>
-							</div>
-						<?php //endif; ?>
-					</div> -->
-
 					<div class="post-meta uppercase p-y-md">
 						<span><?php the_date() ?></span> | <span>BY <?php the_author() ?></span>
 					</div>
@@ -36,10 +22,8 @@ get_header(); ?>
 						<?php the_content(); ?>
 					</div>
 
-					<?php if ( comments_open() || get_comments_number() ) : ?>
-						<?php // comments_template(); ?>
-					<?php endif; ?>
 				</div>
+
 				<!-- Related Posts -->
 
 				<?php if(is_array(get_the_tags())): ?>
@@ -52,6 +36,7 @@ get_header(); ?>
 					?>
 					<?php $args = array(
 						'tag' => $tags,
+						'post_type' => 'post',
 						'post__not_in' => array(get_the_ID()),
 						'max_num_pages' => 1,
 						'posts_per_page' => 3
