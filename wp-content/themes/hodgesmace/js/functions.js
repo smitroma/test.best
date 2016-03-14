@@ -17,18 +17,18 @@
       $('#top-header .menu-item-has-children').removeClass('active');
       $('#top-header .menu-item-has-children .sub-menu').hide()
     }
-    // toggle menu when you click
+  // toggle menu when you click
     $('#top-header .menu-item-has-children').click(function() {
       $(this).toggleClass('active');
       $(this).find('.sub-menu').toggle();
     })
-    // hide menu when you click off
+  // hide menu when you click off
     $('body').click( function(e) {
       if($(e.target).parents('.portal-toggle').length === 0) {
         hidePortalMenu();
       }
     });
-    // reset menu on resize
+  // reset menu on resize
     $(window).resize(function(){
         hidePortalMenu();
     });
@@ -86,12 +86,18 @@
       });
     }
 
-    // onLoad - Even Column Height
-      setEvenColHeight();
+  // onLoad - Even Column Height
+    setEvenColHeight();
 
-    // onResize - Even Column Height
-      $(window).resize(function() {
-        setEvenColHeight();
-      });
+  // onResize - Even Column Height
+    $(window).resize(function() {
+      setEvenColHeight();
+    });
+
+  // resize window of resources iframe
+
+  function resizeIframe(iframe){
+    //$(iframe).height($(iframe).contents().height());
+  }
 
 })(jQuery);
