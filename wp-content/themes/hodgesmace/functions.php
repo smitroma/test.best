@@ -435,7 +435,7 @@ function send_to_acton_3($entry,$form) {
   $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/0007/d-ext-0001');
 }
 
-/* Brochere Request */
+/* Brochure Request */
 
 add_action('gform_after_submission_4', 'send_to_acton_4', 10, 2);
 
