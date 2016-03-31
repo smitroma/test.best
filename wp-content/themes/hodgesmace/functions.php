@@ -435,6 +435,24 @@ function send_to_acton_3($entry,$form) {
   $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/0007/d-ext-0001');
 }
 
+/* Brochere Request */
+
+add_action('gform_after_submission_4', 'send_to_acton_4', 10, 2);
+
+function send_to_acton_4($entry,$form) {
+
+  $ao_gf1 = new ActonWordPressConnection;
+
+  $ao_gf1->setPostItems('First Name',$entry['1.3']);
+  $ao_gf1->setPostItems('Last Name',$entry['1.6']);
+  $ao_gf1->setPostItems('Email',$entry['2']);
+  $ao_gf1->setPostItems('State',$entry['3']);
+  $ao_gf1->setPostItems('Business Phone',$entry['4']);
+
+  $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/0010/d-ext-0001');
+}
+
+
 /* Gravity Forms Business Email Validation */
 
 require_once('inc/gform-email-validation.php');
