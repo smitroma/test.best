@@ -471,7 +471,7 @@ function send_to_acton_6($entry,$form) {
   $ao_gf1->setPostItems('state',$entry['16']);
 
 
-  $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/0002/d-ext-0001');
+  $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/000f/d-ext-0001');
 }
 
 
