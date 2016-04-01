@@ -752,6 +752,20 @@ input[type=submit], .site-content .vc_btn3.vc_btn3-color-green.vc_btn3-style-mod
   outline: 0;
 }
 
+.site-content select {
+  padding: 0 1em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: #fff;
+  color: #aaa;
+  border: 2px solid #eee;
+  outline: none;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 3em;
+}
+
 /*
  * Gravity Form Helper Classes
  * --------------------------------------------------------------- *
@@ -1671,6 +1685,11 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 
 .site-content .act-on-form {
   height: 400px;
+}
+
+/* Fancybox */
+#fancybox-content {
+    background-color: #fff;
 }
 
 /* Helpers
