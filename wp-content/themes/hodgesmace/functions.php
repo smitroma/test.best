@@ -443,7 +443,8 @@ function send_to_acton_5($entry,$form) {
   $ao_gf1->setPostItems('state',$entry['22']);
   $ao_gf1->setPostItems('Number of Employees Range',$entry['20']);
   $ao_gf1->setPostItems('Industry',$entry['19']);
-
+  $ao_gf1->setPostItems('Type',$entry['23']);
+  $ao_gf1->setPostItems('Marketing Program',$entry['24']);
 
   $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/0002/d-ext-0001');
 }
@@ -469,7 +470,8 @@ function send_to_acton_6($entry,$form) {
   $ao_gf1->setPostItems('productInterest',join(',', array_filter($interestSolutions)));
   $ao_gf1->setPostItems('companyName',$entry['15']);
   $ao_gf1->setPostItems('state',$entry['16']);
-
+  $ao_gf1->setPostItems('Type',$entry['18']);
+  $ao_gf1->setPostItems('Marketing Program',$entry['19']);
 
   $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/000f/d-ext-0001');
 }
