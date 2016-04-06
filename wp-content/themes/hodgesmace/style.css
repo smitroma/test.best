@@ -782,11 +782,21 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 }
 
 .site-content .gf-match-first-name {
-
+  width: 48.8%;
+  float: left;
+  clear: none;
+  padding-right: 16px;
 }
 
 .site-content .gf-match-last-name {
-  
+  width: 48.8%;
+  float: left;
+  clear: none;
+}
+
+.site-content .gf-match-last-name .large,
+.site-content .gf-match-first-name .large {
+  width: 100%;
 }
 
  /* Hide Labels */
