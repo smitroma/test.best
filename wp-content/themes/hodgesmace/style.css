@@ -794,8 +794,14 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   clear: none;
 }
 
-.site-content .gf-match-last-name .large,
-.site-content .gf-match-first-name .large {
+.site-content .gform_wrapper .hidden_label .gf-match-last-name input.large,
+.site-content .gform_wrapper .hidden_label .gf-match-last-name select.large,
+.site-content .gform_wrapper .top_label .gf-match-last-name input.large,
+.site-content .gform_wrapper .top_label .gf-match-last-name select.large
+.site-content .gform_wrapper .hidden_label .gf-match-first-name input.large,
+.site-content .gform_wrapper .hidden_label .gf-match-first-name select.large,
+.site-content .gform_wrapper .top_label .gf-match-first-name input.large,
+.site-content .gform_wrapper .top_label .gf-match-first-name select.large {
   width: 100%;
 }
 
