@@ -781,14 +781,14 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   max-width: inherit;
 }
 
-.site-content .gf-match-first-name {
+.site-content .gform_wrapper ul li.gf-match-first-name {
   width: 48.8%;
   float: left;
   clear: none;
   padding-right: 16px;
 }
 
-.site-content .gf-match-last-name {
+.site-content .gform_wrapper ul li.gf-match-last-name {
   width: 48.8%;
   float: left;
   clear: none;
