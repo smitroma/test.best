@@ -28,9 +28,6 @@
 			<div class="container">
 				<?php get_search_form( true ); ?>
 				<?php wp_nav_menu(array('menu' => 'Login Menu', 'menu_class' => 'top_nav' )); ?>
-				<!-- <a href="#">
-					<button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern bttn-white-border m-l-md">SmartBen Login</button>
-				</a> -->
 			</div>
 		</div>
     <div id="header">
@@ -43,9 +40,19 @@
 				<div class="mobile-menu-toggle"><i class="fa fa-bars"></i></div>
 				<div id="main-menu">
 					<div class="request-header">
-						<a href="/request-a-demo/">
-							<button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern bttn-blue m-l-sm">Request a Demo</button>
-						</a>
+						<button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern bttn-blue m-l-sm requestDemoBtn">Request a Demo</button>
+
+						<!-- Request a demo popup -->
+						<div id="requestPopUp" style="display: none;">
+							<div style="background-color: #fff; text-align: center;">
+								<p><strong>Choose the option that best describes you:</strong></p>
+								<p>
+									<a href="/request-a-demo-broker" class="bttn-blue">Broker</a>
+									<a href="/request-a-demo-company" class="bttn-blue">Employer</a>
+								</p>
+							</div>
+						</div>
+
 					</div>
 	        <?php wp_nav_menu(array('menu' => 'Main Menu', 'menu_class' => 'header_nav' )); ?>
 				</div>

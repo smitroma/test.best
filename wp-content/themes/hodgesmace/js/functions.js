@@ -84,12 +84,20 @@
       });
     }
 
-  // onLoad - Even Column Height
+    // onLoad - Even Column Height
     setEvenColHeight();
 
-  // onResize - Even Column Height
+    // onResize - Even Column Height
     $(window).resize(function() {
       setEvenColHeight();
+    });
+
+    // Client / Broker Popup
+
+    $('.requestDemoBtn').click(function(){
+        $.fancybox({
+                'content' : $("#requestPopUp").html()
+        });
     });
 
 })(jQuery);
