@@ -53,6 +53,13 @@
 							</div>
 						</div>
 
+						<!-- Watch Video Popup -->
+						<div id="watchVideoPopUp" style="display: none;">
+							<div style="background-color: #fff; text-align: center;">
+
+							</div>
+						</div>
+
 					</div>
 	        <?php wp_nav_menu(array('menu' => 'Main Menu', 'menu_class' => 'header_nav' )); ?>
 				</div>

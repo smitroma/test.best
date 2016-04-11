@@ -99,4 +99,29 @@
       });
     });
 
+  // Watch Video Popup
+    $('.watchVideoBtn').click(function(){
+      $.fancybox({
+          'content' : $("#watchVideoPopUp").html()
+      });
+    });
+
+  // StickyNav
+    function getScroll() {
+      console.log($(window).scrollTop() > $('#header').offset().top)
+      if($(window).scrollTop() > $('#header').offset().top) {
+        $('#header').toggleClass('sticky');
+        $('#top-header').toggleClass('stickyMargin');
+      }
+    }
+
+  // onload - StickyNav
+    getScroll();
+
+  // onScroll - StickyNav
+    $(window).scroll(function(){
+      console.log('Scrolling');
+      getScroll();
+    });
+
 })(jQuery);
