@@ -111,7 +111,9 @@
       console.log($(window).scrollTop() > $('#header').offset().top)
       if($(window).scrollTop() > $('#header').offset().top) {
         $('#header').toggleClass('sticky');
-        $('#top-header').toggleClass('stickyMargin');
+        ($('#top-header').css('marginBottom') === $('#header').height()) ?
+          $('#top-header').css('marginBottom', $('#header').height().'px') :
+          $('#top-header').css('marginBottom', '0px');
       }
     }
 

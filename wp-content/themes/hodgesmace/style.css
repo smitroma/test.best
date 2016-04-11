@@ -283,6 +283,7 @@ ul#menu-login-menu li.active {
 }
 
 /* Search Form */
+
 #top-header form#searchform {
   display: inline-block;
   width: 41%;
@@ -564,6 +565,12 @@ input#s:focus {
   .header_nav {
     font-size: 1em;
   }
+}
+
+/* Stick Nav */
+
+.sticky {
+  position: fixed;
 }
 
 /*
