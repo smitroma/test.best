@@ -110,10 +110,15 @@
     function getScroll() {
       console.log($(window).scrollTop() > $('#header').offset().top)
       if($(window).scrollTop() > $('#header').offset().top) {
-        $('#header').toggleClass('sticky');
-        ($('#top-header').css('marginBottom') === $('#header').height()) ?
-          $('#top-header').css('marginBottom', $('#header').height()+'px') :
+        if($('#header').hasClass('sticky')){
+          $('#header').addClass('sticky');
+          $('#top-header').css('marginBottom', $('#header').height()+'px');
+        }
+      } else {
+        if(!$('#header').hasClass('sticky')){
+          $('#header').removeClass('sticky');
           $('#top-header').css('marginBottom', '0px');
+        }
       }
     }
 
