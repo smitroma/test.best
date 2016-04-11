@@ -112,7 +112,7 @@
       if($(window).scrollTop() > $('#header').offset().top) {
         $('#header').toggleClass('sticky');
         ($('#top-header').css('marginBottom') === $('#header').height()) ?
-          $('#top-header').css('marginBottom', $('#header').height().'px') :
+          $('#top-header').css('marginBottom', $('#header').height()+'px') :
           $('#top-header').css('marginBottom', '0px');
       }
     }
