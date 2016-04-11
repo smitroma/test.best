@@ -569,8 +569,10 @@ input#s:focus {
 
 /* Stick Nav */
 
-.sticky {
+#header.sticky {
   position: fixed;
+  background-color: #fff;
+  top:0;
 }
 
 /*
