@@ -20,6 +20,10 @@
   </div>
 </div>
 </div><!-- .container-fluid -->
+
+<!-- Hello Bar -->
+<!-- <script src="//my.hellobar.com/7ab6f26df44190c1fc207f819a72fcad0185b7c6.js" type="text/javascript" charset="utf-8" async="async"></script> -->
+
 <?php wp_footer(); ?>
 </body>
 </html>

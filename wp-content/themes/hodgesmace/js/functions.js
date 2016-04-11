@@ -110,13 +110,11 @@
     function getScroll() {
       if($(window).scrollTop() > $('#top-header').height()) {
         if(!$('#header').hasClass('sticky')){
-          console.log('added');
           $('#header').addClass('sticky');
           $('#top-header').css('marginBottom', $('#header').height()+'px');
         }
       } else {
         if($('#header').hasClass('sticky')){
-          console.log('removed');
           $('#header').removeClass('sticky');
           $('#top-header').css('marginBottom', '0px');
         }
