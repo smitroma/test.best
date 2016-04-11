@@ -55,7 +55,7 @@
         }
       );
 
-  // Anchor Buttons
+      // Anchor Buttons
     $('.anchor-bttn').click(function() {
       var anchorTarget = $(this).attr('data-target');
       $('html, body').animate({
@@ -84,20 +84,19 @@
       });
     }
 
-    // onLoad - Even Column Height
+  // onLoad - Even Column Height
     setEvenColHeight();
 
-    // onResize - Even Column Height
+  // onResize - Even Column Height
     $(window).resize(function() {
       setEvenColHeight();
     });
 
-    // Client / Broker Popup
-
+  // Client / Broker Popup
     $('.requestDemoBtn').click(function(){
-        $.fancybox({
-                'content' : $("#requestPopUp").html()
-        });
+      $.fancybox({
+          'content' : $("#requestPopUp").html()
+      });
     });
 
 })(jQuery);
