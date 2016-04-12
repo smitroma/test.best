@@ -15,6 +15,12 @@ class core_google_apps_login {
 	
 	// May be overridden in basic or premium
 	public function ga_activation_hook($network_wide) {
+		global $gal_core_already_exists;
+		if ($gal_core_already_exists) {
+			deactivate_plugins( $this->my_plugin_basename() );
+			echo( 'Please Deactivate the free version of Google Apps Login before you activate the new Premium/Enterprise version.' );
+			exit;
+		}
 	}
 	
 	public function ga_plugins_loaded() {
@@ -430,7 +436,7 @@ class core_google_apps_login {
 	}
 	
 	public function ga_init() {
-		if (isset($_GET['code']) && isset($_GET['state'])) {
+		if (isset($_GET['code']) && isset($_GET['state']) && $_SERVER['REQUEST_METHOD']=='GET') {
 			$options = $this->get_option_galogin();
 			if ($options['ga_rememberme']) {
 				$_POST['rememberme'] = true;
@@ -926,7 +932,7 @@ class core_google_apps_login {
 		
 		// Service account settings
 		$newinput['ga_domainadmin'] = isset($input['ga_domainadmin']) ? trim($input['ga_domainadmin']) : '';
-		if (!preg_match('/^([A-Za-z0-9._%+-]+@([0-9a-z-]+\.)*[0-9a-z-]+\.[a-z]{2,7})?$/', $newinput['ga_domainadmin'])) {
+		if (!preg_match('/^([A-Za-z0-9._%+-]+@([0-9a-z-]+\.)*[0-9a-z-]+\.[a-z]{2,63})?$/', $newinput['ga_domainadmin'])) {
 			add_settings_error(
 			'ga_domainadmin',
 			'invalid_email',

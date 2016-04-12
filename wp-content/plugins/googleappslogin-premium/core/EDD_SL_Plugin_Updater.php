@@ -13,9 +13,9 @@
  * Allows plugins to use their own update API.
  *
  * @author Pippin Williamson and Dan Lester
- * @version 6
+ * @version 9
  */
-class EDD_SL_Plugin_Updater6 {
+class EDD_SL_Plugin_Updater9 {
 	private $api_url  = '';
 	private $api_data = array();
 	private $name     = '';
@@ -25,6 +25,8 @@ class EDD_SL_Plugin_Updater6 {
 	private $license_settings_url = '';
 
 	private $license_warning_delay = 3600;
+
+	private $display_warnings = true;
 
 	/**
 	 * Class constructor.
@@ -38,12 +40,13 @@ class EDD_SL_Plugin_Updater6 {
 	 * @return void
 	 */
 	function __construct( $_api_url, $_plugin_file, $_api_data = null,
-		$license_status_optname = null, $license_settings_url = null ) {
+		$license_status_optname = null, $license_settings_url = null, $display_warnings=true ) {
 		$this->api_url  = trailingslashit( $_api_url );
 		$this->api_data = urlencode_deep( $_api_data );
 		$this->name     = plugin_basename( $_plugin_file );
 		$this->slug     = basename( $_plugin_file, '.php');
 		$this->version  = $_api_data['version'];
+		$this->display_warnings = $display_warnings;
 
 		if (is_null($license_status_optname)) {
 			$license_status_optname = 'eddsl_'.$this->slug;
@@ -92,7 +95,7 @@ class EDD_SL_Plugin_Updater6 {
 				update_site_option($this->license_status_optname, $license_status);
 				$this->license_status_option = $license_status;
 			}
-			else {
+			elseif ($this->display_warnings) {
 				if (is_multisite()) {
 					add_action('network_admin_notices', Array($this, 'eddsl_license_notice'));
 				}
@@ -441,20 +444,27 @@ class EDD_SL_Plugin_Updater6 {
 			'url'        => home_url()
 		);
 
-		$request = wp_remote_post( $this->api_url, array( 'timeout' => 15, 'sslverify' => false, 'body' => $api_params ) );
+		$request = wp_remote_post( $this->api_url, array( 'timeout' => $this->get_timeout(), 'sslverify' => false, 'body' => $api_params ) );
 
 		if ( ! is_wp_error( $request ) ) {
 			$request = json_decode( wp_remote_retrieve_body( $request ) );
 		}
 
-		if ( $request && isset( $request->sections ) ) {
-			$request->sections = maybe_unserialize( $request->sections );
+		if (is_object($request)) {
+			if ( isset( $request->sections ) ) {
+				$request->sections = maybe_unserialize( $request->sections );
+			} else {
+				$request->sections = array();
+			}
 			$request->last_updated = null; // For changelog page only to avoid error
-		} elseif ($request) {
-			$request->sections = array();
 		}
 
 		return $request;
+	}
+
+	private function get_timeout() {
+		$timeout = intval(get_site_option('eddsl_dsl_license_timeout', '10'));
+		return empty($timeout) ? 10 : $timeout;
 	}
 
 	public function show_changelog() {
@@ -497,7 +507,7 @@ class EDD_SL_Plugin_Updater6 {
 
 		// Call the custom API.
 		$response = wp_remote_get( add_query_arg( $api_params, $this->api_url ),
-			array( 'timeout' => 15, 'sslverify' => false ) );
+			array( 'timeout' => $this->get_timeout(), 'sslverify' => false ) );
 
 		// make sure the response came back okay
 		if ( is_wp_error( $response ) )
