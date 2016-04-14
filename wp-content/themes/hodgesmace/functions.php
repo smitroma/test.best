@@ -514,6 +514,4 @@ function send_to_acton_4($entry,$form) {
 
 require_once('inc/gform-email-validation.php');
 
-
-
 ?>

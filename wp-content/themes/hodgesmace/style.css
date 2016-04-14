@@ -1507,6 +1507,20 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   }
 }
 
+/* News V2
+* --------------------------------------------------------------- *
+*/
+
+.news-sections .vc_row {
+  display: none;
+  opacity: 0;
+  transition: all 500ms ease-out;
+  -webkit-trasition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -ms-transition: all 500ms ease-out;
+}
+
+
 /* Blog Roll
 * --------------------------------------------------------------- *
 */
