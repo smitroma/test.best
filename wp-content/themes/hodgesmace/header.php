@@ -55,9 +55,8 @@
 
 						<!-- Watch Video Popup -->
 						<div id="watchVideoPopUp" style="display: none;">
-							<div style="background-color: #fff; text-align: center; max-width:500px; width:100%">
+							<div style="background-color: #fff; text-align: center; max-width:750px; width:100%">
 								<iframe src="https://player.vimeo.com/video/156508092?title=0&byline=0&portrait=0" width="100%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/156508092">Hodges-Mace - Company Overview</a> from <a href="https://vimeo.com/ecgprod">ECG Productions</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 							</div>
 						</div>
 
