@@ -54,11 +54,7 @@
 						</div>
 
 						<!-- Watch Video Popup -->
-						<div id="watchVideoPopUp" style="display: none;">
-							<div style="background-color: #fff; text-align: center; max-width:750px; width:100%;">
-								<iframe src="https://player.vimeo.com/video/156508092?title=0&byline=0&portrait=0" width="100%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-							</div>
-						</div>
+						<iframe id="watchVideoPopUp" style="display: none;" src="https://player.vimeo.com/video/156508092?title=0&byline=0&portrait=0" width="100%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 					</div>
 	        <?php wp_nav_menu(array('menu' => 'Main Menu', 'menu_class' => 'header_nav' )); ?>
