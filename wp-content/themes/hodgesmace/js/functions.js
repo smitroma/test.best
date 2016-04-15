@@ -100,13 +100,13 @@
     });
 
   // Watch Video Popup
-    $('.watchVideoBtn').fancybox({
+    $('.watchVideoBtn a').fancybox({
       width: 400,
       height: 225,
       type: 'iframe',
       fitToView : false
     });
-    
+
   // StickyNav
     function getScroll() {
       if($(window).scrollTop() > $('#top-header').height()) {
