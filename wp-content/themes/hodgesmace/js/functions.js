@@ -100,15 +100,13 @@
     });
 
   // Watch Video Popup
-    $('.watchVideoBtn').click(function(){
-      var width = $(window).innerWidth() / 3;
-      $.fancybox({
-          'content' : $("#watchVideoPopUp").html(),
-          'width': width < 320 ? 320 : width,
-          'autoDimensions': false
-      });
+    $('.watchVideoBtn').fancybox({
+      width: 400,
+      height: 225,
+      type: 'iframe',
+      fitToView : false
     });
-
+    
   // StickyNav
     function getScroll() {
       if($(window).scrollTop() > $('#top-header').height()) {
