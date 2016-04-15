@@ -101,8 +101,11 @@
 
   // Watch Video Popup
     $('.watchVideoBtn').click(function(){
+      var width = $(window).innerWidth() / 3;
       $.fancybox({
-          'content' : $("#watchVideoPopUp").html()
+          'content' : $("#watchVideoPopUp").html(),
+          'width': width < 320 ? 320 : width,
+          'autoDimensions': false
       });
     });
 
