@@ -514,4 +514,28 @@ function send_to_acton_4($entry,$form) {
 
 require_once('inc/gform-email-validation.php');
 
+
+/**
+ * Register widgetized area and update sidebar with default widgets
+ */
+function magazino_widgets_init() {
+	register_sidebar( array(
+		'name' => __( 'Footer Sidebar', 'magazino' ),
+		'id' => 'sidebar-1',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<div class="widget-title">',
+		'after_title' => '</div>',
+	) );
+	register_sidebar( array(
+		'name' => __( 'Side Sidebar', 'magazino' ),
+		'id' => 'sidebar-2',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<div class="widget-title">',
+		'after_title' => '</div>',
+	) );
+
+}
+add_action( 'widgets_init', 'magazino_widgets_init' );
 ?>
