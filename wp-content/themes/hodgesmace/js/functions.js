@@ -100,9 +100,13 @@
     });
 
   // Watch Video Popup
+    var windowWidth = $(window).innerWidth() * 2 / 3;
+    var videoWidth = (windowWidth < 400 ) ? 400 : windowWidth;
+    var videoHeight = videoWidth * (225 / 400);
+
     $('.watchVideoBtn a').fancybox({
-      width: 400,
-      height: 225,
+      width: videoWidth,
+      height: videoHeight,
       type: 'iframe',
       fitToView : false
     });
