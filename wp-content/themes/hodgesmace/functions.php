@@ -509,6 +509,12 @@ function send_to_acton_4($entry,$form) {
   $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/0010/d-ext-0001');
 }
 
+/* Modifies confirmation anchor */
+function adjust_brochure_anchor(){
+  return 400;
+}
+
+add_filter( 'gform_confirmation_anchor_4', 'adjust_brochure_anchor' );
 
 /* Gravity Forms Business Email Validation */
 
