@@ -21,9 +21,6 @@
 </div>
 </div><!-- .container-fluid -->
 
-<!-- Act on Beacon Tracking -->
-<script>/*<![CDATA[*/(function(w,a,b,d,s){w[a]=w[a]||{};w[a][b]=w[a][b]||{q:[],track:function(r,e,t){this.q.push({r:r,e:e,t:t||+new Date});}};var e=d.createElement(s);var f=d.getElementsByTagName(s)[0];e.async=1;e.src='//marketing.hodgesmace.com/cdnr/96/acton/bn/tracker/17907';f.parentNode.insertBefore(e,f);})(window,'ActOn','Beacon',document,'script');ActOn.Beacon.track();/*]]>*/</script>
-
 <?php wp_footer(); ?>
 </body>
 </html>
