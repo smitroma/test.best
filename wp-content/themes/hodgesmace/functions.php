@@ -126,7 +126,7 @@ function tweet_func( $atts, $content = null ) {
 	), $atts);
 
   global $post;
-  $url = get_permalink($post->ID);
+  $url = 'http://hodgesmace.com/?p='.$post->ID;
 
   $content_text = str_replace(' ', '+', strip_tags($content));
 
