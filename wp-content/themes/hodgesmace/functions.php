@@ -44,7 +44,7 @@ if (!function_exists('hodges_setup')) {
          * to output valid HTML5.
          */
         add_theme_support('html5', array(
-            'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
+            'search-form', 'comment-form', 'comment-list', 'caption'
         ));
 
         /*
@@ -420,6 +420,63 @@ function send_to_acton_2($entry,$form) {
   $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/0002/d-ext-0001');
 }
 
+/* Request a Demo Form - Client */
+
+add_action('gform_after_submission_5', 'send_to_acton_5', 10, 2);
+
+function send_to_acton_5($entry,$form) {
+
+  $ao_gf1 = new ActonWordPressConnection;
+
+  $interestSolutions = array(
+    $entry['8.1'],$entry['8.2'],$entry['8.3'],$entry['8.4'],$entry['8.5'],
+    $entry['9.1'],$entry['9.2'],$entry['9.3'],$entry['9.4'],$entry['9.5']
+  );
+
+  $ao_gf1->setPostItems('firstName',$entry['11.3']);
+  $ao_gf1->setPostItems('lastName',$entry['11.6']);
+  $ao_gf1->setPostItems('email',$entry['17']);
+  $ao_gf1->setPostItems('message',$entry['4']);
+  $ao_gf1->setPostItems('businessPhone',$entry['12']);
+  $ao_gf1->setPostItems('productInterest',join(',', array_filter($interestSolutions)));
+  $ao_gf1->setPostItems('companyName',$entry['15']);
+  $ao_gf1->setPostItems('state',$entry['22']);
+  $ao_gf1->setPostItems('Number of Employees Range',$entry['20']);
+  $ao_gf1->setPostItems('Industry',$entry['19']);
+  $ao_gf1->setPostItems('Type',$entry['23']);
+  $ao_gf1->setPostItems('Marketing Program',$entry['24']);
+
+  $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/0002/d-ext-0001');
+}
+
+/* Request a Demo Form - Broker */
+
+add_action('gform_after_submission_6', 'send_to_acton_6', 10, 2);
+
+function send_to_acton_6($entry,$form) {
+
+  $ao_gf1 = new ActonWordPressConnection;
+
+  $interestSolutions = array(
+    $entry['8.1'],$entry['8.2'],$entry['8.3'],$entry['8.4'],$entry['8.5'],
+    $entry['9.1'],$entry['9.2'],$entry['9.3'],$entry['9.4'],$entry['9.5']
+  );
+
+  $ao_gf1->setPostItems('firstName',$entry['11.3']);
+  $ao_gf1->setPostItems('lastName',$entry['11.6']);
+  $ao_gf1->setPostItems('email',$entry['17']);
+  $ao_gf1->setPostItems('message',$entry['4']);
+  $ao_gf1->setPostItems('businessPhone',$entry['12']);
+  $ao_gf1->setPostItems('productInterest',join(',', array_filter($interestSolutions)));
+  $ao_gf1->setPostItems('companyName',$entry['15']);
+  $ao_gf1->setPostItems('state',$entry['20']);
+  $ao_gf1->setPostItems('Type',$entry['18']);
+  $ao_gf1->setPostItems('Marketing Program',$entry['19']);
+
+  $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/000f/d-ext-0001');
+}
+
+
 /* Resource Request */
 
 add_action('gform_after_submission_3', 'send_to_acton_3', 10, 2);
@@ -435,10 +492,56 @@ function send_to_acton_3($entry,$form) {
   $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/0007/d-ext-0001');
 }
 
+/* Brochure Request */
+
+add_action('gform_after_submission_4', 'send_to_acton_4', 10, 2);
+
+function send_to_acton_4($entry,$form) {
+
+  $ao_gf1 = new ActonWordPressConnection;
+
+  $ao_gf1->setPostItems('First Name',$entry['1.3']);
+  $ao_gf1->setPostItems('Last Name',$entry['1.6']);
+  $ao_gf1->setPostItems('Email',$entry['2']);
+  $ao_gf1->setPostItems('State',$entry['5']);
+  $ao_gf1->setPostItems('Business Phone',$entry['4']);
+
+  $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/0010/d-ext-0001');
+}
+
+/* Modifies confirmation anchor */
+function adjust_brochure_anchor(){
+  return 400;
+}
+
+add_filter( 'gform_confirmation_anchor_4', 'adjust_brochure_anchor' );
+
 /* Gravity Forms Business Email Validation */
 
 require_once('inc/gform-email-validation.php');
 
 
+/**
+ * Register widgetized area and update sidebar with default widgets
+ */
+function magazino_widgets_init() {
+	register_sidebar( array(
+		'name' => __( 'Footer Sidebar', 'magazino' ),
+		'id' => 'sidebar-1',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<div class="widget-title">',
+		'after_title' => '</div>',
+	) );
+	register_sidebar( array(
+		'name' => __( 'Side Sidebar', 'magazino' ),
+		'id' => 'sidebar-2',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<div class="widget-title">',
+		'after_title' => '</div>',
+	) );
 
+}
+add_action( 'widgets_init', 'magazino_widgets_init' );
 ?>

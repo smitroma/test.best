@@ -4,7 +4,7 @@
  * Plugin Name: Google Apps Login Premium
  * Plugin URI: http://wp-glogin.com/
  * Description: Simple secure login and user management for Wordpress through your Google Apps domain (uses secure OAuth2, and MFA if enabled)
- * Version: 2.9.1
+ * Version: 2.9.6
  * Author: Dan Lester
  * Author URI: http://wp-glogin.com/
  * License: Premium Paid per WordPress site and Google Apps domain
@@ -41,14 +41,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'WPGLOGIN_GA_STORE_URL', 'http://wp-glogin.com' );
-define( 'WPGLOGIN_GA_ITEM_NAME', 'Google Apps Login for WordPress Premium' );
-
-require_once( plugin_dir_path(__FILE__).'/core/commercial_google_apps_login.php' );
+if (class_exists('commercial_google_apps_login')) {
+	global $gal_core_already_exists;
+	$gal_core_already_exists = true;
+}
+else {
+	require_once( plugin_dir_path( __FILE__ ) . '/core/commercial_google_apps_login.php' );
+}
 
 class premium_google_apps_login extends commercial_google_apps_login {
 	
-	protected $PLUGIN_VERSION = '2.9.1';
+	protected $PLUGIN_VERSION = '2.9.6';
+	protected $WPGLOGIN_GA_STORE_URL = 'http://wp-glogin.com';
+	protected $WPGLOGIN_GA_ITEM_NAME = 'Google Apps Login for WordPress Premium';
 	
 	// Singleton
 	private static $instance = null;
@@ -87,11 +92,17 @@ class premium_google_apps_login extends commercial_google_apps_login {
 }
 
 // Global accessor function to singleton
-function GoogleAppsLogin() {
+function galpremiumGoogleAppsLogin() {
 	return premium_google_apps_login::get_instance();
 }
 
 // Initialise at least once
-GoogleAppsLogin();
+galpremiumGoogleAppsLogin();
+
+if (!function_exists('GoogleAppsLogin')) {
+	function GoogleAppsLogin() {
+		return galpremiumGoogleAppsLogin();
+	}
+}
 
 ?>

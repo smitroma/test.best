@@ -55,7 +55,7 @@
         }
       );
 
-  // Anchor Buttons
+      // Anchor Buttons
     $('.anchor-bttn').click(function() {
       var anchorTarget = $(this).attr('data-target');
       $('html, body').animate({
@@ -90,6 +90,48 @@
   // onResize - Even Column Height
     $(window).resize(function() {
       setEvenColHeight();
+    });
+
+  // Client / Broker Popup
+    $('.requestDemoBtn').click(function(){
+      $.fancybox({
+          'content' : $("#requestPopUp").html()
+      });
+    });
+
+  // Watch Video Popup
+    var windowWidth = $(window).innerWidth() * 2 / 3;
+    var videoWidth = (windowWidth < 400 ) ? 400 : windowWidth;
+    var videoHeight = videoWidth * (225 / 400);
+
+    $('.watchVideoBtn a').fancybox({
+      width: videoWidth,
+      height: videoHeight,
+      type: 'iframe',
+      fitToView : false
+    });
+
+  // StickyNav
+    function getScroll() {
+      if($(window).scrollTop() > $('#top-header').height()) {
+        if(!$('#header').hasClass('sticky')){
+          $('#header').addClass('sticky');
+          $('#top-header').css('marginBottom', $('#header').height()+'px');
+        }
+      } else {
+        if($('#header').hasClass('sticky')){
+          $('#header').removeClass('sticky');
+          $('#top-header').css('marginBottom', '0px');
+        }
+      }
+    }
+
+  // onload - StickyNav
+    getScroll();
+
+  // onScroll - StickyNav
+    $(window).scroll(function(){
+      getScroll();
     });
 
 })(jQuery);

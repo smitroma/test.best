@@ -283,6 +283,7 @@ ul#menu-login-menu li.active {
 }
 
 /* Search Form */
+
 #top-header form#searchform {
   display: inline-block;
   width: 41%;
@@ -566,6 +567,14 @@ input#s:focus {
   }
 }
 
+/* Stick Nav */
+
+#header.sticky {
+  position: fixed;
+  background-color: #fff;
+  top:0;
+}
+
 /*
  * Footer
  * --------------------------------------------------------------- *
@@ -752,6 +761,20 @@ input[type=submit], .site-content .vc_btn3.vc_btn3-color-green.vc_btn3-style-mod
   outline: 0;
 }
 
+.site-content select {
+  padding: 0 1em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: #fff;
+  color: #aaa;
+  border: 2px solid #eee;
+  outline: none;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 3em;
+}
+
 /*
  * Gravity Form Helper Classes
  * --------------------------------------------------------------- *
@@ -767,11 +790,40 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   max-width: inherit;
 }
 
+.site-content .gform_wrapper ul li.gf-match-first-name {
+  width: 48.8%;
+  float: left;
+  clear: none;
+  padding-right: 16px;
+}
+
+.site-content .gform_wrapper ul li.gf-match-last-name {
+  width: 48.8%;
+  float: left;
+  clear: none;
+}
+
+.site-content .gform_wrapper .hidden_label .gf-match-last-name input.large,
+.site-content .gform_wrapper .hidden_label .gf-match-last-name select.large,
+.site-content .gform_wrapper .top_label .gf-match-last-name input.large,
+.site-content .gform_wrapper .top_label .gf-match-last-name select.large
+.site-content .gform_wrapper .hidden_label .gf-match-first-name input.large,
+.site-content .gform_wrapper .hidden_label .gf-match-first-name select.large,
+.site-content .gform_wrapper .top_label .gf-match-first-name input.large,
+.site-content .gform_wrapper .top_label .gf-match-first-name select.large {
+  width: 100%;
+}
+
  /* Hide Labels */
 
  .site-content .gform_wrapper .top_label .gfield_label,
  .site-content .gform_wrapper .ginput_complex label {
    display: none;
+ }
+
+ .site-content .gform_wrapper .top_label .show_label .gfield_label,
+ .site-content .gform_wrapper .ginput_complex .show_label label {
+   display: block;
  }
 
  /* Center Button */
@@ -883,6 +935,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 }
 
 /* Fixes error floats */
+
 .gform_wrapper .top_label .gfield_error {
   float: none !important;
 }
@@ -1255,10 +1308,6 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   margin-bottom: 6em;
 }
 
-/* Internal Page
-* --------------------------------------------------------------- *
-*/
-
 .hover-content {
   display: none;
   height: 480px;
@@ -1462,6 +1511,20 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
     padding-top: 3em
   }
 }
+
+/* News V2
+* --------------------------------------------------------------- *
+*/
+
+.news-sections .vc_row {
+  display: none;
+  opacity: 0;
+  transition: all 500ms ease-out;
+  -webkit-trasition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -ms-transition: all 500ms ease-out;
+}
+
 
 /* Blog Roll
 * --------------------------------------------------------------- *
@@ -1671,6 +1734,11 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 
 .site-content .act-on-form {
   height: 400px;
+}
+
+/* Fancybox */
+#fancybox-content {
+    background-color: #fff;
 }
 
 /* Helpers
