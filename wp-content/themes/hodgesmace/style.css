@@ -1727,7 +1727,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 }
 
 .site-content .aoFormContainer .formFieldLabel {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .site-content .aoFormContainer input[type=button] {
@@ -1736,20 +1736,51 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 }
 
 .site-content div#errorMsg {
-    text-align: center;
-    margin-bottom: 10px;
-    color: #ff0000;
-    font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #ff0000;
+  font-weight: bold;
 }
 
 .site-content .act-on-form {
   height: 400px;
 }
 
+/* Add-ons
+* --------------------------------------------------------------- *
+*/
+
 /* Fancybox */
+
 #fancybox-content {
-    background-color: #fff;
+  background-color: #fff;
 }
+
+/* Click to Tweet */
+
+.click-to-tweet {
+  border: 1px solid #ccc;
+  padding: 10px 20px 0px 20px;
+}
+
+.click-to-tweet .ctt-text p a{
+  font-family: Georgia, serif;
+  font-weight: normal;
+}
+
+.click-to-tweet .ctt-link a {
+  color: #555;
+  font-weight: 600;
+}
+
+.click-to-tweet .ctt-link {
+  text-align: right;
+}
+
+.click-to-tweet a {
+  color: #aaa;
+}
+
 
 /* Helpers
 * --------------------------------------------------------------- *
@@ -1799,4 +1830,8 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   .site-content .f-r-md { float: right !important;}
   .site-content .ta-l-md { text-align: left; }
   .site-content .d-n-xs { display: block; }
+}
+
+.c-twitter-blue {
+  color: #00aced;
 }

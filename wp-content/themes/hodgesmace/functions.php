@@ -117,6 +117,43 @@ function icon_func( $atts ) {
 }
 add_shortcode( 'icon', 'icon_func' );
 
+/**
+ * Click to Tweet Shortcode
+ */
+
+function tweet_func( $atts, $content = null ) {
+	$atts = shortcode_atts( array(
+	), $atts);
+
+  global $post;
+  $url = get_permalink($post->ID);
+
+  $content_text = str_replace(' ', '+', strip_tags($content));
+
+  ob_start();
+  ?>
+
+	<div class="click-to-tweet">
+    <div class="ctt-text">
+      <p>
+        <a href="https://twitter.com/share?text=<?= $content_text ?>&amp;via=HodgesMace&amp;related=HodgesMace&amp;url=<?= $url ?>" target="_blank">
+          <?= strip_tags($content) ?>
+        </a>
+      </p>
+    </div>
+    <p class="ctt-link">
+      <a href="https://twitter.com/share?text=<?= $content_text ?>&amp;via=HodgesMace&amp;related=HodgesMace&amp;url=<?= $url ?>" target="_blank" class="ctt-btn">
+        <i class="fa fa-twitter c-twitter-blue"></i> TWEET
+      </a>
+    </p>
+  </div>
+
+  <?php
+  return ob_get_clean();
+}
+
+add_shortcode( 'tweet', 'tweet_func' );
+
 /*-----------------------------------------------------------------------------------*/
 /*	Custom Post Type : Testimonials
 /*-----------------------------------------------------------------------------------*/
@@ -524,6 +561,7 @@ require_once('inc/gform-email-validation.php');
 /**
  * Register widgetized area and update sidebar with default widgets
  */
+
 function magazino_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Footer Sidebar', 'magazino' ),
