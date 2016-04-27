@@ -11,7 +11,7 @@ get_header(); ?>
 
 	<div id="primary">
 		<main id="main" role="main">
-			<div class="container">
+			<div class="container blog-single-container">
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<div class="post-meta uppercase p-y-md">

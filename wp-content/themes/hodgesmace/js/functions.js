@@ -104,12 +104,14 @@
     var videoWidth = (windowWidth < 400 ) ? 400 : windowWidth;
     var videoHeight = videoWidth * (225 / 400);
 
-    $('.watchVideoBtn a').fancybox({
-      width: videoWidth,
-      height: videoHeight,
-      type: 'iframe',
-      fitToView : false
-    });
+    if($.fancybox) {
+      $('.watchVideoBtn a').fancybox({
+        width: videoWidth,
+        height: videoHeight,
+        type: 'iframe',
+        fitToView : false
+      });
+    }
 
   // StickyNav
     function getScroll() {

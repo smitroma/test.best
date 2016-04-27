@@ -1691,6 +1691,16 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   height: 20px;
 }
 
+.site-content .blog-single-container {
+  max-width: 750px;
+}
+
+.site-content .blog-single-container p,
+.site-content .blog-single-container li {
+  font-size: 1.25em;
+  line-height: 1.8em;
+}
+
 /* Essential Grid
 * --------------------------------------------------------------- *
 */
