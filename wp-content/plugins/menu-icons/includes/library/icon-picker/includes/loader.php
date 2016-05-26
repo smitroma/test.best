@@ -99,6 +99,8 @@ final class Icon_Picker_Loader {
 	protected function __construct() {
 		$this->register_assets();
 
+		add_filter( 'media_view_strings', array( $this, '_media_view_strings' ) );
+
 		/**
 		 * Fires when Icon Picker loader is ready
 		 *
@@ -160,7 +162,7 @@ final class Icon_Picker_Loader {
 			'icon-picker',
 			"{$icon_picker->url}/js/icon-picker{$suffix}.js",
 			array( 'media-views' ),
-			$icon_picker->VERSION,
+			$icon_picker->version,
 			true
 		);
 		$this->add_script( 'icon-picker' );
@@ -169,7 +171,7 @@ final class Icon_Picker_Loader {
 			'icon-picker',
 			"{$icon_picker->url}/css/icon-picker{$suffix}.css",
 			false,
-			$icon_picker->VERSION
+			$icon_picker->version
 		);
 		$this->add_style( 'icon-picker' );
 	}
@@ -182,11 +184,13 @@ final class Icon_Picker_Loader {
 	 * @return void
 	 */
 	public function load() {
+		$icon_picker = Icon_Picker::instance();
+
 		if ( ! is_admin() ) {
 			_doing_it_wrong(
 				__METHOD__,
 				'It should only be called on admin pages.',
-				esc_html( self::VERSION )
+				esc_html( $icon_picker->version )
 			);
 
 			return;
@@ -199,13 +203,12 @@ final class Icon_Picker_Loader {
 					'It should not be called until the %s hook.',
 					'<code>icon_picker_loader_init</code>'
 				),
-				esc_html( self::VERSION )
+				esc_html( $icon_picker->version )
 			);
 
 			return;
 		}
 
-		add_filter( 'media_view_strings', array( $this, '_media_view_strings' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, '_enqueue_assets' ) );
 		add_action( 'print_media_templates', array( $this, '_media_templates' ) );
 	}
@@ -225,6 +228,7 @@ final class Icon_Picker_Loader {
 		$strings['iconPicker'] = array(
 			'frameTitle' => __( 'Icon Picker', 'icon-picker' ),
 			'allFilter'  => __( 'All', 'icon-picker' ),
+			'selectIcon' => __( 'Select Icon', 'icon-picker' ),
 		);
 
 		return $strings;
@@ -285,7 +289,7 @@ final class Icon_Picker_Loader {
 				continue;
 			}
 
-			$template_id_prefix = "tmpl-icon-picker-{$type->template_id}";
+			$template_id_prefix = "tmpl-iconpicker-{$type->template_id}";
 			if ( in_array( $template_id_prefix, $this->printed_templates ) ) {
 				continue;
 			}

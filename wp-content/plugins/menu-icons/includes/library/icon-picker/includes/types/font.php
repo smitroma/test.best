@@ -67,12 +67,32 @@ abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 	 * @return string
 	 */
 	public function get_stylesheet_uri() {
-		return sprintf(
+		$stylesheet_uri = sprintf(
 			'%1$s/css/types/%2$s%3$s.css',
 			Icon_Picker::instance()->url,
 			$this->stylesheet_id,
 			( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min'
 		);
+
+		/**
+		 * Filters icon type's stylesheet URI
+		 *
+		 * @since  0.4.0
+		 *
+		 * @param  string                $stylesheet_uri Icon type's stylesheet URI.
+		 * @param  string                $icon_type_id   Icon type's ID.
+		 * @param  Icon_Picker_Type_Font $icon_type      Icon type's instance.
+		 *
+		 * @return string
+		 */
+		$stylesheet_uri = apply_filters(
+			'icon_picker_icon_type_stylesheet_uri',
+			$stylesheet_uri,
+			$this->id,
+			$this
+		);
+
+		return $stylesheet_uri;
 	}
 
 
@@ -95,6 +115,11 @@ abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 		$deps     = false;
 		$styles   = wp_styles();
 
+		/**
+		 * When the stylesheet ID of an icon type is already registered,
+		 * we'll compare its version with ours. If our stylesheet has greater
+		 * version number, we'll deregister the other stylesheet.
+		 */
 		if ( $styles->query( $this->stylesheet_id, 'registered' ) ) {
 			$object = $styles->registered[ $this->stylesheet_id ];
 
@@ -154,6 +179,7 @@ abstract class Icon_Picker_Type_Font extends Icon_Picker_Type {
 	 */
 	public function get_templates() {
 		$templates = array(
+			'icon' => '<i class="_icon {{data.type}} {{ data.icon }}"></i>',
 			'item' => sprintf(
 				'<div class="attachment-preview js--select-attachment">
 					<div class="thumbnail">

@@ -567,7 +567,7 @@ class commercial_google_apps_login extends core_google_apps_login {
 		$indomains = preg_split('/[, ]+/', $listtext);
 		foreach ($indomains as $domain) {
 			$domain = trim($domain);
-			if (preg_match('/^([0-9a-z-]+\.)+[a-z]{2,7}$/', $domain)) {
+			if (preg_match('/^([0-9a-z-]+\.)+[a-z]{2,63}$/', $domain)) {
 				$outdomains[] = $domain;
 			}
 		}
