@@ -424,7 +424,7 @@ function send_to_acton_1($entry,$form) {
 
   $ao_gf1->setPostItems('firstName',$entry['5.3']);
   $ao_gf1->setPostItems('lastName',$entry['5.6']);
-  $ao_gf1->setPostItems('contactType',$entry['7']);
+  $ao_gf1->setPostItems('Type',$entry['7']);
   $ao_gf1->setPostItems('email',$entry['2']);
   $ao_gf1->setPostItems('businessPhone',$entry['6']);
   $ao_gf1->setPostItems('message',$entry['4']);
