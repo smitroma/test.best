@@ -57,8 +57,8 @@
 							<div style="background-color: #fff; text-align: center;">
 								<p><strong>Choose the option that best describes you:</strong></p>
 								<p>
-									<a href="/request-a-demo-broker" class="bttn-blue">Broker</a>
-									<a href="/request-a-demo-company" class="bttn-blue">Employer</a>
+									<a href="/request-a-demo-broker" class="bttn-blue">Broker</a><br>
+									<a href="/request-a-demo-company" class="bttn-blue">Employer</a><br>
 									<a href="/request-a-demo-carrier" class="bttn-blue">Carrier</a>
 								</p>
 							</div>
