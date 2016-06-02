@@ -575,6 +575,14 @@ input#s:focus {
   top:0;
 }
 
+/* requestPopUp */
+
+ #requestPopUp .demo-button {
+   margin-bottom: 8px;
+   line-height: 100%;
+   padding-bottom: 6px;
+ }
+
 /*
  * Footer
  * --------------------------------------------------------------- *
