@@ -577,7 +577,7 @@ input#s:focus {
 
 /* requestPopUp */
 
- #requestPopUp .demo-button {
+.demo-button {
    margin-bottom: 8px;
    line-height: 100%;
    padding-bottom: 6px;
