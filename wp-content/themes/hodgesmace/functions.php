@@ -481,8 +481,6 @@ function send_to_acton_5($entry,$form) {
   $ao_gf1->setPostItems('state',$entry['22']);
   $ao_gf1->setPostItems('Number of Employees Range',$entry['20']);
   $ao_gf1->setPostItems('Industry',$entry['19']);
-  $ao_gf1->setPostItems('Type',$entry['23']);
-  $ao_gf1->setPostItems('Marketing Program',$entry['24']);
 
   $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/0002/d-ext-0001');
 }
@@ -508,12 +506,34 @@ function send_to_acton_6($entry,$form) {
   $ao_gf1->setPostItems('productInterest',join(',', array_filter($interestSolutions)));
   $ao_gf1->setPostItems('companyName',$entry['15']);
   $ao_gf1->setPostItems('state',$entry['20']);
-  $ao_gf1->setPostItems('Type',$entry['18']);
-  $ao_gf1->setPostItems('Marketing Program',$entry['19']);
 
   $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/000f/d-ext-0001');
 }
 
+/* Request a Demo Form - Carrier */
+
+add_action('gform_after_submission_8', 'send_to_acton_8', 10, 2);
+
+function send_to_acton_8($entry,$form) {
+
+  $ao_gf1 = new ActonWordPressConnection;
+
+  $interestSolutions = array(
+    $entry['8.1'],$entry['8.2'],$entry['8.3'],$entry['8.4'],$entry['8.5'],
+    $entry['9.1'],$entry['9.2'],$entry['9.3'],$entry['9.4'],$entry['9.5']
+  );
+
+  $ao_gf1->setPostItems('firstName',$entry['11.3']);
+  $ao_gf1->setPostItems('lastName',$entry['11.6']);
+  $ao_gf1->setPostItems('email',$entry['17']);
+  $ao_gf1->setPostItems('message',$entry['4']);
+  $ao_gf1->setPostItems('businessPhone',$entry['12']);
+  $ao_gf1->setPostItems('productInterest',join(',', array_filter($interestSolutions)));
+  $ao_gf1->setPostItems('companyName',$entry['15']);
+  $ao_gf1->setPostItems('state',$entry['20']);
+
+  $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/0014/d-ext-0001');
+}
 
 /* Resource Request */
 
