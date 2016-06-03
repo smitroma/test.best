@@ -948,6 +948,13 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   float: none !important;
 }
 
+/* fixes li issues */
+
+.gform_wrapper form li:before,
+.gform_wrapper li:before {
+    content: "";
+}
+
 /*
  * Visual Composer Helper Classes
  * --------------------------------------------------------------- *
