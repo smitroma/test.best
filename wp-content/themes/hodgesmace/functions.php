@@ -570,6 +570,7 @@ function send_to_acton_4($entry,$form) {
   $ao_gf1->setPostItems('Email',$entry['2']);
   $ao_gf1->setPostItems('State',$entry['5']);
   $ao_gf1->setPostItems('Business Phone',$entry['4']);
+  $ao_gf1->setPostItems('Marketing Program', 'Website - Brochure');
 
   $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/0010/d-ext-0001');
 }
