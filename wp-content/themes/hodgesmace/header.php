@@ -20,17 +20,6 @@
 		 <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/ie.css">
 	<![endif]-->
 
-	<!-- JLEE SHENANIGANS
-
-
-<?php
-	if( is_single( array(565,821,822,823)))
-
-echo(<meta http-equiv="refresh" content="0;URL=http://www.hodgesmace.com/404">)
-
-
-?>
- JLEE OVER-->
 
 	<?php wp_head(); ?>
 </head>
