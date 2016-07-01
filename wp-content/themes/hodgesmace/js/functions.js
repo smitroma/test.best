@@ -149,5 +149,11 @@
     }
 
   })
+  // This is for the request demo button to refresh on screen-resizes -jl
+  $(window).resize(function() {
+          location.reload();
+  });
+
+
 
 })(jQuery);
