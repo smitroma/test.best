@@ -1852,12 +1852,20 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 }
 /* The 'Reqest Demo' button in the Nav acts funny cuz it's not a menu item*/
 /* Probably needs a better solution  -JL*/
-#demo-btn-mob-jank {
-    margin-top: 80px;
-    margin-left: -25px !important;
+@media(min-width:500px){
+  #demo-btn-mob-jank {
+   margin-left: -25px !important;
+   margin-top:80px;
+  };
 }
 @media(min-width:1170px){
   #demo-btn-mob-jank {
     display:none;
+  };
+}
+@media(max-width:500px){
+  #demo-btn-mob-jank {
+    margin-left:0px !important;
+    margin-top:80px;
   };
 }
