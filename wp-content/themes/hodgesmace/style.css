@@ -1849,3 +1849,14 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 .c-twitter-blue {
   color: #00aced;
 }
+/* The 'Reqest Demo' button in the Nav acts funny cuz it's not a menu item*/
+/* Probably needs a better solution  -JL*/
+#demo-btn-mob-jank {
+    margin-top: 80px;
+    margin-left: -25px !important;
+}
+@media(max-width:1287px){
+  #demo-btn-mob-jank {
+    display:none;
+  };
+}
