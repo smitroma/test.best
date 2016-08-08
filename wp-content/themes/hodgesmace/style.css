@@ -1872,5 +1872,5 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 
 /* Limit the width of the featured resources title on the resources archive page */
 h2.featured-resource-title {
-  max-width: 400px;
+  max-width: 500px;
 }
