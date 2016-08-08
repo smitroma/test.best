@@ -257,6 +257,26 @@ function resource_link_func( $atts, $content='' ) {
 
 add_shortcode( 'resource_link', 'resource_link_func' );
 
+/*	Featured Resource Title Shortcode */
+
+function resource_title_func( $atts, $content='' ) {
+
+  $featured_query = new WP_Query(array('post_type'=> 'resources', 'cat'=> 41));
+
+  if($featured_query->have_posts()){
+    while($featured_query->have_posts()){
+      $featured_query->the_post();
+      $title = get_the_title();
+    }
+  } else {
+    $title = '';
+  }
+
+	return $title;
+}
+
+add_shortcode( 'featured_resource_title', 'resource_title_func' );
+
 /*-----------------------------------------------------------------------------------*/
 /*	EXCERPT LENGTH / CONTENT
 /*-----------------------------------------------------------------------------------*/
