@@ -34,7 +34,7 @@ get_header(); ?>
             </a>
           </div>
           <div class="col-md-8">
-            <p class="post-meta"><?php the_date(); ?> | BY <?php the_author(); ?></p>
+            <p class="post-meta"><?php the_time('F j, Y'); ?> | BY <?php the_author(); ?></p>
             <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
             <p class="post-content"><?php the_excerpt(); ?></p>
           </div>
