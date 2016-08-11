@@ -164,6 +164,45 @@ new GW_Email_Domain_Validator( array(
 new GW_Email_Domain_Validator( array(
     'form_id' => 4,
     'field_id' => 2,
+    'validation_message' => __( 'Only business email accounts are allowed e.g. name@company.com' ),
+) );
+
+/* Resource Request */
+new GW_Email_Domain_Validator( array(
+    'form_id' => 3,
+    'field_id' => 2,
+    'domains' => $excluded_domains,
+    'validation_message' => __( 'Only business email accounts are allowed e.g. name@company.com' ),
+) );
+
+/* Request a Demo Form - Carrier */
+new GW_Email_Domain_Validator( array(
+    'form_id' => 8,
+    'field_id' => 17,
+    'domains' => $excluded_domains,
+    'validation_message' => __( 'Only business email accounts are allowed e.g. name@company.com' ),
+) );
+
+/* Request a Demo Form - Broker */
+new GW_Email_Domain_Validator( array(
+    'form_id' => 6,
+    'field_id' => 17,
+    'domains' => $excluded_domains,
+    'validation_message' => __( 'Only business email accounts are allowed e.g. name@company.com' ),
+) );
+
+/* Request a Demo Form - Client */
+new GW_Email_Domain_Validator( array(
+    'form_id' => 5,
+    'field_id' => 17,
+    'domains' => $excluded_domains,
+    'validation_message' => __( 'Only business email accounts are allowed e.g. name@company.com' ),
+) );
+
+/* Contact Form */
+new GW_Email_Domain_Validator( array(
+    'form_id' => 1,
+    'field_id' => 2,
     'domains' => $excluded_domains,
     'validation_message' => __( 'Only business email accounts are allowed e.g. name@company.com' ),
 ) );
