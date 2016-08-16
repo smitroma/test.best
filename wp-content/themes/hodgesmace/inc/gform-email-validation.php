@@ -38,10 +38,6 @@ class GW_Email_Domain_Validator {
 
         foreach($form['fields'] as &$field) {
 
-            // if this is not an email field, skip
-            if(RGFormsModel::get_input_type($field) != 'email')
-                continue;
-
             // if field ID was passed and current field is not in that array, skip
             if($this->_args['field_id'] && !in_array($field['id'], $this->_args['field_id']))
                 continue;
