@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1244.66 1071.19" style="enable-background:new 0 0 1244.66 1071.19;" xml:space="preserve">
 	<style type="text/css">
-
+		@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600';
+		@font-face{
+		font-family:"NeuzeitGro W01 Bold";
+			src:url("Fonts/66182542-0bb8-41e7-94b8-f45d24bea18d.eot?#iefix") format("eot"),url("Fonts/8dfba670-079e-4879-8b0a-8d079ab7c067.woff2") format("woff2"),url("Fonts/218401dc-d400-4482-8c9b-0527059f7559.woff") format("woff"),url("Fonts/ace900f9-272b-4efa-88b0-6f2b1adc0f41.ttf") format("truetype"),url("Fonts/eeb8e139-b0e6-40d3-820c-0011bcf71e43.svg#eeb8e139-b0e6-40d3-820c-0011bcf71e43") format("svg");
+		}
 		#personalization-button .infographic-button-path.active {
 			fill: #D6DE23;
 		}
@@ -50,7 +53,7 @@
 			fill: #D6DE23;
 		}
 		.st1 {
-			font-family: 'NeuzeitGro-Bol';
+			font-family: 'NeuzeitGro W01 Bold';
 			font-size: 18px;
 			text-transform: uppercase;
 		}
@@ -64,7 +67,8 @@
 			font-size: 25px;
 		}
 		.st5 {
-			font-family: 'SourceSansPro-Regular';
+			font-family: 'Source Sans Pro', sans-serif;
+			font-weight: 400;
 		}
 		.st6 {
 			fill: none;
@@ -150,7 +154,8 @@
 			font-size: 30.568px;
 		}
 		.st22 {
-			font-family: 'SourceSansPro-Semibold';
+			font-family: 'Source Sans Pro', sans-serif;
+			font-weight: 600;
 		}
 		.st23 {
 			font-size: 30.27px;
@@ -471,4 +476,5 @@
 
 		// ]]>
 	</script>
+	<script type="text/javascript" src="//fast.fonts.net/jsapi/9c27d8bf-7b25-4446-860d-2b7213f6872a.js"></script>
 </svg>
