@@ -29,15 +29,22 @@
   		}
 
       .infographic-text-detail.unhighlight tspan {
+        transition: fill 0.5s;
         fill: #808184;
       }
+      .infographic-text-detail tspan {
+        transition: fill 0.5s;
+      }
       .infographic-text-detail.unhighlight line, .infographic-text-detail.unhighlight path, .infographic-text-detail.unhighlight circle, .infographic-text-detail.unhighlight polyline {
+        transition: stroke 0.5s;
         stroke: #808184;
+      }
+      .infographic-text-detail line, .infographic-text-detail path, .infographic-text-detail circle, .infographic-text-detail polyline {
+        transition: stroke 0.5s;
       }
 
   		.infographic-button-path.active {
-  			transition: opacity 0.3s;
-  			opacity: 0.5;
+        transition: fill 0.5s;
   		}
   		.infographic-button-path.active.clicked {
   			opacity: 1;
@@ -53,7 +60,7 @@
   			cursor: pointer;
   		}
   		.infographic-button-path {
-  			transition: fill 0.3s;
+  			transition: fill 0.5s;
   			fill: #808184;
   		}
 
@@ -563,6 +570,7 @@
 
     document.getElementById("enrollment-button").onclick = function () {
       var buttonPaths = document.getElementsByClassName("group-button");
+      /*
       for(var i = 0; i < buttonPaths.length; i++) {
         var buttonElement = buttonPaths[i];
         var buttonName = buttonElement.getAttribute("id").replace("-button", "");
@@ -574,6 +582,7 @@
           showText(buttonName);
         }
       }
+      */
     };
 
     var buttonMouseOver = function(element) {
