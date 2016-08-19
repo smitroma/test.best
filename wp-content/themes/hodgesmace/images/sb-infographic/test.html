@@ -28,6 +28,13 @@
   			fill: #00A69C;
   		}
 
+      .infographic-text-detail.unhighlight tspan {
+        fill: #808184;
+      }
+      .infographic-text-detail.unhighlight line, .infographic-text-detail.unhighlight path, .infographic-text-detail.unhighlight circle, .infographic-text-detail.unhighlight polyline {
+        stroke: #808184;
+      }
+
   		.infographic-button-path.active {
   			transition: opacity 0.3s;
   			opacity: 0.5;
@@ -50,13 +57,11 @@
   			fill: #808184;
   		}
 
-  		.infographic-text-detail {
-  			transition: opacity 0.3s;
-  			opacity: 0;
-  		}
-  		.infographic-text-detail.active {
-  			opacity: 1;
-  		}
+      .infographic-text-detail {
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+
 
   		.st0 {
   			fill: #D6DE23;
@@ -155,7 +160,12 @@
   		}
   		.st19 {
   			fill: #8EC449;
+        opacity: 0.8;
+        transition: opacity 0.5s;
   		}
+      #enrollment-button:hover .st19 {
+        opacity: 1;
+      }
   		.st20 {
   			font-size: 42.3158px;
   		}
@@ -184,7 +194,7 @@
   		}
   	</style>
   	<g id="personalization">
-  		<g id="personalization-text-detail" class="infographic-text-detail">
+  		<g id="personalization-text-detail" class="infographic-text-detail hide unhighlight">
   			<text transform="matrix(1 0 0 1 51.5265 697.434)">
   				<tspan x="0" y="0" class="st0 st1 st2">Personalization</tspan>
   				<tspan x="186.52" y="36" class="st3 st1 st4">Avatar</tspan>
@@ -227,7 +237,7 @@
   		</g>
   	</g>
   	<g id="education">
-  		<g id="education-text-detail" class="infographic-text-detail">
+  		<g id="education-text-detail" class="infographic-text-detail hide unhighlight">
   			<text transform="matrix(1 0 0 1 548.5392 914.108)">
   				<tspan x="0" y="0" class="st9 st1 st2">Education</tspan>
   				<tspan x="0" y="36" class="st3 st1 st4">Educator</tspan>
@@ -270,7 +280,7 @@
   		</g>
   	</g>
   	<g id="eligibility">
-  		<g id="eligibility-text-detail" class="infographic-text-detail">
+  		<g id="eligibility-text-detail" class="infographic-text-detail hide unhighlight">
   			<text transform="matrix(1 0 0 1 961.4849 697.434)">
   				<tspan x="0" y="0" class="st11 st1 st2">Eligibility</tspan>
   				<tspan x="0" y="36" class="st3 st1 st4">Sentry</tspan>
@@ -316,7 +326,7 @@
   		</g>
   	</g>
   	<g id="compliance">
-  		<g id="compliance-text-detail" class="infographic-text-detail">
+  		<g id="compliance-text-detail" class="infographic-text-detail hide unhighlight">
   			<text transform="matrix(1 0 0 1 961.4849 451.9845)">
   				<tspan x="0" y="0" class="st14 st1 st2">Compliance</tspan>
   				<tspan x="0" y="36" class="st3 st1 st4">Gatekeeper</tspan>
@@ -355,7 +365,7 @@
   		</g>
   	</g>
   	<g id="decision-support">
-  		<g id="decision-support-text-detail" class="infographic-text-detail">
+  		<g id="decision-support-text-detail" class="infographic-text-detail hide unhighlight">
   			<text transform="matrix(1 0 0 1 40.603 451.9846)">
   				<tspan x="0" y="0" class="st16 st1 st2">Decision Support</tspan>
   				<tspan x="149.22" y="36" class="st3 st1 st4">Pathfinder</tspan>
@@ -451,8 +461,8 @@
     var showText = function(name) {
       var textElement = document.getElementById(name+"-text-detail");
       var classString = textElement.getAttribute("class");
-      if(classString.indexOf(" active") == -1) {
-        var newClass = classString + " active";
+      if(classString.indexOf(" hide") != -1) {
+        var newClass = classString.replace(" hide", "");
         textElement.setAttribute("class", newClass);
       }
     };
@@ -460,8 +470,26 @@
     var hideText = function (name) {
       var textElement = document.getElementById(name+"-text-detail");
       var classString = textElement.getAttribute("class");
-      if(classString.indexOf(" active") != -1 && !buttonIsClicked(name)) {
-        var newClass = classString.replace(" active", "");
+      if(classString.indexOf(" hide") == -1 && !buttonIsClicked(name)) {
+        var newClass = classString + " hide";
+        textElement.setAttribute("class", newClass);
+      }
+    };
+
+    var unhighlightText = function(name) {
+      var textElement = document.getElementById(name+"-text-detail");
+      var classString = textElement.getAttribute("class");
+      if(classString.indexOf(" unhighlight") == -1 && !buttonIsClicked(name)) {
+        var newClass = classString + " unhighlight";
+        textElement.setAttribute("class", newClass);
+      }
+    };
+
+    var highlightText = function(name) {
+      var textElement = document.getElementById(name+"-text-detail");
+      var classString = textElement.getAttribute("class");
+      if(classString.indexOf(" unhighlight") != -1) {
+        var newClass = classString.replace(" unhighlight", "");
         textElement.setAttribute("class", newClass);
       }
     };
@@ -543,7 +571,6 @@
         if(classString.indexOf(" clicked") == -1) {
           var newClass = classString + " clicked";
           buttonPath.setAttribute("class", newClass);
-          activateButton(buttonName);
           showText(buttonName);
         }
       }
@@ -552,13 +579,14 @@
     var buttonMouseOver = function(element) {
       var name = element.getAttribute("id").replace("-button", "");
       activateButton(name);
+      highlightText(name);
       showText(name);
     };
 
     var buttonMouseOut = function(element) {
       var name = element.getAttribute("id").replace("-button", "");
       deactivateButton(name);
-      hideText(name);
+      unhighlightText(name);
     };
 
     var buttonClicked = function(element) {
