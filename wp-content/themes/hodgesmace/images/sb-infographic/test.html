@@ -70,6 +70,16 @@
       }
 
 
+      .infographic-text-detail.hide {
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      #infographic-enrollment-instructions{
+        transition: fill 0.5s;
+      }
+
+
   		.st0 {
   			fill: #D6DE23;
   		}
@@ -280,8 +290,7 @@
         <path class="infographic-button-text-path-selected" d="M721.87,743.27c62.73-42.49,79.14-127.8,36.65-190.53s-127.8-79.14-190.53-36.65
       		s-79.14,127.8-36.65,190.53S659.13,785.77,721.87,743.27z"/>
   			<text>
-  				<textPath xlink:href="#SVGID_x5F_2_x5F_" startOffset="86.2%">
-  					<tspan class="st25 st1" >education</tspan>
+  				<textPath xlink:href="#SVGID_x5F_2_x5F_" startOffset="86.2%"><tspan class="st25 st1" >education</tspan>
   				</textPath>
   			</text>
   		</g>
@@ -428,7 +437,7 @@
   				<tspan x="-371.85" y="80.68" class="st3 st5 st21">Our platform features industry-leading, innovative technology that empowers</tspan>
   				<tspan x="-417.79" y="125.35" class="st3 st5 st21">employees to make smarter benefit decisions. With secure, cloud-based systems that</tspan>
   				<tspan x="-412.32" y="170.03" class="st3 st5 st21">run on any device, there are no barriers between employer, employee, and benefits.</tspan>
-  				<tspan x="-330.53" y="214.71" class="st3 st22 st23">Start with the essentials, then add on the pieces that are right for you.</tspan>
+  				<tspan x="-330.53" y="214.71" id="infographic-enrollment-instructions" class="st3 st22 st23">Start with the essentials, then add on the pieces that are right for you.</tspan>
   			</text>
   			<line class="st24" x1="731.01" y1="280.97" x2="559.06" y2="280.97"/>
   			<g>
@@ -442,7 +451,7 @@
   				<circle class="st24" cx="622.81" cy="341.08" r="2.45"/>
   			</g>
   		</g>
-  		<g id="enrollment-button">
+  		<g id="enrollment-button" onclick="enrollmentClicked();">
   			<path
   				class="st19"
   				d="M745.27,624.17c0-28.16-11.62-53.6-30.32-71.79l-18.48,2.62l-2.6-18.33c-14.43-8.06-31.06-12.66-48.77-12.66
@@ -567,29 +576,34 @@
         deselectButton(buttonName);
       }
     };
+    var enrollmentPulse = new TimelineLite();
+    var intervalRef = setInterval (function () {
 
-    document.getElementById("enrollment-button").onclick = function () {
-      var buttonPaths = document.getElementsByClassName("group-button");
-      /*
-      for(var i = 0; i < buttonPaths.length; i++) {
-        var buttonElement = buttonPaths[i];
-        var buttonName = buttonElement.getAttribute("id").replace("-button", "");
-        var buttonPath = buttonElement.getElementsByClassName("infographic-button-path")[0];
-        var classString = buttonPath.getAttribute("class");
-        if(classString.indexOf(" clicked") == -1) {
-          var newClass = classString + " clicked";
-          buttonPath.setAttribute("class", newClass);
-          showText(buttonName);
-        }
-      }
-      */
+      var path = document.getElementById("enrollment-button").getElementsByTagName("path")[0];
+      enrollmentPulse.clear();
+      enrollmentPulse.to(path, 1, { scale: 1.1 , transformOrigin: "center center" });
+      enrollmentPulse.to(path, 1, { scale: 1 , transformOrigin: "center center" }, 1.1);
+    }, 2200);
+
+    var enrollmentClicked = function () {
+      clearInterval(intervalRef);
+      showText('personalization');
+      showText('eligibility');
+      showText('compliance');
+      showText('education');
+      showText('decision-support');
+      enrollmentPulse.clear();
+      var path = document.getElementById("enrollment-button").getElementsByTagName("path")[0];
+      enrollmentPulse.to(path, 0.1, { scale: 1 , transformOrigin: "center center" });
+      var instructionText = document.getElementById("infographic-enrollment-instructions");
+      instructionText.setAttribute("style", "fill:#8EC449");
     };
+
 
     var buttonMouseOver = function(element) {
       var name = element.getAttribute("id").replace("-button", "");
       activateButton(name);
       highlightText(name);
-      showText(name);
     };
 
     var buttonMouseOut = function(element) {
@@ -601,6 +615,7 @@
     var buttonClicked = function(element) {
       var name = element.getAttribute("id").replace("-button", "");
       clickedButton(name);
+      enrollmentClicked();
     };
   </script>
   <script src="minified/plugins/MorphSVGPlugin.min.js"></script>
