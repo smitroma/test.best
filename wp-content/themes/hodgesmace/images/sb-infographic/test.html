@@ -60,7 +60,6 @@
   			cursor: pointer;
   		}
   		.infographic-button-path {
-  			transition: fill 0.5s;
   			fill: #808184;
   		}
 
@@ -587,16 +586,18 @@
 
     var enrollmentClicked = function () {
       clearInterval(intervalRef);
-      showText('personalization');
-      showText('eligibility');
-      showText('compliance');
-      showText('education');
-      showText('decision-support');
       enrollmentPulse.clear();
       var path = document.getElementById("enrollment-button").getElementsByTagName("path")[0];
       enrollmentPulse.to(path, 0.1, { scale: 1 , transformOrigin: "center center" });
       var instructionText = document.getElementById("infographic-enrollment-instructions");
-      instructionText.setAttribute("style", "fill:#8EC449");
+      instructionText.setAttribute("style", "fill:#8EC449; text-decoration: underline;");
+      setTimeout(function () {
+        showText('personalization');
+        showText('eligibility');
+        showText('compliance');
+        showText('education');
+        showText('decision-support');
+      }, 1200);
     };
 
 
