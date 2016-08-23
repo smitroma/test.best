@@ -86,7 +86,7 @@ function hodgesmace_scripts() {
     wp_enqueue_style('grid', get_template_directory_uri() . '/css/grid.css');
     wp_enqueue_style('utility', get_template_directory_uri() . '/css/utility.css');
     wp_enqueue_style('hodgesmace-style', get_stylesheet_uri());
-    wp_enqueue_script('hodgesmace-script', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20150330', true);
+    wp_enqueue_script('hodgesmace-script', get_template_directory_uri() . '/js/functions.js#async', array('jquery'), '20150330', true);
 }
 
 add_action( 'wp_enqueue_scripts', 'hodgesmace_scripts' );
