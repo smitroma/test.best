@@ -78,6 +78,8 @@ add_action( 'wp_head', 'hodgesmace_javascript_detection', 0 );
  */
 
 function hodgesmace_scripts() {
+
+    wp_enqueue_script('jquery');
     wp_enqueue_style('js_composer_front'); // VC CSS
     wp_enqueue_style('OpenSans', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,700');
     wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
@@ -637,24 +639,38 @@ function magazino_widgets_init() {
 add_action( 'widgets_init', 'magazino_widgets_init' );
 
 /*
- * Async loading
+ * Asynchronously load all scripts
  */
-function async_scripts($url)
-{
-  if (strpos($url, '#async') === false) {
-    return $url;
-  } else if (is_admin()) {
-    return str_replace('#async', '', $url);
-  } else {
-    return str_replace('#async', '', $url)."' async='async";
+add_action('init', 'js_mod_attr');
+add_filter('script_loader_tag', 'js_async_attr', 10);
+add_filter('gform_init_scripts_footer', '__return_true');
+add_filter('gform_cdata_open', 'wrap_gform_cdata_open');
+add_filter('gform_cdata_close', 'wrap_gform_cdata_close');
+
+function js_mod_attr() {
+	if (!is_admin()) {
+		wp_deregister_script('jquery');
+		wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js', false, '1.8.1');
+    wp_enqueue_script('jquery');
+	}
+}
+
+function js_async_attr($tag) {
+  if (is_admin()) {
+    return $tag;
   }
+  else if (strpos($tag, 'jquery')) {
+    return $tag;
+  }
+  return str_replace( ' src', ' async="async" src', $tag);
 }
 
-function query_scripts($src) {
-  $parts = explode( '?ver', $src );
-  return $parts[0];
+function wrap_gform_cdata_open($content = '') {
+  $content = 'document.addEventListener( "DOMContentLoaded", function() { ';
+  return $content;
 }
 
-add_filter('clean_url', 'async_scripts', 11, 1);
-add_filter('script_loader_src', 'query_scripts', 15, 1);
-add_filter('style_loader_src', 'query_scripts', 15, 1);
+function wrap_gform_cdata_close($content = '') {
+  $content = ' }, false );';
+  return $content;
+}
