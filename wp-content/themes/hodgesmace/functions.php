@@ -636,9 +636,25 @@ function magazino_widgets_init() {
 }
 add_action( 'widgets_init', 'magazino_widgets_init' );
 
-function _remove_script_version($src) {
+/*
+ * Async loading
+ */
+function async_scripts($url)
+{
+  if (strpos($url, '#async') === false) {
+    return $url;
+  } else if (is_admin()) {
+    return str_replace('#async', '', $url);
+  } else {
+    return str_replace('#async', '', $url)."' async='async";
+  }
+}
+
+function query_scripts($src) {
   $parts = explode( '?ver', $src );
   return $parts[0];
 }
-add_filter('script_loader_src', '_remove_script_version', 15, 1);
-add_filter('style_loader_src', '_remove_script_version', 15, 1);
+
+add_filter('clean_url', 'async_scripts', 11, 1);
+add_filter('script_loader_src', 'query_scripts', 15, 1);
+add_filter('style_loader_src', 'query_scripts', 15, 1);
