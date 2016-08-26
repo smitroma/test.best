@@ -1,4 +1,4 @@
-jQuery(document).ready(function ($) {
+jQuery(window).load(function ($) {
     if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
         // Do Firefox-related activities
         document.getElementById("personalizationTextPath").setAttribute("startOffset", "-1%");
