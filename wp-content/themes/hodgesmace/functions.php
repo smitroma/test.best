@@ -80,6 +80,7 @@ add_action( 'wp_head', 'hodgesmace_javascript_detection', 0 );
 function hodgesmace_scripts() {
 
     wp_enqueue_script('jquery');
+    
     wp_enqueue_style('js_composer_front'); // VC CSS
     wp_enqueue_style('OpenSans', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,700');
     wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
@@ -87,12 +88,20 @@ function hodgesmace_scripts() {
     wp_enqueue_style('typography', get_template_directory_uri() . '/css/typography.css');
     wp_enqueue_style('grid', get_template_directory_uri() . '/css/grid.css');
     wp_enqueue_style('utility', get_template_directory_uri() . '/css/utility.css');
+    wp_enqueue_style('sb-infographic', get_template_directory_uri() . '/css/sb-infographic.css');
+    
     wp_enqueue_style('hodgesmace-style', get_stylesheet_uri());
     wp_enqueue_script('hodgesmace-script', get_template_directory_uri() . '/js/functions.js#async', array('jquery'), '20150330', true);
     wp_enqueue_script('tweenmax', '//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js', array(), '1.19.0', true);
     wp_enqueue_script('morphsvg', get_template_directory_uri() . '/js/gsap/plugins/MorphSVGPlugin.min.js', array('tweenmax'), '0.8.6', true);
+<<<<<<< HEAD
     wp_enqueue_script('raphael', '//cdnjs.cloudflare.com/ajax/libs/raphael/2.2.1/raphael.js', array(), '2.2.1', true);    
     wp_enqueue_style('sb-infographic', get_template_directory_uri() . '/css/sb-infographic.css');
+=======
+    wp_enqueue_script('raphael', '//cdnjs.cloudflare.com/ajax/libs/raphael/2.2.1/raphael.js', array(), '2.2.1', true);
+    //wp_enqueue_script('sb-infographic', get_template_directory_uri() . '/js/sb-infographic.js', array('jquery', 'tweenmax', 'morphsvg'), '1.0', false);
+    
+>>>>>>> 9b3bc1515c71675bdeb2611b054b72c8e3f5d97b
 }
 
 add_action( 'wp_enqueue_scripts', 'hodgesmace_scripts' );
@@ -138,23 +147,19 @@ function tweet_func( $atts, $content = null ) {
 
   ob_start();
   ?>
-
-	<div class="click-to-tweet">
-    <div class="ctt-text">
-      <p>
-        <a href="https://twitter.com/share?text=<?= $content_text ?>&amp;via=HodgesMace&amp;related=HodgesMace&amp;url=<?= $url ?>" target="_blank">
-          <?= strip_tags($content) ?>
-        </a>
-      </p>
+    <div class="click-to-tweet">
+        <div class="ctt-text">
+            <p>
+                <a href="https://twitter.com/share?text=<?= $content_text ?>&amp;via=HodgesMace&amp;related=HodgesMace&amp;url=<?= $url ?>" target="_blank">
+                    <?= strip_tags($content) ?>
+                </a>
+            </p>
+        </div>
+        <p class="ctt-link">
+            <a href="https://twitter.com/share?text=<?= $content_text ?>&amp;via=HodgesMace&amp;related=HodgesMace&amp;url=<?= $url ?>" target="_blank" class="ctt-btn"> <i class="fa fa-twitter c-twitter-blue"></i> TWEET </a>
+        </p>
     </div>
-    <p class="ctt-link">
-      <a href="https://twitter.com/share?text=<?= $content_text ?>&amp;via=HodgesMace&amp;related=HodgesMace&amp;url=<?= $url ?>" target="_blank" class="ctt-btn">
-        <i class="fa fa-twitter c-twitter-blue"></i> TWEET
-      </a>
-    </p>
-  </div>
-
-  <?php
+    <?php
   return ob_get_clean();
 }
 
