@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1244.66 1071.19" style="enable-background:new 0 0 1244.66 1071.19;" xml:space="preserve">
-	<style type="text/css">		
+	<style type="text/css">
+		@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600';
+		@font-face{
+		font-family:"NeuzeitGro W01 Bold";
+			src:url("Fonts/66182542-0bb8-41e7-94b8-f45d24bea18d.eot?#iefix") format("eot"),url("Fonts/8dfba670-079e-4879-8b0a-8d079ab7c067.woff2") format("woff2"),url("Fonts/218401dc-d400-4482-8c9b-0527059f7559.woff") format("woff"),url("Fonts/ace900f9-272b-4efa-88b0-6f2b1adc0f41.ttf") format("truetype"),url("Fonts/eeb8e139-b0e6-40d3-820c-0011bcf71e43.svg#eeb8e139-b0e6-40d3-820c-0011bcf71e43") format("svg");
+		}
 		#personalization-button .infographic-button-path.active {
 			fill: #D6DE23;
 		}

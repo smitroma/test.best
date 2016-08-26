@@ -89,6 +89,11 @@ function hodgesmace_scripts() {
     wp_enqueue_style('utility', get_template_directory_uri() . '/css/utility.css');
     wp_enqueue_style('hodgesmace-style', get_stylesheet_uri());
     wp_enqueue_script('hodgesmace-script', get_template_directory_uri() . '/js/functions.js#async', array('jquery'), '20150330', true);
+    wp_enqueue_script('tweenmax', '//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js', array(), '1.19.0', true);
+    wp_enqueue_script('morphsvg', get_template_directory_uri() . '/js/gsap/plugins/MorphSVGPlugin.min.js', array('tweenmax'), '0.8.6', true);
+    wp_enqueue_script('raphael', '//cdnjs.cloudflare.com/ajax/libs/raphael/2.2.1/raphael.js', array(), '2.2.1', true);
+    wp_enqueue_script('sb-infographic', get_template_directory_uri() . '/js/sb-infographic.js', array('tweenmax', 'morphsvg'), '1.0');
+    wp_enqueue_style('sb-infographic', get_template_directory_uri() . '/css/sb-infographic.css');
 }
 
 add_action( 'wp_enqueue_scripts', 'hodgesmace_scripts' );
@@ -648,18 +653,13 @@ add_filter('gform_cdata_open', 'wrap_gform_cdata_open');
 add_filter('gform_cdata_close', 'wrap_gform_cdata_close');
 
 function js_mod_attr() {
-	if (!is_admin()) {
-		wp_deregister_script('jquery');
-		wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js', false, '1.8.1');
+    wp_deregister_script('jquery');
+	wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js', false, '1.8.1');
     wp_enqueue_script('jquery');
-	}
 }
 
 function js_async_attr($tag) {
-  if (is_admin()) {
-    return $tag;
-  }
-  else if (strpos($tag, 'jquery')) {
+  if (strpos($tag, 'jquery')) {
     return $tag;
   }
   return str_replace( ' src', ' async="async" src', $tag);
