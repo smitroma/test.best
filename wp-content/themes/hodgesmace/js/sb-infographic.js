@@ -1,4 +1,3 @@
-jQuery(window).load(function ($) {
     if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
         // Do Firefox-related activities
         document.getElementById("personalizationTextPath").setAttribute("startOffset", "-1%");
@@ -166,4 +165,3 @@ jQuery(window).load(function ($) {
         clickedButton(name);
         enrollmentClicked();
     };
-})(jQuery);
