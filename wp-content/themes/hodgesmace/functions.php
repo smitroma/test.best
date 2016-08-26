@@ -78,6 +78,8 @@ add_action( 'wp_head', 'hodgesmace_javascript_detection', 0 );
  */
 
 function hodgesmace_scripts() {
+
+    wp_enqueue_script('jquery');
     wp_enqueue_style('js_composer_front'); // VC CSS
     wp_enqueue_style('OpenSans', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,700');
     wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
@@ -86,7 +88,7 @@ function hodgesmace_scripts() {
     wp_enqueue_style('grid', get_template_directory_uri() . '/css/grid.css');
     wp_enqueue_style('utility', get_template_directory_uri() . '/css/utility.css');
     wp_enqueue_style('hodgesmace-style', get_stylesheet_uri());
-    wp_enqueue_script('hodgesmace-script', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20150330', true);
+    wp_enqueue_script('hodgesmace-script', get_template_directory_uri() . '/js/functions.js#async', array('jquery'), '20150330', true);
 }
 
 add_action( 'wp_enqueue_scripts', 'hodgesmace_scripts' );
@@ -635,4 +637,40 @@ function magazino_widgets_init() {
 
 }
 add_action( 'widgets_init', 'magazino_widgets_init' );
-?>
+
+/*
+ * Asynchronously load all scripts
+ */
+add_action('init', 'js_mod_attr');
+add_filter('script_loader_tag', 'js_async_attr', 10);
+add_filter('gform_init_scripts_footer', '__return_true');
+add_filter('gform_cdata_open', 'wrap_gform_cdata_open');
+add_filter('gform_cdata_close', 'wrap_gform_cdata_close');
+
+function js_mod_attr() {
+	if (!is_admin()) {
+		wp_deregister_script('jquery');
+		wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js', false, '1.8.1');
+    wp_enqueue_script('jquery');
+	}
+}
+
+function js_async_attr($tag) {
+  if (is_admin()) {
+    return $tag;
+  }
+  else if (strpos($tag, 'jquery')) {
+    return $tag;
+  }
+  return str_replace( ' src', ' async="async" src', $tag);
+}
+
+function wrap_gform_cdata_open($content = '') {
+  $content = 'document.addEventListener( "DOMContentLoaded", function() { ';
+  return $content;
+}
+
+function wrap_gform_cdata_close($content = '') {
+  $content = ' }, false );';
+  return $content;
+}
