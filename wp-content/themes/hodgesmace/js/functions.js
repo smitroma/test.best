@@ -118,16 +118,16 @@
     });
     // Contact show employee rang on business type select
     $('.contact-footer #input_1_7').change(function () {
-            console.log($(this).val());
-            $('.contact-footer #field_1_8').removeClass('d-n');
-            if ($(this).val() == 'Employer') {
-                $('.contact-footer #field_1_8 .gf_placeholder').text('Company Size');
-            }
-            else if ($(this).val() == 'Broker' || $(this).val() == 'Carrier') {
-                $('.contact-footer #field_1_8 .gf_placeholder').text('Average Client Size');
-            }
-            else {
-                $('.contact-footer #field_1_8').addClass('d-n');
-            }
-        })
+        console.log($(this).val());
+        $('.contact-footer #field_1_8').removeClass('d-n');
+        if ($(this).val() == 'Employer') {
+            $('.contact-footer #field_1_8 .gf_placeholder').text('Company Size');
+        }
+        else if ($(this).val() == 'Broker' || $(this).val() == 'Carrier') {
+            $('.contact-footer #field_1_8 .gf_placeholder').text('Average Client Size');
+        }
+        else {
+            $('.contact-footer #field_1_8').addClass('d-n');
+        }
+    })
 })(jQuery);
