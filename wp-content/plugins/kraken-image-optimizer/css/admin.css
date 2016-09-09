@@ -241,6 +241,7 @@ span.kraken-bulk-choose-type {
 small.krakenReset {
 	text-decoration: underline;
 	cursor: pointer;
+	display: inline-block;
 }
 .resetSpinner {
 	display: inline-block;
@@ -369,4 +370,7 @@ label[for=blog_kraker_mode_thumbs] {
 .kraken-item-details {
 	cursor: pointer;
 	text-decoration: underline;
+}
+.kraken_detailed_results_wrap {
+	display: inline-block;
 }

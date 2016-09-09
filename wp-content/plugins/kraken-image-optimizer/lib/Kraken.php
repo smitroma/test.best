@@ -2,7 +2,7 @@
 
 class Kraken {
     protected $auth = array();
-    public static $kraken_plugin_version = '2.5.0';
+    public static $kraken_plugin_version = '2.6.2';
 
     public function __construct($key = '', $secret = '') {
         $this->auth = array(
@@ -26,13 +26,6 @@ class Kraken {
                 "success" => false,
                 "error" => "File parameter was not provided"
             );
-        }
-
-        if (preg_match("/\/\//i", $opts['file'])) {
-            $opts['url'] = $opts['file'];
-            unset($opts['file']);
-
-            return $this->url($opts);
         }
 
         if (!file_exists($opts['file'])) {
@@ -92,10 +85,11 @@ class Kraken {
         $error = curl_errno($curl);
 
         if ($response === null) {
-            $error_code = (int) curl_error($curl);
+            $error = curl_error($curl);
+            $error_code = curl_errno($curl);
             $response = array (
                 "success" => false,
-                "error" => 'cURL Error: ' . $error_code,
+                "error" => 'cURL Error: ' . $error,
                 "code" => $error_code
             );
         } 

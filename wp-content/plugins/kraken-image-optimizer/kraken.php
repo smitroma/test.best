@@ -21,8 +21,8 @@
  * Plugin URI: http://wordpress.org/plugins/kraken-image-optimizer/
  * Description: This plugin allows you to optimize your WordPress images through the Kraken API, the world's most advanced image optimization solution.
  * Author: Karim Salman
- * Version: 2.5.1
- * Stable Tag: 2.5.1
+ * Version: 2.6.2
+ * Stable Tag: 2.6.2
  * Author URI: https://kraken.io
  * License GPL2
  */
@@ -41,7 +41,7 @@ if ( !class_exists( 'Wp_Kraken' ) ) {
 
 		private $optimization_type = 'lossy';
 
-		public static $kraken_plugin_version = '2.5.0';
+		public static $kraken_plugin_version = '2.6.2';
 
 		function __construct() {
 			$plugin_dir_path = dirname( __FILE__ );
@@ -61,7 +61,23 @@ if ( !class_exists( 'Wp_Kraken' ) ) {
 				add_action( 'add_attachment', array( &$this, 'kraken_media_uploader_callback' ) );			
 				add_filter( 'wp_generate_attachment_metadata', array( &$this, 'optimize_thumbnails' ) );
 			}
-			add_action( 'admin_menu', array( &$this, 'kraken_menu' ) );		
+
+			// in case settings were not resaved after update
+			if ( !isset( $this->kraken_settings["optimize_main_image"] ) ) {
+				$this->kraken_settings["optimize_main_image"] = 1;
+			}
+
+			// in case settings were not resaved after update
+			if ( !isset( $this->kraken_settings["chroma"] ) ) {
+				$this->kraken_settings["chroma"] = '4:2:0';
+			}
+
+			add_action( 'admin_menu', array( &$this, 'kraken_menu' ) );	
+		}
+
+		function preg_array_key_exists( $pattern, $array ) {
+		    $keys = array_keys( $array );    
+		    return (int) preg_grep( $pattern,$keys );
 		}
 
 		function isApiActive() {
@@ -76,10 +92,6 @@ if ( !class_exists( 'Wp_Kraken' ) ) {
 
 		function kraken_menu() {
 			add_options_page( 'Kraken Image Optimizer Settings', 'Kraken.io', 'manage_options', 'wp-krakenio', array( &$this, 'kraken_settings_page' ) );
-		}
-
-		function blog_kraker() {
-			add_management_page( 'Blog Kraker', 'Blog Kraker', 'manage_options', 'blog-kraker', array( &$this, 'show_blog_kraker' ) );
 		}
 
 		function add_settings_link ( $links ) {
@@ -114,6 +126,12 @@ if ( !class_exists( 'Wp_Kraken' ) ) {
 			$resize_width = isset( $settings['resize_width'] ) ? $settings['resize_width'] : 0;
 			$resize_height = isset( $settings['resize_height'] ) ? $settings['resize_height'] : 0;
 			$jpeg_quality = isset( $settings['jpeg_quality'] ) ? $settings['jpeg_quality'] : 0;
+			$chroma_subsampling = isset( $settings['chroma'] ) ? $settings['chroma'] : '4:2:0';
+		
+			$sizes = array_keys($this->get_image_sizes());
+			foreach ($sizes as $size) {
+				$valid['include_size_' . $size] = isset( $settings['include_size_' . $size]) ? $settings['include_size_' . $size] : 1;
+			}
 
 			$status = $this->get_api_status( $api_key, $api_secret );
 
@@ -251,16 +269,51 @@ if ( !class_exists( 'Wp_Kraken' ) ) {
 						        			Advanced users can force the quality of JPEG images to a discrete "q" value between 25 and 100 using this setting <br />
 						        			For example, forcing the quality to 60 or 70 might yield greater savings, but the resulting quality might be affected, depending on the image. <br />
 						        			We therefore recommend keeping the <strong>Intelligent Lossy</strong> setting, which will not allow a resulting image of unacceptable quality.<br />
-						        			This settings will be ignored when using the <strong>lossless</strong> optimization mode.
+						        			This setting will be ignored when using the <strong>lossless</strong> optimization mode.
 						        		</div>
 						        	</td>
 						        </tr>
+						        <tr class="with-tip">
+						            <th scope="row">Chroma subsampling scheme:</th>
+						            <td>
+						                <input type="radio" id="kraken_chroma_420" name="_kraken_options[chroma]" value="4:2:0" <?php checked( '4:2:0', $chroma_subsampling, true ); ?>/>
+						                <label for="kraken_chroma_420">4:2:0 (default)</label>
+						                <input style="margin-left:10px;" type="radio" id="kraken_chroma_422" name="_kraken_options[chroma]" value="4:2:2" <?php checked( '4:2:2', $chroma_subsampling, true ) ?>/>
+						                <label for="kraken_chroma_422">4:2:2</label>
+						                <input style="margin-left:10px;" type="radio" id="kraken_chroma_444" name="_kraken_options[chroma]" value="4:4:4" <?php checked( '4:4:4', $chroma_subsampling, true ) ?>/>
+						                <label for="kraken_chroma_444">4:4:4 (no subsampling)</label>						             
+						            </td>
+						        </tr>
+						        <tr class="tip">
+						        	<td colspan="2">
+						        		<div>
+						        			Advanced users can also set the resolution at which colour is encoded for JPEG images. In short, the default setting of <strong>4:2:0</strong> is suitable for most images,<br />
+						        			and will result in the lowest possible optimized file size. Images containing high contrast text or bright red areas on flat backgrounds might benefit from disabling chroma subsampling<br />
+						        			(by setting it to <strong>4:4:4</strong>). More information can be found in our <a href="https://kraken.io/docs/chroma-subsampling" target="_blank">documentation</a>.
+						        		</div>
+						        	</td>
+						        </tr>						        					      
 						        <tr class="no-border">
-						        	<td class="krakenAdvancedSettings"><h3><span class="kraken-advanced-settings-label" title="Click to toggle advanced settings">Advanced Settings</span></h3></td>
+						        	<td class="krakenAdvancedSettings"><h3><span class="kraken-advanced-settings-label">Advanced Settings</span></h3></td>
 						        </tr>
 						        <tr class="kraken-advanced-settings">
 						        	<td colspan="2" class="krakenAdvancedSettingsDescription"><small>We recommend that you leave these settings at their default values</td>
 						        </tr>
+						        <tr class="kraken-advanced-settings">
+						            <th scope="row">Image Sizes to Krak:</th>
+									<td>
+						            	<?php $size_count = count($sizes); ?>
+						            	<?php $i = 0; ?>
+						            	<?php foreach($sizes as $size) { ?>
+						            	<?php $size_checked = isset( $valid['include_size_' . $size] ) ? $valid['include_size_' . $size] : 1; ?>
+						                <label for="<?php echo "kraken_size_$size" ?>"><input type="checkbox" id="kraken_size_<?php echo $size ?>" name="_kraken_options[include_size_<?php echo $size ?>]" value="1" <?php checked( 1, $size_checked, true ); ?>/>&nbsp;<?php echo $size ?></label>&nbsp;&nbsp;&nbsp;&nbsp;
+						            	<?php $i++ ?>
+						            	<?php if ($i % 3 == 0) { ?>
+						            		<br />
+						            	<?php } ?>
+     							        <?php } ?>
+						            </td>
+						        </tr>						        
 						        <tr class="kraken-advanced-settings">
 						            <th scope="row">Preserve EXIF Metadata:</th>
 						            <td>
@@ -345,6 +398,13 @@ if ( !class_exists( 'Wp_Kraken' ) ) {
 			$valid['resize_width'] = isset( $input['resize_width'] ) ? (int) $input['resize_width'] : 0;
 			$valid['resize_height'] = isset( $input['resize_height'] ) ? (int) $input['resize_height'] : 0;
 			$valid['jpeg_quality'] = isset( $input['jpeg_quality'] ) ? (int) $input['jpeg_quality'] : 0;
+			$valid['chroma'] = isset( $input['chroma'] ) ? $input['chroma'] : '4:2:0';
+
+
+			$sizes = get_intermediate_image_sizes();
+			foreach ($sizes as $size) {
+				$valid['include_size_' . $size] = isset( $input['include_size_' . $size] ) ? 1 : 0;
+			}
 
 			if ( $valid['show_reset'] ) {
 				$valid['show_reset'] = $input['show_reset'];
@@ -440,7 +500,6 @@ if ( !class_exists( 'Wp_Kraken' ) ) {
 		 *  Handles optimizing already-uploaded images in the  Media Library
 		 */
 		function kraken_media_library_ajax_callback() {
-			
 			$image_id = (int) $_POST['id'];
 			$type = false;
 
@@ -569,7 +628,7 @@ if ( !class_exists( 'Wp_Kraken' ) ) {
 
 			$this->id = $image_id;
 
-			if ( !$this->kraken_settings['optimize_main_image'] ) {
+			if ( empty( $this->kraken_settings['optimize_main_image'] ) ) {
 				return;
 			}
 
@@ -1080,6 +1139,9 @@ EOD;
 			if ( $settings['preserve_meta_profile'] ) {
 				$preserve_meta_arr[] = 'profile';
 			}
+			if ( $settings['chroma'] ) {
+				$params['sampling_scheme'] = $settings['chroma'];
+			}
 
 			if ( count( $preserve_meta_arr ) ) {
 				$params['preserve_meta'] = $preserve_meta_arr;
@@ -1093,11 +1155,11 @@ EOD;
 				$width = (int) $settings['resize_width'];
 				$height = (int) $settings['resize_height'];
 				if ( $width && $height ) {
-					$params['resize'] = array('strategy' => 'auto', 'width' => $width, 'height' => $height, 'enhance' => true );
+					$params['resize'] = array('strategy' => 'auto', 'width' => $width, 'height' => $height );
 				} elseif ( $width && !$height ) {
-					$params['resize'] = array('strategy' => 'landscape', 'width' => $width, 'enhance' => true );
+					$params['resize'] = array('strategy' => 'landscape', 'width' => $width );
 				} elseif ( $height && !$width ) {
-					$params['resize'] = array('strategy' => 'portrait', 'height' => $height, 'enhance' => true );
+					$params['resize'] = array('strategy' => 'portrait', 'height' => $height );
 				}
 			}
 
@@ -1111,14 +1173,69 @@ EOD;
 			return $data;
 		}
 
+		function get_sizes_to_krak() {
+			$settings = $this->kraken_settings;
+			$rv = array();
+
+			foreach( $settings as $key => $value ) {
+				if ( strpos( $key, 'include_size' ) === 0 && !empty( $value ) ) {
+					$rv[] = $key;
+				}
+			}
+			return $rv;
+		}
+
 		function optimize_thumbnails( $image_data ) {
-			
+
 			$image_id = $this->id;
 			if ( empty( $image_id ) ) {
 				global $wpdb;
 				$post = $wpdb->get_row( $wpdb->prepare( "SELECT post_id FROM $wpdb->postmeta WHERE meta_value = %s LIMIT 1", $image_data['file'] ) );
 				$image_id = $post->post_id;
 			}
+
+			$kraken_meta = get_post_meta( $image_id, '_kraken_size', true );
+			$image_backup_path = isset( $kraken_meta['optimized_backup_file'] ) ? $kraken_meta['optimized_backup_file'] : '';
+			
+			if ( $image_backup_path ) {
+				$original_image_path = get_attached_file( $image_id );				
+				if ( copy( $image_backup_path, $original_image_path ) ) {
+					unlink( $image_backup_path );
+					unset( $kraken_meta['optimized_backup_file'] );
+					update_post_meta( $image_id, '_kraken_size', $kraken_meta );
+				}
+			}
+
+			if ( !$this->preg_array_key_exists( '/^include_size_/', $this->kraken_settings ) ) {
+				
+				global $_wp_additional_image_sizes;
+				$sizes = array();
+
+				foreach ( get_intermediate_image_sizes() as $_size ) {
+					if ( in_array( $_size, array('thumbnail', 'medium', 'medium_large', 'large') ) ) {
+						$sizes[ $_size ]['width']  = get_option( "{$_size}_size_w" );
+						$sizes[ $_size ]['height'] = get_option( "{$_size}_size_h" );
+						$sizes[ $_size ]['crop']   = (bool) get_option( "{$_size}_crop" );
+					} elseif ( isset( $_wp_additional_image_sizes[ $_size ] ) ) {
+						$sizes[ $_size ] = array(
+							'width'  => $_wp_additional_image_sizes[ $_size ]['width'],
+							'height' => $_wp_additional_image_sizes[ $_size ]['height'],
+							'crop'   => $_wp_additional_image_sizes[ $_size ]['crop'],
+						);
+					}
+				}
+				$sizes = array_keys( $sizes );
+				foreach ($sizes as $size) {
+					$this->kraken_settings['include_size_' . $size] = 1;
+				}
+			}			
+
+			// when resizing has taken place via API, update the post metadata accordingly
+			if ( !empty( $kraken_meta['kraked_width'] ) && !empty( $kraken_meta['kraked_height'] ) ) {
+				$image_data['width'] = $kraken_meta['kraked_width'];
+				$image_data['height'] = $kraken_meta['kraked_height'];
+			}
+
 
 			$path_parts = pathinfo( $image_data['file'] );
 
@@ -1138,11 +1255,17 @@ EOD;
 			}
 
 			if ( !empty( $sizes ) ) {
+
+				$sizes_to_krak = $this->get_sizes_to_krak();
 				$thumb_path = '';
 				$thumbs_optimized_store = array();
 				$this_thumb = array();
 
 				foreach ( $sizes as $key => $size ) {
+
+					if ( !in_array("include_size_$key", $sizes_to_krak) ) {
+						continue;
+					}
 
 					$thumb_path = $upload_full_path . '/' . $size['file'];
 					
@@ -1159,36 +1282,38 @@ EOD;
 								$this_thumb = array( 'thumb' => $key, 'file' => $size['file'], 'original_size' => $result['original_size'], 'kraked_size' => $result['original_size'], 'type' => $this->optimization_type );
 								$thumbs_optimized_store [] = $this_thumb;								
 							}
-						} else {
-							return $image_data;
-						}
+						} 
 					}
 				}
 			}
-
-			$kraken_meta = get_post_meta( $image_id, '_kraken_size', true );
-			$image_backup_path = isset( $kraken_meta['optimized_backup_file'] ) ? $kraken_meta['optimized_backup_file'] : '';
-			
-			if ( $image_backup_path ) {
-				$original_image_path = get_attached_file( $image_id );				
-				if ( copy( $image_backup_path, $original_image_path ) ) {
-					unlink( $image_backup_path );
-					unset( $kraken_meta['optimized_backup_file'] );
-					update_post_meta( $image_id, '_kraken_size', $kraken_meta );
-				}
-			}
-
-			// when resizing has taken place via API, update the post metadata accordingly
-			if ( !empty( $kraken_meta['kraked_width'] ) && !empty( $kraken_meta['kraked_height'] ) ) {
-				$image_data['width'] = $kraken_meta['kraked_width'];
-				$image_data['height'] = $kraken_meta['kraked_height'];
-			}
-			
 			if ( !empty( $thumbs_optimized_store ) ) {
 				update_post_meta( $image_id, '_kraked_thumbs', $thumbs_optimized_store, false );
 			}
 			return $image_data;
 		}
+
+		function get_image_sizes() {
+			global $_wp_additional_image_sizes;
+
+			$sizes = array();
+
+			foreach ( get_intermediate_image_sizes() as $_size ) {
+				if ( in_array( $_size, array('thumbnail', 'medium', 'medium_large', 'large') ) ) {
+					$sizes[ $_size ]['width']  = get_option( "{$_size}_size_w" );
+					$sizes[ $_size ]['height'] = get_option( "{$_size}_size_h" );
+					$sizes[ $_size ]['crop']   = (bool) get_option( "{$_size}_crop" );
+				} elseif ( isset( $_wp_additional_image_sizes[ $_size ] ) ) {
+					$sizes[ $_size ] = array(
+						'width'  => $_wp_additional_image_sizes[ $_size ]['width'],
+						'height' => $_wp_additional_image_sizes[ $_size ]['height'],
+						'crop'   => $_wp_additional_image_sizes[ $_size ]['crop'],
+					);
+				}
+			}
+
+			return $sizes;
+		}
+
 
 		static function formatBytes( $size, $precision = 2 ) {
 		    $base = log( $size, 1024 );

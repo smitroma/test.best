@@ -5,7 +5,7 @@
   Description: Gravity Forms was built to be able to store all uploaded files to the server and email you a link.  There are times that you need to have that file get attached to the notification email.  You can now tick a checkbox in the notifications area to specify whether or not you want the file attached. If multiple files you are then able to have it attempt to zip before sending too. Also ability to delete files on email getting sent.
   Author: Greg Whitehead
   Author URI: http://wpcms.ninja
-  Version: 2.1
+  Version: 2.2
  */
  
  
@@ -20,7 +20,7 @@ function GFUEA_custom_notification_attachments( $notification, $form, $entry ) {
     $zip_attachment = rgar( $notification, 'gfu_zip_attachment' );
     $gf_delete_files = rgar( $notification, 'gfu_delete_files' );
     if( ($last5 == "GFUEA" || $last7 == "GFUEANZ") || $attach_upload_to_email == 'yes' ) {
-		if ($last7 == "GFUEANZ" || $zip_attachment == false ){
+		if ($last7 == "GFUEANZ" || $zip_attachment != 'yes'){
 			$attemptzip = false;
 		} else {
 			$attemptzip = true;
@@ -31,7 +31,7 @@ function GFUEA_custom_notification_attachments( $notification, $form, $entry ) {
         }
         $attachments = array();
         $upload_root = RGFormsModel::get_upload_root();
-        error_log("upload_root: " . $upload_root);
+
         foreach( $fileupload_fields as $field ) {
             $url = $entry[ $field['id'] ];
             if ( empty( $url ) ) {
@@ -55,7 +55,6 @@ function GFUEA_custom_notification_attachments( $notification, $form, $entry ) {
                 	}
 				  $zip->close();
 				  $attachments[] = $filename;
-				  add_filter( 'gform_confirmation', 'gfuea_clean_zips', 10, 4 );				  
 			  }
             } else {
                 $attachment = preg_replace( '|^(.*?)/gravity_forms/|', $upload_root, $url );
@@ -63,6 +62,7 @@ function GFUEA_custom_notification_attachments( $notification, $form, $entry ) {
                 $attachments[] = $attachment;
             }
         }
+        add_filter( 'gform_confirmation', 'gfuea_clean_zips', 10, 4 );
         $notification['attachments'] = $attachments;
     }
     GFCommon::log_debug( $log . 'stopping.' );
@@ -73,9 +73,11 @@ function gfuea_clean_zips($confirmation, $form, $entry, $ajax) {
     global $gf_delete_files;
     $upload_root = RGFormsModel::get_upload_root();
     $filename = $upload_root . "/uploaded_files".$entry['id'].".zip";
+
     if (is_file($filename)){
         unlink($filename);
     }
+
     if ($gf_delete_files == 'yes') {
         //delete all files that were uploaded
         
@@ -121,7 +123,7 @@ function gf_upload_notification_setting( $ui_settings, $notification, $form ) {
             <th><label for="attach_upload_to_email">GF Upload Options</label></th>
             <td><input type="checkbox" value="yes" '. ( $gf_upload == 'yes' ? ' checked ' : '' ) .' name="gfu_attach_upload_to_email"><label for="gfu_attach_upload_to_email">Attach File to Outbound Email</label><br>
             <input type="checkbox" value="yes" '. ( $gf_zip == 'yes' ? ' checked ' : '' ) .' name="gfu_zip_attachment"><label for="gfu_zip_attachment">Attempt to zip file before sending</label><br>
-            <input type="checkbox" value="yes" '. ( $gf_delete == 'yes' ? ' checked ' : '' ) .' name="gfu_delete_files"><label for="gfu_delete_files">Attempt to delete files after sending</label>
+            <input type="checkbox" value="yes" '. ( $gf_delete == 'yes' ? ' checked ' : '' ) .' name="gfu_delete_files"><label for="gfu_delete_files">Delete files after sending</label>
             </td>
         </tr>
         ';

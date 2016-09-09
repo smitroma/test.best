@@ -8,11 +8,11 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This allows you to create a notification in gravity forms of an email that would send with the files being uploaded by that form as an attachment. Checkboxes in the notification area allow for you to setup a notification to attach files. Also ability to delete files on email getting sent.
+This allows you to create a notification in gravity forms of an email that would send with the files being uploaded by that form as an attachment. Checkboxes in the notification area allow for you to setup a notification to attach files
 
 == Description ==
 
-Gravity Forms was built to be able to store all uploaded files to the server and email you a link.  There are times that you need to have that file get attached to the notification email.  You can now tick a checkbox in the notifications area to specify whether or not you want the file attached. If multiple files you are then able to have it attempt to zip before sending too. Also ability to delete files on email getting sent.
+Gravity Forms was built to be able to store all uploaded files to the server and email you a link.  There are times that you need to have that file get attached to the notification email.  You can now tick a checkbox in the notifications area to specify whether or not you want the file attached. If multiple files you are then able to have it attempt to zip before sending too.
 
 Works with both single and multiple upload boxes as well as multiiple notifiations.  I left the old GFUEA and GFUEANZ designations in the name for people still using it.
 
@@ -34,8 +34,11 @@ Check off box in notification settings to enable file attachment.
 
 == Changelog ==
 
-= 2.1 = 
-* Added delete file checkbox to delete the files from the server after confirmation of form submission.  Will be adding ability to delete entry in future.
+= 2.2 = 
+* Slight Modification to wording.
+
+= 2.1.2 = 
+* Confirmed zip functionality and delete functionality.
 
 = 2.0 = 
 * Decided recent change signified a good step forward to making it 2.0. Also cleaned up code.
@@ -61,8 +64,11 @@ Check off box in notification settings to enable file attachment.
 
 == Upgrade Notice ==
 
-= 2.1 =
-* Added delete file capability on form confirmation.
+= 2.2 = 
+* Slight Modification to wording.
+
+= 2.1.2 = 
+* Confirmed zip functionality and delete functionality.
 
 = 2.0 =
 * Went through cleaning up code.
