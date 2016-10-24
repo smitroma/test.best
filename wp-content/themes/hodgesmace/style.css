@@ -2368,6 +2368,11 @@ input#input_1_6 {
 
 select#input_1_7 {
     height: 44px;
-    margin: 9px 0 30px;
+    margin-top: -66px;
     width: 97.7%;
+    float: left;
+}
+
+li#field_1_4 {
+    width: 100%;
 }
