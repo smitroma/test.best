@@ -134,10 +134,5 @@
             r.collapse(true);
             r.select();
         }
-
-        $(this).focus(); //set focus
-
     });
-
-
 })(jQuery);
