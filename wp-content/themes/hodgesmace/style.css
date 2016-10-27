@@ -2376,3 +2376,7 @@ select#input_1_7 {
 li#field_1_4 {
     width: 100%;
 }
+
+textarea#input_1_4 {
+    height: 145px;
+}
