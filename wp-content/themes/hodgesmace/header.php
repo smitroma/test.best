@@ -20,6 +20,7 @@
 		 <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/ie.css">
 	<![endif]-->
 	<?php wp_head(); ?>
+
 	<script>
 		/*<![CDATA[*/
 		(function(w, a, b, d, s) {
