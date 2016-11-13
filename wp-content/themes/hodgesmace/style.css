@@ -2380,3 +2380,11 @@ li#field_1_4 {
 textarea#input_1_4 {
     height: 145px;
 }
+select#input_1_8 {
+    width: 48%;
+    float: right;
+    margin-top: -43px;
+}
+li#field_1_9 {
+    width: 96%;
+}
