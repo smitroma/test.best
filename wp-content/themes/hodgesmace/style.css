@@ -102,6 +102,9 @@ h6 {
     h5 {
         font-size: 1em;
     }
+    select#input_1_7{
+        float:none;
+    }
 }
 
 h1 a,
@@ -2381,7 +2384,7 @@ textarea#input_1_4 {
     height: 145px;
 }
 select#input_1_8 {
-    width: 48%;
+    width: 48.5%;
     float: right;
     margin-top: -43px;
 }
