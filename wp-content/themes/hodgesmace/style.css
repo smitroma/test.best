@@ -104,6 +104,7 @@ h6 {
     }
     select#input_1_7{
         float:none !important;
+        width:100% !important;
     }
     select#input_1_8{
         margin-right:2% !important;;
@@ -2394,3 +2395,9 @@ select#input_1_8 {
 li#field_1_9 {
     width: 96%;
 }
+@media(max-width: 641px) {
+    select#input_1_8,
+    li#fielid_1_9{
+        float:none !important;
+        width:100% !important;
+    }
