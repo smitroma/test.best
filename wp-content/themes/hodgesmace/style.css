@@ -2397,7 +2397,8 @@ li#field_1_9 {
 }
 @media(max-width: 641px) {
     select#input_1_8,
-    li#fielid_1_9{
+    li#field_1_9{
         float:none !important;
         width:100% !important;
     }
+}
