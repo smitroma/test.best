@@ -101,9 +101,12 @@ h6 {
     }
     h5 {
         font-size: 1em;
-    }
+    }ß
     select#input_1_7{
-        float:none;
+        float:none !important;
+    }
+    select#input_1_8{
+        margin-right:2% !important;;
     }
 }
 
