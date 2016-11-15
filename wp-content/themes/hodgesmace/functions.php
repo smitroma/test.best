@@ -90,7 +90,7 @@ function hodgesmace_scripts() {
     wp_enqueue_style('hodgesmace-style', get_stylesheet_uri());
     wp_enqueue_script('hodgesmace-script', get_template_directory_uri() . '/js/functions.js#async', array('jquery'), '20150330', true);
     wp_enqueue_script('tweenmax', '//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js', array(), '1.19.0', false);
-    wp_enqueue_script('morphsvg', get_template_directory_uri() . '/js/gsap/plugins/MorphSVGPlugin.min.js', array('tweenmax'), '0.8.6', true);    
+    wp_enqueue_script('morphsvg', get_template_directory_uri() . '/js/gsap/plugins/MorphSVGPlugin.min.js', array('tweenmax'), '0.8.6', true);
 }
 
 add_action( 'wp_enqueue_scripts', 'hodgesmace_scripts' );
@@ -452,7 +452,7 @@ function send_to_acton_1($entry,$form) {
   $ao_gf1->setPostItems('email',$entry['2']);
   $ao_gf1->setPostItems('businessPhone',$entry['6']);
   $ao_gf1->setPostItems('message',$entry['4']);
-  $ao_gf1->setPostItems('department',$entry['9']);
+  $ao_gf1->setPostItems('Department',$entry['9']);
   $ao_gf1->setPostItems('Number of Employees',$entry['8']);
   $ao_gf1->setPostItems('Marketing Program','Website - Contact Us');
 
