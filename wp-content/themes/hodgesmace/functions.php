@@ -281,6 +281,51 @@ function resource_title_func( $atts, $content='' ) {
 
 add_shortcode( 'featured_resource_title', 'resource_title_func' );
 
+/*	Banner Ad Shortcodes */
+function doingjobblue( $atts, $content = null ) {
+	$atts = shortcode_atts(
+		array(
+			'btn-txt' => 'download',
+		), $atts
+	);
+	$ad_divs = '<div id="hm_bg_jobblue"><div class="place"><a class="hm_shortcode_btn" href="/resources/benefits-management-brochure">'.$atts['btn-txt'].'</a></div></div>';
+	return $ad_divs;
+}
+function doingjobgreen( $atts, $content = null ) {
+	$atts = shortcode_atts(
+		array(
+			'btn-txt' => 'download',
+		), $atts
+	);
+	$ad_divs = '<div id="hm_bg_jobgreen"><div class="place"><a class="hm_shortcode_btn" href="/resources/benefits-management-brochure">'.$atts['btn-txt'].'</a></div></div>';
+	return $ad_divs;
+}
+function helloblue( $atts, $content = null ) {
+	$atts = shortcode_atts(
+		array(
+			'btn-txt' => 'download',
+		), $atts
+	);
+	$ad_divs = '<div id="hm_bg_helloblue"><div class="place"><a class="hm_shortcode_hellobtn" href="/smartben-platform">'.$atts['btn-txt'].'</a></div></div>';
+	return $ad_divs;
+}
+function hellogreen( $atts, $content = null ) {
+	$atts = shortcode_atts(
+		array(
+			'btn-txt' => 'download',
+		), $atts
+	);
+	$ad_divs = '<div id="hm_bg_hellogreen"><div class="place"><a class="hm_shortcode_hellobtn" href="/smartben-platform">'.$atts['btn-txt'].'</a></div></div>';
+	return $ad_divs;
+}
+add_shortcode('brochure-blue', 'doingjobblue');
+add_shortcode('brochure-green', 'doingjobgreen');
+add_shortcode('sb-blue', 'helloblue');
+add_shortcode('sb-green', 'hellogreen');
+
+
+
+
 /*-----------------------------------------------------------------------------------*/
 /*	EXCERPT LENGTH / CONTENT
 /*-----------------------------------------------------------------------------------*/
