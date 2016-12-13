@@ -2410,24 +2410,28 @@ li#field_1_9 {
   background-size: contain;
   height: 310px;
   margin: auto;
+  position: relative;
 }
 #hm_bg_jobblue{
   background: url("/wp-content/uploads/2016/12/HM_BannerDoing_B_Mobile.png") no-repeat center;
   background-size: contain;
   height: 310px;
   margin: auto;
+  position: relative;
 }
 #hm_bg_helloblue{
   background: url("/wp-content/uploads/2016/12/HM_Say_HelloB_Mobile.png") no-repeat center;
   background-size: contain;
   height: 310px;
   margin: auto;
+  position: relative;
 }
 #hm_bg_hellogreen{
   background: url("/wp-content/uploads/2016/12/HM_Say_HelloG_Mobile.png") no-repeat center;
   background-size: contain;
   height: 310px;
   margin: auto;
+  position: relative;
 }
 .place {
   margin: auto;
