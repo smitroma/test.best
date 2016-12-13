@@ -303,7 +303,7 @@ function doingjobgreen( $atts, $content = null ) {
 function helloblue( $atts, $content = null ) {
 	$atts = shortcode_atts(
 		array(
-			'btn-txt' => 'download',
+			'btn-txt' => 'learn more',
 		), $atts
 	);
 	$ad_divs = '<div id="hm_bg_helloblue"><div class="place"><a class="hm_shortcode_hellobtn" href="/smartben-platform">'.$atts['btn-txt'].'</a></div></div>';
@@ -312,7 +312,7 @@ function helloblue( $atts, $content = null ) {
 function hellogreen( $atts, $content = null ) {
 	$atts = shortcode_atts(
 		array(
-			'btn-txt' => 'download',
+			'btn-txt' => 'learn more',
 		), $atts
 	);
 	$ad_divs = '<div id="hm_bg_hellogreen"><div class="place"><a class="hm_shortcode_hellobtn" href="/smartben-platform">'.$atts['btn-txt'].'</a></div></div>';
