@@ -2479,12 +2479,12 @@ li#field_1_9 {
 
 @media (min-width:750px){
   #hm_bg_jobgreen{
-    background: url("/wp-content/uploads/2016/12/HM_BannerDoing_our_G.png") no-repeat center;
+    background: url("/wp-content/uploads/2016/12/HM-Banner_Doing_our_G.png") no-repeat center;
     height: 250px;
     width:100%;
   }
   #hm_bg_jobblue{
-    background: url("/wp-content/uploads/2016/12/HM_BannerDoing_our_B.png") no-repeat center;
+    background: url("/wp-content/uploads/2016/12/HM-Banner_Doing_our_B.png") no-repeat center;
     height: 250px;
     width:100%;
   }
@@ -2498,6 +2498,10 @@ li#field_1_9 {
     height: 250px;
     width:100%;
   }
-  .hm_shortcode_hellobtn{}
+  .hm_shortcode_hellobtn{
+    left:37%;
+    top:68%;
+    padding:1em 2em;
+  }
   .hm_shortcode_btn{}
 }
