@@ -2438,24 +2438,40 @@ li#field_1_9 {
   text-align: center;
 }
 .hm_shortcode_btn{
-  color:black;
-  font-weight:500;
+  color: black;
+  font-weight: 500;
   background: white;
-  border:2px solid white;
+  border: 2px solid white;
   position: absolute;
-  top: 22%;
-  left: 38.5%;
+  top: 70%;
+  left: 17.5%;
   padding: .5em 2em;
   border-radius: 7px;
   text-decoration: none;
   letter-spacing: .3em;
   text-transform: uppercase;
+  transition: .2s;
 }
+.hm_shortcode_hellobtn:hover,
 .hm_shortcode_btn:hover {
   background-color: transparent;
   color: white;
 }
-.hm_shortcode_hellobtn{}
+.hm_shortcode_hellobtn{
+  color: black;
+  font-weight: 500;
+  background: white;
+  border: 2px solid white;
+  position: absolute;
+  top: 70%;
+  left: 27.5%;
+  padding: .5em 2em;
+  border-radius: 7px;
+  text-decoration: none;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  transition: .2s;
+}
 
   @media (min-width: 600px) {
     .sc_bg_holder img {
