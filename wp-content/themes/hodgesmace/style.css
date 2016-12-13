@@ -2503,5 +2503,9 @@ li#field_1_9 {
     top:68%;
     padding:1em 2em;
   }
-  .hm_shortcode_btn{}
+  .hm_shortcode_btn{
+    top: 64%;
+    left: 6.5%;
+    padding: 1em 2em;
+  }
 }
