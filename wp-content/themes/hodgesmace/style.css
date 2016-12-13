@@ -2409,6 +2409,7 @@ li#field_1_9 {
   background: url("/wp-content/uploads/2016/12/HM_BannerDoing_G_Mobile.png") no-repeat center;
   background-size: contain;
   height: 310px;
+  width: 350px;
   margin: auto;
   position: relative;
 }
@@ -2416,6 +2417,7 @@ li#field_1_9 {
   background: url("/wp-content/uploads/2016/12/HM_BannerDoing_B_Mobile.png") no-repeat center;
   background-size: contain;
   height: 310px;
+  width: 350px;
   margin: auto;
   position: relative;
 }
@@ -2423,6 +2425,7 @@ li#field_1_9 {
   background: url("/wp-content/uploads/2016/12/HM_Say_HelloB_Mobile.png") no-repeat center;
   background-size: contain;
   height: 310px;
+  width: 350px;
   margin: auto;
   position: relative;
 }
@@ -2430,6 +2433,7 @@ li#field_1_9 {
   background: url("/wp-content/uploads/2016/12/HM_Say_HelloG_Mobile.png") no-repeat center;
   background-size: contain;
   height: 310px;
+  width: 350px;
   margin: auto;
   position: relative;
 }
@@ -2443,8 +2447,8 @@ li#field_1_9 {
   background: white;
   border: 2px solid white;
   position: absolute;
-  top: 70%;
-  left: 17.5%;
+  top: 72%;
+  left: 11%;
   padding: .5em 2em;
   border-radius: 7px;
   text-decoration: none;
@@ -2463,8 +2467,8 @@ li#field_1_9 {
   background: white;
   border: 2px solid white;
   position: absolute;
-  top: 70%;
-  left: 27.5%;
+  top: 72%;
+  left: 23%;
   padding: .5em 2em;
   border-radius: 7px;
   text-decoration: none;
