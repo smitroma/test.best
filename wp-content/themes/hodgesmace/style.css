@@ -2477,36 +2477,23 @@ li#field_1_9 {
   transition: .2s;
 }
 
-  @media (min-width: 600px) {
-    .sc_bg_holder img {
-      width: 100%;
-      height: auto;
-      margin: 0;
-      padding: 0;
-    }
-    #tv_bg_snoreguide {
-      background: url("/wp-content/uploads/2016/11/tv-ad-desktop.png") no-repeat center;
-      height: 212px;
-      background-size:contain;
-    }
-    .tv_shortcode_btn {
-      display: inline-block;
-      padding: .6em 1.5em;
-      background-color: #00A5ED;
-      border-radius: 30px;
-      text-decoration: none;
-      color: white;
-      transition-duration: .2s;
-      text-transform: uppercase;
-      letter-spacing: .3em;
-      font-weight: 700;
-      float: left;
-      margin-left: 45%;
-      margin-top: 130px;
-    }
-    .tv_shortcode_btn:hover {
-      background-color: #008ec7;
-      text-decoration: none;
-      color: white;
-    }
+@media (min-width:750px){
+  #hm_bg_jobgreen{
+    background: url("/wp-content/uploads/2016/12/HM_BannerDoing_G.png") no-repeat center;
+    height: 250px;
   }
+  #hm_bg_jobblue{
+    background: url("/wp-content/uploads/2016/12/HM_BannerDoing_B.png") no-repeat center;
+    height: 250px;
+  }
+  #hm_bg_helloblue{
+    background: url("/wp-content/uploads/2016/12/HM_Say_HelloB.png") no-repeat center;
+    height: 250px;
+  }
+  #hm_bg_hellogreen{
+    background: url("/wp-content/uploads/2016/12/HM_Say_HelloG.png") no-repeat center;
+    height: 250px;
+  }
+  .hm_shortcode_hellobtn{}
+  .hm_shortcode_btn{}
+}
