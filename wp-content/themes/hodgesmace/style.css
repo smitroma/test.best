@@ -2476,8 +2476,15 @@ li#field_1_9 {
   text-transform: uppercase;
   transition: .2s;
 }
+.brochuretxt{
+  display:none;
+}
 
 @media (min-width:750px){
+
+  .brochuretxt{
+    display:inline;
+  }
   #hm_bg_jobgreen{
     background: url("/wp-content/uploads/2016/12/HM-Banner_Doing_our_G.png") no-repeat center;
     height: 250px;
