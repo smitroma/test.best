@@ -288,7 +288,7 @@ function doingjobblue( $atts, $content = null ) {
 			'btn-txt' => 'download',
 		), $atts
 	);
-	$ad_divs = '<div id="hm_bg_jobblue"><div class="place"><a class="hm_shortcode_btn" href="/resources/benefits-management-brochure">'.$atts['btn-txt'].'<span class="brochuretxt">brochure</span></a></div></div>';
+	$ad_divs = '<div id="hm_bg_jobblue"><div class="place"><a class="hm_shortcode_btn" href="/resources/benefits-management-brochure">'.$atts['btn-txt'].'<span class="brochuretxt">&nbsp;&nbsp;brochure</span></a></div></div>';
 	return $ad_divs;
 }
 function doingjobgreen( $atts, $content = null ) {
@@ -297,7 +297,7 @@ function doingjobgreen( $atts, $content = null ) {
 			'btn-txt' => 'download',
 		), $atts
 	);
-	$ad_divs = '<div id="hm_bg_jobgreen"><div class="place"><a class="hm_shortcode_btn" href="/resources/benefits-management-brochure">'.$atts['btn-txt'].'<span class="brochuretxt">brochure</span></a></div></div>';
+	$ad_divs = '<div id="hm_bg_jobgreen"><div class="place"><a class="hm_shortcode_btn" href="/resources/benefits-management-brochure">'.$atts['btn-txt'].'<span class="brochuretxt">&nbsp;&nbsp;brochure</span></a></div></div>';
 	return $ad_divs;
 }
 function helloblue( $atts, $content = null ) {
