@@ -1722,7 +1722,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   display:table;
 }
 
-.home-logos .vc_item .vc_column-inner {
+.home-logos .vc_item .vc_inner {
   display:table-cell;
   vertical-align: middle;
 }
