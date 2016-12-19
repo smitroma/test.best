@@ -1719,7 +1719,12 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 .home-logos .vc_item {
   float:left;
   clear: none;
-  display:block;
+  display:table;
+}
+
+.home-logos .vc_item .vc_column-inner {
+  display:table-cell;
+  vertical-align: middle;
 }
 
 
