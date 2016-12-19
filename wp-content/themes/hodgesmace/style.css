@@ -494,6 +494,7 @@ input#s:focus {
 .header_nav li a:visited {
     padding: 0.5em 1em;
     color: #555555;
+    white-space: nowrap;
     text-decoration: none;
 }
 
@@ -1716,9 +1717,6 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 
 /* logos inline in ie9 */
 
-.home-logos .vc_item {
-
-}
 
 .home-logos .vc_item .vc_inner {
   text-align: center;
