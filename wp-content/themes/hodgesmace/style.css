@@ -1728,6 +1728,10 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
   text-align: center;
 }
 
+.home-logos .vc_item .vc_inner img {
+  max-width: calc(100% - 20px);
+}
+
 
 /* News V2
 * --------------------------------------------------------------- *
