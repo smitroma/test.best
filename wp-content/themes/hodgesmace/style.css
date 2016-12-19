@@ -1717,19 +1717,16 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 /* logos inline in ie9 */
 
 .home-logos .vc_item {
-  float:left;
-  clear: none;
-  display:table;
+
 }
 
 .home-logos .vc_item .vc_inner {
-  display:table-cell;
-  vertical-align: middle;
   text-align: center;
 }
 
 .home-logos .vc_item .vc_inner img {
   max-width: 90%;
+  padding: 0 5%;
 }
 
 
