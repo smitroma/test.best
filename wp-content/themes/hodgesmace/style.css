@@ -1702,6 +1702,12 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 }
 
 
+/* svg image */
+
+#shenanigans {
+  height: 730px;
+}
+
 /* News V2
 * --------------------------------------------------------------- *
 */
