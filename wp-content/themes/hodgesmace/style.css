@@ -1360,7 +1360,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
     -moz-border-radius: 0px;
     -webkit-border-radius: 0px;
     font-size: 1.5em;
-    font-family: 'Neuxeit Grotesk Regular';
+    font-family: 'Neuxeit Grotesk Regular', sans-serif;;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -1369,7 +1369,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 
 .site-content .press-tabs.vc_tta-tabs-position-top .vc_tta-tabs-list .vc_tta-tab.vc_active a {
     border-bottom-color: #333;
-    font-family: 'NeuzeitGro Bold';
+    font-family: 'NeuzeitGro Bold', sans-serif;
     font-size: 1.7em;
 }
 
@@ -2573,4 +2573,27 @@ li#field_1_9 {
   color: #ddd;
   font-weight: 100;
   margin-top: 1em;
+}
+
+.smartAdmin-content .h2 {
+  font-size: 2.25em;
+  line-height: 125%;
+  font-family: 'NeuzeitGro Bold';
+  margin-bottom: 1em;
+}
+
+.smartAdmin-content .h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.smartAdmin-content .h3 a {
+  color: #8EC449;
+  font-family: 'NeuzeitGro Bold';
+  font-size: 1.15em;
+}
+
+.smartAdmin-content .p {
+  font-size: 1.35em;
+  color: #888;
 }
