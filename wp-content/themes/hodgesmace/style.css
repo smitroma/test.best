@@ -2096,7 +2096,21 @@ img.aligncenter {
     display: none;
 }
 
+.desktop-hide {
+  display: inherit;
+}
+
+.mobile-hide {
+  display: none;
+}
+
 @media(min-width:768px) {
+    .desktop-hide{
+      display: none;
+    }
+    .mobile-hide {
+      display: inherit;
+    }
     .site-content .ta-r-md {
         text-align: right;
     }
