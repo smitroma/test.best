@@ -2129,6 +2129,15 @@ img.aligncenter {
     color: #00aced;
 }
 
+.vc_btn3.vc_btn3-color-blue, .vc_btn3.vc_btn3-color-blue.vc_btn3-style-flat {
+    color: #fff;
+    background-color: #1897d3;
+}
+
+.ff-bold {
+    font-family: 'NeuzeitGro Bold', sans-serif;
+}
+
 
 /* The 'Reqest Demo' button in the Nav acts funny cuz it's not a menu item*/
 
@@ -2610,4 +2619,13 @@ li#field_1_9 {
 .smartAdmin-content .p {
   font-size: 1.35em;
   color: #888;
+}
+
+.smartAdmin-module .h3 {
+  font-size: 1.75em;
+  font-weight: 100;
+}
+
+.smartAdmin-module .p {
+  font-size: 1.15em;
 }
