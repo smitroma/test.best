@@ -214,6 +214,7 @@ form {
 .site-content .cq-bannerblock-content {
     width: 100%;
     padding: 0 20px;
+    overflow: auto;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1780,6 +1781,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
 
 .blog-excerpt {
     border-top: 1px solid #eee;
+    overflow: auto;
 }
 
 .blog-excerpt:first-child {
