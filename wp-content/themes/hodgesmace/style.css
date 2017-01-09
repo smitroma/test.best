@@ -185,7 +185,8 @@ form {
 .c-white h5,
 .c-white h6,
 .c-white .cq-bannerblock-content,
-.c-white h4.cq-bannerblock-title {
+.c-white h4.cq-bannerblock-title,
+.c-white.smartAdmin-content .p {
     color: #ffffff;
 }
 
@@ -2136,6 +2137,11 @@ img.aligncenter {
     background-color: #1897d3;
 }
 
+.vc_btn3.vc_btn3-color-green, .vc_btn3.vc_btn3-color-green.vc_btn3-style-flat {
+    color: #fff;
+    background-color: #8EC449;
+}
+
 .ff-bold {
     font-family: 'NeuzeitGro Bold', sans-serif;
 }
@@ -2573,7 +2579,11 @@ li#field_1_9 {
   }
 }
 
-/* SmartAdmin Page */
+/* ==========================
+ * SmartAdmin
+ * ========================== */
+
+/* SmartAdmin Banner */
 
 .smartAdmin-banner .h1 {
   font-family: 'NeuzeitGro Bold';
@@ -2600,10 +2610,12 @@ li#field_1_9 {
   margin-top: 1em;
 }
 
+/* Smart Admin copy */
+
 .smartAdmin-content .h2 {
   font-size: 2.25em;
   line-height: 125%;
-  font-family: 'NeuzeitGro Bold';
+  font-family: 'NeuzeitGro Bold', sans-serif;;
   margin-bottom: 1em;
 }
 
@@ -2614,7 +2626,7 @@ li#field_1_9 {
 
 .smartAdmin-content .h3 a {
   color: #8EC449;
-  font-family: 'NeuzeitGro Bold';
+  font-family: 'NeuzeitGro Bold', sans-serif;;
   font-size: 1.15em;
 }
 
@@ -2622,6 +2634,8 @@ li#field_1_9 {
   font-size: 1.35em;
   color: #888;
 }
+
+/* Smart Admin Benifits modules */
 
 .smartAdmin-module .h3 {
   font-size: 1.75em;
@@ -2635,4 +2649,34 @@ li#field_1_9 {
 .svg-overlay-wrapper .svg-overlay {
   position: relative;
   z-index: 9;
+}
+
+/* smart admin service */
+
+.smartAdmin-service-svg {
+    height: 120px;
+    padding: 20px 0;
+}
+
+.smartAdmin-service-svg svg {
+    height: 80px;
+}
+
+.smartAdmin-service-svg-cut svg {
+    height: 60px;
+}
+
+.smartAdmin-service .h3 {
+    color: #8EC449;
+    font-family: 'NeuzeitGro Bold';
+    font-size: 2em;
+}
+
+.smartAdmin-service .p {
+    font-size: 1.1em;
+}
+
+.smartAdmin-service .p em {
+    color: #333;
+    font-weight: 500;
 }
