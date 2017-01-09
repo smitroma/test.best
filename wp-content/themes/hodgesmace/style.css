@@ -2103,8 +2103,12 @@ img.aligncenter,
   display: inherit;
 }
 
-.mobile-hide {
+.site-content .mobile-hide {
   display: none;
+}
+
+.site-content .of-v {
+  overflow: visible;
 }
 
 @media(min-width:768px) {
