@@ -2099,7 +2099,7 @@ img.aligncenter,
     display: none;
 }
 
-.desktop-hide {
+.site-content .desktop-hide {
   display: inherit;
 }
 
@@ -2112,10 +2112,10 @@ img.aligncenter,
 }
 
 @media(min-width:768px) {
-    .desktop-hide{
+    .site-content .desktop-hide{
       display: none;
     }
-    .mobile-hide {
+    .site-content .mobile-hide {
       display: inherit;
     }
     .site-content .ta-r-md {
