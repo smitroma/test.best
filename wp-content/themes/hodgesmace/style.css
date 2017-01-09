@@ -2628,8 +2628,7 @@ li#field_1_9 {
   font-weight: 400;
 }
 
-.smartAdmin-content .h3 a {
-  color: #8EC449;
+.smartAdmin-content .h3 strong {
   font-family: 'NeuzeitGro Bold', sans-serif;;
   font-size: 1.15em;
 }
