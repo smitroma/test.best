@@ -2725,3 +2725,12 @@ li#field_1_9 {
   font-size: .85em;
   color: #1897d3;
 }
+
+.mobile-svg {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.mobile-svg svg {
+  max-width: 100%;
+}
