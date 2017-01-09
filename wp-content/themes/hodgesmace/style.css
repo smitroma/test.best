@@ -769,7 +769,6 @@ input[type=submit],
 .site-wrapper .gform_wrapper .gform_footer input[type=image],
 .site-wrapper .gform_wrapper .gform_footer input[type=submit] {
     text-transform: uppercase;
-    ;
     border: none;
     font-size: 14px;
     cursor: pointer;
@@ -2654,29 +2653,71 @@ li#field_1_9 {
 /* smart admin service */
 
 .smartAdmin-service-svg {
-    height: 120px;
-    padding: 20px 0;
+  height: 120px;
+  padding: 20px 0;
 }
 
 .smartAdmin-service-svg svg {
-    height: 80px;
+  height: 80px;
 }
 
 .smartAdmin-service-svg-cut svg {
-    height: 60px;
+  height: 60px;
 }
 
 .smartAdmin-service .h3 {
-    color: #8EC449;
-    font-family: 'NeuzeitGro Bold';
-    font-size: 2em;
+  color: #8EC449;
+  font-family: 'NeuzeitGro Bold';
+  font-size: 2em;
 }
 
 .smartAdmin-service .p {
-    font-size: 1.1em;
+  font-size: 1.1em;
 }
 
 .smartAdmin-service .p em {
-    color: #333;
-    font-weight: 500;
+  color: #333;
+  font-weight: 500;
+}
+
+/* smart admin testimonials */
+
+.smartAdmin-content .vc_gitem-post-data-source-post_title,
+.smartAdmin-content .vc_gitem-animated-block,
+.smartAdmin-content .vc_gitem-col .vc_btn3-container {
+  display: none;
+}
+
+.smartAdmin-content .vc_gitem-post-data p {
+  text-align: left !important;
+}
+
+.smartAdmin-content .vc_gitem_row .vc_gitem-col {
+  box-sizing: border-box;
+  padding: 5px 20px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: url('/wp-content/uploads/2017/01/TestimonialCorner.svg');
+  background-size: initial;
+}
+
+.smartAdmin-content .vc_gitem-post-data p span,
+.smartAdmin-content .vc_gitem-post-data .testimonial-content span,
+.smartAdmin-content .vc_gitem-post-data .testimonial-content {
+    font-weight: 200 !important;
+}
+
+.smartAdmin-content .vc_gitem-post-data .testimonial-contact {
+  font-family: 'NeuzeitGro Bold';
+  font-style: normal;
+  font-size: 1.25em;
+  line-height: 100%;
+}
+
+.smartAdmin-content .vc_gitem-post-data .testimonial-company {
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: .85em;
+  color: #1897d3;
 }
