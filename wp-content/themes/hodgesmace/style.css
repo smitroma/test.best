@@ -2734,3 +2734,11 @@ li#field_1_9 {
 .mobile-svg svg {
   max-width: 100%;
 }
+
+/* smart admin blue boxes */
+@media (min-width: 768px) {
+  .smartAdmin-blue-boxes .wpb_column .vc_column-inner {
+      background: #f3fdff;
+      margin: 0 1.5%;
+  }
+}
