@@ -2697,13 +2697,8 @@ li#field_1_9 {
 }
 
 .smartAdmin-content .vc_gitem_row .vc_gitem-col {
-  box-sizing: border-box;
   padding: 5px 20px;
   background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-image: url('/wp-content/uploads/2017/01/TestimonialCorner.svg');
-  background-size: initial;
 }
 
 .smartAdmin-content .vc_gitem-post-data p span,
@@ -2724,6 +2719,7 @@ li#field_1_9 {
   text-transform: uppercase;
   font-size: .85em;
   color: #1897d3;
+  display:none;
 }
 
 .mobile-svg {
