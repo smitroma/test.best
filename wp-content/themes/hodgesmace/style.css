@@ -2660,8 +2660,12 @@ li#field_1_9 {
   padding: 20px 0;
 }
 
-.smartAdmin-service-svg-cut{
-  padding-top: 0;
+.smartAdmin-service-svg svg {
+  height: 80px;
+}
+
+.smartAdmin-service-svg-cut svg {
+  height: 60px;
 }
 
 .smartAdmin-service .h3 {
