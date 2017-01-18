@@ -4,7 +4,7 @@
  * Plugin Name: Google Apps Login Premium
  * Plugin URI: http://wp-glogin.com/
  * Description: Simple secure login and user management for Wordpress through your Google Apps domain (uses secure OAuth2, and MFA if enabled)
- * Version: 2.9.8
+ * Version: 2.10.5
  * Author: Dan Lester
  * Author URI: http://wp-glogin.com/
  * License: Premium Paid per WordPress site and Google Apps domain
@@ -51,7 +51,7 @@ else {
 
 class premium_google_apps_login extends commercial_google_apps_login {
 	
-	protected $PLUGIN_VERSION = '2.9.8';
+	protected $PLUGIN_VERSION = '2.10.5';
 	protected $WPGLOGIN_GA_STORE_URL = 'http://wp-glogin.com';
 	protected $WPGLOGIN_GA_ITEM_NAME = 'Google Apps Login for WordPress Premium';
 	
