@@ -2653,6 +2653,13 @@ li#field_1_9 {
   z-index: 9;
 }
 
+.what-can-btn {
+    bottom: 0px;
+    position: absolute;
+    right: 5px;
+    left: 5px;
+}
+
 /* smart admin service */
 
 .smartAdmin-service-svg {
