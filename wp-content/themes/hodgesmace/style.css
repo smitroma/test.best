@@ -2744,3 +2744,10 @@ li#field_1_9 {
       margin: 0 1.5%;
   }
 }
+
+/* roi-cal */
+
+.roi-calculator .form-group > label {
+    width: 300px;
+    display: inline-block;
+}
