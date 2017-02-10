@@ -246,3 +246,40 @@
 .st26 {
     font-size: 28px;
 }
+
+/* New Graphics new css */
+
+.mobile-education ,
+.mobile-connect,
+.mobile-decision,
+.mobile-compliance,
+.mobile-person,
+.mobile-eligibility {
+  margin-bottom: 30px;
+  display: block;
+  margin: auto;
+}
+
+.mobile-education {
+    max-width: 320px;
+}
+
+.mobile-connect {
+    max-width: 240px;
+}
+
+.mobile-decision {
+    max-width: 230px;
+}
+
+.mobile-compliance {
+    max-width: 220px;
+}
+
+.mobile-person {
+    max-width: 260px;
+}
+
+.mobile-eligibility {
+    max-width: 200px;
+}
