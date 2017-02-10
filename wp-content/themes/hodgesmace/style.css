@@ -2754,13 +2754,13 @@ li#field_1_9 {
 
 /* SB Infographic */
 
-.mobile-education ,
-.mobile-connect,
-.mobile-decision,
-.mobile-compliance,
-.mobile-person,
-.mobile-eligibility {
-  margin-bottom: 30px;
+body .mobile-education ,
+body .mobile-connect,
+body .mobile-decision,
+body .mobile-compliance,
+body .mobile-person,
+body .mobile-eligibility {
+  padding-bottom: 30px !important;
   display: block;
   margin: auto;
 }
