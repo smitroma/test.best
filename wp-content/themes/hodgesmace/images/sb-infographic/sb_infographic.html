@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" id="shenanigans"
+			 viewBox="0 0 1261.615 1071.003" style="enable-background:new 0 0 1261.615 1071.003; display: block; margin: auto;" xml:space="preserve">
+			 <defs>
+					<style type="text/css">
+						@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600';
+						@font-face{
+						font-family:"NeuzeitGro W01 Bold";
+								src:url("https://www.hodgesmace.com/wp-content/themes/hodgesmace/fonts/66182542-0bb8-41e7-94b8-f45d24bea18d.eot?#iefix") format("eot"),url("https://www.hodgesmace.com/wp-content/themes/hodgesmace/fonts/8dfba670-079e-4879-8b0a-8d079ab7c067.woff2") format("woff2"),url("https://www.hodgesmace.com/wp-content/themes/hodgesmace/fonts/218401dc-d400-4482-8c9b-0527059f7559.woff") format("woff"),url("https://www.hodgesmace.com/wp-content/themes/hodgesmace/fonts/ace900f9-272b-4efa-88b0-6f2b1adc0f41.ttf") format("truetype"),url("https://www.hodgesmace.com/wp-content/themes/hodgesmace/fonts/eeb8e139-b0e6-40d3-820c-0011bcf71e43.svg#eeb8e139-b0e6-40d3-820c-0011bcf71e43") format("svg");
+						}
+
+						.infographic-button-path-selected,
+						.infographic-button-piece,
+						.infographic-button-notch  {
+							display: none;
+						}
+						.infographic-button-path-selected.active {
+							display: block;
+						}
+
+						.st0{fill:#FFFFFF;}
+						.st1{fill:#8EC449;}
+						.st2{fill:none;stroke:#1596D2;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;}
+
+						/* buttons */
+						.infographic-button-path {fill: #aaa;cursor:pointer;}
+						/*compliance*/
+						.st3.active{fill:#1596D2;}
+						/*decision-support*/
+						.st4.active{fill:#00A69C;}
+						/*personalization*/
+						.st5.active{fill:#D6DE23;}
+						/*connect*/
+						.st6.active{fill:#43C618;}
+						/*education*/
+						.st7.active{fill:#1B75BB;}
+						/*eligibility*/
+						.st8.active{fill:#009345;}
+
+						/*text*/
+						.infographic-text-title {fill:#aaa;}
+						.infographic-text-line {stroke:#aaa;}
+						.infographic-text-icon-p1 {fill:#aaa;stroke:#aaa;}
+						.infographic-text-icon-p2 {stroke:#aaa;}
+						/*connect*/
+						#connect-text-detail.active .infographic-text-title {fill:#43C618;}
+						#connect-text-detail.active .infographic-text-line {stroke:#43C618;}
+						#connect-text-detail.active .infographic-text-icon-p1 {fill:#43C618;stroke:#43C618;}
+						#connect-text-detail.active .infographic-text-icon-p2 {stroke:#43C618;}
+						/*personalization*/
+						#personalization-text-detail.active .infographic-text-title {fill:#D6DE23;}
+						#personalization-text-detail.active .infographic-text-line {stroke:#D6DE23;}
+						#personalization-text-detail.active .infographic-text-icon-p2 {stroke:#D6DE23;}
+						/*education*/
+						#education-text-detail.active .infographic-text-title {fill:#1B75BB;}
+						#education-text-detail.active .infographic-text-line {stroke:#1B75BB;}
+						#education-text-detail.active .infographic-text-icon-p2 {stroke:#1B75BB;}
+						/*eligibility*/
+						#eligibility-text-detail.active .infographic-text-title {fill:#009345;}
+						#eligibility-text-detail.active .infographic-text-line {stroke:#009345;}
+						#eligibility-text-detail.active .infographic-text-icon-p2 {stroke:#009345;}
+						/*compliance*/
+						#compliance-text-detail.active .infographic-text-title {fill:#1596D2;}
+						#compliance-text-detail.active .infographic-text-line {stroke:#1596D2;}
+						#compliance-text-detail.active .infographic-text-icon-p2 {stroke:#1596D2;}
+						/*decision-support*/
+						#decision-support-text-detail.active .infographic-text-title {fill:#00A69C;}
+						#decision-support-text-detail.active .infographic-text-line {stroke:#00A69C;}
+						#decision-support-text-detail.active .infographic-text-icon-p2 {stroke:#00A69C;}
+					</style>
+		 	 </defs>
+		<g id="connect">
+			<g id="connect-text-detail" class="infographic-text-detail hide unhighlight">
+				<text transform="matrix(1 0 0 1 370.095 917.9254)"><tspan class="infographic-text-title" x="0" y="0" style="font-family:'NeuzeitGro W01 Bold'; font-size:33px;">CONNECT</tspan><tspan x="85.378" y="36" style="fill:#555555; font-family:'NeuzeitGro W01 Bold'; font-size:25px;">NOW</tspan><tspan x="-126.591" y="72" style="fill:#555555; font-family: 'Source Sans Pro'; font-weight: 400; font-size:25px;">&#x2022; Personalized mobile app </tspan><tspan x="-196.766" y="108" style="fill:#555555; font-family: 'Source Sans Pro'; font-weight: 400; font-size:25px;">&#x2022; Centralized benefits dashboard</tspan><tspan x="-172.591" y="144" style="fill:#555555; font-family: 'Source Sans Pro'; font-weight: 400; font-size:25px;">&#x2022; Custom alerts and reminders</tspan></text>
+				<line class="infographic-text-line" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="533.624" y1="896.002" x2="533.624" y2="1068.422"/>
+				<path class="infographic-text-icon-p1" style="stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+					M556.537,941.847c-0.069-0.04-0.168-0.19-0.197-0.3c-0.73-3.86-2.768-8.665-6.086-14.306c-0.325-0.56-0.65-1.12-1.044-1.721
+					c-1.073-1.83-1.216-4.142-0.248-5.809c0.726-1.25,1.846-1.9,3.251-1.92c0.179,0.011,0.388,0.132,0.405,0.421
+					c-0.011,0.179-0.132,0.388-0.421,0.405c-1.405,0.02-2.137,0.802-2.54,1.496c-0.807,1.389-0.721,3.481,0.224,5.052
+					c0.325,0.56,0.65,1.12,1.044,1.721c3.179,5.56,5.327,10.336,6.126,14.237l18.636,0.05c0.394-2.278,0.993-3.788,1.62-5.188
+					c0.8-1.857,1.6-3.714,1.604-7.24l0.043-10.468c0.027-1.006-0.952-2.039-1.998-1.996c-0.468,0.007-1.057,0.222-1.369,0.598
+					c-0.421,0.405-0.594,0.862-0.627,1.4l0,0c-0.011,0.179-0.132,0.388-0.421,0.405c-0.179-0.011-0.388-0.132-0.405-0.421l0,0
+					l0.007-2.41c-0.009-1.584-1.266-2.778-2.809-2.838c-1.584,0.009-2.778,1.266-2.838,2.809c-0.011,0.179-0.132,0.388-0.421,0.405
+					c-0.179-0.011-0.388-0.132-0.405-0.421l-0.009-1.584c-0.025-0.757-0.269-1.456-0.813-1.958c-0.544-0.502-1.21-0.795-1.996-0.88
+					c-0.757,0.025-1.456,0.269-1.958,0.813c-0.502,0.544-0.795,1.21-0.811,2.036c-0.011,0.179-0.132,0.388-0.421,0.405
+					c-0.179-0.011-0.388-0.132-0.446-0.352l-1.341-14.801c-0.206-1.884-1.046-2.836-2.341-2.845c-0.757,0.025-1.346,0.24-1.779,0.824
+					c-0.392,0.515-0.686,1.181-0.701,2.007l0.51,21.19c-0.011,0.179-0.132,0.388-0.421,0.405c-0.179-0.011-0.388-0.132-0.405-0.421
+					l-0.51-21.19c0.027-1.006,0.332-1.85,0.845-2.574c0.583-0.683,1.472-1.095,2.408-1.109c1.763,0.002,2.87,1.295,3.123,3.578
+					l1.216,12.778c0.121-0.208,0.311-0.376,0.432-0.585c0.692-0.712,1.611-1.015,2.547-1.028c0.936-0.013,1.92,0.372,2.522,1.093
+					c0.544,0.502,0.858,1.241,0.992,1.969c0.663-0.822,1.743-1.402,2.859-1.404c2.012,0.054,3.604,1.629,3.591,3.571l0.007,0.468
+					c0,0,0,0,0.04-0.069c0.502-0.544,1.241-0.858,1.958-0.813c1.474,0.02,2.829,1.364,2.809,2.838l-0.043,10.468
+					c-0.016,3.705-0.816,5.562-1.627,7.599c-0.627,1.4-1.266,2.979-1.591,5.298c-0.011,0.179-0.202,0.347-0.381,0.336l-19.284-0.055
+					C556.676,941.928,556.606,941.888,556.537,941.847z"/>
+				<path  class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+					M564.844,906.023l-7.333-2.002l-7.27,2.002c-1.476,0-2.684-1.208-2.684-2.684l0,0c0-1.476,1.208-2.684,2.684-2.684l7.27,2.002
+					l7.333-2.002c1.476,0,2.684,1.208,2.684,2.684l0,0C567.527,904.816,566.32,906.023,564.844,906.023z"/>
+				<path style="fill:#FFFFFF;" d="M575.794,942.184l-19.193-0.032c-0.866-4.565-3.442-9.845-6.103-14.341
+					c-0.324-0.557-0.648-1.114-1.041-1.711c-1.758-2.865-0.782-7.103,2.659-7.142c0,0,2.159,0.419,2.93,2.436l-0.532-21.09
+					c0-1.755,1.089-3.156,2.884-3.225c1.755,0,2.53,1.373,2.737,3.248l1.352,14.73c0-1.755,1.417-3.244,3.241-3.203
+					c1.755,0,3.243,1.417,3.203,3.241l0.011,1.576c0-1.755,1.486-3.203,3.241-3.203c1.755,0,3.244,1.417,3.203,3.241l-0.004,2.399
+					c0.007-1.289,1.114-2.403,2.403-2.395c1.289,0.007,2.363,1.184,2.395,2.403l-0.031,10.419
+					C579.013,935.828,576.639,936.578,575.794,942.184"/>
+			</g>
+
+		</g>
+
+		<g id="personalization">
+			<g id="personalization-text-detail" class="infographic-text-detail hide unhighlight">
+				<text transform="matrix(1 0 0 1 51.5265 697.434)"><tspan class="infographic-text-title" x="0" y="0" style="font-family:'NeuzeitGro W01 Bold'; font-size:33px;">PERSONALIZATION</tspan><tspan x="186.52" y="36" style="fill:#555555; font-family:'NeuzeitGro W01 Bold'; font-size:25px;">AVATAR</tspan><tspan x="47.149" y="72" style="fill:#555555; font-family: 'Source Sans Pro'; font-weight: 400; font-size:25px;">&#x2022; Artificial Intelligence</tspan><tspan x="19.699" y="108" style="fill:#555555; font-family: 'Source Sans Pro'; font-weight: 400; font-size:25px;">&#x2022; Multilanguage Support</tspan><tspan x="-64.198" y="144" style="fill:#555555; font-family: 'Source Sans Pro'; font-weight: 400; font-size:25px;">&#x2022; Interactive Enrollment Support</tspan></text>
+
+				<line class="infographic-text-line" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="345.997" y1="673.509" x2="345.997" y2="845.929"/>
+				<path class="infographic-text-icon-p2" style="fill:none; stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+					M398.942,698.657l6.211-2.108l-5.973-7.207c-1.92-8.739-9.698-15.284-19.014-15.284c-10.758,0-19.479,8.721-19.479,19.479
+					c0,6.127,2.834,11.586,7.257,15.157v6.128c0,2.319,1.898,4.217,4.217,4.217h10.939c2.319,0,4.217-1.898,4.217-4.217v-3.178
+					C392.976,709.407,397.324,704.601,398.942,698.657z"/>
+			</g>
+		</g>
+
+		<g id="education">
+			<g id="education-text-detail" class="infographic-text-detail hide unhighlight">
+				<g>
+					<text transform="matrix(1 0 0 1 777.1293 917.9256)"><tspan class="infographic-text-title" x="0" y="0" style="font-family:'NeuzeitGro W01 Bold'; font-size:33px;">EDUCATION</tspan><tspan x="0" y="36" style="fill:#555555; font-family:'NeuzeitGro W01 Bold'; font-size:25px;">EDUCATOR</tspan></text>
+					<text transform="matrix(1 0 0 1 779.1236 990.928)"><tspan x="0" y="0" style="fill:#555555; font-family: 'Source Sans Pro'; font-weight: 400; font-size:25px;">&#x2022;  Educate Employees and Change Behavior</tspan><tspan x="0" y="36" style="fill:#555555; font-family: 'Source Sans Pro'; font-weight: 400; font-size:25px;">&#x2022;  Healthcare Modeling</tspan><tspan x="0" y="72" style="fill:#555555; font-family: 'Source Sans Pro'; font-weight: 400; font-size:25px;">&#x2022;  Total Compensation Statements</tspan></text>
+
+						<line class="infographic-text-line" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="754.127" y1="1067.033" x2="754.127" y2="897.2"/>
+					<g>
+						<path class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" d="M707.889,942.164h-4.065
+							c-1.283,0-2.333-1.05-2.333-2.333v-40.297c0-1.283,1.05-2.333,2.333-2.333h4.065V942.164z"/>
+						<path class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" d="M733.001,942.164h-25.112
+							V897.2h25.112c1.283,0,2.333,1.05,2.333,2.333v40.297C735.334,941.114,734.284,942.164,733.001,942.164z"/>
+
+							<line class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="712.691" y1="923.34" x2="729.461" y2="923.34"/>
+
+							<line class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="714.239" y1="929.167" x2="727.913" y2="929.167"/>
+
+							<circle class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" cx="721.169" cy="912.199" r="3.256"/>
+					</g>
+				</g>
+			</g>
+		</g>
+
+		<g id="eligibility">
+			<g id="eligibility-text-detail" class="infographic-text-detail hide unhighlight">
+				<text transform="matrix(1 0 0 1 961.4849 697.434)"><tspan class="infographic-text-title" x="0" y="0" style="font-family:'NeuzeitGro W01 Bold'; font-size:33px;">ELIGIBILITY</tspan><tspan x="0" y="36" style="fill:#555555; font-family:'NeuzeitGro W01 Bold'; font-size:25px;">SENTRY</tspan><tspan x="0" y="72" style="fill:#555555; font-family: 'Source Sans Pro'; font-weight: 400; font-size:25px;">&#x2022; Verify Eligibility</tspan><tspan x="0" y="108" style="fill:#555555; font-family: 'Source Sans Pro'; font-weight: 400; font-size:25px;">&#x2022; Manage Compliance Risks</tspan><tspan x="0" y="144" style="fill:#555555; font-family: 'Source Sans Pro'; font-weight: 400; font-size:25px;">&#x2022; Reduce Healthcare Costs</tspan></text>
+
+					<line class="infographic-text-line" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="940.904" y1="673.509" x2="940.904" y2="845.929"/>
+				<g>
+					<path class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" d="M922.071,719.619h-26.934
+						c-1.65,0-3-1.35-3-3v-38.036c0-1.65,1.35-3,3-3h26.934c1.65,0,3,1.35,3,3v38.036
+						C925.071,718.269,923.721,719.619,922.071,719.619z"/>
+
+						<polyline class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+						900.153,686.935 902.021,688.859 905.039,683.539 			"/>
+
+						<polyline class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+						900.153,698.21 902.021,700.134 905.039,694.813 			"/>
+
+						<polyline class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+						900.153,709.485 902.021,711.409 905.039,706.088 			"/>
+
+						<line class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="912" y1="686.199" x2="917.16" y2="686.199"/>
+
+						<line class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="912" y1="697.474" x2="917.16" y2="697.474"/>
+
+						<line class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="912" y1="708.749" x2="917.16" y2="708.749"/>
+				</g>
+			</g>
+		</g>
+
+		<g id="compliance">
+			<g id="compliance-text-detail" class="infographic-text-detail hide unhighlight">
+				<text transform="matrix(1 0 0 1 961.4849 451.9845)"><tspan class="infographic-text-title" x="0" y="0" style="font-family:'NeuzeitGro W01 Bold'; font-size:33px;">COMPLIANCE</tspan><tspan x="0" y="36" style="fill:#555555; font-family:'NeuzeitGro W01 Bold'; font-size:25px;">GATEKEEPER</tspan><tspan x="0" y="72" style="fill:#555555; font-family: 'Source Sans Pro'; font-weight: 400; font-size:25px;">&#x2022; ACA Compliance</tspan><tspan x="0" y="108" style="fill:#555555; font-family: 'Source Sans Pro'; font-weight: 400; font-size:25px;">&#x2022; 1094C and 1095C Reporting</tspan><tspan x="0" y="144" style="fill:#555555; font-family: 'Source Sans Pro'; font-weight: 400; font-size:25px;">&#x2022; Eligibility Determination</tspan></text>
+
+					<line class="infographic-text-line" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="940.971" y1="428.06" x2="940.971" y2="600.479"/>
+
+					<circle class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" cx="904.16" cy="449.965" r="21.923"/>
+
+					<line class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="903.602" y1="436.669" x2="903.602" y2="450.127"/>
+
+					<line class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="912.198" y1="458.904" x2="903.602" y2="450.127"/>
+
+					<circle class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" cx="903.602" cy="450.127" r="2.278"/>
+
+					<line class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="903.748" y1="431.089" x2="903.748" y2="428.192"/>
+
+					<line class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="903.748" y1="471.946" x2="903.748" y2="469.049"/>
+
+					<line class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="923.14" y1="450.01" x2="926.038" y2="450.01"/>
+
+					<line class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="882.237" y1="449.965" x2="885.135" y2="449.965"/>
+			</g>
+		</g>
+
+		<g id="decision-support">
+			<g id="decision-support-text-detail" class="infographic-text-detail hide unhighlight">
+				<line class="infographic-text-line" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="345.997" y1="428.059" x2="345.997" y2="600.479"/>
+				<path class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" d="M383.194,428.255
+					c-1.221-0.779-2.658-1.254-4.212-1.292c-4.539-0.111-8.309,3.479-8.42,8.018c-4.539-0.111-8.309,3.479-8.42,8.018
+					c-0.047,1.931,0.58,3.72,1.661,5.15c-2.437,1.376-4.115,3.954-4.189,6.956c-0.111,4.539,3.479,8.309,8.018,8.42
+					c-0.111,4.539,3.479,8.309,8.018,8.42c3.285,0.08,6.158-1.782,7.542-4.535V428.255z"/>
+				<path class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" d="M383.194,428.255
+					c1.221-0.779,2.658-1.254,4.212-1.292c4.539-0.111,8.309,3.479,8.42,8.018c4.539-0.111,8.309,3.479,8.42,8.018
+					c0.047,1.931-0.58,3.72-1.661,5.15c2.437,1.376,4.115,3.954,4.189,6.956c0.111,4.539-3.479,8.309-8.018,8.42
+					c0.111,4.539-3.479,8.309-8.018,8.42c-3.285,0.08-6.158-1.782-7.542-4.535V428.255z"/>
+				<path class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" d="M370.378,456.244
+					c3.418,0.427,4.08,6.786-2.745,7.28"/>
+				<path class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" d="M392.678,440.096
+					c0,0-2.035-4.463,3.148-5.115"/>
+				<path class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+					M376.1,443.016c-4.568,3.872-0.503,7.744-0.503,7.744"/>
+				<path class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+					M388.973,452.405c1.666-1.41,0.214-3.289,0.214-3.289"/>
+				<path class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+					M370.563,434.981c0,0,0,3.449,3.703,2.558"/>
+				<path class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+					M402.584,448.149c0,0-2.121,2.424-4.524,0.448"/>
+				<path class="infographic-text-icon-p2" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+					M393.365,461.029c0.187-2.06,5.465-2.796,5.39,2.496"/>
+				<text transform="matrix(1 0 0 1 40.603 451.9846)"><tspan class="infographic-text-title" x="0" y="0" style="font-family:'NeuzeitGro W01 Bold'; font-size:33px;">DECISION SUPPORT</tspan><tspan x="149.219" y="36" style="fill:#555555; font-family:'NeuzeitGro W01 Bold'; font-size:25px;">PATHFINDER</tspan><tspan x="46" y="72" style="fill:#555555; font-family: 'Source Sans Pro'; font-weight: 400; font-size:25px;">&#x2022; Actuarial Information</tspan><tspan x="53" y="108" style="fill:#555555; font-family: 'Source Sans Pro'; font-weight: 400; font-size:25px;">&#x2022; Utilization Estimates</tspan><tspan x="31.221" y="144" style="fill:#555555; font-family: 'Source Sans Pro'; font-weight: 400; font-size:25px;">&#x2022; Personalized Packages</tspan></text>
+			</g>
+		</g>
+
+		<g id="enrollment">
+			<g id="enrollment-support-text-detail" class="infographic-text-detail hide unhighlight">
+				<text transform="matrix(1 0 0 1 513.1837 35.2701)"><tspan x="0" y="0" style="fill:#8EC449; font-family:'NeuzeitGro W01 Bold'; font-size:42.3158px;">ENROLLMENT</tspan><tspan x="61.603" y="36" style="fill:#555555; font-family:'NeuzeitGro W01 Bold'; font-size:25px;">ESSENTIALS</tspan><tspan x="-371.852" y="80.676" style="fill:#555555; font-family: 'Source Sans Pro'; font-weight: 400; font-size:30.568px;">Our platform features industry-leading, innovative technology that empowers</tspan><tspan x="-417.795" y="125.353" style="fill:#555555; font-family: 'Source Sans Pro'; font-weight: 400; font-size:30.568px;">employees to make smarter benefit decisions. With secure, cloud-based systems that</tspan><tspan x="-412.323" y="170.029" style="fill:#555555; font-family: 'Source Sans Pro'; font-weight: 400; font-size:30.568px;">run on any device, there  are no barriers between employer, employee, and benefits.</tspan><tspan x="-330.527" y="214.709" style="fill:#555555; font-family: 'Source Sans Pro'; font-weight: 600; font-size:30.27px;">Start with the essentials, then add on the pieces that are right for you.</tspan></text>
+
+				<line style="fill:none;stroke:#8DC349;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="731.011" y1="280.968" x2="559.06" y2="280.968"/>
+
+				<g>
+					<path style="fill:none;stroke:#8DC349;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" d="M632.908,328.659v-12.658
+						c0-1.026,1.093-1.865,2.428-1.865h4.577l3.365,3.178l2.807-3.178h5.135c1.336,0,2.428,0.839,2.428,1.865v12.658H632.908z"/>
+
+						<circle style="fill:none;stroke:#8DC349;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" cx="643.277" cy="303.464" r="6.768"/>
+					<path style="fill:none;stroke:#8DC349;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" d="M663.744,337.055v-4.642
+						c0-2.073-1.681-3.754-3.754-3.754h-33.425c-2.073,0-3.754,1.681-3.754,3.754v6.217"/>
+
+						<line style="fill:none;stroke:#8DC349;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="643.277" y1="328.659" x2="643.277" y2="342.128"/>
+
+						<circle style="fill:none;stroke:#8DC349;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" cx="643.475" cy="344.577" r="2.449"/>
+
+						<circle style="fill:none;stroke:#8DC349;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" cx="663.744" cy="339.679" r="2.449"/>
+
+						<circle style="fill:none;stroke:#8DC349;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" cx="622.81" cy="341.079" r="2.449"/>
+				</g>
+			</g>
+		</g>
+
+		<!-- enrollment wheel -->
+
+ 	 <g id="enrollment-wheel" transform="matrix(1 0 0 1 448 428)">
+		<!-- enrollment-button -->
+ 	 	<g id="_x31_">
+ 	 		<polygon class="st0" points="267.5,236.9 267.5,236.9 267.5,236.9 	"/>
+ 	 		<g id="active_copy">
+ 	 		</g>
+ 	 		<g>
+ 	 			<path class="st1" d="M298.1,189.9c-0.8-12.4-3.8-24.2-8.7-35h-22.8l11.2-19.5c-6.8-8.9-14.9-16.6-24.2-22.8
+ 	 				c-3.9-2.6-7.9-4.9-12.1-7c-10.5-5.1-22-8.4-34.1-9.6L196,115.5l-11.1-19.3c-11.6,1.4-22.5,4.8-32.5,9.8c-4.2,2.1-8.2,4.5-12.1,7.1
+ 	 				c-8.5,5.9-16.1,13-22.5,21.1l11.9,20.6h-24.4c-4.9,10.8-7.9,22.6-8.7,35c-0.1,2.2-0.2,4.3-0.2,6.5c0,2.5,0.1,5,0.3,7.5
+ 	 				c0.8,11.3,3.5,22.1,7.8,32.1h22.7l-11.4,19.8c6.9,9.4,15.3,17.6,25,24.2c3.8,2.6,7.9,5,12.1,7.1c9.6,4.8,20.1,8,31.2,9.5l12-20.8
+ 	 				l12.2,21.1c11.6-1.2,22.7-4.5,32.8-9.3c4.2-2,8.3-4.4,12.2-6.9c9.8-6.6,18.5-14.8,25.5-24.3l-11.1-19.3h0v0l0,0h22.3
+ 	 				c4.5-10.2,7.4-21.4,8.2-33.1c0.2-2.5,0.3-4.9,0.3-7.5C298.3,194.2,298.2,192,298.1,189.9z"/>
+ 	 			<g>
+ 	 				<path class="st0" d="M120.7,196.9h6.6v3.1h-6.6v4.7h6.6v3.1h-10.4v-18.7h10.4v3.1h-6.6V196.9z"/>
+ 	 				<path class="st0" d="M134.3,207.9h-3.8v-18.7h3.8l7.8,11.6v-11.6h3.8v18.7h-3.8l-7.8-11.8V207.9z"/>
+ 	 				<path class="st0" d="M153.6,207.9h-3.8v-18.7h5.8c4.6,0,7.1,2,7.1,5.9c0,2.9-1.5,4.9-4.4,5.6l5.2,7.2h-4.6l-5.1-7.4L153.6,207.9
+ 	 					L153.6,207.9z M155.3,198.2c2.2,0,3.4-1.1,3.4-2.9c0-1.8-1.2-2.9-3.1-2.9h-2.1v5.9L155.3,198.2L155.3,198.2z"/>
+ 	 				<path class="st0" d="M181.8,192c1.6,1.8,2.4,3.9,2.4,6.7c0,5.3-4.3,9.6-9.5,9.6c-5.5,0-9.7-4.2-9.7-9.6c0-5.5,4.3-9.8,9.8-9.8
+ 	 					C177.4,188.8,179.9,189.9,181.8,192z M168.8,198.6c0,3.5,2.5,6.1,5.7,6.1c3.2,0,5.7-2.7,5.7-6c0-3.6-2.4-6.3-5.7-6.3
+ 	 					C171.2,192.4,168.8,195,168.8,198.6z"/>
+ 	 				<path class="st0" d="M197.2,204.7v3.2h-10.1v-18.7h3.8v15.5H197.2z"/>
+ 	 				<path class="st0" d="M209.9,204.7v3.2h-10.1v-18.7h3.8v15.5H209.9z"/>
+ 	 				<path class="st0" d="M216,207.9h-3.8v-18.7h4.3l5.6,11.3l5.6-11.3h4.3v18.7h-3.8v-11.6l-6.1,12.2l-6.1-12.2L216,207.9L216,207.9z
+ 	 					"/>
+ 	 				<path class="st0" d="M239.1,196.9h6.6v3.1h-6.6v4.7h6.6v3.1h-10.4v-18.7h10.4v3.1h-6.6V196.9z"/>
+ 	 				<path class="st0" d="M252.7,207.9h-3.8v-18.7h3.8l7.8,11.6v-11.6h3.8v18.7h-3.8l-7.8-11.8V207.9z"/>
+ 	 				<path class="st0" d="M274.6,207.9h-3.8v-15.5h-4.5v-3.1h12.7v3.1h-4.4L274.6,207.9L274.6,207.9z"/>
+ 	 			</g>
+ 	 		</g>
+ 	 	</g>
+ 		<!-- compliance -->
+ 	 	<g id="compliance-button" class="group-button" onmouseover="buttonMouseOver(this);" onmouseout="buttonMouseOut(this);" onclick="buttonClicked(this);">
+ 	 		<g class="infographic-button-original">
+ 				<!-- shape -->
+ 	 			<path class="infographic-button-path st3" d="M366.5,97.1C350.4,69.8,328,46.7,301.2,30L267,89.2c13.4,8.7,25.1,19.9,34.4,32.9l-10,17.4h20.5
+ 	 				c7.7,15.3,12.3,32.4,13.2,50.4h68.4C392.4,157.1,383.1,125.2,366.5,97.1z"/>
+ 	 			<g class="infographic-button-text">
+ 	 				<path class="st0" d="M313.8,84.9c-1.8,0-3-0.5-4.2-1.7s-1.8-2.6-1.7-4.1c0.1-1.4,0.7-2.9,1.8-4c2.4-2.5,5.8-2.6,8.2-0.3
+ 	 					c1.3,1.2,1.8,2.4,1.8,4.3l-2.1,0c-0.1-1.2-0.4-2-1.1-2.7c-1.4-1.4-3.5-1.3-5,0.3s-1.6,3.7-0.1,5.1c0.7,0.7,1.6,1,2.6,0.9
+ 	 					L313.8,84.9z"/>
+ 	 				<path class="st0" d="M327.1,87.6c-0.2,1.4-0.8,2.7-2.1,3.8c-2.4,2.1-6.1,1.9-8.2-0.5c-2.2-2.5-2-6.1,0.4-8.3
+ 	 					c2.5-2.2,6.2-2,8.4,0.5C326.8,84.3,327.3,85.9,327.1,87.6z M318.9,84.3c-1.6,1.4-1.8,3.6-0.5,5.1c1.3,1.5,3.5,1.5,5.1,0.2
+ 	 					c1.6-1.5,1.9-3.6,0.6-5.1C322.7,82.9,320.5,82.9,318.9,84.3z"/>
+ 	 				<path class="st0" d="M323.2,98.2l-1.4-1.9l9.1-6.8l1.6,2.1l-3.5,6.8l7.6-1.4l1.6,2.1L329,106l-1.4-1.9l5.7-4.2l-8.2,1.5l3.7-7.4
+ 	 					L323.2,98.2z"/>
+ 	 				<path class="st0" d="M331.4,109.8l-1.3-2l9.6-6.1l1.9,3.1c1.4,2.3,1.2,4.2-0.8,5.5c-2,1.3-4.1,0.7-5.4-1.4l-0.8-1.2L331.4,109.8z
+ 	 					 M336.9,107.5c0.7,1.1,1.7,1.4,2.6,0.8c0.9-0.6,1.1-1.7,0.4-2.7l-0.6-0.9l-3,1.9L336.9,107.5z"/>
+ 	 				<path class="st0" d="M339.8,120l-1.7,0.9l-3-5.3l9.9-5.6l1.1,2l-8.2,4.6L339.8,120z"/>
+ 	 				<path class="st0" d="M339.8,124.3l-1.1-2.1l10.1-5.2l1.1,2.1L339.8,124.3z"/>
+ 	 				<path class="st0" d="M343.5,127.3l-2.1,0.2l-1-2.2l11.9-1.2l1.2,2.6l-8.7,8.2l-1.1-2.3l1.5-1.4L343.5,127.3z M350.4,126.5
+ 	 					l-4.9,0.5l1.3,2.9L350.4,126.5z"/>
+ 	 				<path class="st0" d="M346,138.1l-0.8-2.2l10.6-4l0.8,2.1l-4.9,6.9l6.6-2.5l0.8,2.2l-10.6,4l-0.8-2.1l5-7L346,138.1z"/>
+ 	 				<path class="st0" d="M353.3,155.3c-1.5-0.9-2.4-1.9-2.9-3.5s-0.3-3.1,0.5-4.4c0.7-1.2,2.1-2.2,3.6-2.7c3.3-1,6.3,0.5,7.3,3.7
+ 	 					c0.5,1.7,0.4,3-0.5,4.6l-1.9-1c0.5-1.1,0.6-2,0.4-2.9c-0.6-1.9-2.4-2.8-4.5-2.2c-2.1,0.6-3.2,2.5-2.6,4.4c0.3,1,0.9,1.7,1.8,2.1
+ 	 					L353.3,155.3z"/>
+ 	 				<path class="st0" d="M359.1,157.4l0.9,3.9l-1.9,0.4l-0.9-3.9l-2.8,0.7l0.9,3.9l-1.9,0.4l-1.5-6.1l11-2.6l1.5,6.1l-1.9,0.4
+ 	 					l-0.9-3.9L359.1,157.4z"/>
+ 	 			</g>
+ 	 		</g>
+ 	 	</g>
+ 		<!-- decision-support -->
+ 	 	<g id="decision-support-button" class="group-button" onmouseover="buttonMouseOver(this);" onmouseout="buttonMouseOut(this);" onclick="buttonClicked(this);">
+ 	 		<polygon class="st0" points="267.5,236.9 267.5,236.9 267.5,236.9 	"/>
+ 	 		<g id="active_copy_2_">
+ 	 		</g>
+ 	 		<g>
+ 				<!-- shape -->
+ 	 			<path class="infographic-button-path st4" d="M196.8,0c-32.3,0-64,7.9-92.3,23l34.5,59.7c14.4-7.4,30.4-12.2,47.3-13.7l9.9,17.1l10-17.3
+ 	 				c17.5,1.2,34,5.9,48.9,13.4L289.1,23C260.8,7.9,229,0,196.8,0z"/>
+ 	 			<g>
+ 	 				<path class="st0" d="M124.2,41.9l2.9-1.3c1.7-0.7,3-0.9,4.2-0.5c1.5,0.5,2.6,1.6,3.4,3.2c0.7,1.7,0.8,3.4,0.2,4.8
+ 	 					c-0.5,1.2-1.6,2.1-3.1,2.8l-3.1,1.4L124.2,41.9z M130.1,49.6l0.4-0.2c1.1-0.5,1.7-1,2.1-1.8c0.5-1,0.4-2.1-0.1-3.3
+ 	 					c-0.9-2.1-2.8-2.8-4.7-2l-0.8,0.3L130.1,49.6z"/>
+ 	 				<path class="st0" d="M138.4,41l3.7-1.4l0.7,1.8l-3.7,1.4l1,2.7l3.7-1.4l0.7,1.8l-5.9,2.2l-4-10.6l5.9-2.2l0.7,1.8l-3.7,1.4
+ 	 					L138.4,41z"/>
+ 	 				<path class="st0" d="M154.6,41.1c-0.9,1.6-1.9,2.4-3.5,2.9c-1.6,0.5-3.1,0.3-4.4-0.4c-1.2-0.7-2.2-2-2.7-3.5
+ 	 					c-1-3.3,0.5-6.3,3.6-7.3c1.7-0.5,3-0.4,4.6,0.5l-1,1.9c-1.1-0.5-2-0.6-2.9-0.3c-1.9,0.6-2.8,2.5-2.1,4.5c0.6,2.1,2.5,3.2,4.5,2.6
+ 	 					c1-0.3,1.6-0.9,2.1-1.9L154.6,41.1z"/>
+ 	 				<path class="st0" d="M158.7,41.6l-2.3,0.6l-2.8-11l2.3-0.6L158.7,41.6z"/>
+ 	 				<path class="st0" d="M161.7,37.5l0,0.1c0.2,0.7,0.9,1.2,1.8,1c0.8-0.2,1.4-0.8,1.2-1.5c-0.1-0.4-0.3-0.6-0.6-0.8
+ 	 					c-0.3-0.2-0.5-0.2-1.5-0.3c-2.6-0.3-3.7-1.1-4-2.8c-0.4-2,0.8-3.7,2.9-4.1c2.2-0.5,3.8,0.5,4.5,2.6l-2.3,0.5
+ 	 					c-0.3-0.9-0.8-1.3-1.7-1.1c-0.8,0.2-1.3,0.8-1.1,1.5c0.1,0.4,0.4,0.7,0.9,0.9c0.3,0.1,0.5,0.1,1.4,0.3c1.3,0.2,2,0.4,2.6,0.7
+ 	 					c0.7,0.4,1.2,1.1,1.3,2c0.4,2-0.8,3.7-3.1,4.2c-2.3,0.5-4-0.5-4.5-2.7L161.7,37.5z"/>
+ 	 				<path class="st0" d="M171.7,39l-2.3,0.4l-1.9-11.2l2.3-0.4L171.7,39z"/>
+ 	 				<path class="st0" d="M182.5,27.8c1.1,1,1.7,2.2,1.9,3.9c0.4,3.2-1.9,6.1-5.1,6.4c-3.3,0.4-6.2-1.9-6.5-5.1
+ 	 					c-0.4-3.3,1.9-6.2,5.2-6.6C179.6,26.3,181.2,26.8,182.5,27.8z M175.1,32.7c0.2,2.1,1.9,3.5,3.9,3.3c1.9-0.2,3.3-2,3.1-4
+ 	 					c-0.2-2.2-1.9-3.6-3.9-3.4C176.1,28.8,174.8,30.6,175.1,32.7z"/>
+ 	 				<path class="st0" d="M188.9,37.1l-2.3,0.1l-0.4-11.3l2.3-0.1l5,6.9l-0.3-7.1l2.3-0.1l0.4,11.3l-2.3,0.1l-5-7L188.9,37.1z"/>
+ 	 				<path class="st0" d="M205,33.8l0,0.2c0,0.8,0.6,1.4,1.5,1.4c0.8,0,1.5-0.4,1.6-1.1c0-0.4-0.1-0.7-0.4-0.9s-0.5-0.3-1.3-0.7
+ 	 					c-2.4-1-3.3-2-3.2-3.7c0.1-2.1,1.7-3.3,3.9-3.2c2.2,0.1,3.6,1.5,3.6,3.7l-2.3-0.1c0-1-0.5-1.4-1.4-1.5c-0.8,0-1.4,0.4-1.5,1.1
+ 	 					c0,0.5,0.2,0.8,0.6,1.1c0.3,0.2,0.5,0.3,1.3,0.6c1.2,0.5,1.8,0.9,2.3,1.4c0.6,0.6,0.8,1.4,0.8,2.2c-0.1,2.1-1.8,3.4-4.1,3.2
+ 	 					c-2.4-0.1-3.8-1.6-3.6-3.7L205,33.8z"/>
+ 	 				<path class="st0" d="M214.5,33.1c-0.1,1-0.1,1.6,0.3,2.1c0.3,0.5,0.9,0.8,1.5,0.9c0.7,0.1,1.3-0.1,1.7-0.6
+ 	 					c0.4-0.4,0.6-0.9,0.7-1.9l0.8-6.6l2.3,0.3l-0.8,6.5c-0.2,1.7-0.7,2.8-1.5,3.5c-0.9,0.8-2.1,1.1-3.4,0.9c-1.4-0.2-2.6-0.8-3.2-1.8
+ 	 					c-0.6-0.9-0.8-1.9-0.6-3.7l0.8-6.5l2.3,0.3L214.5,33.1z"/>
+ 	 				<path class="st0" d="M224.7,39.3l-2.3-0.4l2-11.2l3.6,0.6c2.6,0.5,3.9,2,3.5,4.3c-0.4,2.3-2.2,3.5-4.7,3l-1.4-0.3L224.7,39.3z
+ 	 					 M226.8,33.8c1.3,0.2,2.2-0.3,2.4-1.4c0.2-1.1-0.5-1.9-1.7-2.2l-1-0.2l-0.6,3.5L226.8,33.8z"/>
+ 	 				<path class="st0" d="M233.8,41.1l-2.3-0.5l2.7-11l3.5,0.8c2.6,0.6,3.8,2.3,3.2,4.5c-0.6,2.3-2.4,3.4-4.8,2.8l-1.4-0.3L233.8,41.1
+ 	 					z M236.1,35.7c1.3,0.3,2.2-0.1,2.5-1.2c0.3-1.1-0.3-2-1.6-2.3l-1-0.2l-0.8,3.5L236.1,35.7z"/>
+ 	 				<path class="st0" d="M252.6,36.5c0.6,1.3,0.7,2.7,0.2,4.3c-1,3.1-4.2,4.8-7.3,3.8c-3.2-1-4.9-4.2-3.9-7.3c1-3.2,4.3-4.9,7.5-3.9
+ 	 					C250.7,33.9,251.9,35,252.6,36.5z M243.9,37.9c-0.6,2,0.3,4,2.2,4.6c1.9,0.6,3.8-0.5,4.4-2.5c0.7-2.1-0.2-4.1-2.2-4.7
+ 	 					C246.5,34.8,244.5,35.9,243.9,37.9z"/>
+ 	 				<path class="st0" d="M254.8,47.6l-2.2-0.9l4.2-10.5l3.3,1.3c2.6,1,3.6,2.7,2.7,4.9c-0.7,1.7-2,2.4-3.8,2.2l1.3,5.2l-2.6-1
+ 	 					l-1.2-5.3L254.8,47.6z M257.9,42.6c1.2,0.5,2.2,0.2,2.6-0.9c0.4-1,0-1.9-1.1-2.3l-1.2-0.5l-1.3,3.3L257.9,42.6z"/>
+ 	 				<path class="st0" d="M265.2,52.1l-2.1-1l3.9-8.6l-2.5-1.1l0.8-1.7l7,3.2l-0.8,1.7l-2.4-1.1L265.2,52.1z"/>
+ 	 			</g>
+ 	 		</g>
+ 	 	</g>
+ 		<!-- personalization -->
+ 	 	<g id="personalization-button" class="group-button" onmouseover="buttonMouseOver(this);" onmouseout="buttonMouseOut(this);" onclick="buttonClicked(this);">
+ 	 		<polygon class="st0" points="267.5,236.9 267.5,236.9 267.5,236.9 	"/>
+ 	 		<g id="active_copy_5_">
+ 	 		</g>
+ 	 		<g>
+ 				<!-- shape -->
+ 	 			<path class="infographic-button-path st5" d="M126.8,89.7L92.3,30C65.6,46.7,43.1,69.8,27,97.1c-16.6,28.1-25.9,60.1-27,92.8h69.6
+ 	 				c0.9-17.3,5.2-33.6,12.3-48.5H104l-11-19C102.2,109.6,113.7,98.5,126.8,89.7z"/>
+ 	 			<g>
+ 	 				<path class="st0" d="M38.3,179.6l-0.3,2.3l-11.3-1.3l0.4-3.6c0.3-2.7,1.8-4,4.1-3.8c2.3,0.3,3.6,2,3.3,4.5l-0.2,1.4L38.3,179.6z
+ 	 					 M32.6,177.9c0.2-1.3-0.4-2.2-1.5-2.3c-1.1-0.1-1.9,0.6-2,1.9l-0.1,1l3.6,0.4L32.6,177.9z"/>
+ 	 				<path class="st0" d="M33,169.5l0.7-3.9l1.9,0.3l-0.7,3.9l2.8,0.5l0.7-3.9l1.9,0.3l-1.1,6.2l-11.2-1.9l1.1-6.2l1.9,0.3l-0.7,3.9
+ 	 					L33,169.5z"/>
+ 	 				<path class="st0" d="M41,162.7l-0.5,2.3l-11.1-2.5l0.8-3.4c0.6-2.7,2.2-3.9,4.4-3.4c1.7,0.4,2.7,1.6,2.7,3.4l4.9-2.1l-0.6,2.8
+ 	 					l-5.1,2L41,162.7z M35.5,160.4c0.3-1.3-0.2-2.2-1.3-2.4c-1.1-0.2-1.9,0.3-2.1,1.4l-0.3,1.2l3.5,0.8L35.5,160.4z"/>
+ 	 				<path class="st0" d="M40,153l0.1,0c0.7,0.2,1.5-0.3,1.7-1.1c0.2-0.8-0.1-1.6-0.7-1.8c-0.3-0.1-0.7,0-1,0.2
+ 	 					c-0.3,0.2-0.4,0.4-1,1.1c-1.5,2.1-2.7,2.7-4.3,2.2c-2-0.6-2.9-2.4-2.3-4.5c0.6-2.1,2.3-3.1,4.4-2.7l-0.7,2.3
+ 	 					c-0.9-0.2-1.5,0.1-1.8,1c-0.2,0.8,0.1,1.5,0.8,1.7c0.4,0.1,0.8,0,1.2-0.4c0.2-0.2,0.4-0.4,0.9-1.1c0.8-1.1,1.3-1.6,1.9-1.9
+ 	 					c0.7-0.4,1.5-0.5,2.4-0.3c2,0.6,2.9,2.5,2.2,4.7c-0.7,2.3-2.4,3.3-4.5,2.7L40,153z"/>
+ 	 				<path class="st0" d="M39.4,134.7c1.4-0.5,2.7-0.5,4.3,0c3,1.1,4.6,4.4,3.5,7.4c-1.1,3.1-4.4,4.7-7.5,3.6
+ 	 					c-3.2-1.2-4.7-4.5-3.6-7.6C36.7,136.6,37.9,135.3,39.4,134.7z M40.5,143.5c2,0.7,4-0.1,4.7-2c0.7-1.8-0.3-3.8-2.3-4.5
+ 	 					c-2.1-0.8-4.1,0.1-4.8,2C37.5,140.8,38.5,142.8,40.5,143.5z"/>
+ 	 				<path class="st0" d="M50.6,133l-1,2.1l-10.3-4.7l0.9-2.1l8.4-1.4l-6.4-2.9l1-2.1l10.3,4.7l-0.9,2.1l-8.5,1.4L50.6,133z"/>
+ 	 				<path class="st0" d="M53.7,122l1.4,1.5l-1.2,2.2l-8.1-8.8l1.4-2.6l11.8,2l-1.2,2.2l-2-0.4L53.7,122z M48.9,116.9l3.4,3.6l1.5-2.8
+ 	 					L48.9,116.9z"/>
+ 	 				<path class="st0" d="M61.2,109.2l1.6,1l-3.2,5.2l-9.7-5.9l1.2-2l8,4.9L61.2,109.2z"/>
+ 	 				<path class="st0" d="M64.9,107.1l-1.3,1.9l-9.4-6.3l1.3-1.9L64.9,107.1z"/>
+ 	 				<path class="st0" d="M69,98.1l1.5,1.1l-5,6.8l-4.5-9.8l-2.8,3.8l-1.5-1.1l4.9-6.7l4.5,9.8L69,98.1z"/>
+ 	 				<path class="st0" d="M71.5,94.9l1.1,1.8L71,98.5l-6.2-10.3l1.9-2.2l11.2,4.3l-1.6,2l-1.9-0.8L71.5,94.9z M67.8,89l2.6,4.2l2-2.4
+ 	 					L67.8,89z"/>
+ 	 				<path class="st0" d="M80.8,87.3L79.2,89l-6.9-6.4l-1.8,2L69,83.3l5.2-5.7l1.4,1.3l-1.8,2L80.8,87.3z"/>
+ 	 				<path class="st0" d="M85.1,82.9l-1.6,1.6l-8-8l1.6-1.6L85.1,82.9z"/>
+ 	 				<path class="st0" d="M87.4,67.6c1.4,0.2,2.7,0.8,3.8,2c2.2,2.4,2,6.1-0.4,8.2c-2.5,2.2-6.1,2-8.3-0.4c-2.2-2.5-2.1-6.2,0.4-8.4
+ 	 					C84.1,67.9,85.7,67.4,87.4,67.6z M84.2,75.8c1.4,1.6,3.6,1.8,5.1,0.4c1.5-1.3,1.5-3.5,0.1-5.1c-1.5-1.6-3.6-1.9-5.1-0.5
+ 	 					C82.8,72,82.7,74.2,84.2,75.8z"/>
+ 	 				<path class="st0" d="M98,71.4l-1.8,1.4l-6.9-9l1.8-1.4l8.1,2.7l-4.3-5.6l1.8-1.4l6.9,9l-1.8,1.4l-8.1-2.8L98,71.4z"/>
+ 	 			</g>
+ 	 		</g>
+ 	 	</g>
+ 		<!-- connect -->
+ 	 	<g id="connect-button" class="group-button" onmouseover="buttonMouseOver(this);" onmouseout="buttonMouseOut(this);" onclick="buttonClicked(this);">
+ 	 		<polygon class="st0" points="267.5,236.9 267.5,236.9 267.5,236.9 	"/>
+ 	 		<g>
+ 				<!-- shape -->
+ 	 			<path class="infographic-button-path st6" d="M91.5,268.2l10.3-17.8H81.4c-6.7-14.3-10.8-30-11.7-46.5H0c1.2,32.7,10.4,64.7,27,92.8
+ 	 				c16.1,27.2,38.5,50.3,65.3,67.1l34.9-60.4C113.1,294.1,101,282.1,91.5,268.2z"/>
+ 	 			<g>
+ 	 				<path class="st0" d="M41.6,257.3c-1.6-0.9-2.4-1.9-2.9-3.5c-0.5-1.6-0.4-3.1,0.4-4.4c0.7-1.2,2-2.2,3.5-2.7
+ 	 					c3.3-1,6.3,0.5,7.3,3.6c0.5,1.7,0.4,3-0.4,4.6l-1.9-1c0.5-1.1,0.6-2,0.3-2.9c-0.6-1.9-2.5-2.8-4.5-2.1s-3.1,2.5-2.5,4.5
+ 	 					c0.3,1,0.9,1.6,1.9,2.1L41.6,257.3z"/>
+ 	 				<path class="st0" d="M53.3,264.8c-0.7,1.3-1.7,2.2-3.2,2.8c-3,1.2-6.4-0.3-7.6-3.2c-1.2-3.1,0.2-6.4,3.2-7.6
+ 	 					c3.1-1.2,6.5,0.2,7.7,3.3C54.1,261.7,54,263.3,53.3,264.8z M46.7,259c-2,0.8-2.9,2.8-2.2,4.6c0.7,1.8,2.8,2.6,4.7,1.9
+ 	 					c2-0.8,3-2.8,2.3-4.6C50.7,259,48.7,258.2,46.7,259z"/>
+ 	 				<path class="st0" d="M46.9,274l-1-2.1l10.2-5l1,2.1l-4.3,7.4l6.4-3.1l1,2.1l-10.2,5l-1-2l4.4-7.4L46.9,274z"/>
+ 	 				<path class="st0" d="M52.5,284.9l-1.2-2l9.8-5.7l1.2,2l-3.7,7.7l6.1-3.6l1.2,2L56,291l-1.1-2l3.8-7.7L52.5,284.9z"/>
+ 	 				<path class="st0" d="M64.2,291.2l2.2,3.3l-1.6,1.1l-2.2-3.3l-2.4,1.6l2.2,3.3l-1.6,1.1l-3.5-5.2l9.4-6.3l3.5,5.2l-1.6,1.1
+ 	 					l-2.2-3.3L64.2,291.2z"/>
+ 	 				<path class="st0" d="M69.1,306.7c-1.8-0.3-2.9-1-3.9-2.3c-1-1.3-1.4-2.8-1.1-4.3c0.3-1.4,1.1-2.8,2.4-3.7
+ 	 					c2.7-2.1,6.1-1.7,8.1,0.9c1.1,1.4,1.4,2.6,1.2,4.5l-2.1-0.3c0.1-1.2-0.1-2.1-0.7-2.8c-1.2-1.6-3.3-1.8-5-0.5
+ 	 					c-1.7,1.3-2.1,3.4-0.9,5.1c0.6,0.8,1.4,1.2,2.5,1.3L69.1,306.7z"/>
+ 	 				<path class="st0" d="M72,312.4l-1.5-1.8l7.1-6.2l-1.8-2l1.4-1.2l5,5.8l-1.4,1.2l-1.8-2L72,312.4z"/>
+ 	 			</g>
+ 	 		</g>
+ 	 		<g id="active_copy_4_">
+ 	 		</g>
+ 	 	</g>
+ 		<!-- education -->
+ 	 	<g id="education-button" class="group-button" onmouseover="buttonMouseOver(this);" onmouseout="buttonMouseOut(this);" onclick="buttonClicked(this);">
+ 	 		<polygon class="st0" points="267.5,236.9 267.5,236.9 267.5,236.9 	"/>
+ 	 		<g id="active_copy_3_">
+ 	 		</g>
+ 	 		<g>
+ 				<!-- shape -->
+ 	 			<path class="infographic-button-path st7" d="M254.5,310.9c-14.6,7.3-30.7,11.9-47.8,13.1L196,305.4l-10.6,18.4c-16.5-1.5-32-6.2-46.1-13.4l-34.9,60.4
+ 	 				c28.3,15,60.1,23,92.3,23c32.3,0,64-7.9,92.3-23L254.5,310.9z"/>
+ 	 			<g>
+ 	 				<path class="st0" d="M157.6,357.1l3.9,0.9l-0.5,1.8l-3.9-0.9l-0.7,2.8l3.9,0.9l-0.5,1.8l-6.1-1.5l2.7-11l6.1,1.5l-0.5,1.8
+ 	 					l-3.9-0.9L157.6,357.1z"/>
+ 	 				<path class="st0" d="M164.2,353.9l3.2,0.6c1.8,0.3,3,0.9,3.8,2c1,1.2,1.3,2.8,1,4.5c-0.3,1.8-1.3,3.3-2.6,4.1
+ 	 					c-1.1,0.7-2.5,0.9-4.1,0.6l-3.3-0.6L164.2,353.9z M164.8,363.6l0.4,0.1c1.2,0.2,2,0.1,2.8-0.3c0.9-0.5,1.6-1.5,1.8-2.7
+ 	 					c0.4-2.2-0.7-3.9-2.8-4.3l-0.8-0.2L164.8,363.6z"/>
+ 	 				<path class="st0" d="M176,362.6c-0.1,1,0,1.6,0.3,2.1c0.3,0.5,0.9,0.8,1.5,0.9c0.7,0.1,1.3-0.2,1.7-0.6c0.4-0.4,0.5-0.9,0.7-1.9
+ 	 					l0.7-6.6l2.3,0.3l-0.7,6.5c-0.2,1.7-0.7,2.8-1.5,3.5c-0.9,0.8-2.1,1.1-3.4,0.9c-1.4-0.2-2.6-0.8-3.3-1.8
+ 	 					c-0.6-0.9-0.8-1.9-0.6-3.7l0.7-6.5l2.3,0.3L176,362.6z"/>
+ 	 				<path class="st0" d="M194,367.1c-1.4,1.2-2.6,1.6-4.3,1.5c-1.7-0.1-3-0.7-4-1.9c-0.9-1.1-1.4-2.7-1.3-4.2
+ 	 					c0.2-3.4,2.6-5.8,5.9-5.7c1.8,0.1,2.9,0.6,4.2,2l-1.6,1.5c-0.9-0.9-1.6-1.2-2.6-1.3c-2-0.1-3.4,1.4-3.5,3.6
+ 	 					c-0.1,2.2,1.3,3.8,3.3,3.9c1,0,1.9-0.3,2.6-1L194,367.1z"/>
+ 	 				<path class="st0" d="M198.1,366.6l-0.6,2l-2.5,0.1l3.6-11.4l2.9-0.1l4.2,11.2l-2.5,0.1l-0.7-1.9L198.1,366.6z M200.1,359.9
+ 	 					l-1.5,4.7l3.1-0.1L200.1,359.9z"/>
+ 	 				<path class="st0" d="M210.4,367.9l-2.3,0.2l-0.7-9.4l-2.7,0.2l-0.2-1.9l7.7-0.6l0.2,1.9l-2.7,0.2L210.4,367.9z"/>
+ 	 				<path class="st0" d="M216.9,367.2l-2.3,0.3l-1.3-11.3l2.3-0.3L216.9,367.2z"/>
+ 	 				<path class="st0" d="M227.6,355.7c1.1,0.9,1.8,2.1,2.1,3.7c0.6,3.2-1.5,6.2-4.7,6.7c-3.3,0.6-6.3-1.5-6.8-4.7
+ 	 					c-0.6-3.3,1.5-6.3,4.8-6.9C224.6,354.3,226.2,354.7,227.6,355.7z M220.5,361.1c0.4,2.1,2.1,3.4,4.1,3.1c1.9-0.3,3.1-2.2,2.8-4.2
+ 	 					c-0.4-2.2-2.1-3.5-4.1-3.1S220.1,358.9,220.5,361.1z"/>
+ 	 				<path class="st0" d="M235.3,363.9l-2.3,0.6l-2.9-11l2.2-0.6l6.4,5.7l-1.8-6.8l2.3-0.6l2.9,11l-2.2,0.6l-6.4-5.7L235.3,363.9z"/>
+ 	 			</g>
+ 	 		</g>
+ 	 	</g>
+ 		<!-- eligibility button -->
+ 	 	<g id="eligibility-button" class="group-button" onmouseover="buttonMouseOver(this);" onmouseout="buttonMouseOut(this);" onclick="buttonClicked(this);">
+ 	 		<polygon class="st0" points="267.5,236.9 267.5,236.9 267.5,236.9 	"/>
+ 	 		<g id="active_copy_6_">
+ 	 		</g>
+ 	 		<g>
+ 				<!-- shape -->
+ 	 			<path class="infographic-button-path st8" d="M325.1,203.9c-1,16.9-5.3,33-12.2,47.5h-20.5l10.2,17.7c-9.6,13.8-21.8,25.7-36,34.9l34.6,59.9
+ 	 				c26.7-16.8,49.2-39.9,65.3-67.1c16.6-28.1,25.9-60.1,27-92.8H325.1z"/>
+ 	 			<g>
+ 	 				<path class="st0" d="M312.8,310.4l2.7-3l1.4,1.3l-2.7,3l2.1,1.9l2.7-3l1.4,1.3l-4.2,4.7l-8.4-7.6l4.2-4.7l1.4,1.3l-2.7,3
+ 	 					L312.8,310.4z"/>
+ 	 				<path class="st0" d="M324.3,304.2l1.5,1.2l-3.9,4.7l-8.8-7.2l1.5-1.8l7.3,6L324.3,304.2z"/>
+ 	 				<path class="st0" d="M328.3,302.1l-1.4,1.9l-9-6.8l1.4-1.9L328.3,302.1z"/>
+ 	 				<path class="st0" d="M330.9,287.2l0.5,0.3c1.5,1,2.3,2.1,2.6,3.7c0.3,1.6,0,3.1-0.9,4.4c-1.9,2.8-5.3,3.4-8.1,1.6
+ 	 					c-2.8-1.9-3.5-5.4-1.7-8.1c1-1.5,2.6-2.5,4.4-2.6l0.2,2.2c-1.3,0.1-2.1,0.6-2.7,1.5c-1.1,1.7-0.6,3.8,1.2,5
+ 	 					c1.8,1.2,4,0.8,5.1-0.9c0.5-0.8,0.7-1.8,0.5-2.7c-0.1-0.5-0.3-0.8-0.8-1.4l-1.8,2.6l-1.6-1.1L330.9,287.2z"/>
+ 	 				<path class="st0" d="M338.4,286.9l-1.2,2l-9.7-5.8l1.2-2L338.4,286.9z"/>
+ 	 				<path class="st0" d="M331.5,276c0.7-1.2,1.3-1.9,1.9-2.2c0.8-0.4,1.7-0.3,2.6,0.2c0.7,0.4,1.1,0.9,1.4,1.5c0.1,0.4,0.1,0.7,0,1.4
+ 	 					c0.5-0.5,0.7-0.7,1.2-0.9c0.7-0.2,1.4-0.2,2.2,0.2c0.9,0.5,1.5,1.3,1.6,2.2c0.1,0.7-0.1,1.4-0.7,2.5l-2,3.7l-10-5.3L331.5,276z
+ 	 					 M335.1,279.5l0.4-0.8c0.6-1.2,0.5-2-0.4-2.5c-0.5-0.3-1.1-0.3-1.4,0c-0.3,0.2-0.6,0.6-0.9,1.2l-0.4,0.7L335.1,279.5z
+ 	 					 M339.3,281.8l0.5-1c0.4-0.7,0.5-1.1,0.4-1.5c0-0.4-0.3-0.8-0.8-1.1c-0.5-0.3-1-0.3-1.4,0c-0.3,0.2-0.6,0.5-1,1.2l-0.5,0.9
+ 	 					L339.3,281.8z"/>
+ 	 				<path class="st0" d="M345.4,273.6l-1,2.1l-10.2-4.9l1-2.1L345.4,273.6z"/>
+ 	 				<path class="st0" d="M347.2,264.8l1.8,0.8l-2.4,5.6l-10.4-4.5l0.9-2.1l8.6,3.7L347.2,264.8z"/>
+ 	 				<path class="st0" d="M350.4,261.7l-0.8,2.2l-10.6-4.1l0.8-2.2L350.4,261.7z"/>
+ 	 				<path class="st0" d="M352.6,255.5l-0.7,2.2l-8.9-3l-0.9,2.6l-1.8-0.6l2.5-7.3l1.8,0.6l-0.9,2.5L352.6,255.5z"/>
+ 	 				<path class="st0" d="M355.4,246.2l-0.6,2.2l-4.8-1.3l-7.1,2l0.7-2.7l4.4-1.1l-3.2-3.1l0.7-2.6l5.1,5.3L355.4,246.2z"/>
+ 	 			</g>
+ 	 		</g>
+ 	 	</g>
+ 	 </g>
+		</svg>
+		<script type="text/javascript">
+	 		//var makes it so cannot mouseover after
+	 		console.log('worked');
+
+	 		 var hoverCooldown = [];
+	 		 var buttonIsClicked = function (name) {
+	 				 var buttonElement = document.getElementById(name + "-button");
+	 				 var buttonPath = jQuery("#"+name + "-button .infographic-button-path").get()[0];
+	 				 var classString = buttonPath.getAttribute("class");
+	 				 return classString.indexOf(" clicked") != -1;
+	 		 };
+
+	 		 var showText = function (name) {
+	 				 var textElement = document.getElementById(name + "-text-detail");
+	 				 var classString = textElement.getAttribute("class");
+	 				 if (classString.indexOf(" hide") != -1) {
+	 						 var newClass = classString.replace(" hide", "");
+	 						 textElement.setAttribute("class", newClass);
+	 				 }
+	 		 };
+
+	 		 var hideText = function (name) {
+	 				 var textElement = document.getElementById(name + "-text-detail");
+	 				 var classString = textElement.getAttribute("class");
+	 				 if (classString.indexOf(" hide") == -1 && !buttonIsClicked(name)) {
+	 						 var newClass = classString + " hide";
+	 						 textElement.setAttribute("class", newClass);
+	 				 }
+	 		 };
+
+	 		 var unhighlightText = function (name) {
+	 				 var textElement = document.getElementById(name + "-text-detail");
+	 				 var classString = textElement.getAttribute("class");
+	 				 if (classString.indexOf(" unhighlight") == -1 && !buttonIsClicked(name)) {
+	 						 var newClass = classString + " unhighlight";
+	 						 textElement.setAttribute("class", newClass);
+	 				 }
+	 		 };
+
+	 		 var highlightText = function (name) {
+	 				 var textElement = document.getElementById(name + "-text-detail");
+	 				 var classString = textElement.getAttribute("class");
+	 				 if (classString.indexOf(" unhighlight") != -1) {
+	 						 var newClass = classString.replace(" unhighlight", "");
+	 						 textElement.setAttribute("class", newClass);
+	 				 }
+	 		 };
+
+	 		 var activateButton = function (buttonName) {
+	 				 jQuery("#"+buttonName + "-button .infographic-button-path").addClass('active');
+	 				 jQuery("#"+buttonName + "-text-detail").addClass('active');
+	 		 };
+
+	 		 var deactivateButton = function (buttonName) {
+	 			 if(!jQuery('#'+buttonName+'-button').hasClass('clicked')){
+	 				 jQuery("#"+buttonName + "-button .infographic-button-path").removeClass('active');
+	 				 jQuery("#"+buttonName + "-text-detail").removeClass('active');
+	 			 }
+	 		 };
+
+	 		 var selectButton = function (name) {
+	 				 var tl = new TimelineLite();
+	 				 var buttonPath = jQuery("#"+name + "-button .infographic-button-path").get()[0];
+
+	 				 tl.to(buttonPath, 0.5, {
+	 						 morphSVG: buttonPathSelected
+	 				 }, 0);
+	 		 };
+
+	 		 var deselectButton = function (name) {
+	 				 var tl = new TimelineLite();
+	 				 var buttonElement = document.getElementById(name + "-button");
+	 				 var buttonPath = jQuery("#"+name + "-button .infographic-button-path").get()[0];
+	 				 var buttonPathSelected = jQuery("#"+name + "-button .infographic-button-path-original").get()[0];
+	 				 var buttonTextPath = jQuery("#"+name + "-button .infographic-button-text-path").get()[0];
+	 				 var buttonTextPathSelected = jQuery("#"+name + "-button .infographic-button-text-path-original").get()[0];
+	 				 var buttonText = jQuery("#"+name + "-button .st1").get()[0];
+	 				 tl.to(buttonText, 0.5, {
+	 						 fontSize: 18
+	 						 , autoRound: false
+	 				 });
+	 				 tl.to(buttonPath, 0.5, {
+	 						 morphSVG: buttonPathSelected
+	 				 }, 0);
+	 				 tl.to(buttonTextPath, 0.5, {
+	 						 morphSVG: buttonTextPathSelected
+	 				 }, 0);
+	 		 };
+
+	 		 var clickedButton = function (buttonName) {
+	 				 var buttonElement = document.getElementById(buttonName + "-button");
+	 				 var classString = buttonElement.getAttribute("class");
+	 				 if (classString.indexOf(" clicked") == -1) {
+	 						 var newClass = classString + " clicked";
+	 						 buttonElement.setAttribute("class", newClass);
+	 						 selectButton(buttonName);
+	 						 activateButton(buttonName);
+	 						 showText(buttonName);
+	 				 }
+	 				 else {
+	 						 var newClass = classString.replace(" clicked", "");
+	 						 buttonElement.setAttribute("class", newClass);
+	 						 deselectButton(buttonName);
+	 				 }
+	 		 };
+
+	 		 var enrollmentPulse = new TimelineLite();
+	 		 var intervalRef = setInterval(function () {
+	 			 if (document.getElementById("enrollment-button")){
+	 				 var path = document.getElementById("enrollment-button").getElementsByTagName("path")[0];
+	 				 enrollmentPulse.clear();
+	 				 enrollmentPulse.to(path, 1, {
+	 						 scale: 1.1
+	 						 , transformOrigin: "center center"
+	 				 });
+	 				 enrollmentPulse.to(path, 1, {
+	 						 scale: 1
+	 						 , transformOrigin: "center center"
+	 				 }, 1.1);
+	 			 }
+	 		 }, 2200);
+
+	 		 var enrollmentClicked = function () {
+	 				 clearInterval(intervalRef);
+	 				 enrollmentPulse.clear();
+	 				 var path = document.getElementById("enrollment-button").getElementsByTagName("path")[0];
+	 				 enrollmentPulse.to(path, 0.1, {
+	 						 scale: 1
+	 						 , transformOrigin: "center center"
+	 				 });
+
+	 				 var instructionText = document.getElementById("infographic-enrollment-instructions");
+	 				 instructionText.setAttribute("style", "fill:#8EC449; text-decoration: underline;");
+	 				 setTimeout(function () {
+	 						 showText('personalization');
+	 						 showText('eligibility');
+	 						 showText('compliance');
+	 						 showText('education');
+	 						 showText('decision-support');
+	 				 }, 1200);
+	 		 };
+
+	 		 var buttonMouseOver = function (element) {
+	 				 var name = element.getAttribute("id").replace("-button", "");
+	 				 activateButton(name);
+	 				 highlightText(name);
+	 		 };
+
+	 		 var buttonMouseOut = function (element) {
+	 				 var name = element.getAttribute("id").replace("-button", "");
+	 				 deactivateButton(name);
+	 				 unhighlightText(name);
+	 		 };
+
+	 		 var buttonClicked = function (element) {
+	 				 var name = element.getAttribute("id").replace("-button", "");
+	 				 clickedButton(name);
+	 				 enrollmentClicked();
+	 		 };
+
+
+	 			if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+	 				// Do Firefox-related activities
+	 						 document.getElementById("personalizationTextPath").setAttribute("startOffset", "-1%");
+	 						 document.getElementById("educationTextPath").setAttribute("startOffset", "86.2%");
+	 						 document.getElementById("eligibilityTextPath").setAttribute("startOffset", "2%");
+	 						 document.getElementById("complianceTextPath").setAttribute("startOffset", "2%");
+	 						 document.getElementById("decisionTextPath").setAttribute("startOffset", "-.8%");
+	 			};
+	  </script>
+	</body>
+</html>
