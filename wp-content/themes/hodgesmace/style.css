@@ -2499,6 +2499,51 @@ li#field_1_9 {
     display: inline-block;
 }
 
+.roi-field-header {
+    color: #2498d1;
+    font-size: 15px;
+    margin: 30px 0 5px;
+}
+
+.roi-savings-low {
+    background-color: #f9f9fa;
+}
+.roi-savings-average {
+    background-color: #f2f7fa;
+}
+.roi-savings-high {
+    background-color: #ebf5f9;
+}
+.roi-savings-group {
+    display: inline-block;
+    width: 33%;
+    padding: 40px;
+    text-align: center;
+    font-size: 12px;
+}
+span.roi-saving-total {
+    display: block;
+    color: #2498d1;
+    font-size: 26px;
+}
+.roi-calculator input {
+    border: 2px solid #eee;
+    border-radius: 5px;
+    padding: 5px 10px;
+    vertical-align: top;
+    margin: 0 20px;
+}
+.roi-calculator .checkbox input {
+    height: 35px;
+    margin: 0;
+}
+.roi-calculator .checkbox label {
+    vertical-align: top;
+}
+.roi-calculator .checkbox {
+    line-height: 35px;
+}
+
 /* SB Infographic */
 
 body .mobile-education ,
