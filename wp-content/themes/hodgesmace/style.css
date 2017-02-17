@@ -2536,6 +2536,7 @@ span.roi-saving-total {
 .roi-calculator .checkbox input {
     height: 35px;
     margin: 0;
+    display: inline-block;
 }
 .roi-calculator .checkbox label {
     vertical-align: top;
@@ -2544,6 +2545,18 @@ span.roi-saving-total {
     line-height: 35px;
 }
 
+@media screen and (max-width: 830px){
+  .roi-calculator .form-group > label {
+      width: 100%
+  }
+  .roi-calculator input {
+      margin: 20px 0;
+      display: block;
+  }
+  .roi-calculator .checkbox {
+      display: block;
+  }
+}
 /* SB Infographic */
 
 body .mobile-education ,
