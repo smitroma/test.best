@@ -2556,6 +2556,11 @@ span.roi-saving-total {
   .roi-calculator .checkbox {
       display: block;
   }
+  .roi-savings-group {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+  }
 }
 /* SB Infographic */
 
