@@ -2516,10 +2516,17 @@ li#field_1_9 {
 }
 .roi-savings-group {
     display: inline-block;
-    width: 33%;
+    width: 31%;
+    margin: 0 1%;
     padding: 40px;
     text-align: center;
     font-size: 12px;
+}
+.roi-savings-group.roi-savings-low {
+    margin-left: 0;
+}
+.roi-savings-group.roi-savings-high {
+    margin-right: 0;
 }
 span.roi-saving-total {
     display: block;
