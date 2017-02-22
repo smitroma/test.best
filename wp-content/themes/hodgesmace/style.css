@@ -2122,9 +2122,16 @@ img.aligncenter,
   overflow: visible;
 }
 
+.mobile-center {
+  text-align:center;
+}
+
 @media(min-width:768px) {
     .site-content .desktop-hide{
       display: none;
+    }
+    .mobile-center {
+      text-align:inherit;
     }
     .site-content .mobile-hide {
       display: inherit;
