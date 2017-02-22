@@ -2124,6 +2124,16 @@ img.aligncenter,
 
 .mobile-center {
   text-align:center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mobile-t-p {
+  padding-top: 1em;
+}
+
+.mobile-b-p {
+  padding-bottom: 1em;
 }
 
 @media(min-width:768px) {
@@ -2132,6 +2142,15 @@ img.aligncenter,
     }
     .mobile-center {
       text-align:inherit;
+      margin-left: inherit;
+      margin-right: inherit;
+    }
+    .mobile-t-p {
+      padding-top: inherit;
+    }
+
+    .mobile-b-p {
+      padding-bottom: inherit;
     }
     .site-content .mobile-hide {
       display: inherit;
