@@ -219,6 +219,10 @@ form {
     margin-right: auto;
 }
 
+.site-content .full-width {
+  width: 100%;
+}
+
 .site-content .vc_row-fluid .vc_row-fluid {
     width: 100%;
     padding: 0;
@@ -232,6 +236,9 @@ form {
     .header_nav .soft-serv .sub-menu {
         width: 95%;
         padding: 0;
+    }
+    .site-content .full-width {
+      width: 100%;
     }
     .site-content .wrapper-container,
     .site-content .banner-bttn-right-sm {
@@ -251,6 +258,9 @@ form {
     .header_nav .soft-serv .sub-menu {
         width: 78%;
         padding: 0;
+    }
+    .site-content .full-width {
+      width: 100%;
     }
     .site-content .wrapper-container,
     .site-content .banner-bttn-right-sm {
