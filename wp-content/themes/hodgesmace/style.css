@@ -2681,3 +2681,9 @@ body .mobile-eligibility {
   margin-top: 1em;
   color: #2d5593;
 }
+
+/*smartben essentials*/
+
+.smartben-essentials-box .p {
+  line-height: 175%;
+}
