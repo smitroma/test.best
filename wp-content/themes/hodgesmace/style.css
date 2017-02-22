@@ -2647,16 +2647,16 @@ body .mobile-eligibility {
 
 /* SmartBen Now */
 
-.smartben-now-cta {
-
-}
-
 .smartben-now-banner .p {
-  font-size: 1.85em;
+  font-size: 1.7em;
 }
 
 .smartben-now-banner .h1 {
   margin-bottom: 0;
+}
+
+.smartben-now-banner .h1 strong {
+  font-size: 110%;
 }
 
 .smartben-now-content .h2 {
