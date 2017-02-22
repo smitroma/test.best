@@ -2605,3 +2605,18 @@ body .mobile-eligibility {
 .mobile-eligibility {
     max-width: 200px;
 }
+
+
+/* SmartBen Now */
+
+.smartben-now-cta {
+
+}
+
+.smartben-now-banner .p {
+  font-size: 1.85em;
+}
+
+.smartben-now-banner .h1 {
+  margin-bottom: 0;
+}
