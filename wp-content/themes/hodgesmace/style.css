@@ -2692,9 +2692,11 @@ body .mobile-eligibility {
 }
 
 .site-content .smartben-essentials-content ul li:before {
-    content: "\f111";
-    color: #333;
-    font-family: "FontAwesome";
-    position: absolute;
-    left: 0;
+  content: "\f111";
+  color: #333;
+  font-size: 5px;
+  font-family: "FontAwesome";
+  position: absolute;
+  left: 0;
+  line-height: 23px;
 }
