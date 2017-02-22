@@ -812,6 +812,10 @@ input[type=submit],
 }
 
 
+.vc_btn3.vc_btn3-color-green, .vc_btn3.vc_btn3-color-green.vc_btn3-style-flat {
+  background-color: #8bc63f;
+}
+
 /* Changes default button to ours*/
 
 .site-content .vc_btn3 {
