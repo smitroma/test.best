@@ -2706,3 +2706,13 @@ body .mobile-eligibility {
   left: 0;
   line-height: 23px;
 }
+
+@media screen and (max-width: 767px) {
+  .mobile-white-bkg .vc_column-inner {
+      background-color: #fff !important;
+  }
+
+  .mobile-gray-bkg .vc_column-inner {
+      background-color: #f9f9f9 !important;
+  }
+}
