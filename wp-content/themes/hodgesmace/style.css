@@ -456,7 +456,7 @@ input#s:focus {
     display: none;
 }
 
-@media (min-width: 1170px) {
+@media (min-width: 1210px) {
     #header .request-header {
         display: block;
     }
