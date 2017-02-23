@@ -2696,6 +2696,9 @@ body .mobile-eligibility {
 .smartben-essentials-content .h3 {
   color:#5fb6e3;
 }
+.site-content .smartben-essentials-content ul {
+  margin-left: 1em;
+}
 
 .site-content .smartben-essentials-content ul li:before {
   content: "\f111";
