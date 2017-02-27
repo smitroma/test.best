@@ -138,7 +138,7 @@
 
     // Fixes IE active element
 
-    document.activeElement.blur();
+    document.activeElement = document.body;
 
 
 })(jQuery);
