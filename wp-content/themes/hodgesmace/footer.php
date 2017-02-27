@@ -26,8 +26,10 @@
 <script type="text/javascript">
 console.log('loaded',document.activeElement);
 if(document.body.setActive){
-  document.getElementById('top-header').focus();
-  console.log('focused');
+  setTimeout(function(){
+    document.getElementById('top-header').focus();
+    console.log('focused');
+  }, 40);
 }
 console.log('set',document.activeElement);
 </script>
