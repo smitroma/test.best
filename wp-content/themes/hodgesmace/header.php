@@ -20,20 +20,8 @@
 		 <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/ie.css">
 	<![endif]-->
 	<?php wp_head(); ?>
-	<script type="text/javascript">
-		function setBodyActive() {
-			console.log('loaded',document.activeElement);
-			if(document.body.setActive){
-				document.body.setActive();
-				document.body.focus();
-			}
-
-			console.log('set',document.activeElement);
-		}
-		window.onload = setBodyActive;
-	</script>
 </head>
-<body <?php body_class(); ?> autofocus>
+<body <?php body_class(); ?>>
 
 	<!-- Google Tag Manager -->
 		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NCHLPG"

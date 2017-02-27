@@ -136,4 +136,12 @@
         }
     });
 
+    $(document).ready(function(){
+      console.log('loaded',document.activeElement);
+      if(document.body.setActive){
+        document.body.setActive();
+        document.body.focus();
+      }
+      console.log('set',document.activeElement);
+    });
 })(jQuery);
