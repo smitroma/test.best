@@ -139,8 +139,8 @@
     $(document).ready(function(){
       console.log('loaded',document.activeElement);
       if(document.body.setActive){
-        document.body.setActive();
-        document.body.focus();
+        $('#top-header').focus();
+        console.log('focused');
       }
       console.log('set',document.activeElement);
     });
