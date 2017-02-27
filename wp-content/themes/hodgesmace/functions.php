@@ -687,3 +687,16 @@ function magazino_widgets_init() {
 
 }
 add_action( 'widgets_init', 'magazino_widgets_init' );
+
+
+/**
+ * Fix Gravity Form Tabindex Conflicts
+ * http://gravitywiz.com/fix-gravity-form-tabindex-conflicts/
+ */
+add_filter( 'gform_tabindex', 'gform_tabindexer', 10, 2 );
+function gform_tabindexer( $tab_index, $form = false ) {
+    $starting_index = -1; // if you need a higher tabindex, update this number
+    if( $form )
+        add_filter( 'gform_tabindex_' . $form['id'], 'gform_tabindexer' );
+    return $starting_index;
+}
