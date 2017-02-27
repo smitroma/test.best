@@ -23,7 +23,14 @@
   </div>
 </div>
 </div><!-- .container-fluid -->
-
+<script type="text/javascript">
+console.log('loaded',document.activeElement);
+if(document.body.setActive){
+  document.getElementById('top-header').focus();
+  console.log('focused');
+}
+console.log('set',document.activeElement);
+</script>
 <?php wp_footer(); ?>
 </body>
 </html>

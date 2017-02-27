@@ -135,13 +135,4 @@
             r.select();
         }
     });
-
-    $(document).ready(function(){
-      console.log('loaded',document.activeElement);
-      if(document.body.setActive){
-        $('#top-header').focus();
-        console.log('focused');
-      }
-      console.log('set',document.activeElement);
-    });
 })(jQuery);
