@@ -30,7 +30,7 @@ if(document.body.setActive){
     document.body.focus();
     document.body.setActive();
     console.log('focused');
-  }, 40);
+  }, 400);
 }
 console.log('set',document.activeElement);
 </script>
