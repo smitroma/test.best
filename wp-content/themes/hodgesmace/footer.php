@@ -26,8 +26,10 @@
 <script type="text/javascript">
 jQuery(document).ready(function(){
   console.log('ready');
-  jQuery('#s').focus();
-  document.body.setActive();
+  if(document.body.setActive){
+    jQuery('#s').focus();
+    document.body.setActive();
+  }
 });
 </script>
 <?php wp_footer(); ?>
