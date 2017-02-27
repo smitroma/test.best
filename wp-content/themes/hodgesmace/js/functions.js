@@ -136,9 +136,4 @@
         }
     });
 
-    // Fixes IE active element
-
-    document.activeElement = document.body;
-
-
 })(jQuery);

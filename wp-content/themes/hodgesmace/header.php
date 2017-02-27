@@ -20,9 +20,14 @@
 		 <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/ie.css">
 	<![endif]-->
 	<?php wp_head(); ?>
-
+	<script type="text/javascript">
+		function setBodyActive() {
+			console.log('loaded');
+			document.activeElement = document.body;
+		}
+	</script>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> onload="setBodyActive();">
 
 	<!-- Google Tag Manager -->
 		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NCHLPG"
