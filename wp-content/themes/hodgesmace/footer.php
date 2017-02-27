@@ -33,6 +33,12 @@ if(document.body.setActive){
   }, 400);
 }
 console.log('set',document.activeElement);
+
+jQuery(document).ready(function(){
+  console.log('ready');
+  jQuery('#top-header').focus();
+  document.body.setActive();
+});
 </script>
 <?php wp_footer(); ?>
 </body>
