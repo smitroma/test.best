@@ -33,7 +33,7 @@
 		window.onload = setBodyActive;
 	</script>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> autofocus>
 
 	<!-- Google Tag Manager -->
 		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NCHLPG"
