@@ -29,7 +29,7 @@ if(document.body.setActive){
   setTimeout(function(){
     document.body.focus();
     document.body.setActive();
-    console.log('focused');
+    console.log('focused', document.activeElement);
   }, 400);
 }
 console.log('set',document.activeElement);
