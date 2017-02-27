@@ -23,7 +23,7 @@
 	<script type="text/javascript">
 		function setBodyActive() {
 			console.log('loaded',document.activeElement);
-			document.activeElement = document.body;
+			document.body.setActive();
 			console.log('set',document.activeElement);
 		}
 	</script>
