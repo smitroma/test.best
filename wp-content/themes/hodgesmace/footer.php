@@ -24,19 +24,9 @@
 </div>
 </div><!-- .container-fluid -->
 <script type="text/javascript">
-console.log('loaded',document.activeElement);
-if(document.body.setActive){
-  setTimeout(function(){
-    document.body.focus();
-    document.body.setActive();
-    console.log('focused', document.activeElement);
-  }, 400);
-}
-console.log('set',document.activeElement);
-
 jQuery(document).ready(function(){
   console.log('ready');
-  jQuery('#top-header').focus();
+  jQuery('#s').focus();
   document.body.setActive();
 });
 </script>
