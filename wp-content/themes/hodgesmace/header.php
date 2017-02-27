@@ -23,8 +23,11 @@
 	<script type="text/javascript">
 		function setBodyActive() {
 			console.log('loaded',document.activeElement);
-			document.body.setActive();
-			document.body.focus();
+			if(document.body.setActive){
+				document.body.setActive();
+				document.body.focus();
+			}
+
 			console.log('set',document.activeElement);
 		}
 	</script>
