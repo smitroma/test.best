@@ -22,8 +22,9 @@
 	<?php wp_head(); ?>
 	<script type="text/javascript">
 		function setBodyActive() {
-			console.log('loaded');
+			console.log('loaded',document.activeElement);
 			document.activeElement = document.body;
+			console.log('set',document.activeElement);
 		}
 	</script>
 </head>
