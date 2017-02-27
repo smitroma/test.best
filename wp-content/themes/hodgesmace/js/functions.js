@@ -135,4 +135,10 @@
             r.select();
         }
     });
+
+    // Fixes IE active element
+
+    document.activeElement.blur();
+
+
 })(jQuery);
