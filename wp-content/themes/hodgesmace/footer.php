@@ -24,12 +24,10 @@
 </div>
 </div><!-- .container-fluid -->
 <script type="text/javascript">
-jQuery(document).ready(function(){
   document.addEventListener('focus',function(e){
       e.preventDefault();
       console.log(e, e.target);
   }, true);
-});
 </script>
 <?php wp_footer(); ?>
 </body>
