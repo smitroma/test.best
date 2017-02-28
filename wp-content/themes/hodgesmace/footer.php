@@ -28,8 +28,9 @@
     if(document.body.setActive && document.activeElement !== document.body){
       document.body.setActive();
       document.body.focus();
-      console.log(e, e.target);
+      console.log('focus on', document.activeElement);
     }
+    console.log(e, e.target);
   }, true);
 </script>
 <?php wp_footer(); ?>
