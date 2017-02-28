@@ -27,6 +27,7 @@
   document.addEventListener('focus',function(e){
     if(document.body.setActive && document.activeElement !== document.body){
       document.body.setActive();
+      document.body.focus();
       console.log(e, e.target);
     }
   }, true);
