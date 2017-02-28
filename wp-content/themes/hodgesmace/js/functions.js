@@ -127,12 +127,4 @@
                 $('.contact-footer #field_1_8').addClass('d-n');
             }
         })
-        //Input fields start at beginning
-    $('input').each(function () {
-        if (this.createTextRange) {
-            var r = this.createTextRange();
-            r.collapse(true);
-            r.select();
-        }
-    });
 })(jQuery);
