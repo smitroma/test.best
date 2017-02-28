@@ -25,7 +25,9 @@
 </div><!-- .container-fluid -->
 <script type="text/javascript">
 jQuery(document).ready(function(){
-  console.log('ready');
+  document.addEventListener('focus',function(e){
+    console.log(e, e.target);
+  }, true);
   if(document.body.setActive){
     jQuery('#s').focus();
     document.body.setActive();
