@@ -25,8 +25,10 @@
 </div><!-- .container-fluid -->
 <script type="text/javascript">
   document.addEventListener('focus',function(e){
-      document.body.activeElement();
+    if(document.body.setActive && document.activeElement !== document.body){
+      document.body.setActive();
       console.log(e, e.target);
+    }
   }, true);
 </script>
 <?php wp_footer(); ?>
