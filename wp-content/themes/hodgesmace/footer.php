@@ -27,8 +27,8 @@
 jQuery(document).ready(function(){
   console.log('ready');
   if(document.body.setActive){
-    // jQuery('#s').focus();
-    // document.body.setActive();
+    jQuery('#s').focus();
+    document.body.setActive();
   }
 });
 </script>
