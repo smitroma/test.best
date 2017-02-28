@@ -25,12 +25,11 @@
 </div><!-- .container-fluid -->
 <script type="text/javascript">
 jQuery(document).ready(function(){
-  document.addEventListener('focus',function(e){
-    console.log(e, e.target);
-  }, true);
   if(document.body.setActive){
-    jQuery('#s').focus();
-    document.body.setActive();
+    document.addEventListener('focus',function(e){
+      e.preventDefault();
+      console.log(e, e.target);
+    }, true);
   }
 });
 </script>
