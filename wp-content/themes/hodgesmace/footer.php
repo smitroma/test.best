@@ -25,7 +25,7 @@
 </div><!-- .container-fluid -->
 <script type="text/javascript">
   document.addEventListener('focus',function(e){
-    if(document.body.setActive && document.activeElement !== document.body){
+    if(document.body.setActive && e.target !== document.body){
       document.body.setActive();
       document.body.focus();
       console.log('focus on', document.activeElement);
