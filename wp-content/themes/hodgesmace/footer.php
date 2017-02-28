@@ -26,10 +26,8 @@
 <script type="text/javascript">
 jQuery(document).ready(function(){
   document.addEventListener('focus',function(e){
-    if (document.body.setActive) {
       e.preventDefault();
       console.log(e, e.target);
-    }
   }, true);
 });
 </script>
