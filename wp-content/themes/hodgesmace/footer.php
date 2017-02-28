@@ -25,12 +25,12 @@
 </div><!-- .container-fluid -->
 <script type="text/javascript">
 jQuery(document).ready(function(){
-  if(document.body.setActive){
-    document.addEventListener('focus',function(e){
+  document.addEventListener('focus',function(e){
+    if (document.body.setActive) {
       e.preventDefault();
       console.log(e, e.target);
-    }, true);
-  }
+    }
+  }, true);
 });
 </script>
 <?php wp_footer(); ?>
