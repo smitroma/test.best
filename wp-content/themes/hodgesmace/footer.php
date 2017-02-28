@@ -25,7 +25,7 @@
 </div><!-- .container-fluid -->
 <script type="text/javascript">
   document.addEventListener('focus',function(e){
-      e.preventDefault();
+      e.target.blur();
       console.log(e, e.target);
   }, true);
 </script>
