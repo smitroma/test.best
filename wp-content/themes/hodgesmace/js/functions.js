@@ -130,13 +130,17 @@
     });
     // Mobile Menu
     $('.menu-item-has-children').click(function(e){
-      if(!($(e.target).parents('.sub-menu').length > 0)) {
-        e.preventDefault();
-        $(this).find('.sub-menu').toggleClass('d-b');
+      if($(window).outerWidth() < 768){
+        if(!($(e.target).parents('.sub-menu').length > 0)) {
+          e.preventDefault();
+          $(this).find('.sub-menu').toggleClass('d-b');
+        }
       }
     });
     $('.current-menu-ancestor').each(function(k, v){
-      $(v).find('.sub-menu').toggleClass('d-b');
+      if($(window).outerWidth() < 768){
+        $(v).find('.sub-menu').toggleClass('d-b');
+      }
     });
 
 })(jQuery);
