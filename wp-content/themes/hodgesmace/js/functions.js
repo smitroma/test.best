@@ -126,5 +126,5 @@
             } else {
                 $('.contact-footer #field_1_8').addClass('d-n');
             }
-        })
+    });
 })(jQuery);
