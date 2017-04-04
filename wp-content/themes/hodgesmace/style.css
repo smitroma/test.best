@@ -2633,7 +2633,9 @@ span.roi-saving-total {
     margin: 20px 0;
   }
 }
-/* SB Infographic */
+/* SB Infographic
+* --------------------------------------------------------------- *
+*/
 
 body .mobile-education ,
 body .mobile-connect,
@@ -2670,8 +2672,9 @@ body .mobile-eligibility {
     max-width: 200px;
 }
 
-
-/* SmartBen Now */
+/* SmartBen Now
+* --------------------------------------------------------------- *
+*/
 
 .smartben-essentials-box .h3,
 .smartben-essentials-content .h3,
@@ -2703,7 +2706,9 @@ body .mobile-eligibility {
   color: #2d5593;
 }
 
-/*smartben essentials*/
+/* SmartBen Essentials
+* --------------------------------------------------------------- *
+*/
 
 .smartben-essentials-box .p {
   line-height: 175%;
@@ -2737,4 +2742,18 @@ body .mobile-eligibility {
 
 .contact-footer input {
   -ms-user-select: none;
+}
+
+/* SmartBen Gatekeeper
+* --------------------------------------------------------------- *
+*/
+
+.h3-two-lines {
+  height: 62px;
+}
+
+@media screen and (max-width: 816px) {
+  .w-816-h3-three-lines {
+    height: 93px;
+  }
 }
