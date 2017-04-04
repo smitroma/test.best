@@ -97,7 +97,7 @@
     }
     // StickyNav
     function getScroll() {
-      if($(window).outerWidth() > 767){
+      if($(window).outerWidth() > 889){
         if ($(window).scrollTop() > $('#top-header').height()) {
             if (!$('#header').hasClass('sticky')) {
                 $('#header').addClass('sticky');
