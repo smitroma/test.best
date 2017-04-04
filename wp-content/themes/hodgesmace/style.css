@@ -2764,3 +2764,8 @@ body .mobile-eligibility {
   margin-bottom: 10px;
   color: #000;
 }
+
+/* fixes bkg position on footer banner */
+.smartben-now-cta {
+    background-position: top left !important;
+}
