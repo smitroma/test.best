@@ -137,10 +137,18 @@
         }
       }
     });
-    $('.current-menu-ancestor').each(function(k, v){
-      if($(window).outerWidth() < 890){
-        $(v).find('.sub-menu').toggleClass('d-b');
-      }
-    });
+    function openActiveSubOnMobile() {
+      $('.current-menu-ancestor').each(function(k, v){
+        if($(window).outerWidth() < 890){
+          $(v).find('.sub-menu').addClass('d-b');
+        } else {
+          $('.sub-menu').removeClass('d-b');
+        }
+      });
+    }
+    // set active link acestor open on mobile
+    openActiveSubOnMobile();
+    // set active link acestor open when window size changes
+    $(window).resize(openActiveSubOnMobile);
 
 })(jQuery);

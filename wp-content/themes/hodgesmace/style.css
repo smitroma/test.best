@@ -649,7 +649,7 @@ input#s:focus {
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 889px) {
   .sub-menu {
     display: none;
   }
@@ -660,7 +660,7 @@ input#s:focus {
 
 /* Sticky Nav */
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 889px){
   #header.sticky {
       position: fixed;
       background-color: #fff;
