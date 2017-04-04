@@ -2766,6 +2766,13 @@ body .mobile-eligibility {
 }
 
 /* fixes bkg position on footer banner */
-.smartben-now-cta {
+.site-content .smartben-now-cta {
     background-position: top left !important;
+}
+
+@media screen and (max-width:769px) {
+  .site-content .smartben-now-cta {
+      background-position: 34% top !important;
+      background-size: 400% 130% !important;
+  }
 }
