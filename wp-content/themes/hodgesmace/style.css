@@ -2748,12 +2748,14 @@ body .mobile-eligibility {
 * --------------------------------------------------------------- *
 */
 
-.h3-two-lines {
-  height: 62px;
-}
-
-@media screen and (max-width: 816px) {
+@media screen and (min-width: 768px) {
   .w-816-h3-three-lines {
     height: 93px;
+  }
+}
+
+@media screen and (min-width: 817px) {
+  .h3-two-lines {
+    height: 62px;
   }
 }
