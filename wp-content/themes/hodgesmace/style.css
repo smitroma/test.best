@@ -2776,3 +2776,12 @@ body .mobile-eligibility {
       background-size: 400% 130% !important;
   }
 }
+
+/* Pathfinder */
+
+.site-content .pathfinder-process-bkg {
+    background-image: url(https://www.hodgesmace.com/wp-content/uploads/2017/04/gradientbar-row2.png?id=2434) !important;
+    background-position: top center !important;
+    background-repeat: no-repeat !important;
+    background-size: 65% 5px !important;
+}
