@@ -5,18 +5,18 @@
     // Mobile Menu toggle
     $('.mobile-menu-toggle').click(function () {
             $('.header_nav').toggle();
-        })
-        // Portal Menu toggle
+    });
+    // Portal Menu toggle
     var hidePortalMenu = function () {
             $('#top-header .menu-item-has-children').removeClass('active');
             $('#top-header .menu-item-has-children .sub-menu').hide()
-        }
-        // toggle menu when you click
+    }
+    // toggle menu when you click
     $('#top-header .menu-item-has-children').click(function () {
             $(this).toggleClass('active');
             $(this).find('.sub-menu').toggle();
-        })
-        // hide menu when you click off
+    });
+    // hide menu when you click off
     $('body').click(function (e) {
         if ($(e.target).parents('.portal-toggle').length === 0) {
             hidePortalMenu();
