@@ -109,6 +109,11 @@
                 $('#top-header').css('marginBottom', '0px');
             }
         }
+      } else {
+          if ($('#header').hasClass('sticky')) {
+              $('#header').removeClass('sticky');
+              $('#top-header').css('marginBottom', '0px');
+          }
       }
     }
     // onload - StickyNav
