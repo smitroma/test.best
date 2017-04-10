@@ -2127,12 +2127,12 @@ img.aligncenter,
     text-align: right;
 }
 
-.vertical-center {
+.site-content .vertical-center {
     display: table-cell;
     vertical-align: center;
 }
 
-.d-n-xs {
+.site-content .d-n-xs {
     display: none;
 }
 
@@ -2148,17 +2148,17 @@ img.aligncenter,
   overflow: visible;
 }
 
-.mobile-center {
+.site-content .mobile-center {
   text-align:center;
   margin-left: auto;
   margin-right: auto;
 }
 
-.mobile-t-p {
+.site-content .mobile-t-p {
   padding-top: 1em;
 }
 
-.mobile-b-p {
+.site-content .mobile-b-p {
   padding-bottom: 1em;
 }
 
@@ -2166,16 +2166,16 @@ img.aligncenter,
     .site-content .desktop-hide{
       display: none;
     }
-    .mobile-center {
+    .site-content .mobile-center {
       text-align:inherit;
       margin-left: inherit;
       margin-right: inherit;
     }
-    .mobile-t-p {
+    .site-content .mobile-t-p {
       padding-top: inherit;
     }
 
-    .mobile-b-p {
+    .site-content .mobile-b-p {
       padding-bottom: inherit;
     }
     .site-content .mobile-hide {
