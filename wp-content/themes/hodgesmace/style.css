@@ -2213,10 +2213,11 @@ img.aligncenter,
     font-family: 'NeuzeitGro Bold', sans-serif;
 }
 
+.m-b-0 {
+  margin-bottom: 0;
+}
 
 /* The 'Reqest Demo' button in the Nav acts funny cuz it's not a menu item*/
-
-
 /* Probably needs a better solution  -JL*/
 
 @media(min-width:500px) {
@@ -2224,14 +2225,12 @@ img.aligncenter,
         margin-left: -25px !important;
         margin-top: 80px;
     }
-    ;
 }
 
 @media(min-width:1170px) {
     #demo-btn-mob-jank {
         display: none;
     }
-    ;
 }
 
 @media(max-width:500px) {
@@ -2239,7 +2238,6 @@ img.aligncenter,
         margin-left: 0px !important;
         margin-top: 80px;
     }
-    ;
 }
 
 
