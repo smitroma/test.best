@@ -2791,6 +2791,10 @@ body .mobile-eligibility {
 
 @media screen and (max-width: 767px){
   .site-content .pathfinder-process-bkg-mobile {
+    padding: 0 20px 0 0;
+    margin: 0 30px;
+    background-size: 2px 76% !important;
+    background-position: 5% 6em !important;
   }
   .site-content .pathfinder-process-bkg-mobile .vc_row.vc_column-gap-30 .vc_column_container,
   .site-content .pathfinder-process-bkg-mobile .vc_column_container > .vc_column-inner {
