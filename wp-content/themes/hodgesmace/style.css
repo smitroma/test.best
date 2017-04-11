@@ -2806,7 +2806,11 @@ body .mobile-eligibility {
   .mobile-fs-1_2-em {
       font-size: 1.2em;
   }
-  .mobile-icon-left {
+  .site-content .mobile-p-lr-10 {
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+  }
+  .site-content .mobile-icon-left {
       display: inline-block;
       width: 10%;
   }
