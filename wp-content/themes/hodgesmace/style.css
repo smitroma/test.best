@@ -2784,15 +2784,15 @@ body .mobile-eligibility {
 }
 
 @media screen and (min-width: 769px){
-  .site-content .pathfinder-process-bkg {
+  .site-content .pathfinder-process-bkg-mobile {
     background: none !important;
   }
 }
 
 @media screen and (max-width: 768px){
-  .site-content .pathfinder-process-bkg {
+  .site-content .pathfinder-process-bkg-mobile {
   }
-  .site-content .mobile-hide-bkg {
+  .site-content .pathfinder-process-bkg {
     background: none !important;
   }
   .mobile-fs-1_2-em {
