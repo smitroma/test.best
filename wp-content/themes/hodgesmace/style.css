@@ -2782,3 +2782,24 @@ body .mobile-eligibility {
     background-repeat: no-repeat !important;
     background-size: 65% 5px !important;
 }
+
+@media screen and (max-width: 768px){
+  .mobile-fs-1_2-em {
+      font-size: 1.2em;
+  }
+  .mobile-icon-left {
+      display: inline-block;
+      width: 10%;
+  }
+  .mobile-text-right {
+      display: inline-block;
+      width: 80%;
+      vertical-align: text-top;
+      padding: 0 0 0 1em !important;
+  }
+  .mobile-text-right h3,
+  .mobile-text-right p {
+      text-align: left !important;
+  }
+
+}
