@@ -2783,13 +2783,14 @@ body .mobile-eligibility {
     background-size: 65% 5px !important;
 }
 
-.site-content .pathfinder-process-bkg {
+@media screen and (min-width: 769px){
+  .site-content .pathfinder-process-bkg {
     background: none !important;
+  }
 }
 
 @media screen and (max-width: 768px){
   .site-content .pathfinder-process-bkg {
-    background: initial !important;
   }
   .site-content .mobile-hide-bkg {
     background: none !important;
