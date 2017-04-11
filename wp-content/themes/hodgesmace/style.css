@@ -2792,10 +2792,10 @@ body .mobile-eligibility {
 @media screen and (max-width: 767px){
   .site-content .pathfinder-process-bkg-mobile {
   }
-  .site-content .pathfinder-process-bkg-mobile > .vc_column_container,
-  .site-content .pathfinder-process-bkg-mobile.vc_column_container > .vc_column-inner {
+  .site-content .pathfinder-process-bkg-mobile .vc_row.vc_column-gap-30 .vc_column_container,
+  .site-content .pathfinder-process-bkg-mobile .vc_column_container > .vc_column-inner {
     padding: 0;
-  }  
+  }
   .site-content .pathfinder-process-bkg {
     background: none !important;
   }
