@@ -2791,7 +2791,7 @@ body .mobile-eligibility {
       display: inline-block;
       width: 10%;
   }
-  .mobile-text-right {
+  .site-content .mobile-text-right {
       display: inline-block;
       width: 80%;
       vertical-align: text-top;
