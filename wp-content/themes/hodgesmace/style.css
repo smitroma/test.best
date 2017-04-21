@@ -146,16 +146,16 @@ form {
 }
 
 .site-content ul li:before {
-    content: "\f00c";
-    color: #024b8c;
+    content: "\f101";
+    color: #8ec449;
     font-family: "FontAwesome";
     position: absolute;
     left: 0;
 }
 
 .site-content ul.blue-checks li:before {
-    content: "\f101";
-    color: #8ec449;
+    content: "\f00c";
+    color: #024b8c;
     font-family: "FontAwesome";
     position: absolute;
     left: 0;
