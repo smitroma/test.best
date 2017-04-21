@@ -2177,7 +2177,7 @@ img.aligncenter,
   padding-bottom: 1em;
 }
 
-@media(min-width:768px) {
+@media screen and (min-width:768px) {
     .site-content .desktop-hide{
       display: none;
     }
@@ -2185,6 +2185,9 @@ img.aligncenter,
       text-align:inherit;
       margin-left: inherit;
       margin-right: inherit;
+    }
+    .site-content .desktop-p-l-6-em {
+        padding-left: 6em;
     }
     .site-content .mobile-t-p {
       padding-top: inherit;
