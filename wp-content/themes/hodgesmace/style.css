@@ -1045,6 +1045,10 @@ Text Domain: hodgesmace
         #field_1_7 {
             width: 97.7%;
         }
+        #input_1_5_3_container,
+        #input_1_5_6_container {
+            width: 98%;
+        }
     }
     /* Fixes error floats */
     
@@ -2269,7 +2273,7 @@ Text Domain: hodgesmace
         font-family: 'NeuzeitGro Bold';
         font-weight: 700;
         color: #fff;
-        font-size: 3em;
+        font-size: 2em;
         line-height: 100%;
         padding: 0;
         margin: 0;
@@ -2645,6 +2649,15 @@ Text Domain: hodgesmace
         .site-content .smartben-now-cta {
             background-position: 34% top !important;
             background-size: 400% 130% !important;
+        }
+        .page-id-2326 .align-left-on-mobile .wpb_wrapper div {
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+            margin: 15px 0 0 0 !important;
+        }
+        .smartben-essentials-box {
+            padding-left: 10px !important;
+            padding-right: 10px !important;
         }
     }
     /* Pathfinder */
