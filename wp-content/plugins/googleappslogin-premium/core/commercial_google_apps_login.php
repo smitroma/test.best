@@ -201,7 +201,7 @@ class commercial_google_apps_login extends core_google_apps_login {
 		if ($this->want_premium_default_role()) {
 			echo '<label for="ga_defaultrole" class="textinput">'.__('Default role for new users', 'google-apps-login').'</label>';
 			echo "<select name='".$this->get_options_name()."[ga_defaultrole]' id='ga_defaultrole' class='select'>";
-			wp_dropdown_roles( $options['ga_defaultrole'] );
+			$this->wp_dropdown_roles_safe( $options['ga_defaultrole'] );
 			echo "</select>";
 			echo '<br class="clear">';
 		}
@@ -231,7 +231,17 @@ class commercial_google_apps_login extends core_google_apps_login {
 		
 		echo '</div>';
 	}
-	
+
+	// Output dropdown options for all roles, but also add an extra dummy option for the selected role if it is not present.
+	// This saves snapping back to the first in the list if the selected role has been deleted since it was set.
+	protected function wp_dropdown_roles_safe($selected = '') {
+		wp_dropdown_roles( $selected );
+		if ($selected !== '' && $selected !== '_gal_superadmin' && is_null(get_role($selected))) {
+			$name = esc_html('-- DELETED ROLE -- '.$selected);
+			echo "\n\t<option selected='selected' value='" . esc_attr($selected) . "'>$name</option>";
+		}
+	}
+
 	protected function want_premium_default_role() {
 		return true;
 	}
@@ -310,6 +320,11 @@ class commercial_google_apps_login extends core_google_apps_login {
 			}
 			
 			echo '<br class="clear" />';
+
+			if (isset($license_status['download_link'])) {
+				echo '<p>Download latest plugin ZIP <a href="'.$license_status['download_link'].'" target="_blank">here</a></p>';
+				echo '<br class="clear" />';
+			}
 		}
 		
 		echo '</div>';
@@ -332,10 +347,11 @@ class commercial_google_apps_login extends core_google_apps_login {
 		$newinput['ga_forcedomain'] = isset($input['ga_forcedomain']) ? (boolean)$input['ga_forcedomain'] : false;
 		$newinput['ga_disablewplogin'] = isset($input['ga_disablewplogin']) ? (boolean)$input['ga_disablewplogin'] : false;
 		$newinput['ga_hidewplogin'] = isset($input['ga_hidewplogin']) ? (boolean)$input['ga_hidewplogin'] : false;
-		
-		$newinput['ga_defaultrole'] = isset($input['ga_defaultrole']) 
-					&& ($input['ga_defaultrole']=='' || !is_null(get_role($input['ga_defaultrole']))) 
-			? $input['ga_defaultrole'] 
+
+		// No longer want to check role exists - just keep deleted role value which will be passed as 'none' to the user
+		// This saves snapping back to an unwanted role if the default role is deleted
+		$newinput['ga_defaultrole'] = isset($input['ga_defaultrole'])
+			? $input['ga_defaultrole']
 			: get_option('default_role');
 		
 		$newinput['ga_googlelogout'] = isset($input['ga_googlelogout']) ? (boolean)$input['ga_googlelogout'] : false;
@@ -433,13 +449,10 @@ class commercial_google_apps_login extends core_google_apps_login {
 	
 	protected function add_actions() {
 		parent::add_actions();
-		$options = $this->get_option_galogin();
 		
 		add_action('login_message', Array($this, 'ga_login_message'));
 		
-		if ($options['ga_googlelogout']) {
-			add_action('wp_logout', Array($this, 'ga_logout'));
-		}
+		add_action('wp_logout', Array($this, 'ga_logout'));
 	}
 	
 	// Also logout of Google
@@ -510,6 +523,11 @@ class commercial_google_apps_login extends core_google_apps_login {
 	
 	public function ga_logout() {
 		$options = $this->get_option_galogin();
+
+		if (!$options['ga_googlelogout']) {
+			return;
+		}
+
 		if (!empty( $_REQUEST['redirect_to'] ) && $options['ga_googlelogout']) {
 			// Normal logout would send straight to redirect_to, but we need to do our Google auto-logout first
 			wp_safe_redirect( 'wp-login.php?loggedout=true&redirect_to='.urlencode($_REQUEST['redirect_to']) );
@@ -531,13 +549,13 @@ class commercial_google_apps_login extends core_google_apps_login {
 			$license_key = $options['ga_license_key'];
 		}
 	
-		if( !class_exists( 'EDD_SL_Plugin_Updater9' ) ) {
+		if( !class_exists( 'EDD_SL_Plugin_Updater10' ) ) {
 			// load our custom updater
 			include( dirname( __FILE__ ) . '/EDD_SL_Plugin_Updater.php' );
 		}
 			
 		// setup the updater
-		$edd_updater = new EDD_SL_Plugin_Updater9( $this->WPGLOGIN_GA_STORE_URL, $this->my_plugin_basename(),
+		$edd_updater = new EDD_SL_Plugin_Updater10( $this->WPGLOGIN_GA_STORE_URL, $this->my_plugin_basename(),
 				array(
 						'version' 	=> $this->PLUGIN_VERSION,
 						'license' 	=> $license_key,

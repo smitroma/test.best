@@ -5,18 +5,18 @@
     // Mobile Menu toggle
     $('.mobile-menu-toggle').click(function () {
             $('.header_nav').toggle();
-        })
-        // Portal Menu toggle
+    });
+    // Portal Menu toggle
     var hidePortalMenu = function () {
             $('#top-header .menu-item-has-children').removeClass('active');
             $('#top-header .menu-item-has-children .sub-menu').hide()
-        }
-        // toggle menu when you click
+    }
+    // toggle menu when you click
     $('#top-header .menu-item-has-children').click(function () {
             $(this).toggleClass('active');
             $(this).find('.sub-menu').toggle();
-        })
-        // hide menu when you click off
+    });
+    // hide menu when you click off
     $('body').click(function (e) {
         if ($(e.target).parents('.portal-toggle').length === 0) {
             hidePortalMenu();
@@ -97,6 +97,7 @@
     }
     // StickyNav
     function getScroll() {
+      if($(window).outerWidth() > 889){
         if ($(window).scrollTop() > $('#top-header').height()) {
             if (!$('#header').hasClass('sticky')) {
                 $('#header').addClass('sticky');
@@ -108,6 +109,12 @@
                 $('#top-header').css('marginBottom', '0px');
             }
         }
+      } else {
+          if ($('#header').hasClass('sticky')) {
+              $('#header').removeClass('sticky');
+              $('#top-header').css('marginBottom', '0px');
+          }
+      }
     }
     // onload - StickyNav
     getScroll();
@@ -117,22 +124,36 @@
     });
     // Contact show employee rang on business type select
     $('.contact-footer #input_1_7').change(function () {
-            console.log($(this).val());
-            $('.contact-footer #field_1_8').removeClass('d-n');
-            if ($(this).val() == 'Employer') {
-                $('.contact-footer #field_1_8 .gf_placeholder').text('Company Size');
-            } else if ($(this).val() == 'Broker' || $(this).val() == 'Carrier') {
-                $('.contact-footer #field_1_8 .gf_placeholder').text('Average Client Size');
-            } else {
-                $('.contact-footer #field_1_8').addClass('d-n');
-            }
-        })
-        //Input fields start at beginning
-    $('input').each(function () {
-        if (this.createTextRange) {
-            var r = this.createTextRange();
-            r.collapse(true);
-            r.select();
+        $('.contact-footer #field_1_8').removeClass('d-n');
+        if ($(this).val() == 'Employer') {
+            $('.contact-footer #field_1_8 .gf_placeholder').text('Company Size');
+        } else if ($(this).val() == 'Broker' || $(this).val() == 'Carrier') {
+            $('.contact-footer #field_1_8 .gf_placeholder').text('Average Client Size');
+        } else {
+            $('.contact-footer #field_1_8').addClass('d-n');
         }
     });
+    // Mobile Menu
+    $('.menu-item-has-children').click(function(e){
+      if($(window).outerWidth() < 890){
+        if(!($(e.target).parents('.sub-menu').length > 0)) {
+          e.preventDefault();
+          $(this).find('.sub-menu').toggleClass('d-b');
+        }
+      }
+    });
+    function openActiveSubOnMobile() {
+      $('.current-menu-ancestor').each(function(k, v){
+        if($(window).outerWidth() < 890){
+          $(v).find('.sub-menu').addClass('d-b');
+        } else {
+          $('.sub-menu').removeClass('d-b');
+        }
+      });
+    }
+    // set active link acestor open on mobile
+    openActiveSubOnMobile();
+    // set active link acestor open when window size changes
+    $(window).resize(openActiveSubOnMobile);
+
 })(jQuery);

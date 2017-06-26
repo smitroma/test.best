@@ -23,7 +23,12 @@
   </div>
 </div>
 </div><!-- .container-fluid -->
-
+<script type="text/javascript">
+  document.addEventListener('focus',function(e){
+    // jQuery(e.target).blur();
+    console.log(e, e.target);
+  }, true);
+</script>
 <?php wp_footer(); ?>
 </body>
 </html>

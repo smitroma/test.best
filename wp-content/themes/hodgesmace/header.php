@@ -20,7 +20,6 @@
 		 <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/ie.css">
 	<![endif]-->
 	<?php wp_head(); ?>
-
 </head>
 <body <?php body_class(); ?>>
 
