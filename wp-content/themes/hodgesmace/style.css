@@ -102,12 +102,13 @@ h6 {
     h5 {
         font-size: 1em;
     }
-    select#input_1_7{
-        float:none !important;
-        width:100% !important;
+    select#input_1_7 {
+        float: none !important;
+        width: 100% !important;
     }
-    select#input_1_8{
-        margin-right:2% !important;;
+    select#input_1_8 {
+        margin-right: 2% !important;
+        ;
     }
 }
 
@@ -349,7 +350,7 @@ ul#menu-login-menu li.active {
 }
 
 @media(min-width: 768px) {
-    ul#menu-login-menu li:hover > .sub-menu {
+    ul#menu-login-menu li:hover>.sub-menu {
         display: block !important;
     }
     ul#menu-login-menu li {
@@ -503,7 +504,7 @@ input#s:focus {
     color: #1897d3;
 }
 
-.header_nav li:hover > .sub-menu {
+.header_nav li:hover>.sub-menu {
     display: block;
 }
 
@@ -1303,7 +1304,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
     right: 10px;
 }
 
-.testimonials-slider .wpb_gallery_slides > ul > li {
+.testimonials-slider .wpb_gallery_slides>ul>li {
     text-align: center;
 }
 
@@ -1668,7 +1669,7 @@ body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
     width: auto;
 }
 
-.smartben-box:hover > .vc_column-inner .smartben-hover-content {
+.smartben-box:hover>.vc_column-inner .smartben-hover-content {
     display: block;
 }
 
@@ -2387,132 +2388,175 @@ li#field_1_4 {
 textarea#input_1_4 {
     height: 145px;
 }
+
 select#input_1_8 {
     width: 48.5%;
     float: right;
     margin-top: -43px;
 }
+
 li#field_1_9 {
     width: 96%;
 }
+
 @media(max-width: 641px) {
     select#input_1_8,
-    li#field_1_9{
-        float:none !important;
-        width:100% !important;
+    li#field_1_9 {
+        float: none !important;
+        width: 100% !important;
     }
 }
 
+
 /* brochure shortcode styles */
 
-#hm_bg_jobgreen{
-  background: url("/wp-content/uploads/2016/12/HM_BannerDoing_G_Mobile.png") no-repeat center;
-  background-size: contain;
-  height: 310px;
-  width: 350px;
-  margin: auto;
-  position: relative;
+#hm_bg_jobgreen {
+    background: url("/wp-content/uploads/2016/12/HM_BannerDoing_G_Mobile.png") no-repeat center;
+    background-size: contain;
+    height: 310px;
+    width: 350px;
+    margin: auto;
+    position: relative;
 }
-#hm_bg_jobblue{
-  background: url("/wp-content/uploads/2016/12/HM_BannerDoing_B_Mobile.png") no-repeat center;
-  background-size: contain;
-  height: 310px;
-  width: 350px;
-  margin: auto;
-  position: relative;
+
+#hm_bg_jobblue {
+    background: url("/wp-content/uploads/2016/12/HM_BannerDoing_B_Mobile.png") no-repeat center;
+    background-size: contain;
+    height: 310px;
+    width: 350px;
+    margin: auto;
+    position: relative;
 }
-#hm_bg_helloblue{
-  background: url("/wp-content/uploads/2016/12/HM_Say_HelloB_Mobile.png") no-repeat center;
-  background-size: contain;
-  height: 310px;
-  width: 350px;
-  margin: auto;
-  position: relative;
+
+#hm_bg_helloblue {
+    background: url("/wp-content/uploads/2016/12/HM_Say_HelloB_Mobile.png") no-repeat center;
+    background-size: contain;
+    height: 310px;
+    width: 350px;
+    margin: auto;
+    position: relative;
 }
-#hm_bg_hellogreen{
-  background: url("/wp-content/uploads/2016/12/HM_Say_HelloG_Mobile.png") no-repeat center;
-  background-size: contain;
-  height: 310px;
-  width: 350px;
-  margin: auto;
-  position: relative;
+
+#hm_bg_hellogreen {
+    background: url("/wp-content/uploads/2016/12/HM_Say_HelloG_Mobile.png") no-repeat center;
+    background-size: contain;
+    height: 310px;
+    width: 350px;
+    margin: auto;
+    position: relative;
 }
+
 .place {
-  margin: auto;
-  text-align: center;
+    margin: auto;
+    text-align: center;
 }
-.hm_shortcode_btn{
-  color: black;
-  font-weight: 500;
-  background: white;
-  border: 2px solid white;
-  position: absolute;
-  top: 72%;
-  left: 11%;
-  padding: .5em 2em;
-  border-radius: 7px;
-  text-decoration: none;
-  letter-spacing: .3em;
-  text-transform: uppercase;
-  transition: .2s;
+
+.hm_shortcode_btn {
+    color: black;
+    font-weight: 500;
+    background: white;
+    border: 2px solid white;
+    position: absolute;
+    top: 72%;
+    left: 11%;
+    padding: .5em 2em;
+    border-radius: 7px;
+    text-decoration: none;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    transition: .2s;
 }
+
 .hm_shortcode_hellobtn:hover,
 .hm_shortcode_btn:hover {
-  background-color: transparent;
-  color: white;
-}
-.hm_shortcode_hellobtn{
-  color: black;
-  font-weight: 500;
-  background: white;
-  border: 2px solid white;
-  position: absolute;
-  top: 72%;
-  left: 23%;
-  padding: .5em 2em;
-  border-radius: 7px;
-  text-decoration: none;
-  letter-spacing: .3em;
-  text-transform: uppercase;
-  transition: .2s;
-}
-.brochuretxt{
-  display:none;
+    background-color: transparent;
+    color: white;
 }
 
-@media (min-width:750px){
+.hm_shortcode_hellobtn {
+    color: black;
+    font-weight: 500;
+    background: white;
+    border: 2px solid white;
+    position: absolute;
+    top: 72%;
+    left: 23%;
+    padding: .5em 2em;
+    border-radius: 7px;
+    text-decoration: none;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    transition: .2s;
+}
 
-  .brochuretxt{
-    display:inline;
-  }
-  #hm_bg_jobgreen{
-    background: url("/wp-content/uploads/2016/12/HM-Banner_Doing_our_G.png") no-repeat center;
-    height: 250px;
-    width:100%;
-  }
-  #hm_bg_jobblue{
-    background: url("/wp-content/uploads/2016/12/HM-Banner_Doing_our_B.png") no-repeat center;
-    height: 250px;
-    width:100%;
-  }
-  #hm_bg_helloblue{
-    background: url("/wp-content/uploads/2016/12/HM_Say_HelloBlue_BG.png") no-repeat center;
-    height: 250px;
-    width:100%;
-  }
-  #hm_bg_hellogreen{
-    background: url("/wp-content/uploads/2016/12/HM_Say_HelloGreen_BG.png") no-repeat center;
-    height: 250px;
-    width:100%;
-  }
-  .hm_shortcode_hellobtn{
-    left:37%;
-    top:68%;
-    padding:1em 2em;
-  }
-  .hm_shortcode_btn{
-    top: 64%;
-    left: 6.5%;
-    padding: 1em 2em;
-  }
+.brochuretxt {
+    display: none;
+}
+
+@media (min-width:750px) {
+    .brochuretxt {
+        display: inline;
+    }
+    #hm_bg_jobgreen {
+        background: url("/wp-content/uploads/2016/12/HM-Banner_Doing_our_G.png") no-repeat center;
+        height: 250px;
+        width: 100%;
+    }
+    #hm_bg_jobblue {
+        background: url("/wp-content/uploads/2016/12/HM-Banner_Doing_our_B.png") no-repeat center;
+        height: 250px;
+        width: 100%;
+    }
+    #hm_bg_helloblue {
+        background: url("/wp-content/uploads/2016/12/HM_Say_HelloBlue_BG.png") no-repeat center;
+        height: 250px;
+        width: 100%;
+    }
+    #hm_bg_hellogreen {
+        background: url("/wp-content/uploads/2016/12/HM_Say_HelloGreen_BG.png") no-repeat center;
+        height: 250px;
+        width: 100%;
+    }
+    .hm_shortcode_hellobtn {
+        left: 37%;
+        top: 68%;
+        padding: 1em 2em;
+    }
+    .hm_shortcode_btn {
+        top: 64%;
+        left: 6.5%;
+        padding: 1em 2em;
+    }
+}
+
+@media screen and (max-width: 889px) {
+    #top-header {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 890px) {
+    #menu-item-2567,
+    #menu-item-2571 {
+        display: none;
+    }
+}
+
+.bop-nav-search {
+    margin: auto;
+    margin-left: 17px;
+}
+
+.bop-nav-search input[type="submit"] {
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    text-transform: none;
+    position: relative;
+    padding: 2px 15px !important;
+    margin-left: 2%;
+}
+
+li#menu-item-1258 {
+    margin-left: 20px;
 }
