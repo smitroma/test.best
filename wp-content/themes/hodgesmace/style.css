@@ -2721,6 +2721,7 @@ Text Domain: hodgesmace
     }
     
     @media screen and (min-width: 890px) {
+        #menu-item-2574,
         #menu-item-2567,
         #menu-item-2571 {
             display: none;
