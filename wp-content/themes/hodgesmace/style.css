@@ -2645,6 +2645,13 @@ Text Domain: hodgesmace
         background-position: top left !important;
     }
     
+    .smartben-essentials-box {
+        padding-left: 3em;
+        padding-right: 3em;
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+    
     @media screen and (max-width:769px) {
         .site-content .smartben-now-cta {
             background-position: 34% top !important;
