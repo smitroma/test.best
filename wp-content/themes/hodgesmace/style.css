@@ -2766,3 +2766,24 @@ Text Domain: hodgesmace
     li#menu-item-1258 {
         margin-left: 20px;
     }
+    /********************/
+    
+    #enr-wpaper,
+    #enr-services,
+    #enr-software {
+        padding: 3em 0 !important;
+        width: 100% !important;
+    }
+    
+    #enr-software p:last-child,
+    #enr-software h2 {
+        color: white;
+    }
+    
+    .four-box-serv {
+        max-width: 80%;
+    }
+    
+    .four-box-serv .vc_column-inner {
+        padding: 3em 1.2em;
+    }
