@@ -2785,6 +2785,14 @@ Text Domain: hodgesmace
         /* background-size: contain !important; */
     }
     
+    #enr-services p:last-child,
+    #enr-services h2,
+    #enr-software p:last-child,
+    #enr-software h2 {
+        max-width: 60%;
+        margin: auto;
+    }
+    
     #enr-software p:last-child,
     #enr-software h2 {
         color: white;
@@ -2802,12 +2810,12 @@ Text Domain: hodgesmace
         position: absolute;
         left: 0;
         right: 0;
-        top: 50%
+        top: 80px;
     }
     
     .enr-position {
         position: absolute;
-        bottom: 45%;
+        top: 160px;
         left: 0;
         right: 0;
     }
@@ -2819,9 +2827,16 @@ Text Domain: hodgesmace
     
     @media (min-width:768px) {
         #enr-footer .h2 {
-            top: 33%;
+            top: 90px;
             font-size: 40px;
             line-height: 1em;
+            left: 10%;
+        }
+        .enr-position {
+            position: absolute;
+            top: 115px;
+            left: -2.5em;
+            right: 0;
         }
         .indent {
             margin-left: 10%;
