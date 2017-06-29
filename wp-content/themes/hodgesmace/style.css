@@ -2789,7 +2789,7 @@ Text Domain: hodgesmace
     #enr-services h2,
     #enr-software p:last-child,
     #enr-software h2 {
-        max-width: 60%;
+        max-width: 75%;
         margin: auto;
     }
     
