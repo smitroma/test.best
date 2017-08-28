@@ -2288,6 +2288,10 @@ Text Domain: hodgesmace
             width:100%;
             background-size:contain;
         }
+        .hm_shortcode_hellobtn{
+            top:55%;
+            left:36%;
+        }
     }
 
 /* ==========================
