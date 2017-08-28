@@ -2189,16 +2189,6 @@ Text Domain: hodgesmace
         margin: auto;
         position: relative;
     }
-    @media (min-width:928px){
-        #hm_bg_jobgreen {
-            background: url("/wp-content/uploads/2016/12/HM-Banner_Doing_our_G.png");
-            width:100%;
-        }
-        #hm_bg_jobblue {
-            background: url("/wp-content/uploads/2016/12/HM-Banner_Doing_our_B.png");
-            width:100%;
-        }
-    }
 
     #hm_bg_jobblue {
         background: url("/wp-content/uploads/2016/12/HM_BannerDoing_B_Mobile.png") no-repeat center;
@@ -2225,6 +2215,19 @@ Text Domain: hodgesmace
         width: 350px;
         margin: auto;
         position: relative;
+    }
+
+    @media (min-width:928px){
+        #hm_bg_jobgreen {
+            background: url("/wp-content/uploads/2016/12/HM-Banner_Doing_our_G.png");
+            width:930px;
+            background-size:contain;
+        }
+        #hm_bg_jobblue {
+            background: url("/wp-content/uploads/2016/12/HM-Banner_Doing_our_B.png");
+            width:930px;
+            background-size:contain;
+        }
     }
 
     .place {
