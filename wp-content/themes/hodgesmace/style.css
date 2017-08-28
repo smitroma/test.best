@@ -2278,7 +2278,18 @@ Text Domain: hodgesmace
         .hm_shortcode_btn{
             top:53%;
         }
+        #hm_bg_helloblue {
+            background: url("http://www.hodgesmace.com/wp-content/uploads/2016/12/HM_Say_HelloBlue_BG.png") no-repeat;
+            width:100%;
+            background-size:contain;
+        }
+        #hm_bg_hellogreen {
+            background: url("http://www.hodgesmace.com/wp-content/uploads/2016/12/HM_Say_HelloGreen_BG.png") no-repeat;
+            width:100%;
+            background-size:contain;
+        }
     }
+
 /* ==========================
  * SmartAdmin
  * ========================== */
