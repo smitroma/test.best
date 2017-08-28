@@ -7,6 +7,12 @@
 Thumbs.db
 /last-mod
 
+# local files
+.data
+.gitmodules
+.maintenance
+docker-compose-wordpress/
+
 # wordpress specific
 wp-config.php
 wp-content/uploads/*

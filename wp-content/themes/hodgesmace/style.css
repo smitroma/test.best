@@ -2217,19 +2217,6 @@ Text Domain: hodgesmace
         position: relative;
     }
 
-    @media (min-width:928px){
-        #hm_bg_jobgreen {
-            background: url("/wp-content/uploads/2016/12/HM-Banner_Doing_our_G.png");
-            width:930px;
-            background-size:contain;
-        }
-        #hm_bg_jobblue {
-            background: url("/wp-content/uploads/2016/12/HM-Banner_Doing_our_B.png");
-            width:930px;
-            background-size:contain;
-        }
-    }
-
     .place {
         margin: auto;
         text-align: center;
@@ -2275,6 +2262,22 @@ Text Domain: hodgesmace
 
     .brochuretxt {
         display: none;
+    }
+
+    @media (min-width:928px){
+        #hm_bg_jobgreen {
+            background: url("/wp-content/uploads/2016/12/HM-Banner_Doing_our_G.png") no-repeat;
+            width:100%;
+            background-size:contain;
+        }
+        #hm_bg_jobblue {
+            background: url("/wp-content/uploads/2016/12/HM-Banner_Doing_our_B.png") no-repeat;
+            width:100%;
+            background-size:contain;
+        }
+        .hm_shortcode_btn{
+            top:53%;
+        }
     }
 /* ==========================
  * SmartAdmin
