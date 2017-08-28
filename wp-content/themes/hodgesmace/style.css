@@ -37,51 +37,51 @@ Text Domain: hodgesmace
  * Base classes
  * --------------------------------------------------------------- *
  */
-    
+
     * {
         box-sizing: border-box;
     }
-    
+
     body {
         font-size: 14px;
         line-height: 1.5;
         color: #555555;
         background-color: #fff;
     }
-    
+
     a {
         text-decoration: none;
         color: #1897d3;
     }
-    
+
     p {
         font-size: 1em;
     }
-    
+
     h1 {
         font-size: 2.25em;
     }
-    
+
     h2 {
         font-size: 2em;
     }
-    
+
     h3 {
         font-size: 1.75em;
     }
-    
+
     h4 {
         font-size: 1.5em;
     }
-    
+
     h5 {
         font-size: 1.25em;
     }
-    
+
     h6 {
         font-size: 1em;
     }
-    
+
     @media(max-width: 769px) {
         h1 {
             font-size: 2em;
@@ -107,7 +107,7 @@ Text Domain: hodgesmace
             ;
         }
     }
-    
+
     h1 a,
     h2 a,
     h3 a,
@@ -116,32 +116,32 @@ Text Domain: hodgesmace
     h6 a {
         color: #555;
     }
-    
+
     h5,
     h6 {
         color: #1897d3;
     }
-    
+
     hr {
         width: 50px;
     }
-    
+
     img {
         max-width: 100%;
         height: auto;
         -ms-interpolation-mode: bicubic;
     }
-    
+
     form {
         margin-bottom: 0;
     }
-    
+
     .site-content ul {
         padding-left: 20px;
         position: relative;
         list-style: none;
     }
-    
+
     .site-content ul li:before {
         content: "\f101";
         color: #8ec449;
@@ -149,7 +149,7 @@ Text Domain: hodgesmace
         position: absolute;
         left: 0;
     }
-    
+
     .site-content ul.blue-checks li:before {
         content: "\f00c";
         color: #024b8c;
@@ -157,36 +157,36 @@ Text Domain: hodgesmace
         position: absolute;
         left: 0;
     }
-    
+
     .site-content ul.m-0 {
         margin: 0;
     }
-    
+
     .site-content ul.li-m-b li {
         margin-bottom: 0.75em;
     }
-    
+
     @media screen and (min-width: 768px) {
         body {
             font-size: 14px;
         }
     }
-    
+
     @media screen and (min-width: 1440px) {
         body {
             font-size: 14px;
         }
     }
     /* Colors */
-    
+
     .c-green {
         color: #8ec449;
     }
-    
+
     .c-blue {
         color: #1897d3;
     }
-    
+
     .c-white,
     .c-white p,
     .c-white h1,
@@ -204,7 +204,7 @@ Text Domain: hodgesmace
  * Containers / Wrappers
  * --------------------------------------------------------------- *
  */
-    
+
     #main {
         overflow: hidden;
         /* fixes visual composer overflow issues */
@@ -212,11 +212,11 @@ Text Domain: hodgesmace
         left: 0;
         clear: both;
     }
-    
+
     .site-content {
         z-index: 0;
     }
-    
+
     .site-content .container,
     .container,
     .site-content .vc_row-fluid,
@@ -227,16 +227,16 @@ Text Domain: hodgesmace
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .site-content .full-width {
         width: 100%;
     }
-    
+
     .site-content .vc_row-fluid .vc_row-fluid {
         width: 100%;
         padding: 0;
     }
-    
+
     @media screen and (min-width: 768px) {
         .site-content .container,
         .container,
@@ -258,7 +258,7 @@ Text Domain: hodgesmace
             margin: 0 2.5%;
         }
     }
-    
+
     @media screen and (min-width: 1090px) {
         .site-content .container,
         .container,
@@ -281,7 +281,7 @@ Text Domain: hodgesmace
         }
     }
     /* Width helper classes */
-    
+
     .site-content .full-width {
         width: 100%;
     }
@@ -290,24 +290,24 @@ Text Domain: hodgesmace
  * --------------------------------------------------------------- *
  */
     /* Top Header */
-    
+
     #top-header {
         background-color: #555555;
         color: #fff;
         text-align: right;
         padding: 10px 20px;
     }
-    
+
     #top-header .container {
         padding: 0;
     }
-    
+
     @media( min-width: 768px) {
         #top-header {
             padding: 0;
         }
     }
-    
+
     .header-right-button {
         float: right;
         clear: none;
@@ -315,30 +315,30 @@ Text Domain: hodgesmace
         margin-left: 1em;
     }
     /* Login Menu */
-    
+
     .menu-login-menu-container {
         display: inline-block;
         margin-left: 10px;
     }
-    
+
     ul#menu-login-menu {
         list-style: none;
         margin: 0;
         position: relative;
         padding: 0;
     }
-    
+
     ul#menu-login-menu li {
         display: inline-block;
         padding: 10px;
         position: relative;
     }
-    
+
     ul#menu-login-menu li a {
         color: #fff;
         white-space: nowrap;
     }
-    
+
     ul#menu-login-menu .sub-menu {
         list-style: none;
         position: absolute;
@@ -350,16 +350,16 @@ Text Domain: hodgesmace
         background-color: #333;
         z-index: 100;
     }
-    
+
     ul#menu-login-menu .sub-menu li {
         padding: 1px 0;
         font-size: .9em;
     }
-    
+
     ul#menu-login-menu li.active {
         background-color: #333;
     }
-    
+
     @media screen and (min-width: 768px) {
         ul#menu-login-menu li:hover>.sub-menu {
             display: block !important;
@@ -372,12 +372,12 @@ Text Domain: hodgesmace
         }
     }
     /* Search Form */
-    
+
     #top-header form#searchform {
         display: inline-block;
         width: 41%;
     }
-    
+
     input#searchsubmit {
         color: inherit;
         background-color: transparent;
@@ -389,7 +389,7 @@ Text Domain: hodgesmace
         font-family: "FontAwesome";
         margin-left: 10px;
     }
-    
+
     input#s {
         background-color: transparent;
         color: #fff;
@@ -401,14 +401,14 @@ Text Domain: hodgesmace
         width: 76%;
         max-width: 150px;
     }
-    
+
     input#s:focus {
         outline: 0;
         color: #fff;
         border: 2px solid #1897d3;
     }
     /* Main Header */
-    
+
     #header {
         width: 100%;
         position: relative;
@@ -416,19 +416,19 @@ Text Domain: hodgesmace
         z-index: 10;
         border-bottom: 1px solid #cad6f9;
     }
-    
+
     #header .logo {
         max-width: 260px;
         width: 75%;
         float: left;
     }
-    
+
     #header .logo a {
         height: 86px;
         line-height: 82px;
         display: block;
     }
-    
+
     #header .logo img {
         width: 100%;
         height: auto;
@@ -438,7 +438,7 @@ Text Domain: hodgesmace
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
     }
-    
+
     #header .mobile-menu-toggle {
         color: #ccc;
         position: absolute;
@@ -446,19 +446,19 @@ Text Domain: hodgesmace
         right: 30px;
         font-size: 30px;
     }
-    
+
     #header .request-header {
         float: right;
         margin-top: -3px;
         display: none;
     }
-    
+
     @media screen and (min-width: 1300px) {
         #header .request-header {
             display: block;
         }
     }
-    
+
     @media screen and (min-width: 890px) {
         #header .mobile-menu-toggle {
             display: none;
@@ -467,12 +467,12 @@ Text Domain: hodgesmace
     /*
  * Main menu
  */
-    
+
     #main-menu {
         padding: 32px 0;
     }
     /* Header Nav */
-    
+
     .header_nav {
         clear: both;
         font-size: 1em;
@@ -488,12 +488,12 @@ Text Domain: hodgesmace
         text-align: left;
         list-style: none;
     }
-    
+
     .header_nav li {
         line-height: 2em;
         display: block;
     }
-    
+
     .header_nav li a,
     .header_nav li a:visited {
         padding: 0.5em 1em;
@@ -501,13 +501,13 @@ Text Domain: hodgesmace
         white-space: nowrap;
         text-decoration: none;
     }
-    
+
     .header_nav li ul a,
     .header_nav .menu-item .sub-menu li a {
         color: #555555;
         cursor: pointer;
     }
-    
+
     .header_nav li:hover a,
     .header_nav .menu-item .sub-menu .menu-item:hover a,
     .header_nav li.current_page_item a,
@@ -515,20 +515,20 @@ Text Domain: hodgesmace
     .header_nav li.current-menu-ancestor a {
         color: #1897d3;
     }
-    
+
     .header_nav li:hover>.sub-menu {
         display: block;
     }
-    
+
     .header_nav .sub-menu .dashicons {
         display: none;
     }
-    
+
     .header_nav .sub-menu .menu-item .description {
         font-weight: 300;
         display: none;
     }
-    
+
     @media screen and (min-width: 890px) {
         #main-menu {
             padding: 29px 0;
@@ -632,7 +632,7 @@ Text Domain: hodgesmace
             display: inherit;
         }
     }
-    
+
     @media screen and (min-width: 1440px) {
         #main-menu {
             padding: 29px 0;
@@ -641,7 +641,7 @@ Text Domain: hodgesmace
             font-size: 1em;
         }
     }
-    
+
     @media screen and (max-width: 889px) {
         .sub-menu {
             display: none;
@@ -651,7 +651,7 @@ Text Domain: hodgesmace
         }
     }
     /* Sticky Nav */
-    
+
     @media screen and (min-width: 889px) {
         #header.sticky {
             position: fixed;
@@ -660,7 +660,7 @@ Text Domain: hodgesmace
         }
     }
     /* requestPopUp */
-    
+
     .demo-button {
         margin-bottom: 8px;
         line-height: 100%;
@@ -670,20 +670,20 @@ Text Domain: hodgesmace
  * Footer
  * --------------------------------------------------------------- *
  */
-    
+
     #footer {
         background-color: #555555;
         overflow: visible;
         width: 100%;
         padding: .5em 0;
     }
-    
+
     @media screen and (min-width: 768px) {
         #footer {
             padding: 1em 0;
         }
     }
-    
+
     #menu-footer {
         padding: 0;
         margin: 0;
@@ -691,12 +691,12 @@ Text Domain: hodgesmace
         list-style: none;
         float: right;
     }
-    
+
     #menu-footer li {
         display: inline-block;
         margin-right: 10px;
     }
-    
+
     #menu-footer li a {
         color: #fff;
     }
@@ -704,7 +704,7 @@ Text Domain: hodgesmace
  * Rounded Boxes
  * --------------------------------------------------------------- *
  */
-    
+
     .site-content .rounded-box-gray,
     .site-content .rounded-box-white,
     .site-content .box-trans-white,
@@ -715,14 +715,14 @@ Text Domain: hodgesmace
         padding: 2em 5%;
         overflow: auto;
     }
-    
+
     .site-content .box-trans-white {
         border-radius: 0px;
         -webkit-border-radius: 0px;
         -moz-border-radius: 0px;
         background: rgba(255, 255, 255, 0.4);
     }
-    
+
     .site-content .box-trans-white-less {
         border-radius: 0px;
         -webkit-border-radius: 0px;
@@ -730,11 +730,11 @@ Text Domain: hodgesmace
         background: rgba(255, 255, 255, 0.8);
     }
     /* Gray */
-    
+
     .rounded-box-gray {
         background-color: #f9f9f9;
     }
-    
+
     .rounded-box-gray h1,
     .rounded-box-gray h2,
     .rounded-box-gray h3,
@@ -744,11 +744,11 @@ Text Domain: hodgesmace
         color: #405bc0;
     }
     /* Trans White */
-    
+
     .rounded-box-white {
         background-color: #fff;
     }
-    
+
     .wpb_images_carousel .vc_item img {
         max-width: 100%;
         height: auto;
@@ -757,7 +757,7 @@ Text Domain: hodgesmace
  * Buttons
  * --------------------------------------------------------------- *
  */
-    
+
     input[type=submit],
     .aoFormContainer input[type=button],
     .bttn-white-border,
@@ -780,7 +780,7 @@ Text Domain: hodgesmace
         padding: 7px 20px 5px 20px;
         line-height: 1.5em;
     }
-    
+
     input[type=submit],
     .aoFormContainer input[type=button],
     .gform_wrapper .gform_footer input.button,
@@ -790,7 +790,7 @@ Text Domain: hodgesmace
         color: #fff;
         padding: 8px 20px 4px 20px !important;
     }
-    
+
     .bttn-white-border,
     .vc_general.vc_btn3.bttn-white-border {
         border: 1px solid #fff;
@@ -798,7 +798,7 @@ Text Domain: hodgesmace
         background: transparent;
         color: #fff;
     }
-    
+
     .bttn-green-border,
     .vc_general.vc_btn3.bttn-green-border {
         border: 1px solid #8ec449;
@@ -806,24 +806,24 @@ Text Domain: hodgesmace
         background: transparent;
         color: #8ec449;
     }
-    
+
     .bttn-blue,
     .vc_general.vc_btn3.bttn-blue {
         background-color: #1897d3;
         color: #fff;
     }
-    
+
     .vc_btn3.vc_btn3-color-green,
     .vc_btn3.vc_btn3-color-green.vc_btn3-style-flat {
         background-color: #8bc63f;
     }
     /* Changes default button to ours*/
-    
+
     .site-content .vc_btn3 {
         text-transform: uppercase;
         line-height: 1.25;
     }
-    
+
     input[type=submit],
     .site-content .vc_btn3.vc_btn3-color-green.vc_btn3-style-modern {
         background-color: #8ec449;
@@ -831,13 +831,13 @@ Text Domain: hodgesmace
         color: #fff;
         border: none;
     }
-    
+
     .vc_btn3-container.vc_btn3-center .vc_btn3-block.vc_btn3-size-md,
     .vc_btn3.vc_btn3-size-md {
         padding-top: 11px;
         padding-bottom: 8px;
     }
-    
+
     .vc_btn3.vc_btn3-size-lg,
     .vc_btn3.vc_btn3-size-lg.vc_btn3-style-outline {
         font-size: 16px;
@@ -847,7 +847,7 @@ Text Domain: hodgesmace
         padding-right: 45px;
     }
     /* Top Header Buttons */
-    
+
     #top-header .vc_general.vc_btn3 {
         font-size: .9em;
     }
@@ -855,7 +855,7 @@ Text Domain: hodgesmace
  * Text Inputs
  * --------------------------------------------------------------- *
  */
-    
+
     .site-content .gform_wrapper input,
     .gform_wrapper textarea,
     .site-content .ao_tbl_container .formFieldText {
@@ -868,14 +868,14 @@ Text Domain: hodgesmace
         padding: 10px !important;
         ;
     }
-    
+
     .site-content .gform_wrapper:focus,
     .site-content .ao_tbl_container:focus {
         border-color: #4d7bde;
         color: #4d7bde;
         outline: 0;
     }
-    
+
     .site-content select {
         padding: 0 1em;
         -webkit-border-radius: 5px;
@@ -893,30 +893,30 @@ Text Domain: hodgesmace
  * Gravity Form Helper Classes
  * --------------------------------------------------------------- *
  */
-    
+
     body .site-content .gform_wrapper label.gfield_label+div.ginput_container {
         margin-bottom: .375em;
         margin-top: 0;
     }
-    
+
     .site-content .gform_wrapper {
         margin: 0;
         max-width: inherit;
     }
-    
+
     .site-content .gform_wrapper ul li.gf-match-first-name {
         width: 48.8%;
         float: left;
         clear: none;
         padding-right: 16px;
     }
-    
+
     .site-content .gform_wrapper ul li.gf-match-last-name {
         width: 48.8%;
         float: left;
         clear: none;
     }
-    
+
     .site-content .gform_wrapper .hidden_label .gf-match-last-name input.large,
     .site-content .gform_wrapper .hidden_label .gf-match-last-name select.large,
     .site-content .gform_wrapper .top_label .gf-match-last-name input.large,
@@ -927,42 +927,42 @@ Text Domain: hodgesmace
         width: 100%;
     }
     /* Hide Labels */
-    
+
     .site-content .gform_wrapper .top_label .gfield_label,
     .site-content .gform_wrapper .ginput_complex label {
         display: none;
     }
-    
+
     .site-content .gform_wrapper .top_label .show_label .gfield_label,
     .site-content .gform_wrapper .ginput_complex .show_label label {
         display: block;
     }
     /* Center Button */
-    
+
     .site-content .button-center .gform_footer {
         text-align: center;
     }
     /* Inline Form */
-    
+
     .site-content .gform_wrapper .inline-form {
         width: 150%;
     }
-    
+
     .site-content .gform_wrapper .inline-form .gform_body,
     .site-content .gform_wrapper .inline-form .gform_footer {
         float: left;
         clear: none;
     }
-    
+
     .site-content .gform_wrapper .inline-form .gform_footer {
         padding: 0;
         margin: 0;
     }
-    
+
     .site-content .gform_wrapper .inline-form label.gfield_label+div.ginput_container {
         margin-top: 0;
     }
-    
+
     .site-content .gform_wrapper .inline-form input {
         border: none;
         border-radius: 0px;
@@ -972,11 +972,11 @@ Text Domain: hodgesmace
         -webkit-border-top-left-radius: .75em;
         -moz-border-top-left-radius: .75em;
     }
-    
+
     .site-content .gform_wrapper .inline-form input.large {
         width: 100%;
     }
-    
+
     .site-content .gform_wrapper .inline-form .gform_footer input.button,
     .site-content .gform_wrapper .inline-form .gform_footer input[type=image],
     .site-content .gform_wrapper .inline-form .gform_footer input[type=submit] {
@@ -991,19 +991,19 @@ Text Domain: hodgesmace
         -moz-border-bottom-right-radius: .75em;
     }
     /* Field Width Correction */
-    
+
     .site-content .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield span.name_first,
     .site-content .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield span.name_last,
     .site-content .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield span.name_middle {
         padding-top: 0px;
     }
-    
+
     .site-content .gform_wrapper .ginput_complex.ginput_container.has_first_name.has_middle_name.no_last_name span,
     .site-content .gform_wrapper .ginput_complex.ginput_container.has_first_name.no_middle_name.has_last_name span,
     .site-content .gform_wrapper .ginput_complex.ginput_container.no_first_name.has_middle_name.has_last_name span {
         width: 48.8%;
     }
-    
+
     .site-content .gform_wrapper .gfield_error .ginput_complex .ginput_left input[type=email],
     .site-content .gform_wrapper .gfield_error .ginput_complex .ginput_left input[type=number],
     .site-content .gform_wrapper .gfield_error .ginput_complex .ginput_left input[type=password],
@@ -1025,16 +1025,16 @@ Text Domain: hodgesmace
         width: 100%;
     }
     /* Adusts text area size */
-    
+
     .site-content .gform_wrapper .xlarge textarea {
         height: 16.85em;
     }
     /* Adjusts date size */
-    
+
     .site-content .gform_wrapper .datepicker {
         width: 47.5% !important;
     }
-    
+
     @media screen and (max-width: 768px) {
         .site-content .gform_wrapper .datepicker {
             width: 100% !important;
@@ -1051,12 +1051,12 @@ Text Domain: hodgesmace
         }
     }
     /* Fixes error floats */
-    
+
     .gform_wrapper .top_label .gfield_error {
         float: none !important;
     }
     /* fixes li issues */
-    
+
     .gform_wrapper form li:before,
     .gform_wrapper li:before {
         content: "";
@@ -1068,7 +1068,7 @@ Text Domain: hodgesmace
     /*
  * Images
  */
-    
+
     .img-100,
     .img-100 .vc_figure,
     .img-100 .vc_figure div,
@@ -1077,18 +1077,18 @@ Text Domain: hodgesmace
         width: 100%;
         height: auto;
     }
-    
+
     .h-a {
         height: auto
     }
-    
+
     .img-rounded {
         border-radius: 1em;
         -webkit-border-radius: 1em;
         -moz-border-radius: 1em;
     }
     /* background-image */
-    
+
     .bg-cover {
         width: 100%;
         float: left;
@@ -1098,32 +1098,32 @@ Text Domain: hodgesmace
     /*
  * Banner
  */
-    
+
     .site-content .cq-bannerblock-content {
         top: inherit;
         -webkit-transform: none;
         -moz-transform: none;
         transform: none;
     }
-    
+
     .site-content .cq-bannerblock {
         height: auto;
     }
-    
+
     .site-content .cq-bannerblock-desc {
         width: auto;
     }
-    
+
     .site-content .banner-bttn-right,
     .site-content .banner-bttn-right .cq-bannerblock-buttonarea {
         text-align: center;
         padding-top: 2em;
     }
-    
+
     .site-content .banner-bttn-left .cq-bannerblock-content {
         width: 100%;
     }
-    
+
     @media screen and (min-width: 768px) {
         .site-content .banner-bttn-right {
             text-align: right;
@@ -1153,16 +1153,16 @@ Text Domain: hodgesmace
         }
     }
     /* Banner lists */
-    
+
     .site-content .cq-bannerblock-desc ul {
         text-align: left;
         list-style: none;
     }
-    
+
     .site-content .cq-bannerblock-desc ul li {
         margin-bottom: .25em;
     }
-    
+
     .site-content .cq-bannerblock-desc ul li:before {
         content: '';
         background-color: #4d7bde;
@@ -1178,7 +1178,7 @@ Text Domain: hodgesmace
         -moz-border-bottom-left-radius: 0px;
     }
     /* Banner Header */
-    
+
     .banner-header-right-bkg h4.cq-bannerblock-title:after,
     .banner-header-right-bkg h3:after,
     .banner-header-right-bkg h2:after,
@@ -1191,45 +1191,45 @@ Text Domain: hodgesmace
         width: 100%;
         height: .7em;
     }
-    
+
     .banner-header-right-bkg h4.cq-bannerblock-title:after,
     .banner-header-right-bkg h3:after,
     .banner-header-right-bkg h2:after {
         margin-left: 20px;
     }
-    
+
     .banner-header-left-bkg h4.cq-bannerblock-title:before,
     .banner-header-left-bkg h3:before,
     .banner-header-left-bkg h2:before {
         left: -100%;
         margin-left: -20px;
     }
-    
+
     .banner-header-right-bkg h4.cq-bannerblock-title:after,
     .banner-header-left-bkg h4.cq-bannerblock-title:before,
     {
         height: .5em;
     }
     /* Banner Button */
-    
+
     .site-content .cq-bannerblock-buttonlink {
         border-radius: 0.75em;
         -webkit-border-radius: .75em;
         -moz-border-radius: .75em;
     }
     /* Banner Content Helpers */
-    
+
     .site-content .banner-content-right {
         max-width: 800px;
         padding: 2em;
         float: right;
     }
-    
+
     .site-content .banner-content-left .cq-bannerblock-content,
     .site-content .banner-content-left {
         text-align: left;
     }
-    
+
     .site-content .banner-content-center {
         position: relative;
         margin-left: auto;
@@ -1239,7 +1239,7 @@ Text Domain: hodgesmace
         vertical-align: middle;
     }
     /* Banner Bttn right small */
-    
+
     .site-content .banner-bttn-right-sm {
         width: 100%;
         overflow: auto;
@@ -1248,7 +1248,7 @@ Text Domain: hodgesmace
         padding-bottom: 1em;
         margin-bottom: 0;
     }
-    
+
     @media screen and (min-width: 768px) {
         .site-content .banner-bttn-right-sm .wpb_column:first-child {
             padding-top: .75em;
@@ -1259,36 +1259,36 @@ Text Domain: hodgesmace
  * Testimonial Slider
  * --------------------------------------------------------------- *
  */
-    
+
     .site-content .flexslider ul li:before {
         content: "";
     }
-    
+
     .site-content .flexslider .flex-direction-nav {
         position: absolute;
         top: 50%;
         width: 100%;
     }
-    
+
     .site-content .flexslider .flex-prev {
         opacity: 0.7;
         left: 10px;
     }
-    
+
     .site-content .flexslider .flex-next {
         opacity: 0.7;
         right: 10px;
     }
-    
+
     .testimonials-slider .wpb_gallery_slides>ul>li {
         text-align: center;
     }
-    
+
     .testimonials-slider .slides img {
         max-width: 100%;
         height: auto;
     }
-    
+
     .testimonials-slider .flexslider {
         border-radius: 0px;
         -webkit-border-radius: 0px;
@@ -1301,13 +1301,13 @@ Text Domain: hodgesmace
         -o-box-shadow: none;
         box-shadow: none;
     }
-    
+
     .testimonials-slider .flex-caption {
         background-color: transparent;
         width: 75%;
         margin: 20px auto;
     }
-    
+
     .testimonials-slider .flexslider .slides img {
         width: auto;
         height: auto;
@@ -1319,15 +1319,15 @@ Text Domain: hodgesmace
  * Tabs
  * --------------------------------------------------------------- *
  */
-    
+
     .site-content .vc_tta-tabs ul li:before {
         content: '';
     }
-    
+
     .site-content .press-tabs .vc_tta-tabs-list .vc_tta-tab {
         width: 25%;
     }
-    
+
     .site-content .press-tabs .vc_tta-tabs-list .vc_tta-tab a {
         background-color: transparent;
         border-radius: 0px;
@@ -1341,13 +1341,13 @@ Text Domain: hodgesmace
         border-right: none;
         border-color: transparent;
     }
-    
+
     .site-content .press-tabs.vc_tta-tabs-position-top .vc_tta-tabs-list .vc_tta-tab.vc_active a {
         border-bottom-color: #333;
         font-family: 'NeuzeitGro Bold', sans-serif;
         font-size: 1.7em;
     }
-    
+
     @media screen and (min-width: 768px) {
         .site-content .vc_tta.press-tabs .vc_tta-panels {
             border-color: #f0f0f0;
@@ -1363,13 +1363,13 @@ Text Domain: hodgesmace
  * Contact Footer
  * --------------------------------------------------------------- *
  */
-    
+
     .contact-footer .gform_footer input[type=submit] {
         width: 100%;
         border: none;
         background-color: #1897d3;
     }
-    
+
     .gform_wrapper .contact-footer textarea.medium {
         height: 17.5em;
         ;
@@ -1377,11 +1377,11 @@ Text Domain: hodgesmace
     /* Home
 * --------------------------------------------------------------- *
 */
-    
+
     .home-banner-height {
         height: 450px
     }
-    
+
     .site-content .blue-arrow {
         background-position: center -1px !important;
         background-size: 300px;
@@ -1389,17 +1389,17 @@ Text Domain: hodgesmace
     /* Contact Us
 * --------------------------------------------------------------- *
 */
-    
+
     .site-content .contact-icon {
         max-width: 100px;
         clear: left;
     }
-    
+
     .site-content .phone-before,
     .site-content .envelope-before {
         padding-left: 25px;
     }
-    
+
     .site-content .phone-before:before {
         content: '\f098';
         font-family: 'FontAwesome';
@@ -1407,7 +1407,7 @@ Text Domain: hodgesmace
         color: #555;
         left: 0;
     }
-    
+
     .site-content .envelope-before:before {
         content: '\f003';
         font-family: 'FontAwesome';
@@ -1418,30 +1418,30 @@ Text Domain: hodgesmace
     /* Internal Page
 * --------------------------------------------------------------- *
 */
-    
+
     .page-banner-height {
         display: block;
     }
-    
+
     .page-banner-height .vc_column_container {
         margin-top: 6em;
         margin-bottom: 6em;
     }
-    
+
     .hover-content {
         display: none;
         height: 480px;
     }
     /* Height with btn */
-    
+
     .hover-content-btn {
         height: 490px;
     }
-    
+
     .hover-btn {
         height: 40px;
     }
-    
+
     @media(min-width: 550px) {
         .hover-content {
             height: 320px;
@@ -1454,20 +1454,20 @@ Text Domain: hodgesmace
         }
     }
     /* show middle content by default */
-    
+
     .hover-content-1 {
         display: inherit;
     }
-    
+
     .hover {
         cursor: pointer;
     }
-    
+
     .hover h3 {
         height: 45px;
         font-size: .7em
     }
-    
+
     .hover .icon {
         margin: 1em auto;
         display: block;
@@ -1477,35 +1477,35 @@ Text Domain: hodgesmace
         background-repeat: no-repeat;
         position: relative;
     }
-    
+
     .hover-0 .icon {
         background-image: url('./images/custom-communication.png');
     }
-    
+
     .hover-0.hover-active .icon {
         background-image: url('./images/custom-communication-hover.png');
     }
-    
+
     .hover-1 .icon {
         background-image: url('./images/ongoing-support.png');
     }
-    
+
     .hover-1.hover-active .icon {
         background-image: url('./images/ongoing-support-hover.png');
     }
-    
+
     .hover.hover-active h3 span {
         color: #0093d3 !important;
     }
-    
+
     .hover-2 .icon {
         background-image: url('./images/security.png');
     }
-    
+
     .hover-2.hover-active .icon {
         background-image: url('./images/security-hover.png');
     }
-    
+
     .hover.hover-active .icon:after {
         content: "\f0d7";
         position: absolute;
@@ -1517,11 +1517,11 @@ Text Domain: hodgesmace
         color: #0093d3;
         font-family: 'FontAwesome';
     }
-    
+
     .three-col-content-height {
         min-height: 160px;
     }
-    
+
     @media screen and (min-width: 768px) {
         .hover .icon,
         .hover-1 .icon,
@@ -1539,7 +1539,7 @@ Text Domain: hodgesmace
             margin-left: -.3em;
         }
     }
-    
+
     @media screen and (min-width: 990px) {
         .hover h3 {
             font-size: 1.5em;
@@ -1548,7 +1548,7 @@ Text Domain: hodgesmace
     /* Smarter Approach
 * --------------------------------------------------------------- *
 */
-    
+
     .smarter-banner-ampersand {
         text-align: center;
         display: none;
@@ -1568,23 +1568,23 @@ Text Domain: hodgesmace
         font-family: "Open Sans";
         color: #fff;
     }
-    
+
     .smarter-banner-ampersand p {
         font-weight: 500;
     }
-    
+
     @media screen and (min-width: 768px) {
         .smarter-banner-ampersand {
             display: inherit;
         }
     }
-    
+
     @media screen and (min-width: 768px) {
         .smarter-column {
             height: 380px;
         }
     }
-    
+
     @media screen and (min-width:1440px) {
         .smarter-column {
             height: 300px;
@@ -1593,25 +1593,25 @@ Text Domain: hodgesmace
     /* In The Community
 * --------------------------------------------------------------- *
 */
-    
+
     @media screen and (min-width: 768px) {
         .in-the-community-column {
             height: 560px;
         }
     }
-    
+
     @media screen and (min-width: 1050px) {
         .in-the-community-column {
             height: 500px;
         }
     }
-    
+
     @media screen and (min-width: 1330px) {
         .in-the-community-column {
             height: 435px;
         }
     }
-    
+
     @media screen and (min-width:1440px) {
         .in-the-community-column {
             height: 400px;
@@ -1620,16 +1620,16 @@ Text Domain: hodgesmace
     /* SmartBen Platform
 * --------------------------------------------------------------- *
 */
-    
+
     .smartben-box img {
         height: 130px;
         width: auto;
     }
-    
+
     .smartben-box:hover>.vc_column-inner .smartben-hover-content {
         display: block;
     }
-    
+
     .smartben-hover-content {
         background-color: rgba(0, 0, 0, .7);
         color: #fff;
@@ -1642,45 +1642,45 @@ Text Domain: hodgesmace
         display: none;
         top: 0;
     }
-    
+
     .smartben-hover-content h5 {
         color: #fff;
     }
-    
+
     @media(min-width: 1250px) {
         .smartben-hover-content {
             padding-top: 8em
         }
     }
-    
+
     @media(min-width: 768px) {
         .smartben-hover-content {
             padding-top: 3em
         }
     }
     /* svg image */
-    
+
     #shenanigans {
         height: 600px;
     }
-    
+
     @media(min-width: 1150px) {
         #shenanigans {
             height: 730px;
         }
     }
     /* logos inline in ie9 */
-    
+
     .home-logos .vc_item {
         display: inline;
         float: left;
         clear: none;
     }
-    
+
     .home-logos .vc_item .vc_inner {
         text-align: center;
     }
-    
+
     .home-logos .vc_item .vc_inner img {
         max-width: 90%;
         padding: 0 5%;
@@ -1688,7 +1688,7 @@ Text Domain: hodgesmace
     /* News V2
 * --------------------------------------------------------------- *
 */
-    
+
     .news-sections .vc_row {
         display: none;
         opacity: 0;
@@ -1700,7 +1700,7 @@ Text Domain: hodgesmace
     /* Blog Roll
 * --------------------------------------------------------------- *
 */
-    
+
     .site-content .blog-banner {
         background-image: url('./images/blog/blog-banner.jpg');
         background-repeat: no-repeat;
@@ -1709,7 +1709,7 @@ Text Domain: hodgesmace
         padding-top: 4em;
         padding-bottom: 4em;
     }
-    
+
     .default-img {
         display: block;
         width: 100%;
@@ -1717,7 +1717,7 @@ Text Domain: hodgesmace
         background: #ddd;
         height: 160px;
     }
-    
+
     .default-img-content {
         background-color: #ddd;
         width: 100%;
@@ -1727,16 +1727,16 @@ Text Domain: hodgesmace
         color: #555;
         position: absolute;
     }
-    
+
     .site-content .blog-excerpt {
         border-top: 1px solid #eee;
         overflow: auto;
     }
-    
+
     .blog-excerpt:first-child {
         border: none;
     }
-    
+
     .blog-footer {
         background-image: url('./images/blog/blog-footer-bg.png');
         background-repeat: no-repeat;
@@ -1750,16 +1750,16 @@ Text Domain: hodgesmace
         margin-left: 2.5%;
         width: 98%;
     }
-    
+
     .blog-footer-content {
         height: inherit;
         padding: 2em 0;
     }
-    
+
     .blog-footer-img {
         display: none;
     }
-    
+
     @media(min-width: 768px) {
         .blog-footer-content {
             height: 350px;
@@ -1787,14 +1787,14 @@ Text Domain: hodgesmace
         }
     }
     /* pagination */
-    
+
     .pagination {
         display: table;
         margin-right: auto;
         margin-left: auto;
         padding: 2em 0;
     }
-    
+
     .pagination span {
         border: 1px solid #AAA;
         border-right: none;
@@ -1805,13 +1805,13 @@ Text Domain: hodgesmace
         text-align: center;
         line-height: 2em;
     }
-    
+
     .pagination span a {
         padding: 1em .5em;
         color: #1897d3;
         font-weight: bold;
     }
-    
+
     .pagination span:first-child {
         border-top-left-radius: 5px;
         -webkit-border-top-left-radius: 5px;
@@ -1820,7 +1820,7 @@ Text Domain: hodgesmace
         -webkit-border-bottom-left-radius: 5px;
         -moz-border-bottom-left-radius: 5px;
     }
-    
+
     .pagination span:last-child {
         border-top-right-radius: 5px;
         -webkit-border-top-right-radius: 5px;
@@ -1830,23 +1830,23 @@ Text Domain: hodgesmace
         -moz-border-bottom-right-radius: 5px;
         border-right: 1px solid #AAA;
     }
-    
+
     .pagination .active {
         border-color: #1897d3;
         background-color: #1897d3;
     }
-    
+
     .pagination .active a {
         color: #fff;
     }
     /* Single
 * --------------------------------------------------------------- *
 */
-    
+
     .post-meta {
         font-size: 1.2em;
     }
-    
+
     .site-content .related-articles {
         background-image: url('./images/blog/related-articles-bg.png');
         background-repeat: no-repeat;
@@ -1854,17 +1854,17 @@ Text Domain: hodgesmace
         padding: 1em 0;
         color: #fff;
     }
-    
+
     .related-articles-arrow {
         background-image: url('./images/blog/Rounded-Rectangle-71.svg');
         background-repeat: no-repeat;
         height: 20px;
     }
-    
+
     .site-content .blog-single-container {
         max-width: 750px;
     }
-    
+
     .site-content .blog-single-container p,
     .site-content .blog-single-container li {
         font-size: 1.25em;
@@ -1873,11 +1873,11 @@ Text Domain: hodgesmace
     /* Essential Grid
 * --------------------------------------------------------------- *
 */
-    
+
     .esg-filter-wrapper.dropdownstyle .esg-filterbutton {
         white-space: nowrap;
     }
-    
+
     .esg-dropdown-wrapper {
         box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 0px;
         -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 0px;
@@ -1886,30 +1886,30 @@ Text Domain: hodgesmace
     /* Act-On Template
 * --------------------------------------------------------------- *
 */
-    
+
     .site-content .act-on-form-bkg {
         overflow: auto;
         padding-top: 6em;
         padding-bottom: 6em;
         background-color: #f9f9f9;
     }
-    
+
     .site-content .aoFormContainer .formFieldLabel {
         padding-bottom: 10px;
     }
-    
+
     .site-content .aoFormContainer input[type=button] {
         line-height: 1;
         padding-bottom: 8px !important;
     }
-    
+
     .site-content div#errorMsg {
         text-align: center;
         margin-bottom: 10px;
         color: #ff0000;
         font-weight: bold;
     }
-    
+
     .site-content .act-on-form {
         height: 400px;
     }
@@ -1917,100 +1917,100 @@ Text Domain: hodgesmace
 * --------------------------------------------------------------- *
 */
     /* Fancybox */
-    
+
     #fancybox-content {
         background-color: #fff;
     }
     /* Click to Tweet */
-    
+
     .click-to-tweet {
         border: 1px solid #ccc;
         padding: 10px 20px 0px 20px;
     }
-    
+
     .click-to-tweet .ctt-text p a {
         font-weight: normal;
     }
-    
+
     .click-to-tweet .ctt-link a {
         color: #555;
         font-weight: 600;
     }
-    
+
     .click-to-tweet .ctt-link {
         text-align: right;
     }
-    
+
     .click-to-tweet a {
         color: #aaa;
     }
     /* Helpers
 * --------------------------------------------------------------- *
 */
-    
+
     .cursor-a,
     .cursor-a a {
         cursor: default;
     }
-    
+
     .va-m {
         vertical-align: middle;
     }
-    
+
     .h-550 {
         height: 550px;
     }
-    
+
     .h-350 {
         height: 350px;
     }
-    
+
     .ta-c {
         text-align: center;
     }
-    
+
     .m-r-10-px {
         margin-right: 10px;
     }
-    
+
     .uppercase {
         text-transform: uppercase;
     }
-    
+
     .word-break {
         word-wrap: break-word;
     }
-    
+
     .bold {
         font-weight: bold;
     }
-    
+
     .d-n {
         display: none !important;
     }
-    
+
     .d-t {
         display: table;
     }
-    
+
     .d-b {
         display: block !important;
     }
-    
+
     .float-left {
         float: left !important;
         clear: none !important;
     }
-    
+
     .float-right {
         float: right !important;
         clear: none !important;
     }
-    
+
     .site-content .background-top-center {
         background-position: center top !important;
     }
-    
+
     .aligncenter,
     img.aligncenter,
     .center {
@@ -2020,48 +2020,48 @@ Text Domain: hodgesmace
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .alignright {
         float: right;
         clear: both;
         text-align: right;
     }
-    
+
     .site-content .vertical-center {
         display: table-cell;
         vertical-align: center;
     }
-    
+
     .site-content .d-n-xs {
         display: none;
     }
-    
+
     .site-content .desktop-hide {
         display: inherit;
     }
-    
+
     .site-content .mobile-hide {
         display: none;
     }
-    
+
     .site-content .of-v {
         overflow: visible;
     }
-    
+
     .site-content .mobile-center {
         text-align: center;
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .site-content .mobile-t-p {
         padding-top: 1em;
     }
-    
+
     .site-content .mobile-b-p {
         padding-bottom: 1em;
     }
-    
+
     @media screen and (min-width:768px) {
         .site-content .desktop-hide {
             display: none;
@@ -2096,46 +2096,46 @@ Text Domain: hodgesmace
             display: block;
         }
     }
-    
+
     .c-twitter-blue {
         color: #00aced;
     }
-    
+
     .vc_btn3.vc_btn3-color-blue,
     .vc_btn3.vc_btn3-color-blue.vc_btn3-style-flat {
         color: #fff;
         background-color: #1897d3;
     }
-    
+
     .vc_btn3.vc_btn3-color-green,
     .vc_btn3.vc_btn3-color-green.vc_btn3-style-flat {
         color: #fff;
         background-color: #8EC449;
     }
-    
+
     .ff-bold {
         font-family: 'NeuzeitGro Bold', sans-serif;
     }
-    
+
     .m-b-0 {
         margin-bottom: 0;
     }
     /* The 'Reqest Demo' button in the Nav acts funny cuz it's not a menu item*/
     /* Probably needs a better solution  -JL*/
-    
+
     @media(min-width:500px) {
         #demo-btn-mob-jank {
             margin-left: -25px !important;
             margin-top: 80px;
         }
     }
-    
+
     @media(min-width:1170px) {
         #demo-btn-mob-jank {
             display: none;
         }
     }
-    
+
     @media(max-width:500px) {
         #demo-btn-mob-jank {
             margin-left: 0px !important;
@@ -2143,36 +2143,36 @@ Text Domain: hodgesmace
         }
     }
     /* Limit the width of the featured resources title on the resources archive page */
-    
+
     input#input_1_6 {
         margin-top: 17px;
     }
-    
+
     select#input_1_7 {
         height: 44px;
         margin-top: -66px;
         width: 97.7%;
         float: left;
     }
-    
+
     li#field_1_4 {
         width: 100%;
     }
-    
+
     textarea#input_1_4 {
         height: 145px;
     }
-    
+
     select#input_1_8 {
         width: 48.5%;
         float: right;
         margin-top: -43px;
     }
-    
+
     li#field_1_9 {
         width: 96%;
     }
-    
+
     @media(max-width: 641px) {
         select#input_1_8,
         li#field_1_9 {
@@ -2181,7 +2181,6 @@ Text Domain: hodgesmace
         }
     }
     /* brochure shortcode styles */
-    
     #hm_bg_jobgreen {
         background: url("/wp-content/uploads/2016/12/HM_BannerDoing_G_Mobile.png") no-repeat center;
         background-size: contain;
@@ -2190,7 +2189,17 @@ Text Domain: hodgesmace
         margin: auto;
         position: relative;
     }
-    
+    @media (min-width:928px){
+        #hm_bg_jobgreen {
+            background: url("/wp-content/uploads/2016/12/HM-Banner_Doing_our_G.png");
+            width:100%;
+        }
+        #hm_bg_jobblue {
+            background: url("/wp-content/uploads/2016/12/HM-Banner_Doing_our_B.png");
+            width:100%;
+        }
+    }
+
     #hm_bg_jobblue {
         background: url("/wp-content/uploads/2016/12/HM_BannerDoing_B_Mobile.png") no-repeat center;
         background-size: contain;
@@ -2199,7 +2208,7 @@ Text Domain: hodgesmace
         margin: auto;
         position: relative;
     }
-    
+
     #hm_bg_helloblue {
         background: url("/wp-content/uploads/2016/12/HM_Say_HelloB_Mobile.png") no-repeat center;
         background-size: contain;
@@ -2208,7 +2217,7 @@ Text Domain: hodgesmace
         margin: auto;
         position: relative;
     }
-    
+
     #hm_bg_hellogreen {
         background: url("/wp-content/uploads/2016/12/HM_Say_HelloG_Mobile.png") no-repeat center;
         background-size: contain;
@@ -2217,12 +2226,12 @@ Text Domain: hodgesmace
         margin: auto;
         position: relative;
     }
-    
+
     .place {
         margin: auto;
         text-align: center;
     }
-    
+
     .hm_shortcode_btn {
         color: black;
         font-weight: 500;
@@ -2238,13 +2247,13 @@ Text Domain: hodgesmace
         text-transform: uppercase;
         transition: .2s;
     }
-    
+
     .hm_shortcode_hellobtn:hover,
     .hm_shortcode_btn:hover {
         background-color: transparent;
         color: white;
     }
-    
+
     .hm_shortcode_hellobtn {
         color: black;
         font-weight: 500;
@@ -2260,15 +2269,15 @@ Text Domain: hodgesmace
         text-transform: uppercase;
         transition: .2s;
     }
-    
+
     .brochuretxt {
         display: none;
     }
-    /* ==========================
+/* ==========================
  * SmartAdmin
  * ========================== */
     /* SmartAdmin Banner */
-    
+
     .smartAdmin-banner .h1 {
         font-family: 'NeuzeitGro Bold';
         font-weight: 700;
@@ -2278,7 +2287,7 @@ Text Domain: hodgesmace
         padding: 0;
         margin: 0;
     }
-    
+
     .smartAdmin-banner .h2 {
         font-size: 2.25em;
         font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -2286,7 +2295,7 @@ Text Domain: hodgesmace
         padding: 0;
         margin: 0;
     }
-    
+
     .smartAdmin-banner .p {
         font-size: 1.5em;
         color: #ddd;
@@ -2294,7 +2303,7 @@ Text Domain: hodgesmace
         margin-top: 1em;
     }
     /* Smart Admin copy */
-    
+
     .smartAdmin-content .h2 {
         font-size: 2.25em;
         line-height: 125%;
@@ -2302,38 +2311,38 @@ Text Domain: hodgesmace
         ;
         margin-bottom: 1em;
     }
-    
+
     .smartAdmin-content .h3 {
         font-size: 1.5em;
         font-weight: 400;
     }
-    
+
     .smartAdmin-content .h3 strong {
         font-family: 'NeuzeitGro Bold', sans-serif;
         ;
         font-size: 1.15em;
     }
-    
+
     .smartAdmin-content .p {
         font-size: 1.35em;
         color: #888;
     }
     /* Smart Admin Benifits modules */
-    
+
     .smartAdmin-module .h3 {
         font-size: 1.75em;
         font-weight: 100;
     }
-    
+
     .smartAdmin-module .p {
         font-size: 1.15em;
     }
-    
+
     .svg-overlay-wrapper .svg-overlay {
         position: relative;
         z-index: 9;
     }
-    
+
     .what-can-btn {
         bottom: 0px;
         position: absolute;
@@ -2341,64 +2350,64 @@ Text Domain: hodgesmace
         left: 5px;
     }
     /* smart admin service */
-    
+
     .smartAdmin-service-svg {
         height: 120px;
         padding: 20px 0;
     }
-    
+
     .smartAdmin-service-svg img {
         height: 80px;
     }
-    
+
     .smartAdmin-service-svg-cut img {
         height: 60px;
     }
-    
+
     .smartAdmin-service .h3 {
         color: #8EC449;
         font-family: 'NeuzeitGro Bold';
         font-size: 2em;
     }
-    
+
     .smartAdmin-service .p {
         font-size: 1.1em;
     }
-    
+
     .smartAdmin-service .p em {
         color: #333;
         font-weight: 500;
     }
     /* smart admin testimonials */
-    
+
     .smartAdmin-content .vc_gitem-post-data-source-post_title,
     .smartAdmin-content .vc_gitem-animated-block,
     .smartAdmin-content .vc_gitem-col .vc_btn3-container {
         display: none;
     }
-    
+
     .smartAdmin-content .vc_gitem-post-data p {
         text-align: left !important;
     }
-    
+
     .smartAdmin-content .vc_gitem_row .vc_gitem-col {
         padding: 5px 20px;
         background-color: #fff;
     }
-    
+
     .smartAdmin-content .vc_gitem-post-data p span,
     .smartAdmin-content .vc_gitem-post-data .testimonial-content span,
     .smartAdmin-content .vc_gitem-post-data .testimonial-content {
         font-weight: 200 !important;
     }
-    
+
     .smartAdmin-content .vc_gitem-post-data .testimonial-contact {
         font-family: 'NeuzeitGro Bold';
         font-style: normal;
         font-size: 1.25em;
         line-height: 100%;
     }
-    
+
     .smartAdmin-content .vc_gitem-post-data .testimonial-company {
         font-style: normal;
         text-transform: uppercase;
@@ -2406,17 +2415,17 @@ Text Domain: hodgesmace
         color: #1897d3;
         display: none;
     }
-    
+
     .mobile-svg {
         max-width: 100%;
         overflow: hidden;
     }
-    
+
     .mobile-svg svg {
         max-width: 100%;
     }
     /* smart admin blue boxes */
-    
+
     @media screen and (min-width: 768px) {
         .smartAdmin-blue-boxes .wpb_column .vc_column-inner {
             background: #f3fdff;
@@ -2424,30 +2433,30 @@ Text Domain: hodgesmace
         }
     }
     /* roi-cal */
-    
+
     .roi-calculator .form-group>label {
         width: 300px;
         display: inline-block;
     }
-    
+
     .roi-field-header {
         color: #2498d1;
         font-size: 16px;
         margin: 30px 0 5px;
     }
-    
+
     .roi-savings-low {
         background-color: #f9f9fa;
     }
-    
+
     .roi-savings-average {
         background-color: #f2f7fa;
     }
-    
+
     .roi-savings-high {
         background-color: #ebf5f9;
     }
-    
+
     .roi-savings-group {
         display: inline-block;
         width: 31%;
@@ -2456,21 +2465,21 @@ Text Domain: hodgesmace
         text-align: center;
         font-size: 12px;
     }
-    
+
     .roi-savings-group.roi-savings-low {
         margin-left: 0;
     }
-    
+
     .roi-savings-group.roi-savings-high {
         margin-right: 0;
     }
-    
+
     span.roi-saving-total {
         display: block;
         color: #2498d1;
         font-size: 26px;
     }
-    
+
     .roi-calculator input {
         border: 2px solid #eee;
         border-radius: 5px;
@@ -2478,21 +2487,21 @@ Text Domain: hodgesmace
         vertical-align: top;
         margin: 0 20px;
     }
-    
+
     .roi-calculator .checkbox input {
         height: 35px;
         margin: 0;
         display: inline-block;
     }
-    
+
     .roi-calculator .checkbox label {
         vertical-align: top;
     }
-    
+
     .roi-calculator .checkbox {
         line-height: 35px;
     }
-    
+
     @media screen and (max-width: 830px) {
         .roi-calculator .form-group>label {
             width: 100%
@@ -2513,7 +2522,7 @@ Text Domain: hodgesmace
     /* SB Infographic
 * --------------------------------------------------------------- *
 */
-    
+
     body .mobile-education,
     body .mobile-connect,
     body .mobile-decision,
@@ -2524,58 +2533,58 @@ Text Domain: hodgesmace
         display: block;
         margin: auto;
     }
-    
+
     .mobile-education {
         max-width: 320px;
     }
-    
+
     .mobile-connect {
         max-width: 240px;
     }
-    
+
     .mobile-decision {
         max-width: 230px;
     }
-    
+
     .mobile-compliance {
         max-width: 220px;
     }
-    
+
     .mobile-person {
         max-width: 260px;
     }
-    
+
     .mobile-eligibility {
         max-width: 200px;
     }
     /* SmartBen Now
 * --------------------------------------------------------------- *
 */
-    
+
     .smartben-essentials-box .h3,
     .smartben-essentials-content .h3,
     .smartben-now-content .h3 {
         font-size: 1.5em;
     }
-    
+
     .smartben-now-banner .p {
         font-size: 1.7em;
     }
-    
+
     .smartben-now-banner .h1 {
         margin-bottom: 0;
     }
-    
+
     .smartben-now-banner .h1 strong {
         font-size: 110%;
     }
-    
+
     .smartben-now-content .h2 {
         font-size: 1.7em;
         color: #2d5593;
         margin-bottom: 0;
     }
-    
+
     .smartben-now-content .h3 {
         margin-bottom: 0;
         margin-top: 1em;
@@ -2584,19 +2593,19 @@ Text Domain: hodgesmace
     /* SmartBen Essentials
 * --------------------------------------------------------------- *
 */
-    
+
     .smartben-essentials-box .p {
         line-height: 175%;
     }
-    
+
     .smartben-essentials-content .h3 {
         color: #5fb6e3;
     }
-    
+
     .site-content .smartben-essentials-content ul {
         margin-left: 1em;
     }
-    
+
     .site-content .smartben-essentials-content ul li:before {
         content: "\f111";
         color: #333;
@@ -2606,7 +2615,7 @@ Text Domain: hodgesmace
         left: 0;
         line-height: 23px;
     }
-    
+
     @media screen and (max-width: 767px) {
         .mobile-white-bkg .vc_column-inner {
             background-color: #fff !important;
@@ -2615,43 +2624,43 @@ Text Domain: hodgesmace
             background-color: #f9f9f9 !important;
         }
     }
-    
+
     .contact-footer input {
         -ms-user-select: none;
     }
     /* SmartBen Gatekeeper
 * --------------------------------------------------------------- *
 */
-    
+
     @media screen and (min-width: 768px) {
         .w-816-h3-three-lines {
             height: 93px;
         }
     }
-    
+
     @media screen and (min-width: 817px) {
         .h3-two-lines {
             height: 62px;
         }
     }
-    
+
     .gatekeeper-list li {
         margin-bottom: 10px;
         color: #000;
     }
     /* fixes bkg position on footer banner */
-    
+
     .site-content .smartben-now-cta {
         background-position: top left !important;
     }
-    
+
     .smartben-essentials-box {
         padding-left: 3em;
         padding-right: 3em;
         padding-top: 2em;
         padding-bottom: 2em;
     }
-    
+
     @media screen and (max-width:769px) {
         .site-content .smartben-now-cta {
             background-position: 34% top !important;
@@ -2668,19 +2677,19 @@ Text Domain: hodgesmace
         }
     }
     /* Pathfinder */
-    
+
     .site-content .pathfinder-process-bkg {
         background-position: top center !important;
         background-repeat: no-repeat !important;
         background-size: 65% 5px !important;
     }
-    
+
     @media screen and (min-width: 768px) {
         .site-content .pathfinder-process-bkg-mobile {
             background: none !important;
         }
     }
-    
+
     @media screen and (max-width: 767px) {
         .site-content .pathfinder-process-bkg-mobile {
             padding: 0 20px 0 0;
@@ -2718,28 +2727,28 @@ Text Domain: hodgesmace
         }
     }
     /* SmartBen Bread Crumb */
-    
+
     .smartben-breadcrumb {
         opacity: .75;
         font-size: .9em;
     }
-    
+
     .smartben-breadcrumb p,
     .smartben-breadcrumb a,
     .smartben-breadcrumb i {
         color: #fff;
     }
-    
+
     .smartben-breadcrumb a:hover {
         text-decoration: underline;
     }
-    
+
     @media screen and (max-width: 889px) {
         #top-header {
             display: none;
         }
     }
-    
+
     @media screen and (min-width: 890px) {
         #menu-item-2574,
         #menu-item-2567,
@@ -2747,12 +2756,12 @@ Text Domain: hodgesmace
             display: none;
         }
     }
-    
+
     .bop-nav-search {
         margin: auto;
         margin-left: 17px;
     }
-    
+
     .bop-nav-search input[type="submit"] {
         border-radius: 3px;
         -webkit-border-radius: 3px;
@@ -2762,12 +2771,12 @@ Text Domain: hodgesmace
         padding: 2px 15px !important;
         margin-left: 2%;
     }
-    
+
     li#menu-item-1258 {
         margin-left: 20px;
     }
     /********************/
-    
+
     #enr-wpaper,
     #enr-services,
     #enr-software,
@@ -2775,60 +2784,60 @@ Text Domain: hodgesmace
         padding: 3em 0 !important;
         width: 100% !important;
     }
-    
+
     #enr-wpaper {
         padding-bottom: 0 !important;
     }
-    
+
     #enr-footer {
         height: 362px;
         /* background-size: contain !important; */
     }
-    
+
     #enr-services h2,
     #enr-software p:last-child,
     #enr-software h2 {
         max-width: 75%;
         margin: auto;
     }
-    
+
     #enr-software p:last-child,
     #enr-software h2 {
         color: white;
     }
-    
+
     #enr-wpaper .vc_column-inner {
         padding: 0;
         margin-bottom: -1px
     }
-    
+
     .four-box-serv {
         max-width: 1100px;
     }
-    
+
     .four-box-serv .vc_column-inner {
         padding: 3em 1.2em;
     }
-    
+
     #enr-footer .h2 {
         position: absolute;
         left: 0;
         right: 0;
         top: 80px;
     }
-    
+
     .enr-position {
         position: absolute;
         top: 160px;
         left: 0;
         right: 0;
     }
-    
+
     .inside-row {
         max-width: 1100px;
         position: relative;
     }
-    
+
     @media (min-width:768px) {
         #enr-footer .h2 {
             top: 90px;
