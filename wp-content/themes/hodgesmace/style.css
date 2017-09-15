@@ -285,7 +285,8 @@ Text Domain: hodgesmace
     .site-content .full-width {
         width: 100%;
     }
-    /*
+
+/*
  * Header
  * --------------------------------------------------------------- *
  */
@@ -2101,6 +2102,11 @@ Text Domain: hodgesmace
         color: #00aced;
     }
 
+    .underline-link {
+        border-bottom: 1px solid #1897d3;
+        padding: 0 0 .75em .5em;
+    }
+
     .vc_btn3.vc_btn3-color-blue,
     .vc_btn3.vc_btn3-color-blue.vc_btn3-style-flat {
         color: #fff;
@@ -2876,3 +2882,11 @@ Text Domain: hodgesmace
             margin-left: 10%;
         }
     }
+
+/*
+ * Benefit Enrollment Solutions
+ */
+
+     .page-id-2582 {
+         line-height: 175%;
+     }
