@@ -2908,7 +2908,6 @@ Text Domain: hodgesmace
 .page-template-no-nav-template ul li:before {
     content: "\f111";
     font-size: .4em;
-    margin-top: 1.25em;
-    margin-left: 1em;
+    margin-left: .5em;
     color: #999;
 }
