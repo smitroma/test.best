@@ -2007,6 +2007,9 @@ Text Domain: hodgesmace
         float: right !important;
         clear: none !important;
     }
+    .clear-left {
+        clear: left !important;
+    }
 
     .site-content .background-top-center {
         background-position: center top !important;
@@ -2910,4 +2913,8 @@ Text Domain: hodgesmace
     font-size: .4em;
     margin-left: .5em;
     color: #999;
+}
+
+.page-template-no-nav-template .gform_confirmation_message {
+    text-align: center;
 }
