@@ -2900,3 +2900,15 @@ Text Domain: hodgesmace
     -webkit-transform: none;
     -ms-transform: none;
 }
+
+.page-template-no-nav-template ul li {
+    margin-bottom: 15px;
+}
+
+.page-template-no-nav-template ul li:before {
+    content: "\f111";
+    font-size: .4em;
+    margin-top: 1.25em;
+    margin-left: 1em;
+    color: #999;
+}
