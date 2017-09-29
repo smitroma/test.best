@@ -35,7 +35,7 @@
 		})(window,document,'script','dataLayer','GTM-NCHLPG');</script>
 	<!-- End Google Tag Manager -->
 
-  <div class="container-fluid">
+  <div class="container-fluid no-nav">
 		<div id="top-header">
 			<div class="container">
                 <!-- No links -->

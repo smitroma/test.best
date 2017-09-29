@@ -2890,3 +2890,13 @@ Text Domain: hodgesmace
      .page-id-2582 {
          line-height: 1.75;
      }
+
+
+/* No nav template */
+
+.page-template-no-nav-template #header .logo img {
+    top: 10px;
+    transform: none;
+    -webkit-transform: none;
+    -ms-transform: none;
+}
