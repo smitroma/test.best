@@ -651,6 +651,24 @@ function send_to_acton_4($entry,$form) {
   $ao_gf1->processConnection('http://marketing.hodgesmace.com/acton/eform/17907/0010/d-ext-0001');
 }
 
+/* Contact - Capterra */
+
+add_action('gform_after_submission_11', 'send_to_acton_11', 10, 2);
+
+function send_to_acton_11($entry,$form) {
+
+  $ao_gf1 = new ActonWordPressConnection;
+
+  $ao_gf1->setPostItems('firstName',$entry['5.3']);
+  $ao_gf1->setPostItems('lastName',$entry['5.6']);
+  $ao_gf1->setPostItems('email',$entry['2']);
+  $ao_gf1->setPostItems('businessPhone',$entry['6']);
+  $ao_gf1->setPostItems('company',$entry['7']);
+  $ao_gf1->setPostItems('Marketing Program','Website - Capterra Landing Page');
+
+  $ao_gf1->processConnection('https://marketing.hodgesmace.com/acton/eform/17907/0022/d-ext-0001');
+}
+
 /* Modifies confirmation anchor */
 function adjust_brochure_anchor(){
   return 400;
