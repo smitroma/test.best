@@ -2,7 +2,7 @@
 /**
  * No navigation page template
  *
- * Template: No Navigation
+ * Template Name: No Navigation
  * @package Brain_Bytes
  * @subpackage Hodges Mace
  * @since Hodges Mace  1.0
