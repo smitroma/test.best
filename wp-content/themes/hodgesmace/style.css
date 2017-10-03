@@ -2188,9 +2188,10 @@ Text Domain: hodgesmace
 
     @media(max-width: 641px) {
         select#input_1_8,
-        li#field_1_9 {
-            float: none !important;
-            width: 100% !important;
+        li#field_1_9,
+        li#field_1_4 {
+            float: left !important;
+            width: 97.5% !important;
         }
     }
     /* brochure shortcode styles */
