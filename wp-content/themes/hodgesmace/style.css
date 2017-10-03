@@ -2179,7 +2179,11 @@ Text Domain: hodgesmace
     }
 
     li#field_1_9 {
-        width: 96%;
+        margin-top:32px;
+    }
+    
+    select#field_1_9 {
+        height: 44px;
     }
 
     @media(max-width: 641px) {
