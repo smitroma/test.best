@@ -2899,12 +2899,27 @@ Text Domain: hodgesmace
          line-height: 1.75;
      }
 
+
+     .page-id-2582 .smartadmin-banner .p {
+         font-size: 1.5em;
+         font-weight: 100;
+         margin-top: 1em;
+         text-align: center;
+         max-width: 800px;
+         margin: auto;
+     }
+
+
 @media (max-width: 769px) {
 
     /* MOBILE BANNER */
 
     .page-id-2582 .smartadmin-banner .h1 {
         font-size: 1.75em;
+    }
+
+    .page-id-2582 .smartadmin-banner .p {
+        font-size: 1.2em;
     }
 
     /* one-size fits all */
