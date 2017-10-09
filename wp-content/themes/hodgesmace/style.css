@@ -2899,6 +2899,39 @@ Text Domain: hodgesmace
          line-height: 1.75;
      }
 
+@media (max-width: 769px) {
+
+    /* MOBILE BANNER */
+
+    .page-id-2582 .smartadmin-banner .h1 {
+        font-size: 1.75em;
+    }
+
+    /* one-size fits all */
+
+    .page-id-2582 .wpb_text_column.wpb_content_element {
+        padding: 3em 1.2em !important;
+    }
+
+    /* benefits enrollment software */
+
+    .page-id-2582 .vc_custom_1505485322230 .wpb_text_column.wpb_content_element {
+        padding: 1.5em !important;
+    }
+
+    /* enrollment tools */
+
+    .page-id-2582 .vc_custom_1505485322230 .wpb_text_column.wpb_content_element {
+        padding: 1.5em !important;
+    }
+
+    /* case study */
+    .page-id-2582 .vc_custom_1498768589989 {
+         padding: 3em !important;
+    }
+
+}
+
 
 /* No nav template */
 
