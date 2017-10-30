@@ -2992,6 +2992,9 @@ Text Domain: hodgesmace
         float: none;
         margin: 0 auto;
     }
+    .page-template-no-nav-template .home-logos-container {
+        display: none;
+    }
 }
 
 .page-template-no-nav-template .gform_confirmation_message {
