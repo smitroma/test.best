@@ -2968,8 +2968,12 @@ Text Domain: hodgesmace
     color: #999;
 }
 
-.page-template-no-nav-template .request-header {
+.page-template-no-nav-template #header .request-header {
     display: block !important;
+}
+
+.page-template-no-nav-template #header .container {
+    height: 86px;
 }
 
 @media(max-width: 768px) {
