@@ -2995,6 +2995,19 @@ Text Domain: hodgesmace
     .page-template-no-nav-template .home-logos-container {
         display: none;
     }
+    .page-template-no-nav-template #input_11_5_6_container,
+    .page-template-no-nav-template #input_11_5_3_container {
+        width: 100%;
+    }
+
+    /*Three gray boxes mobile*/
+    .vc_custom_1506710978072 > .wpb_wrapper > div,
+    .vc_custom_1506711031452 > .wpb_wrapper > div,
+    .vc_custom_1506711261412 > .wpb_wrapper > div {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        margin: 0 !important;
+    }
 }
 
 .page-template-no-nav-template .gform_confirmation_message {
