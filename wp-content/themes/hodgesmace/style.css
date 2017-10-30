@@ -2980,7 +2980,8 @@ Text Domain: hodgesmace
     .page-template-no-nav-template #main-menu {
         padding: 18px 0;
     }
-    .page-template-no-nav-template #header {
+    .page-template-no-nav-template #header,
+    .page-template-no-nav-template #header .container {
         height: 140px;
     }
     .page-template-no-nav-template #header .request-header {
