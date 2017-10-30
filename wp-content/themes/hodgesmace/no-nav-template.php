@@ -36,11 +36,6 @@
 	<!-- End Google Tag Manager -->
 
   <div class="container-fluid no-nav">
-		<div id="top-header">
-			<div class="container">
-                <!-- No links -->
-			</div>
-		</div>
     <div id="header">
       <div class="container">
 		<div class="logo">
