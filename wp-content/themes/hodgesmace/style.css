@@ -2975,7 +2975,9 @@ Text Domain: hodgesmace
 .page-template-no-nav-template #header .container {
     height: 86px;
 }
-
+.page-template-no-nav-template .capterra-reviews-badge {
+    display: none;
+}
 @media(max-width: 768px) {
     .page-template-no-nav-template #main-menu {
         padding: 18px 0;
@@ -3001,12 +3003,16 @@ Text Domain: hodgesmace
     }
 
     /*Three gray boxes mobile*/
-    .vc_custom_1506710978072 > .wpb_wrapper > div,
-    .vc_custom_1506711031452 > .wpb_wrapper > div,
-    .vc_custom_1506711261412 > .wpb_wrapper > div {
+    .page-template-no-nav-template .vc_custom_1506710978072 > .wpb_wrapper > div,
+    .page-template-no-nav-template .vc_custom_1506711031452 > .wpb_wrapper > div,
+    .page-template-no-nav-template .vc_custom_1506711261412 > .wpb_wrapper > div {
         padding-left: 10px !important;
         padding-right: 10px !important;
         margin: 0 !important;
+    }
+
+    .page-template-no-nav-template .capterra-reviews-badge {
+        display: block;
     }
 }
 
