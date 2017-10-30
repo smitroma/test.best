@@ -2968,6 +2968,24 @@ Text Domain: hodgesmace
     color: #999;
 }
 
+.page-template-no-nav-template .request-header {
+    display: block !important;
+}
+
+@media(max-width: 768px) {
+    .page-template-no-nav-template .request-header {
+        float: none;
+        text-align: center;
+    }
+    .page-template-no-nav-template #main-menu {
+        padding: 18px 0;
+    }
+    .page-template-no-nav-template #header .logo {
+        float: none;
+        margin: 0 auto;
+    }
+}
+
 .page-template-no-nav-template .gform_confirmation_message {
     text-align: center;
 }
