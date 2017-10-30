@@ -2997,3 +2997,9 @@ Text Domain: hodgesmace
 .page-template-no-nav-template .gform_confirmation_message {
     text-align: center;
 }
+
+/* Capterra Page */
+
+.page-template-no-nav-template #shenanigans a {
+    display: none;
+}
