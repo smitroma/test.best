@@ -3013,6 +3013,7 @@ Text Domain: hodgesmace
 
     .page-template-no-nav-template .capterra-reviews-badge {
         display: block;
+        margin-top: 30px;
     }
 }
 
