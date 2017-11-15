@@ -157,3 +157,21 @@
     $(window).resize(openActiveSubOnMobile);
 
 })(jQuery);
+
+// For Capterra Tracking
+var capterraTracking = function(){
+var isSent = false;
+if(!isSent) {
+console.log('sent to capterra');
+      var capterra_vkey = '19dbdadc79fe5c847e85f4dc1887bb42',
+      capterra_vid = '2104545',
+      capterra_prefix = (('https:' == document.location.protocol) ? 'https://ct.capterra.com' : 'http://ct.capterra.com');
+
+      (function() {
+        var ct = document.createElement('script'); ct.type = 'text/javascript'; ct.async = true;
+        ct.src = capterra_prefix + '/capterra_tracker.js?vid=' + capterra_vid + '&vkey=' + capterra_vkey;
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ct, s);
+      })();
+isSent = true;
+}
+}
