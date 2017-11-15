@@ -36,17 +36,28 @@
 	<!-- End Google Tag Manager -->
 
   <div class="container-fluid no-nav">
-		<div id="top-header">
-			<div class="container">
-                <!-- No links -->
-			</div>
-		</div>
     <div id="header">
       <div class="container">
 		<div class="logo">
     	    <img src="<?php header_image(); ?>" alt="<?php bloginfo('name') ?>"  width="260" height="86" title="Hodges-Mace Logo" />
 		</div>
-      </div>
+		<div id="main-menu">
+			<div class="request-header">
+				<button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern bttn-blue m-l-sm requestDemoBtn">Request a Demo</button>
+
+				<!-- Request a demo popup -->
+				<div id="requestPopUp" style="display: none;">
+					<div style="background-color: #fff; text-align: center;">
+						<p><strong>Choose the option that best describes you:</strong></p>
+						<p>
+							<a href="/request-a-demo-broker" class="bttn-blue demo-button">Broker</a><br>
+							<a href="/request-a-demo-company" class="bttn-blue demo-button">Employer</a><br>
+							<a href="/request-a-demo-carrier" class="bttn-blue demo-button">Carrier</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
     </div>
 	<div class="site-content">
         <div id="primary">

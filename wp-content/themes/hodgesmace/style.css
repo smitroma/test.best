@@ -2900,6 +2900,54 @@ Text Domain: hodgesmace
      }
 
 
+     .page-id-2582 .smartadmin-banner .p {
+         font-size: 1.5em;
+         font-weight: 100;
+         margin-top: 1em;
+         text-align: center;
+         max-width: 800px;
+         margin: auto;
+     }
+
+
+@media (max-width: 769px) {
+
+    /* MOBILE BANNER */
+
+    .page-id-2582 .smartadmin-banner .h1 {
+        font-size: 1.75em;
+    }
+
+    .page-id-2582 .smartadmin-banner .p {
+        font-size: 1.2em;
+    }
+
+    /* one-size fits all */
+
+    .page-id-2582 .wpb_text_column.wpb_content_element {
+        padding: 3em 1.2em !important;
+    }
+
+    /* benefits enrollment software */
+
+    .page-id-2582 .vc_custom_1505485322230 .wpb_text_column.wpb_content_element {
+        padding: 1.5em !important;
+    }
+
+    /* enrollment tools */
+
+    .page-id-2582 .vc_custom_1505485322230 .wpb_text_column.wpb_content_element {
+        padding: 1.5em !important;
+    }
+
+    /* case study */
+    .page-id-2582 .vc_custom_1498768589989 {
+         padding: 3em !important;
+    }
+
+}
+
+
 /* No nav template */
 
 .page-template-no-nav-template #header .logo img {
@@ -2920,6 +2968,61 @@ Text Domain: hodgesmace
     color: #999;
 }
 
+.page-template-no-nav-template #header .request-header {
+    display: block !important;
+}
+
+.page-template-no-nav-template #header .container {
+    height: 86px;
+}
+.page-template-no-nav-template .capterra-reviews-badge {
+    display: none;
+}
+@media(max-width: 768px) {
+    .page-template-no-nav-template #main-menu {
+        padding: 18px 0;
+    }
+    .page-template-no-nav-template #header,
+    .page-template-no-nav-template #header .container {
+        height: 140px;
+    }
+    .page-template-no-nav-template #header .request-header {
+        float: none;
+        text-align: center;
+    }
+    .page-template-no-nav-template #header .logo {
+        float: none;
+        margin: 0 auto;
+    }
+    .page-template-no-nav-template .home-logos-container {
+        display: none;
+    }
+    .page-template-no-nav-template #input_11_5_6_container,
+    .page-template-no-nav-template #input_11_5_3_container {
+        width: 100%;
+    }
+
+    /*Three gray boxes mobile*/
+    .page-template-no-nav-template .vc_custom_1506710978072 > .wpb_wrapper > div,
+    .page-template-no-nav-template .vc_custom_1506711031452 > .wpb_wrapper > div,
+    .page-template-no-nav-template .vc_custom_1506711261412 > .wpb_wrapper > div {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        margin: 0 !important;
+    }
+
+    .page-template-no-nav-template .capterra-reviews-badge {
+        display: block;
+        margin-top: 30px;
+    }
+}
+
 .page-template-no-nav-template .gform_confirmation_message {
     text-align: center;
+}
+
+/* Capterra Page */
+
+.page-template-no-nav-template #shenanigans a {
+    display: none;
 }
