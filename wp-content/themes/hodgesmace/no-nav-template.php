@@ -43,7 +43,7 @@
 		</div>
 		<div id="main-menu">
 			<div class="request-header">
-				<a href="#contact"></a>
+				<a href="#contact">
 					<button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern bttn-blue m-l-sm">Request a Demo</button>
 				</a>
 
