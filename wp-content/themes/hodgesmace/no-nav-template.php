@@ -43,9 +43,11 @@
 		</div>
 		<div id="main-menu">
 			<div class="request-header">
-				<button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern bttn-blue m-l-sm requestDemoBtn">Request a Demo</button>
+				<a href="#contact"></a>
+					<button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern bttn-blue m-l-sm">Request a Demo</button>
+				</a>
 
-				<!-- Request a demo popup -->
+				<!-- Request a demo popup
 				<div id="requestPopUp" style="display: none;">
 					<div style="background-color: #fff; text-align: center;">
 						<p><strong>Choose the option that best describes you:</strong></p>
@@ -55,7 +57,7 @@
 							<a href="/request-a-demo-carrier" class="bttn-blue demo-button">Carrier</a>
 						</p>
 					</div>
-				</div>
+				</div>-->
 			</div>
 		</div>
     </div>
