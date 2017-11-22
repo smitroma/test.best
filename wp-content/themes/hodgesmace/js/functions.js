@@ -4,8 +4,9 @@
 (function ($) {
     // Mobile Menu toggle
     $('.mobile-menu-toggle').click(function () {
-
+        $('.header_nav').toggle();
     });
+
     // Portal Menu toggle
     var hidePortalMenu = function () {
         $('#top-header .menu-item-has-children').removeClass('active');
