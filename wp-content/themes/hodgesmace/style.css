@@ -443,6 +443,7 @@ Text Domain: hodgesmace
     #header .mobile-menu-toggle {
         color: #ccc;
         position: absolute;
+        cursor: pointer;
         top: 20px;
         right: 30px;
         font-size: 30px;

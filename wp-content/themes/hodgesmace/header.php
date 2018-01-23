@@ -8,12 +8,14 @@
  */
 ?>
 <!DOCTYPE html>
+
 <html <?php language_attributes(); ?> class="no-js">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<script src='//cdn.freshmarketer.com/185900/510973.js'></script>
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<!--[if lte IE 9]>
 	   <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
@@ -32,6 +34,16 @@
 		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 		})(window,document,'script','dataLayer','GTM-NCHLPG');</script>
 	<!-- End Google Tag Manager -->
+<!-- Page hiding snippet (recommended) -->
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-NCHLPG':true});
+</script>
+<!-- END GOOGLE OPTIMIZE-->
+
 
   <div class="container-fluid">
 		<div id="top-header">
