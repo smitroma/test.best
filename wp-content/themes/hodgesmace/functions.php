@@ -705,3 +705,61 @@ function magazino_widgets_init() {
 
 }
 add_action( 'widgets_init', 'magazino_widgets_init' );
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	SVG shortcode for smartben-platform page
+/*-----------------------------------------------------------------------------------*/
+function enrollment_svg( $atts ) {
+    ob_start();
+    get_template_part( 'enrollment-svg' );
+    return ob_get_clean();
+}
+
+add_shortcode( 'hm_enrollment_svg' , 'enrollment_svg' );
+
+/*-----------------------------------------------------------------------------------*/
+/*	Mobile SVG shortcode for smartben-platform page
+/*-----------------------------------------------------------------------------------*/
+function sentry_svg( $atts ) {
+    ob_start();
+    get_template_part( 'mobile-svg-sentry' );
+    return ob_get_clean();
+}
+add_shortcode( 'hm_sentry_svg' , 'sentry_svg' );
+
+function avatar_svg( $atts ) {
+    ob_start();
+    get_template_part( 'mobile-svg-avatar' );
+    return ob_get_clean();
+}
+add_shortcode( 'hm_avatar_svg' , 'avatar_svg' );
+
+function gatekeeper_svg( $atts ) {
+    ob_start();
+    get_template_part( 'mobile-svg-gatekeeper' );
+    return ob_get_clean();
+}
+add_shortcode( 'hm_gatekeeper_svg' , 'gatekeeper_svg' );
+
+function pathfinder_svg( $atts ) {
+    ob_start();
+    get_template_part( 'mobile-svg-pathfinder' );
+    return ob_get_clean();
+}
+add_shortcode( 'hm_pathfinder_svg' , 'pathfinder_svg' );
+
+function educator_svg( $atts ) {
+    ob_start();
+    get_template_part( 'mobile-svg-educator' );
+    return ob_get_clean();
+}
+add_shortcode( 'hm_educator_svg' , 'educator_svg' );
+
+function now_svg( $atts ) {
+    ob_start();
+    get_template_part( 'mobile-svg-now' );
+    return ob_get_clean();
+}
+add_shortcode( 'hm_now_svg' , 'now_svg' );
