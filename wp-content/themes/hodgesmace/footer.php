@@ -24,6 +24,7 @@
 </div>
 </div><!-- .container-fluid -->
 
+<!-- SalesLoft Tracking -->
 <script type="text/javascript">
   (function(i,s,o,g,r,a,m){i['SLScoutObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -32,6 +33,7 @@
 
   slscout(["init", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0Ijo5NDc0fQ.P_4MkiZfmL0wCTBJKg4E4zQDWXNBDkM-rQzx9rxErWY"]);
 </script>
+<!-- END SalesLoft Tracking -->
 
 <?php wp_footer(); ?>
 </body>
