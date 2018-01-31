@@ -23,12 +23,16 @@
   </div>
 </div>
 </div><!-- .container-fluid -->
+
 <script type="text/javascript">
-  document.addEventListener('focus',function(e){
-    // jQuery(e.target).blur();
-    console.log(e, e.target);
-  }, true);
+  (function(i,s,o,g,r,a,m){i['SLScoutObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://scout-cdn.salesloft.com/sl.js','slscout');
+
+  slscout(["init", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0Ijo5NDc0fQ.P_4MkiZfmL0wCTBJKg4E4zQDWXNBDkM-rQzx9rxErWY"]);
 </script>
+
 <?php wp_footer(); ?>
 </body>
 </html>
