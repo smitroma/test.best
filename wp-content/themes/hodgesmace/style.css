@@ -265,7 +265,7 @@ Text Domain: hodgesmace
         .site-content .vc_row-fluid,
         .site-content .cq-bannerblock-content,
         .header_nav .soft-serv .sub-menu {
-            width: 78%;
+            width: 80%;
             padding: 0;
         }
         .site-content .full-width {
@@ -455,7 +455,7 @@ Text Domain: hodgesmace
         display: none;
     }
 
-    @media screen and (min-width: 1300px) {
+    @media screen and (min-width: 1350px) {
         #header .request-header {
             display: block;
         }
