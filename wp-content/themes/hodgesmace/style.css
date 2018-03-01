@@ -3047,4 +3047,7 @@ Text Domain: hodgesmace
     .five-avatars {
         flex-direction: column;
     }
+    .five-avatars div {
+        text-align: center;
+    }
 }
