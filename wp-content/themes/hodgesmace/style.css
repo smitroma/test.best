@@ -1206,7 +1206,7 @@ Text Domain: hodgesmace
     }
 
     .banner-header-right-bkg h4.cq-bannerblock-title:after,
-    .banner-header-left-bkg h4.cq-bannerblock-title:before,
+    .banner-header-left-bkg h4.cq-bannerblock-title:before
     {
         height: .5em;
     }
