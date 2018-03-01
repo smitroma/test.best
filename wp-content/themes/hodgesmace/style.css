@@ -3045,7 +3045,6 @@ Text Domain: hodgesmace
 
 @media screen and ( max-width: 768px ) {
     .five-avatars {
-        display: flex;
         flex-direction: column;
     }
 }
