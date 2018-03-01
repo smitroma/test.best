@@ -39,7 +39,8 @@ Text Domain: hodgesmace
  */
 
     * {
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
     }
 
     body {
@@ -880,8 +881,6 @@ Text Domain: hodgesmace
 
     .site-content select {
         padding: 0 1em;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
         border-radius: 5px;
         background: #fff;
         color: #aaa;
@@ -1104,7 +1103,6 @@ Text Domain: hodgesmace
     .site-content .cq-bannerblock-content {
         top: inherit;
         -webkit-transform: none;
-        -moz-transform: none;
         transform: none;
     }
 
@@ -1299,7 +1297,6 @@ Text Domain: hodgesmace
         min-height: 438px;
         background: transparent;
         -webkit-box-shadow: none;
-        -moz-box-shadow: none;
         -o-box-shadow: none;
         box-shadow: none;
     }
@@ -1694,6 +1691,7 @@ Text Domain: hodgesmace
     .news-sections .vc_row {
         display: none;
         opacity: 0;
+        -webkit-transition: all 500ms ease-out;
         transition: all 500ms ease-out;
         -webkit-trasition: all 500ms ease-out;
         -moz-transition: all 500ms ease-out;
@@ -2250,6 +2248,7 @@ Text Domain: hodgesmace
         text-decoration: none;
         letter-spacing: .3em;
         text-transform: uppercase;
+        -webkit-transition: .2s;
         transition: .2s;
     }
 
@@ -2272,6 +2271,7 @@ Text Domain: hodgesmace
         text-decoration: none;
         letter-spacing: .3em;
         text-transform: uppercase;
+        -webkit-transition: .2s;
         transition: .2s;
     }
 
@@ -2953,9 +2953,8 @@ Text Domain: hodgesmace
 
 .page-template-no-nav-template #header .logo img {
     top: 10px;
-    transform: none;
     -webkit-transform: none;
-    -ms-transform: none;
+            transform: none;
 }
 
 .page-template-no-nav-template ul li {
