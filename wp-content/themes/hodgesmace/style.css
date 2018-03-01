@@ -3029,16 +3029,16 @@ Text Domain: hodgesmace
 
 /* smartben avatar page */
 
-.five-avatars {
-	display: flex;
+.five-avatars {
+    display: flex;
 }
 
-.five-avatars div {
-	margin: 1em;
+.five-avatars div {
+    margin: 1em;
 }
 
-.five-avatars p {
-	font-size: 1.25em;
-	margin: 1em;
+.five-avatars p {
+    font-size: 1.25em;
+    margin: 1em;
     text-align: center;
 }
