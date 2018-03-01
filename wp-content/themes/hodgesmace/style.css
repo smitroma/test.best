@@ -3026,3 +3026,18 @@ Text Domain: hodgesmace
 .page-template-no-nav-template #shenanigans a {
     display: none;
 }
+
+/* smartben avatar page */
+
+.five-avatars {
+	display: flex;
+}
+
+.five-avatars div {
+	margin: 1em;
+}
+
+.five-avatars p {
+	font-size: 1.25em;
+	margin: 1em;
+}
