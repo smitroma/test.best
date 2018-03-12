@@ -3035,7 +3035,7 @@ Text Domain: hodgesmace
 
 .five-avatars div {
     margin: 1em;
-    flex-grow: 1;
+    flex-basis: 20%;
 }
 
 .five-avatars p {
