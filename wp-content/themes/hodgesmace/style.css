@@ -3033,8 +3033,14 @@ body .smartben-avatar-banner {
   background-position: bottom center !important;
 }
 
-/* http://www.hodgesmace.com/wp-content/uploads/2018/03/Hero.png */
-
+@media screen and (max-width: 915px) {
+  body .smartben-avatar-banner {
+    padding-top: 8em !important;
+    padding-bottom: 8em !important;
+    background: #62b8e1 url(http://www.hodgesmace.com/wp-content/uploads/2018/03/Hero.png) !important;
+    background-position: bottom left !important;
+  }
+}
 .five-avatars {
     display: flex;
 }
