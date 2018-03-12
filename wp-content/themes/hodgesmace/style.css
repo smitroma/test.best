@@ -3039,6 +3039,8 @@ body .smartben-avatar-banner {
     padding-bottom: 8em !important;
     background: #62b8e1 url(http://www.hodgesmace.com/wp-content/uploads/2018/03/Hero.png) !important;
     background-position: bottom left !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
   }
 }
 .five-avatars {
