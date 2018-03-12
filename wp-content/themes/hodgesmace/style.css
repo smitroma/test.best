@@ -462,7 +462,7 @@ Text Domain: hodgesmace
         }
     }
 
-    @media screen and (min-width: 890px) {
+    @media screen and (min-width: 915px) {
         #header .mobile-menu-toggle {
             display: none;
         }
@@ -2785,7 +2785,7 @@ Text Domain: hodgesmace
         }
     }
 
-    @media screen and (min-width: 890px) {
+    @media screen and (min-width: 915px) {
         #menu-item-2574,
         #menu-item-2567,
         #menu-item-2571 {
@@ -3032,6 +3032,8 @@ Text Domain: hodgesmace
 body .smartben-avatar-banner {
   background-position: bottom center !important;
 }
+
+/* http://www.hodgesmace.com/wp-content/uploads/2018/03/Hero.png */
 
 .five-avatars {
     display: flex;
