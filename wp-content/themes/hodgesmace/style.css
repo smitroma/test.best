@@ -532,7 +532,7 @@ Text Domain: hodgesmace
         display: none;
     }
 
-    @media screen and (min-width: 890px) {
+    @media screen and (min-width: 915px) {
         #main-menu {
             padding: 29px 0;
         }
@@ -3028,6 +3028,10 @@ Text Domain: hodgesmace
 }
 
 /* smartben avatar page */
+
+body .smartben-avatar-banner {
+  background-position: bottom center !important;
+}
 
 .five-avatars {
     display: flex;
