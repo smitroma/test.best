@@ -3077,7 +3077,7 @@ body .smartben-avatar-banner {
 
 /* CTA top-header controler */
 @media screen and (max-width: 1349px) {
-  .btn-control {
+  .vc_general.vc_btn3.bttn-orange > .btn-control {
     display: none !important;
   }
 }
