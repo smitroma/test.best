@@ -63,7 +63,7 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 				<div class="mobile-menu-toggle"><i class="fa fa-bars"></i></div>
 				<div id="main-menu">
 					<div class="request-header">
-						<button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern bttn-orange m-l-sm requestDemoBtn">Request a Demo</button>
+						<!-- <button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern bttn-orange m-l-sm requestDemoBtn">Request a Demo</button> -->
 
 						<!-- Request a demo popup -->
 						<div id="requestPopUp" style="display: none;">
