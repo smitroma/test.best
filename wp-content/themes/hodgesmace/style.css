@@ -765,8 +765,10 @@ Text Domain: hodgesmace
     .aoFormContainer input[type=button],
     .bttn-white-border,
     .bttn-blue,
+    .bttn-orange,
     .vc_general.vc_btn3.bttn-white-border,
     .vc_general.vc_btn3.bttn-blue,
+    .vc_general.vc_btn3.bttn-orange,
     .bttn-green-border,
     .vc_general.vc_btn3.bttn-green-border,
     .site-wrapper .gform_wrapper .gform_footer input.button,
@@ -813,6 +815,12 @@ Text Domain: hodgesmace
     .bttn-blue,
     .vc_general.vc_btn3.bttn-blue {
         background-color: #1897d3;
+        color: #fff;
+    }
+
+    .bttn-orange,
+    .vc_general.vc_btn3.orange {
+        background-color: #ec4e38;
         color: #fff;
     }
 
