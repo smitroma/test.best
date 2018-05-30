@@ -3076,12 +3076,6 @@ body .smartben-avatar-banner {
 }
 
 /* CTA top-header controler */
-.btn-control {
-  display: block;
-}
-
-@media screen and (max-width: 1349px) and (min-width: 890px) {
-  .btn-control {
-    display: none !important;
-  }
+#btn-control {
+  display: none !important;
 }
