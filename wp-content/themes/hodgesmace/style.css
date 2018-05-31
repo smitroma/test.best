@@ -3087,7 +3087,8 @@ body .smartben-avatar-banner {
 }
 
 #bottom-post-cta {
-  background: url("/wp-content/uploads/2017/02/CTA-Containe.png") no-repeat center;
+  background: url("/wp-content/uploads/2017/02/CTA-Containe.png");
+  background-position: center top;
   min-height: 130px;
   display: flex;
   align-items: center;
