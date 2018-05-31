@@ -50,7 +50,7 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 			<div class="container">
 				<?php get_search_form( true ); ?>
 				<?php wp_nav_menu(array('menu' => 'Login Menu', 'menu_class' => 'top_nav' )); ?>
-				<button id="btn-control" class="bttn-orange">Request a Demo</button>
+				<button id="btn-control" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern bttn-orange m-l-sm requestDemoBtn">Request a Demo</button>
 			</div>
 		</div>
     <div id="header">
