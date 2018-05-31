@@ -10,73 +10,73 @@
 get_header(); ?>
 
 <div id="primary">
-  <main id="main" role="main">
-    <div class="container blog-single-container">
-      <?php while ( have_posts() ) : the_post(); ?>
-
-        <div class="post-meta uppercase p-y-md">
-          <span><?php the_date() ?></span> | <span>BY <?php the_author() ?></span>
+    <main id="main" role="main">
+      <div class="blog-banner wrapper-container">
+        <div class="banner-content-center">
+          <h4 class="uppercase">Featured Resource</h4>
+          <h2>6 Tips for Improving <br>Employee Communication</h2>
+          <?php echo do_shortcode('[resource_link]<button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-green">Download Resource</button>[/resource_link]');?>
         </div>
-        <h1><?php the_title() ?></h1>
-        <div class="post-content p-b-lg">
-          <?php the_content(); ?>
-        </div>
-
       </div>
-
-      <!-- Related Posts -->
-
-      <?php if(is_array(get_the_tags())): ?>
-        <?php
-          $tags = array();
-          foreach(get_the_tags() as $tag){
-            array_push($tags, $tag->name) ;
-          }
-          $tags = implode(',',$tags);
-        ?>
-        <?php $args = array(
-          'tag' => $tags,
-          'post_type' => 'post',
-          'post__not_in' => array(get_the_ID()),
-          'max_num_pages' => 1,
-          'posts_per_page' => 3
-        ); ?>
-        <?php $related_query = new WP_Query($args); ?>
-        <?php if($related_query->have_posts()): ?>
-          <div class="wrapper-container related-articles">
-            <h3 style="text-align: center;" class="m-b-0">Related Articles</h3>
-          </div>
-          <div class="background-top-center blue-arrow related-articles-arrow"></div>
-          <div class="container p-y-lg">
-            <?php while ($related_query->have_posts()): $related_query->the_post()?>
-              <div class="col-md-4 col-xs-12 p-x-md">
-                <div class="p-b-md">
-                  <a href="<?php the_permalink() ?>">
-                    <?php if ( has_post_thumbnail() ): ?>
-                      <?php the_post_thumbnail(); ?>
-                    <?php else: ?>
-                      <div class="default-img">
-                        <div class="default-img-content">
-                          No Image Added
-                        </div>
-                      </div>
-                    <?php endif; ?>
-                  </a>
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <div class="container p-y-lg blog-excerpt">
+          <div class="col-md-4 p-b-md p-r-lg p-r-0-xs col-xs-12">
+            <a href="<?php the_permalink() ?>" class="img-100">
+              <?php if ( has_post_thumbnail() ): ?>
+                <?php the_post_thumbnail(); ?>
+              <?php else: ?>
+                <div class="default-img col-xs-12">
+                  <div class="default-img-content">
+                    No Image Added
+                  </div>
                 </div>
-                <div>
-                  <p class="post-date"><?php the_date(); ?></p>
-                  <h4 style="font-size: 1em;"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
-                  <p class="post-author">By <?php the_author(); ?></p>
-                  <p><a href="<?php the_permalink() ?>" class="uppercase">Read Article <?php echo do_shortcode('[icon class="fa-caret-right"]')?></a></p>
-                </div>
-              </div>
-            <?php endwhile; ?>
+              <?php endif; ?>
+            </a>
           </div>
-        <?php endif; ?>
+          <div class="col-md-8">
+            <p class="post-meta"><?php the_date(); ?> | BY <?php the_author(); ?></p>
+            <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+            <p class="post-content"><?php the_excerpt(); ?></p>
+          </div>
+        </div>
+      <?php endwhile; ?>
+
+      <?php
+        global $paged; global $wp_query;
+        $pages = $wp_query->max_num_pages;
+        if(!$pages) { $pages = 1; }
+        if(!$paged) { $paged = 1; }
+      ?>
+
+      <?php if($pages > 1): ?>
+        <div class="pagination">
+          <?php if(($paged - 1) > 0): ?>
+            <span class="nav-next"><a href="<?php echo get_pagenum_link($paged-1) ?>"><?php echo do_shortcode('[icon class="fa fa-angle-left"]') ?></a></span>
+          <?php endif; ?>
+          <?php for ($i=1; $i <= $pages; $i++): ?>
+            <span class="<?php echo ($i == $paged) ? 'active' : ''?>"><a href="<?php echo get_pagenum_link($i) ?>"><?php echo $i ?></a></span>
+          <?php endfor;?>
+          <?php if($paged < $pages): ?>
+            <span class="nav-next"><a href="<?php echo get_pagenum_link($paged+1) ?>"><?php echo do_shortcode('[icon class="fa fa-angle-right"]') ?></a></span>
+          <?php endif; ?>
+        </div>
       <?php endif; ?>
-    <?php endwhile;	?>
-  </main>
-</div>
 
+      <?php else : ?>
+        <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+      <?php endif; ?>
+      <div class="container blog-footer">
+        <div class="col-md-6 col-xs-12">
+          <div class="blog-footer-content">
+            <h2>6 Tips for Improving <br>Employee Communication</h2>
+            <div><?php echo do_shortcode('[resource_link]<button class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-green">Download Resource</button>[/resource_link]');?></div>
+          </div>
+        </div>
+        <div class="blog-footer-img">
+          <img src="<?php echo get_stylesheet_directory_uri() ?>/images/blog/EmployeeCommunicationGraphic.png" width="100%" height="auto"/>
+        </div>
+      </div>
+    </main>
+</div>
 
 <?php get_footer(); ?>
