@@ -3093,3 +3093,9 @@ body .smartben-avatar-banner {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33ffffff', endColorstr='#03ffffff', GradientType=0);
 }
+
+@media screen and (max-width: 1349px) {
+  #btn-control {
+    display: none;
+  }
+}
