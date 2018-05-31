@@ -3085,3 +3085,10 @@ body .smartben-avatar-banner {
     display: none;
   }
 }
+
+#bottom-post-cta {
+  background: #f00;
+  min-height: 130px;
+  display: flex;
+  align-items: center;
+}

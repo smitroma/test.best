@@ -75,16 +75,9 @@ get_header(); ?>
 					<?php endif; ?>
 				<?php endif; ?>
 			<?php endwhile;	?>
-      <div class="vc_row wpb_row vc_row-fluid wrapper-container smartben-now-cta vc_custom_1491321206047 vc_row-has-fill vc_row-o-equal-height vc_row-flex"><div class="mobile-center wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner "><div class="wpb_wrapper">
-    	<div class="wpb_text_column wpb_content_element  vc_custom_1490836556631 c-white">
-    		<div class="wpb_wrapper">
-    			<h2 class="h2">Commit to a smarter benefits experience.</h2>
-
-    		</div>
-    	</div>
-    </div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_btn3-container  requestDemoBtn mobile-center vc_btn3-center">
-    	<button class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-color-white">REQUEST DEMO</button></div>
-    </div></div></div></div>
+      <div id="bottom-post-cta">
+        <button class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-color-white">REQUEST DEMO</button>
+      </div>
 		</main>
 	</div>
 
