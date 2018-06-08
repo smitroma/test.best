@@ -1,10 +1,13 @@
 <?php
-/*
- * Template Name: Bottom CTA
- * Template Post Type: post
+/**
+ * The template for displaying all single posts and attachments
+ *
+ * @package Brain_Bytes
+ * @subpackage Hodges Mace
+ * @since Hodges Mace  1.0
  */
 
- get_header();  ?>
+get_header(); ?>
 
   <div id="primary">
     <main id="main" role="main">
