@@ -367,7 +367,7 @@ Text Domain: hodgesmace
             display: block !important;
         }
         ul#menu-login-menu li {
-            background-color: transparent !important;
+            background-color: #1897d3 !important;
         }
         ul#menu-login-menu li:hover {
             background-color: #1897d3 !important;
