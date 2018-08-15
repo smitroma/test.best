@@ -366,12 +366,12 @@ Text Domain: hodgesmace
         ul#menu-login-menu li:hover>.sub-menu {
             display: block !important;
         }
-        ul#menu-login-menu li {
+        #menu-item-1377 {
             background-color: #1897d3 !important;
         }
-        ul#menu-login-menu li:hover {
+        /* ul#menu-login-menu li:hover {
             background-color: #1897d3 !important;
-        }
+        } */
     }
     /* Search Form */
 
