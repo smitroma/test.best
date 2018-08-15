@@ -367,8 +367,11 @@ Text Domain: hodgesmace
             display: block !important;
         }
         #menu-item-1377 {
-            background-color: #1897d3 !important;
+            background-color: #555555 !important;
         }
+        /* #menu-item-1377 {
+            background-color: #1897d3 !important;
+        } */
         /* ul#menu-login-menu li:hover {
             background-color: #1897d3 !important;
         } */
